@@ -1,0 +1,68 @@
+/*
+  Accessibility buttons
+  Control buttons for colour theme and font 
+  ----------------------------------- */
+
+(function() {
+    'use strict';
+
+    console.log("Cathy");
+
+
+  // // GLOBAL
+  // var body = document.body
+  // var root = document.querySelector(':root')
+  // var rootStyles = getComputedStyle(root)
+  
+  // // FONT
+
+  // // If no local storage value exists create one
+  // if (!fontFamily) {
+  //     body.style.setProperty('--font-family', localStorage.getItem('fontFamily'));
+  // }
+
+  // // Get current value
+  // var fontFamily = getComputedStyle(body).getPropertyValue('--font-family');
+
+  // // Set buttons
+  // var dyslexicFont = document.getElementById('dyslexic-font');
+  // var defaultFont = document.getElementById('default-font');
+
+  // // Dyslexic font family
+  // dyslexicFont.addEventListener('click', function (e) {
+  //   body.style.setProperty('--font-family', '"Comic Sans MS", "Comic Sans", cursive');
+  //   localStorage.setItem("fontFamily", '"Comic Sans MS", "Comic Sans", cursive');
+  // });
+
+  // // Default font family
+  // defaultFont.addEventListener('click', function (e) {
+  //   body.style.setProperty('--font-family', rootStyles.getPropertyValue('--font-family'));
+  //   localStorage.setItem('fontFamily', rootStyles.getPropertyValue('--font-family'));
+  // });
+
+
+  // // THEME
+
+  // // Set buttons
+  // var themeDefault = document.getElementById('theme-default');
+  // var themeContrast = document.getElementById('theme-contrast');
+  // var themeMonochrome = document.getElementById('theme-monochrome');
+
+  // body.className = localStorage.getItem('currentTheme');
+
+  // themeDefault.addEventListener('click', function (e) {
+  //   body.className = 'theme-default';
+  //   localStorage.setItem("currentTheme", 'theme-default');
+  // });
+
+  // themeContrast.addEventListener('click', function (e) {
+  //   body.className = 'theme-contrast';
+  //   localStorage.setItem('currentTheme', 'theme-contrast');
+  // });
+
+  // themeMonochrome.addEventListener('click', function (e) {
+  //   body.className = 'theme-monochrome';
+  //   localStorage.setItem('currentTheme', 'theme-monochrome');
+  // });
+
+})();

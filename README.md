@@ -1,5 +1,14 @@
 # EleventyOne
 
+  "prod": "gulp build --prod",
+    "build": "gulp build",
+    "start": "gulp build & gulp watch & gulp serve",
+    "test": "????"
+
+
+-- prod to minify CSS
+-- Prod to ???? Js
+
 Phil's first port of call when starting another project using Eleventy.
 
 This project scaffold includes:

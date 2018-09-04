@@ -1,0 +1,64 @@
+/*
+  Settings
+  CSS variables for fonts, colors, etc.
+  ----------------------------------- */
+
+
+  /* // Change the Alpha prop at the end for states */
+
+/* Colors */
+:root {
+  --colour-black: hsl(0, 0%, 7%);
+  --colour-dark: hsl(210, 100%, 12%);
+  --colour-medium: hsl(210, 94%, 21%);
+  --colour-light: hsl(0, 0%, 95%);
+  --colour-white: hsl(0, 0%, 100%);
+  --colour-bright: hsl(51, 97%, 55%);
+}
+
+.theme-contrast {
+  --colour-black: hsl(0, 0%, 100%);
+  --colour-dark: hsl(62, 100%, 74%);
+  --colour-medium: hsl(45, 100%, 59%);
+  --colour-light: hsl(180, 1%, 26%);
+  --colour-white: hsl(210, 100%, 12%);
+  --colour-bright: hsl(327, 66%, 37%);
+}
+
+.theme-monochrome {
+  --colour-black: rgb(33, 21, 5);
+  --colour-dark: hsl(29, 64%, 14%);
+  --colour-medium: hsl(34, 50%, 22%);
+  --colour-light: hsl(39, 94%, 86%);
+  --colour-white: hsl(41, 90%, 92%);
+  --colour-bright: hsl(41, 91%, 49%);
+}
+
+/* Fonts */
+:root {
+  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dyslexic {
+  --font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+/* Text */
+:root {
+--font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+  
+  :root {
+    --font-size: 14px;
+  }
+
+}
+
+
+
+
+
+
+

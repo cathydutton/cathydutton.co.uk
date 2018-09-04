@@ -1,0 +1,9 @@
+/*
+  Component style sheet
+  Includes all the components and utilities
+  ----------------------------------- */
+
+/* @import '6-components/typography';
+@import '6-components/cookie-banner';
+@import '6-components/range-input'; */
+@import '7-utilities';

@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css" />
     <title>{{ title }}</title>
+
+    <!-- capture the inline CSS content as a Nunjucks variable -->
+    {% set inlineCSS %}
+      {% include "inline.css" %}
+    {% endset %}
+    <style>
+    {{- inlineCSS | e -}}
+    </style>
+
   </head>
-  <body class="{{ bodyClass }}" >
+  <body>
     <div class="container">
       <header>
         <ul class="nav">
@@ -23,6 +32,7 @@
       {{ content | safe }}
       {% include "footer.njk" %}
     </div>
+   <script src="/js/scripts.js"></script>
   </body>
 </html>
 

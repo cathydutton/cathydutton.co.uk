@@ -7,7 +7,7 @@ layout: layouts/base.njk
 
 ## This site is a starting point
 
-From this point we should already have:
+From this point we should already have: 
 
 - [Eleventy](https://11ty.io) with a skeleton site
 - A date format filter for Nunjucks
