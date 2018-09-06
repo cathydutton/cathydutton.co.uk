@@ -3,7 +3,7 @@
   "prod": "gulp build --prod",
     "build": "gulp build",
     "start": "gulp build & gulp watch & gulp serve",
-    "test": "????"
+    "test": "gulp test"
 
 
 -- prod to minify CSS

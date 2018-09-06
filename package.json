@@ -5,14 +5,14 @@
   "author": "Phil Hawksworth",
   "license": "MIT",
   "scripts": {
-    "prod": "gulp build --prod",
+    "prod": "gulp build --prod & gulp test",
     "build": "gulp build",
     "start": "gulp build & gulp watch & gulp serve",
-    "test": "????"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/philhawksworth/eleventyone"
+    "url": "https://github.com/cathydutton/?????"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.5.2",
@@ -21,7 +21,6 @@
     "gulp": "^4.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-image-resize": "^0.13.0",
-    "gulp-rename": "^1.3.0",
     "gulp-serve": "^1.4.0",
     "gulp-shell": "^0.6.5",
     "gulp-uglify": "^3.0.0",
@@ -38,11 +37,17 @@
   "devDependencies": {
     "autoprefixer": "^9.1.4",
     "csswring": "^7.0.0",
+    "gulp-a11y": "^0.1.2",
+    "gulp-accessibility": "^3.1.1",
     "gulp-concat": "^2.6.1",
+    "gulp-csslint": "^1.0.1",
     "gulp-if": "^2.0.2",
     "gulp-livereload": "^4.0.0",
+    "gulp-mocha": "^6.0.0",
     "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
     "postcss": "^7.0.2",
+    "postcss-custom-properties": "^7.0.0",
     "postcss-import": "^12.0.0",
     "yargs": "^12.0.1"
   }
