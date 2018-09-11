@@ -34,10 +34,9 @@ html {
  * Remove default margin.
  */
 
-/* body {
+body {
   margin: 0;
-  background: blue!important;
-} */
+}
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -460,61 +459,3 @@ hr {
 }
 
 
-/*
-  Typography
-  ----------------------------------- */
-
-  h1 {
-    font-family: impact;
-    text-transform: uppercase;
-    font-size: 4em;
-    color: var(--colour-dark);
-    margin-bottom: .8em;
-    line-height: 1.2;
-    hyphens: auto;
-  }
-  
-  h2 {
-    font-size: 1.625em;
-    margin-bottom: .6em;
-    hyphens: auto;
-  }
-  
-  h3 {
-    font-size: 1.375em;
-    margin-bottom: .4em;
-    hyphens: auto;
-  }
-  
-  h4,
-  h5,
-  h6 {
-    font-size: 1.188em;
-    margin-bottom: .4em;
-    hyphens: auto;
-  }
-
-  p {
-    font-size: 1em;
-    margin-bottom: .6em;
-    hyphens: auto;
-  }
-
-  .page-headings p {
-    font-size: 1.188em;
-    border-left: 4px solid var(--colour-bright);
-    padding-left: .4em;
-    hyphens: auto;
-  }
-
-  input, 
-  select, 
-  textarea, 
-  button {
-    font-family:inherit;
-    font-size: .8em;
-  }
-
-  .sub-text {
-    font-size: .8em;
-  }

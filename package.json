@@ -5,14 +5,14 @@
   "author": "Phil Hawksworth",
   "license": "MIT",
   "scripts": {
-    "prod": "gulp build --prod & gulp test",
+    "prod": "gulp production --prod",
     "build": "gulp build",
     "start": "gulp build & gulp watch & gulp serve",
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cathydutton/?????"
+    "url": "https://github.com/cathydutton/cathydutton.co.uk"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.5.2",
@@ -37,16 +37,17 @@
   "devDependencies": {
     "autoprefixer": "^9.1.4",
     "csswring": "^7.0.0",
-    "gulp-a11y": "^0.1.2",
     "gulp-accessibility": "^3.1.1",
     "gulp-concat": "^2.6.1",
     "gulp-csslint": "^1.0.1",
     "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
     "gulp-livereload": "^4.0.0",
     "gulp-mocha": "^6.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "postcss": "^7.0.2",
+    "postcss-color-mod-function": "^2.4.3",
     "postcss-custom-properties": "^7.0.0",
     "postcss-import": "^12.0.0",
     "yargs": "^12.0.1"

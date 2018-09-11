@@ -1,0 +1,33 @@
+/*
+  Layout
+  LHS sidebar responsive layout
+  ----------------------------------- */
+
+  .container {
+    max-width: 80em; 
+    background: var(--colour-white);
+    display: table;
+  }
+
+  .sidebar,
+  .content {
+    max-width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    width: calc((1024px - 100%) * 1024);
+  }
+
+  .sidebar {
+    min-width: 17.50em;
+    background: var(--colour-dark);
+  }
+
+  .content {
+    min-width: calc(100% - 17.80em);
+  }
+
+
+  
+
+
+

@@ -4,16 +4,15 @@
   ----------------------------------- */
 
 
-  /* // Change the Alpha prop at the end for states */
-
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=F1F1F1&v=E61E9E&v=47074E&v=1E0321&v=110213 */
 /* Colors */
 :root {
-  --colour-black: hsl(0, 0%, 7%);
-  --colour-dark: hsl(210, 100%, 12%);
-  --colour-medium: hsl(210, 94%, 21%);
+  --colour-black: hsl(293, 81%, 4%);
+  --colour-dark: hsl(294, 83%, 7%);
+  --colour-medium: hsl(294, 84%, 17%);
   --colour-light: hsl(0, 0%, 95%);
   --colour-white: hsl(0, 0%, 100%);
-  --colour-bright: hsl(51, 97%, 55%);
+  --colour-bright: hsl(322, 80%, 51%);
 }
 
 .theme-contrast {
@@ -43,18 +42,15 @@
   --font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
-/* Text */
+/* Font size */
 :root {
---font-size: 16px;
+  --font-size: 16px;
 }
 
-@media screen and (max-width: 480px) {
-  
-  :root {
-    --font-size: 14px;
-  }
 
-}
+
+
+
 
 
 

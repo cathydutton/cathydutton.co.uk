@@ -1,0 +1,9 @@
+<ul class="navigation">
+  {% for item in navigation %}
+    <li class="navigation-item navigation-item--{{ item.menu_url }}{% if title == item.menu_item %} navigation-item__current{% endif %}">
+    <a href="../{{ item.menu_item | lower | replace(" ", "-") }}/">{{ item.menu_item }}</a></li>
+  {% endfor %}
+</ul>
+
+
+

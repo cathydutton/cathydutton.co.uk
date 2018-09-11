@@ -1,0 +1,159 @@
+/*
+  Elements
+  styling for bare HTML elements (like H1, A, etc.). 
+  These come with default styling from the browser so we can redefine them here.
+  ----------------------------------- */
+  
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    color: var(--colour-black);
+    background: var(--colour-bright);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: 1.5;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 1em;
+    border: 1px solid var(--colour-meduim);
+    background: var(--colour-light);
+  }
+
+  pre { 
+    padding: .5em .5em 0em .5em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    background:var(--colour-light);
+    background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
+    background-size: auto 3em;
+    background-origin: content-box; 
+    font-family: Consolas, Monaco, monospace;
+    tab-size: 4;
+    white-space: unset;
+  }
+  
+  code { 
+    font: inherit 
+  }
+
+  pre code {
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word; 
+  }
+
+  /* Select */
+  ::selection {
+    background: var(--colour-bright);
+  }
+
+
+
+
+
+/* SELECT */
+::selection {
+  background: lighten(map-get($colours, 'accent'), 25%);
+}
+
+/* IMGAES */
+img {
+  image-rendering: auto;
+}
+
+/* SVG */
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* LISTS */
+
+/* Unordered lists */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
+
+ul li {
+  margin-bottom: .4em;
+  list-style: disc;
+}
+
+/* Ordered lists */
+.ol {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
+
+.ol li {
+  margin-bottom: .4em;
+  list-style-type: decimal;
+}
+
+
+
+/* DESCRIPTION LIST */
+dl,
+.description-list {
+  margin-top: .4em;
+  margin-bottom: 1em;
+}
+
+dt,
+.description-list__title {
+  font-weight: bold;
+}
+
+dt,
+dd,
+.description-list__title, 
+.description-list__description {
+  display: inline;
+  margin: 0;
+}
+
+dd + dt::before 
+.description-list__description + .description-list__title::before {
+  content: "\A";
+  white-space: pre;
+}
+
+dt + dd::before,
+.description-list__title + .description-list__description::before {
+  content: "\A";
+  white-space: pre;
+}
+
+dd + dd::before,
+dt + dt::before,,
+.description-list__description + .description-list__description::before,
+.description-list__title + .description-list__title::before {
+  content: ', ';
+  font-weight: normal;
+  margin-left: -.25em;
+}
+
+
+
+
+
+ 

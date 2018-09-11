@@ -8,17 +8,17 @@
   CSS variables for fonts, colors, etc.
   ----------------------------------- */
 
-/* // Change the Alpha prop at the end for states */
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=F1F1F1&v=E61E9E&v=47074E&v=1E0321&v=110213 */
 
 /* Colors */
 
 :root {
-  --colour-black: hsl(0, 0%, 7%);
-  --colour-dark: hsl(210, 100%, 12%);
-  --colour-medium: hsl(210, 94%, 21%);
+  --colour-black: hsl(293, 81%, 4%);
+  --colour-dark: hsl(294, 83%, 7%);
+  --colour-medium: hsl(294, 84%, 17%);
   --colour-light: hsl(0, 0%, 95%);
   --colour-white: hsl(0, 0%, 100%);
-  --colour-bright: hsl(51, 97%, 55%);
+  --colour-bright: hsl(322, 80%, 51%);
 }
 
 .theme-contrast {
@@ -49,18 +49,10 @@
   --font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
-/* Text */
+/* Font size */
 
 :root {
---font-size: 16px;
-}
-
-@media screen and (max-width: 480px) {
-  
-  :root {
-    --font-size: 14px;
-  }
-
+  --font-size: 16px;
 }
 
 /*
@@ -124,10 +116,9 @@ html {
  * Remove default margin.
  */
 
-/* body {
+body {
   margin: 0;
-  background: blue!important;
-} */
+}
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -549,65 +540,6 @@ hr {
 }
 
 /*
-  Typography
-  ----------------------------------- */
-
-h1 {
-    font-family: impact;
-    text-transform: uppercase;
-    font-size: 4em;
-    color: var(--colour-dark);
-    margin-bottom: .8em;
-    line-height: 1.2;
-    hyphens: auto;
-  }
-
-h2 {
-    font-size: 1.625em;
-    margin-bottom: .6em;
-    hyphens: auto;
-  }
-
-h3 {
-    font-size: 1.375em;
-    margin-bottom: .4em;
-    hyphens: auto;
-  }
-
-h4,
-  h5,
-  h6 {
-    font-size: 1.188em;
-    margin-bottom: .4em;
-    hyphens: auto;
-  }
-
-p {
-    font-size: 1em;
-    margin-bottom: .6em;
-    hyphens: auto;
-  }
-
-.page-headings p {
-    font-size: 1.188em;
-    border-left: 4px solid var(--colour-bright);
-    padding-left: .4em;
-    hyphens: auto;
-  }
-
-input, 
-  select, 
-  textarea, 
-  button {
-    font-family:inherit;
-    font-size: .8em;
-  }
-
-.sub-text {
-    font-size: .8em;
-  }
-
-/*
   Elements
   styling for bare HTML elements (like H1, A, etc.). 
   These come with default styling from the browser so we can redefine them here.
@@ -624,32 +556,23 @@ html,
   }
 
 body {
+    color: hsl(293, 81%, 4%);
     color: var(--colour-black);
+    background: hsl(322, 80%, 51%);
     background: var(--colour-bright);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-family: var(--font-family);
+    font-size: 16px;
     font-size: var(--font-size);
     line-height: 1.5;
   }
 
-header,
-  main,
-  footer {
-    padding: .6em;
-    animation: fadeIn 2s forwards;
-  }
-
-footer {
-    text-align: center;
-  }
-
-section {
-    margin-bottom: .8em;
-  }
-
 blockquote {
     margin: 0;
-    padding: 15px;
+    padding: 1em;
     border: 1px solid var(--colour-meduim);
+    border: 1px solid var(--colour-meduim);
+    background: hsl(0, 0%, 95%);
     background: var(--colour-light);
   }
 
@@ -657,7 +580,9 @@ pre {
     padding: .5em .5em 0em .5em;
     line-height: 1.5;
     margin-bottom: 1em;
+    background:hsl(0, 0%, 95%);
     background:var(--colour-light);
+    background-image: linear-gradient( hsl(0, 0%, 100%) 50%, transparent 0);
     background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
     background-size: auto 3em;
     background-origin: content-box; 
@@ -681,50 +606,235 @@ pre code {
 /* Select */
 
 ::selection {
+    background: hsl(322, 80%, 51%);
     background: var(--colour-bright);
+  }
+
+/* SELECT */
+
+::selection {
+  background: lighten(map-get($colours, 'accent'), 25%);
+}
+
+/* IMGAES */
+
+img {
+  image-rendering: auto;
+}
+
+/* SVG */
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* LISTS */
+
+/* Unordered lists */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
+
+ul li {
+  margin-bottom: .4em;
+  list-style: disc;
+}
+
+/* Ordered lists */
+
+.ol {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
+
+.ol li {
+  margin-bottom: .4em;
+  list-style-type: decimal;
+}
+
+/* DESCRIPTION LIST */
+
+dl,
+.description-list {
+  margin-top: .4em;
+  margin-bottom: 1em;
+}
+
+dt,
+.description-list__title {
+  font-weight: bold;
+}
+
+dt,
+dd,
+.description-list__title, 
+.description-list__description {
+  display: inline;
+  margin: 0;
+}
+
+dd + dt::before 
+.description-list__description + .description-list__title::before {
+  content: "\A";
+  white-space: pre;
+}
+
+dt + dd::before,
+.description-list__title + .description-list__description::before {
+  content: "\A";
+  white-space: pre;
+}
+
+dd + dd::before,
+dt + dt::before,,
+.description-list__description + .description-list__description::before,
+.description-list__title + .description-list__title::before {
+  content: ', ';
+  font-weight: normal;
+  margin-left: -.25em;
+}
+
+/*
+  Generic
+  Reset and/or normalize styles, box-sizing definition, etc. 
+  ----------------------------------- */
+
+/*
+  Typography
+  ----------------------------------- */
+
+h1 {
+    /* font-family: impact; */
+    /* text-transform: uppercase; */
+    font-size: calc(100% + 6vw);
+    color: hsl(294, 83%, 7%);
+    color: var(--colour-dark);
+    margin-bottom: .8em;
+    line-height: 1.2;
+    hyphens: auto;
+  }
+
+h2 {
+    font-size: calc(100% + 4vw);
+    margin-bottom: .6em;
+    hyphens: auto;
+  }
+
+h3 {
+    font-size: calc(100% + 3vw);
+    margin-bottom: .4em;
+    hyphens: auto;
+  }
+
+h4,
+  h5,
+  h6 {
+    font-size: calc(100% + 2vw);
+    margin-bottom: .4em;
+    hyphens: auto;
+  }
+
+p {
+    font-size: 1em;
+    margin-bottom: .6em;
+    hyphens: auto;
+  }
+
+.page-headings p {
+    font-size: 1.188em;
+    border-left: 4px solid hsl(322, 80%, 51%);
+    border-left: 4px solid var(--colour-bright);
+    padding-left: .4em;
+    hyphens: auto;
+  }
+
+input, 
+  select, 
+  textarea, 
+  button {
+    font-family:inherit;
+    font-size: .8em;
+  }
+
+.sub-text {
+    font-size: .8em;
   }
 
 /*
   Layout
-  CSS grid and Flexbox responsive content based layout.
+  LHS sidebar responsive layout
   ----------------------------------- */
 
-.wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 100vh;
-    max-width: 1280px;
+.container {
+    max-width: 80em; 
+    background: hsl(0, 0%, 100%); 
+    background: var(--colour-white);
+    display: table;
   }
 
-/* Main Flex box 2 column layout */
+.sidebar,
+  .content {
+    max-width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    width: calc((1024px - 100%) * 1024);
+  }
 
 .sidebar {
-    flex: 1 0 0;
-    padding: .5em;
+    min-width: 17.50em;
+    background: hsl(294, 83%, 7%);
     background: var(--colour-dark);
   }
 
 .content {
-    flex: 10 0 10em;
-    padding: .5em;
-    width: 100%;
-    background: var(--colour-white);
+    min-width: calc(100% - 17.80em);
   }
 
-/* Header CSS grid */
+/*
+  Anchors
+  styling for bare a tags 
+  ----------------------------------- */
 
-header {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1em;
-  }
+/* https://colorme.io/ */
 
-/* Resisable demo area */
+a {
+  color: hsl(294, 84%, 17%);
+  color: var(--colour-medium);
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 0 hsl(294, 84%, 17%);
+  box-shadow: inset 0 -1px 0 0 var(--colour-medium);
+}
 
-#demo {
-    border: 1px solid var(--colour-dark);
-    padding: 1em;
-    margin-top: 1em;
-    overflow: scroll;
-    /* resize: both; */
-  }
+a:hover {
+  color: hsl(294, 83%, 70%);
+  color: hsl(294, 83%, 70%);
+  transition: all .3s ease-in-out;
+}
+
+a:active,
+a:focus {
+  color: rgb(156, 3, 33);
+  color: rgb(156, 3, 33);
+}
+
+a:visited::after {
+  content: '(visited)';
+}
+
+a[target=_blank]::after {
+  display: inline-block;
+  /* overflow: hidden;
+  width: 0;
+  height: 0;
+  white-space: nowrap; */
+  content: '(opens new window)';
+}

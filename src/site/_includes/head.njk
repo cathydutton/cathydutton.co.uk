@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="keywords" content="Interaction Design, UX, User experience, Service design, CSS, Sass, PostCSS">
+<meta name="author" content="Cathy Dutton - cathydutton.co.uk" />
+<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link rel="apple-touch-icon" sizes="128x128" href="/apple-touch-icon.png">
+<link rel="manifest" href="./manifest.json">
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="Front End Developer, CSS, Sass, UX, PostCSS and JavaScript"/>
+<meta name="twitter:title" content="Cathy_Dutton"/>
+<meta name="twitter:site" content="@cathy_dutton"/>
+<meta name="twitter:image" content="/assets/img/profile-image.jpg"/>
+
+
+<!-- Include CSS -->
+{% set inlineCSS %}
+  {% include "inline.css" %}
+{% endset %}
+<style>
+  {{- inlineCSS | e -}}
+</style>
+<link rel="stylesheet" href="/css/main.css" />
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9902393-15"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+  gtag('config', 'UA-9902393-15');
+</script>

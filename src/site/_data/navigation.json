@@ -1,0 +1,17 @@
+ [
+    {
+      "menu_item": "Home"
+    },
+    {
+      "menu_item": "Work history"
+    },
+    {
+      "menu_item": "Portfolio"
+    },
+    {
+      "menu_item": "Blog"
+    },
+    {
+      "menu_item": "PostCSS plugins"
+    }
+  ]

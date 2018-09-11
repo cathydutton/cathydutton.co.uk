@@ -1,6 +1,6 @@
 # EleventyOne
 
-  "prod": "gulp build --prod",
+    "prod": "gulp production --prod",
     "build": "gulp build",
     "start": "gulp build & gulp watch & gulp serve",
     "test": "gulp test"
@@ -27,10 +27,20 @@ To get your own instance of this 11ty starter project cloned and deploying to Ne
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/eleventyone)
 
 
-## Wait, what happens when I click that button?
+## No media queries?
 
-Good question. Here's what it will do...
+Text - calc and rem stuff
 
-1. Netlify will clone the git repository of this project into your Github account. It will be asking for permission to add the repo for you.
-2. We'll create a new site for you in Netlify, and configure it to use your shiny new repo. Right away you'll be able to deploy changes simply by pushing changes to your repo.
-3. That's it really.
+Layout - sidebar stuff
+
+
+Content - CSS grid
+
+
+## Dependencies
+
+post css - custom props
+post css - PostCSS import CSS
+post css - grid????
+post css - colour mod ()
+autoprefixer

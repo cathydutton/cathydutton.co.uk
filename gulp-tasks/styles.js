@@ -5,6 +5,8 @@ var autoprefixer = require('autoprefixer');
 var postcssImport = require('postcss-import');
 var csswring = require('csswring');
 var postCSSCustomProperties = require('postcss-custom-properties');
+var postcssColorMod = require('postcss-color-mod-function');
+
 var gulpif = require('gulp-if');
 var argv = require('yargs').argv;
 var concat = require('gulp-concat');
@@ -19,7 +21,8 @@ gulp.task('inline', function() {
   .pipe(postcss([
     autoprefixer,
     postcssImport,
-    postCSSCustomProperties()
+    postCSSCustomProperties(),
+    postcssColorMod()
   ]))
     .pipe(gulpif(isProd, postcss([
       csswring
@@ -27,6 +30,7 @@ gulp.task('inline', function() {
     ))
     .pipe(concat('inline.css'))
     .pipe(gulp.dest(project.buildSrc+ '/site/_includes'))
+    .pipe(gulp.dest(project.buildDest+ '/css'))
     .pipe(livereload());
 });
 
@@ -38,7 +42,8 @@ gulp.task('main', function() {
   .pipe(postcss([
     autoprefixer,
     postcssImport,
-    postCSSCustomProperties()
+    postCSSCustomProperties(),
+    postcssColorMod()
   ]))
     .pipe(gulpif(isProd, postcss([
       csswring

@@ -9,7 +9,7 @@
     console.log("Cathy");
 
 
-  // // GLOBAL
+  // GLOBAL
   // var body = document.body
   // var root = document.querySelector(':root')
   // var rootStyles = getComputedStyle(root)

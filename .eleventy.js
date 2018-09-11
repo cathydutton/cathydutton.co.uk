@@ -9,7 +9,8 @@ module.exports = function(config) {
     dir: {
       input: "src/site",
       output: "dist",
-      includes: "_includes"
+      includes: "_includes",
+      data: "_data"
     },
     templateFormats : ["njk", "md"],
     htmlTemplateEngine : "njk",

@@ -1,0 +1,20 @@
+<div class="profile-image">
+  
+   <img src="images/profile-image.png" class="profile-image__img" alt="Profile picture - Cathy Dutton"
+  />
+
+{#
+  <img class="profile-image__img srcset=" 
+  images/profile-image4x.jpg 4x, 
+  images/profile-image3x.jpg 3x, 
+  images/profile-image2x.jpg 2x, 
+  images/profile-image1x.jpg 1x " 
+  src="images/profile-image-fallback.jpg" 
+  > #}
+</div>
+
+<p class="profile-description">Interaction &amp; Service Designer, CSS enthusiast and PostCSS fan</p>
+
+<navigation>
+  {% include "navigation.njk" %}
+</navigation>

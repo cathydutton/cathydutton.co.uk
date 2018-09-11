@@ -1,7 +1,6 @@
 var project = require('./_project.js');
 var gulp    = require('gulp');
 var csslint = require('gulp-csslint');
-var a11y = require('gulp-a11y');
 var access = require('gulp-accessibility');
 var mocha = require('gulp-mocha');
 var rename = require("gulp-rename");
@@ -12,27 +11,19 @@ var rename = require("gulp-rename");
 gulp.task('cssLint', function() {
   return gulp.src(project.buildSrc + '/css/**/**.css')
   .pipe(csslint())
-  .pipe(csslint.formatter());
+  .pipe(csslint.formatter())
+  .pipe(csslint.formatter('fail')); 
 });
+
 
 
 /*
   Run a11y (check HTML) 
 */
-gulp.task('a11y', function () {
-  return gulp.src(project.buildDest + '**/**.html')
-    .pipe(a11y())
-    .pipe(a11y.reporter());
-});
-
-
-/*
-  Run code sniffer 
-*/
-gulp.task('codeSniffer', function() {
+gulp.task('a11y', function() {
   return gulp.src(project.buildDest + '**/**.html')
     .pipe(access({
-      force: true
+      force: false
     }))
     .on('error', console.log)
     .pipe(access.report({reportType: 'txt'}))
@@ -58,6 +49,5 @@ gulp.task('mocha', function () {
 gulp.task('test', gulp.parallel(
   'cssLint',
   'a11y',
-  'codeSniffer',
   'mocha'
 ));

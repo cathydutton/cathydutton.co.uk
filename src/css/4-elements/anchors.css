@@ -1,0 +1,44 @@
+/*
+  Anchors
+  styling for bare a tags 
+  ----------------------------------- */
+
+  /* https://colorme.io/ */
+  
+  
+a {
+  color: var(--colour-medium);
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 0 var(--colour-medium);
+}
+
+a:hover {
+  color: color-mod(var(--colour-dark) lightness(70%));
+  transition: all .3s ease-in-out;
+}
+
+a:active,
+a:focus {
+  color: color-mod(var(--colour-dark) red(156));
+}
+
+a:visited::after {
+  content: '(visited)';
+}
+
+
+a[target=_blank]::after {
+  display: inline-block;
+  /* overflow: hidden;
+  width: 0;
+  height: 0;
+  white-space: nowrap; */
+  content: '(opens new window)';
+} 
+
+
+
+
+
+
+

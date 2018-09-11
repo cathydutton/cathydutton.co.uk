@@ -1,0 +1,34 @@
+/*
+  Social media icons
+  ----------------------------------- */
+
+  /* svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .social-media-icons__icon {
+    display: inline-block;
+  }
+  
+  .social-media-icons__anchor svg {
+    position: relative;
+    display: block;
+    width: 75px;
+    height: 75px;
+    margin: 0 5px;
+    border: 0;
+    color: var(--colour-dark);
+    fill: var(--colour-dark);
+  }
+
+  .social-media-icons__anchor svg:hover,
+  .social-media-icons__anchor svg:focus {
+    border-radius: 100%;
+    color: var(--colour-bright);
+    fill: var(--colour-bright);
+    background: var(--colour-dark);
+    outline: none;
+    transform: scale(1.25);
+    transition: background-color .5s, transform .5s ease-out;
+  } */
