@@ -9,8 +9,8 @@
 
 @import '3-generic/generic';
 
-@import '4-elements/elements';
-@import '4-elements/typography';
+@import '4-base/elements';
+@import '4-base/typography';
+@import '4-base/anchors';
 
 @import '5-layout/layout';
-@import '4-elements/anchors';

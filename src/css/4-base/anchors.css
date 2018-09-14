@@ -1,0 +1,51 @@
+/*
+  Anchors
+  styling for bare a tags 
+  ----------------------------------- */
+  
+  a,
+  .anchor {
+    color: currentColor;
+    text-decoration: none;
+    border-bottom: solid 1px currentColor;
+  }
+  
+  a:hover,
+  .anchor:hover {
+    transition: all .3s ease-in-out;
+    color: var(--colour-bright);
+  }
+  
+  a:active,
+  a:focus,
+  .anchor:active,
+  .anchor:focus {
+    color: var(--colour-medium);
+  }
+  
+  a:visited::after{
+    content: '(visited)';
+  }
+  
+  
+  a
+  [target=_blank]::after {
+    display: inline-block;
+    content: '(opens new window)';
+  } 
+
+
+/* Anchor light */
+
+  .anchor__light {
+    color: var(--colour-white);
+  }
+  
+  .anchor__light:hover {
+    color: var(--colour-bright);
+  }
+  
+  .anchor__light:active,
+  .anchor__light:focus {
+    color: var(--colour-light);
+  }

@@ -9,10 +9,45 @@
 :root {
   --colour-black: hsl(293, 81%, 4%);
   --colour-dark: hsl(294, 83%, 7%);
-  --colour-medium: hsl(294, 84%, 17%);
-  --colour-light: hsl(0, 0%, 95%);
+  --colour-medium: hsl(294, 83%, 24%);
+  --colour-light: hsl(295, 56%, 92%);
   --colour-white: hsl(0, 0%, 100%);
   --colour-bright: hsl(322, 80%, 51%);
+
+
+
+  --colour-black--h: 293;
+  --colour-black--s: 81%;
+  --colour-black--l: 4%;
+  --colour-black: hsl(var(--colour-black--h), var(--colour-black--s), var(--colour-black--l));
+
+  --colour-dark--h: 294;
+  --colour-dark--s: 83%;
+  --colour-dark--l: 7%;
+  --colour-dark: hsl(var(--colour-dark--h), var(--colour-dark--s), var(--colour-dark--l));
+
+  --colour-medium--h: 294;
+  --colour-medium--s: 84%;
+  --colour-medium--l: 17%;
+  --colour-medium: hsl(var(--colour-medium--h), var(--colour-medium--s), var(--colour-medium--l));
+
+  --colour-light--h: 0;
+  --colour-light--s: 0%;
+  --colour-light--l: 95%;
+  --colour-light: hsl(var(--colour-light--h), var(--colour-light--s), var(--colour-light--l));
+
+  --colour-white--h: 0;
+  --colour-white--s: 0%;
+  --colour-white--l: 1004%;
+  --colour-white: hsl(var(--colour-white--h), var(--colour-white--s), var(--colour-white--l));
+
+  --colour-bright--h: 322;
+  --colour-bright--s: 80%;
+  --colour-bright--l: 51%;
+  --colour-bright: hsl(var(--colour-bright--h), var(--colour-bright--s), var(--colour-bright--l));
+
+
+
 }
 
 .theme-contrast {

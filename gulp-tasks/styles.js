@@ -5,8 +5,6 @@ var autoprefixer = require('autoprefixer');
 var postcssImport = require('postcss-import');
 var csswring = require('csswring');
 var postCSSCustomProperties = require('postcss-custom-properties');
-var postcssColorMod = require('postcss-color-mod-function');
-
 var gulpif = require('gulp-if');
 var argv = require('yargs').argv;
 var concat = require('gulp-concat');
@@ -22,7 +20,6 @@ gulp.task('inline', function() {
     autoprefixer,
     postcssImport,
     postCSSCustomProperties(),
-    postcssColorMod()
   ]))
     .pipe(gulpif(isProd, postcss([
       csswring
@@ -43,7 +40,6 @@ gulp.task('main', function() {
     autoprefixer,
     postcssImport,
     postCSSCustomProperties(),
-    postcssColorMod()
   ]))
     .pipe(gulpif(isProd, postcss([
       csswring

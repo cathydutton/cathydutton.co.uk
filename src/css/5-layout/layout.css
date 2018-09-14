@@ -4,26 +4,35 @@
   ----------------------------------- */
 
   .container {
-    max-width: 80em; 
     background: var(--colour-white);
-    display: table;
+    overflow: hidden;
+    min-height: 100vh;
   }
-
+  
   .sidebar,
   .content {
     max-width: 100%;
-    vertical-align: top;
-    display: inline-block;
     width: calc((1024px - 100%) * 1024);
+    float: left;
+    margin-bottom: -999px;
+    padding-bottom: 999px;
   }
-
+  
   .sidebar {
-    min-width: 17.50em;
+    min-width: 17.5em;
+    color: var(--colour-white);
     background: var(--colour-dark);
   }
-
+  
   .content {
-    min-width: calc(100% - 17.80em);
+    min-width: calc(100% - 17.5em);
+    background:var(--colour-white);
+  }
+
+  header,
+  main,
+  footer {
+    margin-left: 1em;
   }
 
 

@@ -6,7 +6,7 @@
   /* Print styles */
 
   @media print {
-    .wrapper > *:not(main) {
+    .container > *:not(main) {
       display: none;
     }
   

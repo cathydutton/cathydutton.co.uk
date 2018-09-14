@@ -15,10 +15,51 @@
 :root {
   --colour-black: hsl(293, 81%, 4%);
   --colour-dark: hsl(294, 83%, 7%);
-  --colour-medium: hsl(294, 84%, 17%);
-  --colour-light: hsl(0, 0%, 95%);
+  --colour-medium: hsl(294, 83%, 24%);
+  --colour-light: hsl(295, 56%, 92%);
   --colour-white: hsl(0, 0%, 100%);
   --colour-bright: hsl(322, 80%, 51%);
+
+
+
+  --colour-black--h: 293;
+  --colour-black--s: 81%;
+  --colour-black--l: 4%;
+  --colour-black: hsl(293, 81%, 4%);
+  --colour-black: hsl(var(--colour-black--h), var(--colour-black--s), var(--colour-black--l));
+
+  --colour-dark--h: 294;
+  --colour-dark--s: 83%;
+  --colour-dark--l: 7%;
+  --colour-dark: hsl(294, 83%, 7%);
+  --colour-dark: hsl(var(--colour-dark--h), var(--colour-dark--s), var(--colour-dark--l));
+
+  --colour-medium--h: 294;
+  --colour-medium--s: 84%;
+  --colour-medium--l: 17%;
+  --colour-medium: hsl(294, 84%, 17%);
+  --colour-medium: hsl(var(--colour-medium--h), var(--colour-medium--s), var(--colour-medium--l));
+
+  --colour-light--h: 0;
+  --colour-light--s: 0%;
+  --colour-light--l: 95%;
+  --colour-light: hsl(0, 0%, 95%);
+  --colour-light: hsl(var(--colour-light--h), var(--colour-light--s), var(--colour-light--l));
+
+  --colour-white--h: 0;
+  --colour-white--s: 0%;
+  --colour-white--l: 1004%;
+  --colour-white: hsl(0, 0%, 1004%);
+  --colour-white: hsl(var(--colour-white--h), var(--colour-white--s), var(--colour-white--l));
+
+  --colour-bright--h: 322;
+  --colour-bright--s: 80%;
+  --colour-bright--l: 51%;
+  --colour-bright: hsl(322, 80%, 51%);
+  --colour-bright: hsl(var(--colour-bright--h), var(--colour-bright--s), var(--colour-bright--l));
+
+
+
 }
 
 .theme-contrast {
@@ -63,7 +104,7 @@
 /* Print styles */
 
 @media print {
-    .wrapper > *:not(main) {
+    .container > *:not(main) {
       display: none;
     }
   
@@ -545,14 +586,14 @@ hr {
   These come with default styling from the browser so we can redefine them here.
   ----------------------------------- */
 
-html {
-    margin: 0;
-    padding: 0;
-  }
-
 html,
   body {
     height: 100%;
+  }
+
+html {
+    margin: 0;
+    padding: 0;
   }
 
 body {
@@ -582,7 +623,7 @@ pre {
     margin-bottom: 1em;
     background:hsl(0, 0%, 95%);
     background:var(--colour-light);
-    background-image: linear-gradient( hsl(0, 0%, 100%) 50%, transparent 0);
+    background-image: linear-gradient( hsl(0, 0%, 1004%) 50%, transparent 0);
     background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
     background-size: auto 3em;
     background-origin: content-box; 
@@ -713,9 +754,7 @@ dt + dt::before,,
   ----------------------------------- */
 
 h1 {
-    /* font-family: impact; */
-    /* text-transform: uppercase; */
-    font-size: calc(100% + 6vw);
+    font-size: calc(4vw + 4vh + 2vmin);
     color: hsl(294, 83%, 7%);
     color: var(--colour-dark);
     margin-bottom: .8em;
@@ -724,13 +763,13 @@ h1 {
   }
 
 h2 {
-    font-size: calc(100% + 4vw);
+    font-size: calc(3vw + 3vh + 2vmin);
     margin-bottom: .6em;
     hyphens: auto;
   }
 
 h3 {
-    font-size: calc(100% + 3vw);
+    font-size: calc(2vw + 2vh + 2vmin);
     margin-bottom: .4em;
     hyphens: auto;
   }
@@ -738,19 +777,17 @@ h3 {
 h4,
   h5,
   h6 {
-    font-size: calc(100% + 2vw);
+    font-size: calc(1.4vw + 1.4vh + 2vmin);
     margin-bottom: .4em;
     hyphens: auto;
   }
 
 p {
-    font-size: 1em;
     margin-bottom: .6em;
     hyphens: auto;
   }
 
 .page-headings p {
-    font-size: 1.188em;
     border-left: 4px solid hsl(322, 80%, 51%);
     border-left: 4px solid var(--colour-bright);
     padding-left: .4em;
@@ -762,11 +799,61 @@ input,
   textarea, 
   button {
     font-family:inherit;
-    font-size: .8em;
   }
 
-.sub-text {
-    font-size: .8em;
+/*
+  Anchors
+  styling for bare a tags 
+  ----------------------------------- */
+
+a,
+  .anchor {
+    color: currentColor;
+    text-decoration: none;
+    border-bottom: solid 1px currentColor;
+  }
+
+a:hover,
+  .anchor:hover {
+    transition: all .3s ease-in-out;
+    color: hsl(322, 80%, 51%);
+    color: var(--colour-bright);
+  }
+
+a:active,
+  a:focus,
+  .anchor:active,
+  .anchor:focus {
+    color: hsl(294, 84%, 17%);
+    color: var(--colour-medium);
+  }
+
+a:visited::after{
+    content: '(visited)';
+  }
+
+a
+  [target=_blank]::after {
+    display: inline-block;
+    content: '(opens new window)';
+  }
+
+/* Anchor light */
+
+.anchor__light {
+    color: hsl(0, 0%, 1004%);
+    color: var(--colour-white);
+  }
+
+.anchor__light:hover {
+    color: hsl(322, 80%, 51%);
+    color: var(--colour-bright);
+  }
+
+.anchor__light:active,
+  .anchor__light:focus {
+    color: hsl(0, 0%, 95%);
+    color: var(--colour-light);
   }
 
 /*
@@ -775,66 +862,37 @@ input,
   ----------------------------------- */
 
 .container {
-    max-width: 80em; 
-    background: hsl(0, 0%, 100%); 
+    background: hsl(0, 0%, 1004%);
     background: var(--colour-white);
-    display: table;
+    overflow: hidden;
+    min-height: 100vh;
   }
 
 .sidebar,
   .content {
     max-width: 100%;
-    vertical-align: top;
-    display: inline-block;
     width: calc((1024px - 100%) * 1024);
+    float: left;
+    margin-bottom: -999px;
+    padding-bottom: 999px;
   }
 
 .sidebar {
-    min-width: 17.50em;
+    min-width: 17.5em;
+    color: hsl(0, 0%, 1004%);
+    color: var(--colour-white);
     background: hsl(294, 83%, 7%);
     background: var(--colour-dark);
   }
 
 .content {
-    min-width: calc(100% - 17.80em);
+    min-width: calc(100% - 17.5em);
+    background:hsl(0, 0%, 1004%);
+    background:var(--colour-white);
   }
 
-/*
-  Anchors
-  styling for bare a tags 
-  ----------------------------------- */
-
-/* https://colorme.io/ */
-
-a {
-  color: hsl(294, 84%, 17%);
-  color: var(--colour-medium);
-  text-decoration: none;
-  box-shadow: inset 0 -1px 0 0 hsl(294, 84%, 17%);
-  box-shadow: inset 0 -1px 0 0 var(--colour-medium);
-}
-
-a:hover {
-  color: hsl(294, 83%, 70%);
-  color: hsl(294, 83%, 70%);
-  transition: all .3s ease-in-out;
-}
-
-a:active,
-a:focus {
-  color: rgb(156, 3, 33);
-  color: rgb(156, 3, 33);
-}
-
-a:visited::after {
-  content: '(visited)';
-}
-
-a[target=_blank]::after {
-  display: inline-block;
-  /* overflow: hidden;
-  width: 0;
-  height: 0;
-  white-space: nowrap; */
-  content: '(opens new window)';
-}
+header,
+  main,
+  footer {
+    margin-left: 1em;
+  }

@@ -41,6 +41,6 @@ Content - CSS grid
 
 post css - custom props
 post css - PostCSS import CSS
-post css - grid????
-post css - colour mod ()
+post css - grid????   --- or just use fab 4 for portfolio stuff??
+post css - colour mod ()  or colorFunction?????
 autoprefixer

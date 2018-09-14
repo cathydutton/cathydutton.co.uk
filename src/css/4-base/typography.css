@@ -7,11 +7,10 @@
 /*
   Typography
   ----------------------------------- */
+  
 
   h1 {
-    /* font-family: impact; */
-    /* text-transform: uppercase; */
-    font-size: calc(100% + 6vw);
+    font-size: calc(4vw + 4vh + 2vmin);
     color: var(--colour-dark);
     margin-bottom: .8em;
     line-height: 1.2;
@@ -19,13 +18,13 @@
   }
   
   h2 {
-    font-size: calc(100% + 4vw);
+    font-size: calc(3vw + 3vh + 2vmin);
     margin-bottom: .6em;
     hyphens: auto;
   }
   
   h3 {
-    font-size: calc(100% + 3vw);
+    font-size: calc(2vw + 2vh + 2vmin);
     margin-bottom: .4em;
     hyphens: auto;
   }
@@ -33,19 +32,17 @@
   h4,
   h5,
   h6 {
-    font-size: calc(100% + 2vw);
+    font-size: calc(1.4vw + 1.4vh + 2vmin);
     margin-bottom: .4em;
     hyphens: auto;
   }
 
   p {
-    font-size: 1em;
     margin-bottom: .6em;
     hyphens: auto;
   }
 
   .page-headings p {
-    font-size: 1.188em;
     border-left: 4px solid var(--colour-bright);
     padding-left: .4em;
     hyphens: auto;
@@ -56,9 +53,5 @@
   textarea, 
   button {
     font-family:inherit;
-    font-size: .8em;
   }
 
-  .sub-text {
-    font-size: .8em;
-  }

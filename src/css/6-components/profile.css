@@ -2,11 +2,9 @@
 Profile image
 ----------------------------------- */
 
-
 .profile-image {
   border-radius: 50%;
-  border: dashed 1px color-mod(var(--colour-dark) lighten(10));
-  /* border: dashed 1px var(--colour-light); */
+  border: dashed 2px var(--colour-medium);
   width: 15em;
   height: 15em;
 }
@@ -18,8 +16,8 @@ Profile image
 }
 
 .profile-description {
-  color: var(--colour-white);
-  border-top: solid 1px var(--colour-bright);
-  border-bottom: solid 1px var(--colour-bright);
+  border-top: solid 1px var(--colour-medium);
+  border-bottom: solid 1px var(--colour-medium);
 }
+
 
