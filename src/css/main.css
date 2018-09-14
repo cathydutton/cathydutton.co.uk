@@ -10,5 +10,6 @@
   @import '6-components/navigation';
   @import '6-components/navigation-footer';
   @import '6-components/quotes';
+  @import '6-components/social-media';
   
   @import '7-utilities/utilities';

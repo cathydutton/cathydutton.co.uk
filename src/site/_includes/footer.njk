@@ -1,9 +1,8 @@
 
 <nav class="navigation-footer">
-{% include "navigation.njk" %}
+  {% include "navigation.njk" %}
+</nav>
+{% include "socialMedia.njk" %}
 <p>
-  This page was last updated on {{ date | timestamp }}
-</p>
-<p class="footer__copyright">
-  Copyright 2018 Cathy Dutton - <a href="https://github.com/cathydutton/cathydutton.co.uk" title="view source code on github">view on github.
+  Copyright 2018 Cathy Dutton last updated  {{ date | timestamp }} - <a href="https://github.com/cathydutton/cathydutton.co.uk" title="view source code on github">view on github.
 </p>

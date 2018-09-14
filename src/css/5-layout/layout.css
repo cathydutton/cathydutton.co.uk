@@ -20,7 +20,7 @@
   
   .sidebar {
     min-width: 17.5em;
-    color: var(--colour-white);
+    color: var(--colour-light);
     background: var(--colour-dark);
     text-align: center;
 

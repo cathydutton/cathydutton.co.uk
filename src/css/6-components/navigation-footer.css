@@ -41,11 +41,19 @@
   border-bottom-color: var(--colour-bright);
 }
 
-.navigation-footer .list-item__current,
 .navigation-footer .list-item a:active {
   color: var(--colour-bright);
   box-shadow: 0 3px 0 0 var(--colour-bright);
 }
+
+.navigation-footer .list-item__current a {
+  color: var(--colour-bright);
+  box-shadow: 0 3px 0 0 var(--colour-bright);
+}
+
+
+
+
 
 
 

@@ -17,7 +17,7 @@
   }
   
   .navigation a {
-    color: var(--colour-white);
+    color: var(--colour-light);
     padding: .4em .8em;
     border-bottom: 0;
     border-left: 3px solid var(--colour-bright);
