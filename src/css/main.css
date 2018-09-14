@@ -3,13 +3,12 @@
   Includes all the components and utilities
   ----------------------------------- */
   
-
-
-
-
   @import '6-components/profile';
   @import '6-components/skip-link';
-  /* @import '6-components/buttons'; */
-  /* @import '6-components/social-media-icons'; */
-  /* @import '6-components/navigation'; */
+  @import '6-components/buttons'; 
+  @import '6-components/social-media-icons'; 
+  @import '6-components/navigation';
+  @import '6-components/navigation-footer';
+  @import '6-components/quotes';
+  
   @import '7-utilities/utilities';

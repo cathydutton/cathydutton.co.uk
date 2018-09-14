@@ -5,7 +5,7 @@
   
   a,
   .anchor {
-    color: currentColor;
+    color: var(--colour-medium);
     text-decoration: none;
     border-bottom: solid 1px currentColor;
   }

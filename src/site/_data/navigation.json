@@ -12,6 +12,9 @@
       "menu_item": "Blog"
     },
     {
+      "menu_item": "POD - component library"
+    },
+    {
       "menu_item": "PostCSS plugins"
     }
   ]

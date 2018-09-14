@@ -3,16 +3,16 @@
   CSS variables for fonts, colors, etc.
   ----------------------------------- */
 
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=F4DFF6&v=E61E9C&v=780C83&v=1E0321&v=110213 */
 
-/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=F1F1F1&v=E61E9E&v=47074E&v=1E0321&v=110213 */
 /* Colors */
 :root {
   --colour-black: hsl(293, 81%, 4%);
-  --colour-dark: hsl(294, 83%, 7%);
-  --colour-medium: hsl(294, 83%, 24%);
-  --colour-light: hsl(295, 56%, 92%);
+  --colour-dark: #1d0320;
+  --colour-medium: #780C83;
+  --colour-light: #f4dff6;
   --colour-white: hsl(0, 0%, 100%);
-  --colour-bright: hsl(322, 80%, 51%);
+  --colour-bright: #e61e9c;
 
 
 

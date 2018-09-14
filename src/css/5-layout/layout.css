@@ -22,9 +22,12 @@
     min-width: 17.5em;
     color: var(--colour-white);
     background: var(--colour-dark);
+    text-align: center;
+
   }
   
   .content {
+    animation: fadeIn 2s forwards;
     min-width: calc(100% - 17.5em);
     background:var(--colour-white);
   }
@@ -32,7 +35,12 @@
   header,
   main,
   footer {
-    margin-left: 1em;
+    margin: 0 1em;
+  }
+
+  footer {
+    padding: 1em 0;
+    text-align: center;
   }
 
 

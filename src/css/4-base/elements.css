@@ -22,12 +22,6 @@
     line-height: 1.5;
   }
 
-  blockquote {
-    margin: 0;
-    padding: 1em;
-    border: 1px solid var(--colour-meduim);
-    background: var(--colour-light);
-  }
 
   pre { 
     padding: .5em .5em 0em .5em;

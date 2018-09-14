@@ -19,12 +19,14 @@
   
   h2 {
     font-size: calc(3vw + 3vh + 2vmin);
+    color: var(--colour-dark);
     margin-bottom: .6em;
     hyphens: auto;
   }
   
   h3 {
     font-size: calc(2vw + 2vh + 2vmin);
+    color: var(--colour-dark);
     margin-bottom: .4em;
     hyphens: auto;
   }
@@ -33,6 +35,7 @@
   h5,
   h6 {
     font-size: calc(1.4vw + 1.4vh + 2vmin);
+    color: var(--colour-dark);
     margin-bottom: .4em;
     hyphens: auto;
   }
@@ -42,7 +45,7 @@
     hyphens: auto;
   }
 
-  .page-headings p {
+  .highlight-text {
     border-left: 4px solid var(--colour-bright);
     padding-left: .4em;
     hyphens: auto;
@@ -55,3 +58,6 @@
     font-family:inherit;
   }
 
+  footer p {
+    font-size: .8em;
+  }

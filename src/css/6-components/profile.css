@@ -5,8 +5,10 @@ Profile image
 .profile-image {
   border-radius: 50%;
   border: dashed 2px var(--colour-medium);
-  width: 15em;
-  height: 15em;
+  width: 12em;
+  height: 12em;
+  margin: 1em auto;
+  text-align: center;
 }
 
 
@@ -16,6 +18,9 @@ Profile image
 }
 
 .profile-description {
+  padding: 1em;
+  width: 80%;
+  margin: 0 auto;
   border-top: solid 1px var(--colour-medium);
   border-bottom: solid 1px var(--colour-medium);
 }

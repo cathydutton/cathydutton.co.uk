@@ -8,17 +8,17 @@
   CSS variables for fonts, colors, etc.
   ----------------------------------- */
 
-/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=F1F1F1&v=E61E9E&v=47074E&v=1E0321&v=110213 */
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=F4DFF6&v=E61E9C&v=780C83&v=1E0321&v=110213 */
 
 /* Colors */
 
 :root {
   --colour-black: hsl(293, 81%, 4%);
-  --colour-dark: hsl(294, 83%, 7%);
-  --colour-medium: hsl(294, 83%, 24%);
-  --colour-light: hsl(295, 56%, 92%);
+  --colour-dark: #1d0320;
+  --colour-medium: #780C83;
+  --colour-light: #f4dff6;
   --colour-white: hsl(0, 0%, 100%);
-  --colour-bright: hsl(322, 80%, 51%);
+  --colour-bright: #e61e9c;
 
 
 
@@ -110,7 +110,7 @@
   
   }
 
-/* Animations */
+/* Animation fades */
 
 @keyframes fadeIn {
     0% {opacity: 0;}
@@ -120,6 +120,32 @@
 @keyframes fadeOut {
     0% {opacity: 100;}
     100% {opacity: 0;}
+  }
+
+/* Animation slides */
+
+@keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translate(260px, 0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate(0, 50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: none;
+    }
   }
 
 /*
@@ -608,15 +634,6 @@ body {
     line-height: 1.5;
   }
 
-blockquote {
-    margin: 0;
-    padding: 1em;
-    border: 1px solid var(--colour-meduim);
-    border: 1px solid var(--colour-meduim);
-    background: hsl(0, 0%, 95%);
-    background: var(--colour-light);
-  }
-
 pre { 
     padding: .5em .5em 0em .5em;
     line-height: 1.5;
@@ -764,12 +781,16 @@ h1 {
 
 h2 {
     font-size: calc(3vw + 3vh + 2vmin);
+    color: hsl(294, 83%, 7%);
+    color: var(--colour-dark);
     margin-bottom: .6em;
     hyphens: auto;
   }
 
 h3 {
     font-size: calc(2vw + 2vh + 2vmin);
+    color: hsl(294, 83%, 7%);
+    color: var(--colour-dark);
     margin-bottom: .4em;
     hyphens: auto;
   }
@@ -778,6 +799,8 @@ h4,
   h5,
   h6 {
     font-size: calc(1.4vw + 1.4vh + 2vmin);
+    color: hsl(294, 83%, 7%);
+    color: var(--colour-dark);
     margin-bottom: .4em;
     hyphens: auto;
   }
@@ -787,7 +810,7 @@ p {
     hyphens: auto;
   }
 
-.page-headings p {
+.highlight-text {
     border-left: 4px solid hsl(322, 80%, 51%);
     border-left: 4px solid var(--colour-bright);
     padding-left: .4em;
@@ -801,6 +824,10 @@ input,
     font-family:inherit;
   }
 
+footer p {
+    font-size: .8em;
+  }
+
 /*
   Anchors
   styling for bare a tags 
@@ -808,7 +835,8 @@ input,
 
 a,
   .anchor {
-    color: currentColor;
+    color: hsl(294, 84%, 17%);
+    color: var(--colour-medium);
     text-decoration: none;
     border-bottom: solid 1px currentColor;
   }
@@ -883,9 +911,12 @@ a
     color: var(--colour-white);
     background: hsl(294, 83%, 7%);
     background: var(--colour-dark);
+    text-align: center;
+
   }
 
 .content {
+    animation: fadeIn 2s forwards;
     min-width: calc(100% - 17.5em);
     background:hsl(0, 0%, 1004%);
     background:var(--colour-white);
@@ -894,5 +925,10 @@ a
 header,
   main,
   footer {
-    margin-left: 1em;
+    margin: 0 1em;
+  }
+
+footer {
+    padding: 1em 0;
+    text-align: center;
   }

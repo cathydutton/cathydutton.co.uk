@@ -2,61 +2,49 @@
   Navigation
   ----------------------------------- */
 
-/* .navigation__list {
-  margin: 0;
-  display: flex;
-  flex-flow: row wrap;
-  padding: 1em;
-  background: var(--colour-medium);
-  border-top: solid 2px var(--colour-black);
-  border-bottom: solid 2px var(--colour-black);
-  min-width: 220px;
-} */
-/*   
-.navigation__item {
-  margin: .4em;
-  display: block;
-  background: var(--colour-dark);
-  list-style: none;
-  min-width: 180px;
-  hyphens: auto;
-} */
+  .navigation .list {
+    padding: 0 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  }
   
-/* .navigation__anchor {
-  color: var(--colour-white);
-  display: block;
-  padding: .4em .8em;
-  border-bottom: 0;
-  border-left: 4px solid var(--colour-bright);
-  text-decoration: none;
-  height: 100%;
-}
-   */
-/* .navigation__anchor:hover,
-.navigation__anchor:focus {
-  transition: all .3s ease-in-out;
-  background-color: var(--colour-light);
-  color:  var(--colour-dark);
-  text-decoration: underline;
-  border: 0;
-  border-left: solid 4px var(--colour-bright);
-} */
+  .navigation .list-item {
+    justify-content: center;
+    margin: .4em;
+    list-style: none;
+    hyphens: auto;
+    border: solid 1px var(--colour-medium);
+  }
+  
+  .navigation a {
+    color: var(--colour-white);
+    padding: .4em .8em;
+    border-bottom: 0;
+    border-left: 3px solid var(--colour-bright);
+    display: block;
+    background: linear-gradient(to right, var(--colour-bright) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position:100% bottom;
+  }
 
-/* .navigation__anchor.active {
-  background: var(--colour-light);
-  color:  var(--colour-dark);
-  border-left-color: var(--colour-bright);
-} */
+  .navigation a:hover,
+  .navigation a:focus {
+    color: var(--colour-bright);
+    text-decoration: underline;
+    background-position: 90% bottom;
+  }
+  
+  .navigation .list-item__current,
+  .navigation a:active {
+    background: var(--colour-light);
+    color:  var(--colour-dark);
+  }
 
-/* .navigation__anchor.visited {
-
-}
-    
-.navigation__anchor.active .navigation__anchor__text {
-  border-bottom: solid 1px  var(--colour-dark);
-}
-
-.navigation__anchor.active:hover {
-  text-decoration: none;
-  cursor: not-allowed;
-} */
+  .navigation a:active:hover {
+    text-decoration: none;
+    cursor: not-allowed;
+  }
+  
+ 
+  
+  

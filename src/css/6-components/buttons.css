@@ -2,7 +2,8 @@
   Buttons
   ----------------------------------- */
 
-  button {
+  button,
+  .button {
     display: inline-block;
     margin: .5em 0 0;
     padding: .5em 1em;
@@ -12,35 +13,50 @@
     font-weight: bold;
     box-shadow: 0;
     transition: all 0.3s ease-in-out;
-    background: var(--colour-dark);
+    background: var(--colour-medium);
   }
 
   button:hover,
-  button:active,
-  button:focus,
-  button:visited {
+  .button:hover {
     opacity: 0.74;
     text-decoration: underline;
     border-radius: .8em;
   }
 
   button[disabled="disabled"],
-  button[disabled] {
+  button[disabled],
+  .button[disabled="disabled"],
+  .button[disabled] {
     opacity: 0.7;
     cursor: not-allowed;
   }
 
-  .button:active {
+  button[disabled="disabled"]:hover,
+  button[disabled]:hover,
+  .button[disabled="disabled"]:hover,
+  .button[disabled]:hover {
+    border-radius: .0;
+    text-decoration: none;
+  }
+
+  button:active,
+  button:visited,
+  .button:active,
+  .button:visited,
+   {
     transform: translate(0px, 5px);
     -webkit-transform: translate(0px, 5px);
     box-shadow: 0px 1px 0px 0px;
   }
 
-  .button--primary {
-    background: var(--colour-bright);
-    color: var(--colour-dark);
+  button:focus,
+  .button:focus {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
   }
 
+  .button--bright,
   .button--submit {
     background: var(--colour-bright);
     color: var(--colour-dark);

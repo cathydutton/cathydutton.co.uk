@@ -1,0 +1,41 @@
+/*
+Quotations
+----------------------------------- */
+
+.quote {
+  background: var(--colour-light);
+  margin: 1em;
+  padding: 1em;
+}
+
+blockquote {
+  padding: 1em;
+}
+
+blockquote:before,
+blockquote:after {
+  color: var(--colour-medium);
+  font-size: 4em;
+  line-height: 0.1em;
+}
+
+blockquote:before {
+  content: open-quote;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  content: close-quote;
+  margin-left: 0.25em;
+  vertical-align: -0.6em;
+}
+
+/* 
+cite {
+
+}
+
+q {
+
+} */

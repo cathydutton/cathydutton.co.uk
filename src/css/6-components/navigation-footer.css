@@ -1,0 +1,53 @@
+/*
+    Navigation footer
+    ----------------------------------- */
+
+.navigation-footer {
+  margin: 1.5em auto;
+  padding: 0;
+  font-size: 1.1em;
+}
+
+.navigation-footer .list-item {
+  display: inline-block;
+  margin: .4em;
+}
+
+.navigation-footer .list-item:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px var(--colour-bright);  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+
+.navigation-footer .list-item:hover:after, 
+.navigation-footer .list-item:hover:before { 
+  transform: scaleX(1); 
+}
+
+.navigation-footer .list-item a {
+  color: var(--colour-black);
+  text-decoration: none;
+  border-bottom: 0;
+  box-shadow: 0 3px 0 0 var(--colour-light);
+  display: block;
+}
+
+.navigation-footer .list-item a:hover,
+.navigation-footer .list-item a:focus {
+  transition: all .3s ease-in-out;
+  color: var(--colour-bright);
+  border-bottom-color: var(--colour-bright);
+}
+
+.navigation-footer .list-item__current,
+.navigation-footer .list-item a:active {
+  color: var(--colour-bright);
+  box-shadow: 0 3px 0 0 var(--colour-bright);
+}
+
+
+
+
+
