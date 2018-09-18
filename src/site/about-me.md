@@ -1,13 +1,20 @@
 ---
-title: Work history
+title: About
+pageName: About
 description: ""
-subtitle: cdnsmfns,fnfn,snf,mdnsnf,sd.
 layout: layouts/base.njk
 ---
 
 
-## Header 2
 
+## Tools of choice
+
+
+## Live/now
+
+
+
+### fewjkfhkjer
 
 
 

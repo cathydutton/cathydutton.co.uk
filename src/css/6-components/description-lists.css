@@ -1,0 +1,41 @@
+/*
+    Description Lists
+  ----------------------------------- */
+  
+ 
+  .description-list {
+    margin-top: .4em;
+    margin-bottom: 1em;
+  }
+
+  .description-list__title {
+    font-weight: bold;
+  }
+
+  .description-list__title, 
+  .description-list__description {
+    display: inline;
+    margin: 0;
+  }
+  
+  .description-list__description + .description-list__title::before {
+    content: "\A";
+    white-space: pre;
+  }
+
+  .description-list__title + .description-list__description::before {
+    content: "\A";
+    white-space: pre;
+  }
+  
+  .description-list__description + .description-list__description::before,
+  .description-list__title + .description-list__title::before {
+    content: ', ';
+    font-weight: normal;
+    margin-left: -.25em;
+  }
+
+
+
+
+

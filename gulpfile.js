@@ -28,7 +28,7 @@ gulp.task('generate', () => {
   compile the assets to the correct destination
 */
 gulp.task('assets', gulp.parallel(
-  // 'images',
+  'images',
   'styles',
   'scripts'
 ));

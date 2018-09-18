@@ -6,10 +6,11 @@
   @import '6-components/profile';
   @import '6-components/skip-link';
   @import '6-components/buttons'; 
-  @import '6-components/social-media-icons'; 
   @import '6-components/navigation';
   @import '6-components/navigation-footer';
   @import '6-components/quotes';
   @import '6-components/social-media';
-  
+  @import '6-components/description-lists';
+  @import '6-components/logo-images';
+
   @import '7-utilities/utilities';

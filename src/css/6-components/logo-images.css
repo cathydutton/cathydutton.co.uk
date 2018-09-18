@@ -1,0 +1,14 @@
+/*
+Logo images
+----------------------------------- */
+
+.tech-logo,
+.work-logo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.tech-logo img,
+.work-logo img {
+  filter: hue-rotate(90deg);
+}

@@ -1,0 +1,12 @@
+<ul class="work-logo">
+  {% for item in work %}
+    <li class="work-logo-item">
+      <a href="{{ item.url }}" title="Visit the {{ item.logo }} website" target="_blank" rel="external">
+        <img src="../images/work/{{ item.logo | lower }}-logo.jpg" alt="{{ item.logo }} logo">
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+
+

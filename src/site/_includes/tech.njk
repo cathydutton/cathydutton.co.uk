@@ -1,0 +1,15 @@
+<ul class="tech-logo">
+  {% for item in tech %}
+    <li class="tech-logo-item">
+      <a href="{{ item.url }}" title="Visit the {{ item.logo }} website" target="_blank" rel="external">
+        <img src="../images/tech/{{ item.logo | lower }}.jpg" alt="{{ item.logo }} logo">
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+    
+
+
+
+
+

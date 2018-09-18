@@ -1,0 +1,74 @@
+ [
+    {
+      "logo": "CSS",
+      "url": "https://en.wikipedia.org/wiki/Cascading_Style_Sheets"
+    },
+    {
+      "logo": "PostCSS",
+      "url": "https://postcss.org/"
+    },
+    {
+      "logo": "ITCSS",
+      "url": "https://itcss.io/"
+    },
+    {
+      "logo": "HTML5",
+      "url": "https://en.wikipedia.org/wiki/HTML5"
+    },
+    {
+      "logo": "JavaScript",
+      "url": "https://www.javascript.com/"
+    },
+    {
+      "logo": "Node",
+      "url": "https://nodejs.org/en/"
+    },
+    {
+      "logo": "Express",
+      "url": "https://expressjs.com/"
+    },
+    {
+      "logo": "Gulp",
+      "url": "https://gulpjs.com/"
+    },
+    {
+      "logo": "Git",
+      "url": "https://git-scm.com/"
+    },
+    {
+      "logo": "NPM",
+      "url": "https://www.npmjs.com/"
+    },
+    {
+      "logo": "Sketch",
+      "url": "https://www.sketchapp.com/"
+    },
+    {
+      "logo": "Nunjucks",
+      "url": "https://mozilla.github.io/nunjucks/"
+    },
+    {
+      "logo": "Slack",
+      "url": "https://slack.com/"
+    },
+    {
+      "logo": "Eleventy",
+      "url": "https://www.11ty.io/"
+    },
+    {
+      "logo": "Netliyf",
+      "url": "https://www.netlify.com/"
+    },
+    {
+      "logo": "BEM",
+      "url": "http://getbem.com/"
+    },
+    {
+      "logo": "Github",
+      "url": "https://github.com/"
+    },
+    {
+      "logo": "Balsamiq",
+      "url": "https://balsamiq.com/"
+    }
+  ]

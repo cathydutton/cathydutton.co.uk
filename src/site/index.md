@@ -1,14 +1,14 @@
 ---
-title: My Title
+title: Home
+pageName: Home
 description: ""
-subtitle: cdnsmfns,fnfn,snf,mdnsnf,sd.
 layout: layouts/base.njk
 ---
 
-
-## Header 2
-### Header 3
-#### Header 4
+<h1> Header 1</h1>
+<h2> Header 2</h2>
+<h3>Header 3</h3>
+<h4> Header 4</h4>
 
 <p class="highlight-text"> am a user experience designer with over 12 years industry experience. I am passionate about accessibility, front end architecture, performance and user centered design. I work with CSS (including Sass and PostCSS), HTM</p>  
 
@@ -30,6 +30,10 @@ layout: layouts/base.njk
   </blockquote>
   <figcaption>Sherlock Holmes, <cite>Sign of Four</cite></figcaption>
 </figure>
+
+
+
+
 
 
 

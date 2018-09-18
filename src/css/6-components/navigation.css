@@ -34,7 +34,7 @@
     background-position: 90% bottom;
   }
   
-  .navigation .list-item__current,
+  .navigation .list-item__current a,
   .navigation a:active {
     background: var(--colour-light);
     color:  var(--colour-dark);

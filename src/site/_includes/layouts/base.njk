@@ -32,6 +32,12 @@
       <main id="main">
       <h1 id="js-skip-link-target">{{title}}<h1>
         {{ content | safe }}
+        {% if pageName == "Home" %}
+          {% include "work.njk" %}
+        {% endif %}
+        {% if pageName == "About" %}
+          {% include "tech.njk" %}
+        {% endif %}
       </main>
       <footer class="footer">
         {% include "footer.njk" %}
