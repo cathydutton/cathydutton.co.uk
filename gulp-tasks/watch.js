@@ -10,5 +10,6 @@ gulp.task("watch", function () {
   gulp.watch(project.buildSrc + "/js/**/*", gulp.parallel('scripts'));
   gulp.watch(project.buildSrc + "/css/**/*", gulp.parallel('styles'));
   gulp.watch(project.buildSrc + "/site/**/*",  gulp.parallel('generate'));
+  gulp.watch(project.buildSrc + "/images/**/*",  gulp.parallel('images'));
   'serve'
 });

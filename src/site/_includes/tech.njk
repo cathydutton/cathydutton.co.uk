@@ -1,9 +1,16 @@
 <ul class="tech-logo">
   {% for item in tech %}
     <li class="tech-logo-item">
+    {# {% if item.url %}
       <a href="{{ item.url }}" title="Visit the {{ item.logo }} website" target="_blank" rel="external">
-        <img src="../images/tech/{{ item.logo | lower }}.jpg" alt="{{ item.logo }} logo">
+      <span class="visually-hidden">Visit the {{ item.logo }} website.</span>
+    {% endif %}   #}
+    <div class="image-ratio"> 
+      <img src="../images/tech/{{ item.logo | lower | replace(" ", "-") }}.jpg" alt="{{ item.logo }} logo">
+    </div>
+    {# {% if item.url %}
       </a>
+     {% endif %}    #}
     </li>
   {% endfor %}
 </ul>

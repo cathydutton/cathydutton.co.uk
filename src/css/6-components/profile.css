@@ -5,22 +5,22 @@ Profile image
 .profile-image {
   border-radius: 50%;
   border: dashed 2px var(--colour-medium);
-  width: 10em;
-  height: 10em;
+  width: 12em;
+  height: 12em;
   margin: 1em auto;
   text-align: center;
 }
 
-
 .profile-image__img {
-  clip-path: circle(7em at center);
+  border-radius: 50%;
+  padding: .3em;
   width: 100%;
-}
+} 
 
 .profile-description {
   padding: 1em;
   width: 80%;
-  margin: 0 auto;
+  margin: 1em auto;
   border-top: solid 1px var(--colour-medium);
   border-bottom: solid 1px var(--colour-medium);
 }

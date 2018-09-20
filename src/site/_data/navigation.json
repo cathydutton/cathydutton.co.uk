@@ -1,20 +1,26 @@
  [
     {
-      "menu_item": "Home"
+      "menu_item": "Home",
+      "url": "/"
     },
     {
-      "menu_item": "About me"
+      "menu_item": "About me",
+      "url": "../about-me/"
     },
     {
-      "menu_item": "Portfolio"
+      "menu_item": "Portfolio",
+      "url": "../portfolio/"
     },
     {
-      "menu_item": "Blog"
+      "menu_item": "Blog",
+      "url": "../blog/"
     },
     {
-      "menu_item": "Component library"
+      "menu_item": "Component library",
+      "url": "../component-library/"
     },
     {
-      "menu_item": "PostCSS plugins"
+      "menu_item": "PostCSS plugins",
+      "url": "../postcss-plugins/"
     }
   ]

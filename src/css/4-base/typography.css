@@ -1,13 +1,7 @@
 /*
-  Generic
+  Generic -   Typography
   Reset and/or normalize styles, box-sizing definition, etc. 
   ----------------------------------- */
-
-
-/*
-  Typography
-  ----------------------------------- */
-  
 
   h1 {
     font-size: calc(4vw + 4vh + 2vmin);
@@ -43,12 +37,22 @@
   p {
     margin-bottom: .6em;
     hyphens: auto;
+    font-size: 1em;
   }
 
   .highlight-text {
     border-left: 4px solid var(--colour-bright);
     padding-left: .4em;
     hyphens: auto;
+    font-size: 1.2em;
+  }
+
+  .page-name {
+    margin-bottom: 0;
+  }
+
+  .page-description {
+    font-size: 1.2em;
   }
 
   input, 
@@ -56,6 +60,7 @@
   textarea, 
   button {
     font-family:inherit;
+    font-size: .8em;
   }
 
   footer p {

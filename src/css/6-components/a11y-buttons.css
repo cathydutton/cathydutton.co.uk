@@ -1,0 +1,18 @@
+/*
+  A11y buttons
+  ----------------------------------- */
+
+.accessibility-tools fieldset {
+  margin-bottom: 1em;
+  padding: .4em;
+  min-width: 150px;
+  word-break: break-all;
+}
+
+.accessibility-tools legend {
+  padding: .4em;
+  hyphens: auto;
+  word-break: break-all;
+}
+
+

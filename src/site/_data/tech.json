@@ -1,7 +1,6 @@
  [
     {
-      "logo": "CSS",
-      "url": "https://en.wikipedia.org/wiki/Cascading_Style_Sheets"
+      "logo": "CSS"
     },
     {
       "logo": "PostCSS",
@@ -12,8 +11,7 @@
       "url": "https://itcss.io/"
     },
     {
-      "logo": "HTML5",
-      "url": "https://en.wikipedia.org/wiki/HTML5"
+      "logo": "HTML5"
     },
     {
       "logo": "JavaScript",
@@ -56,12 +54,8 @@
       "url": "https://www.11ty.io/"
     },
     {
-      "logo": "Netliyf",
+      "logo": "Netlify",
       "url": "https://www.netlify.com/"
-    },
-    {
-      "logo": "BEM",
-      "url": "http://getbem.com/"
     },
     {
       "logo": "Github",

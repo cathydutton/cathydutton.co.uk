@@ -1,5 +1,5 @@
 /*
-  Layout
+  Layout - Base
   LHS sidebar responsive layout
   ----------------------------------- */
 
@@ -23,7 +23,6 @@
     color: var(--colour-light);
     background: var(--colour-dark);
     text-align: center;
-
   }
   
   .content {
@@ -36,10 +35,10 @@
   main,
   footer {
     margin: 0 1em;
+    padding: 1em 0;
   }
 
   footer {
-    padding: 1em 0;
     text-align: center;
   }
 

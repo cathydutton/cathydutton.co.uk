@@ -13,4 +13,5 @@
 @import '4-base/typography';
 @import '4-base/anchors';
 
-@import '5-layout/layout';
+@import '5-layout/base';
+@import '5-layout/header';

@@ -5,10 +5,37 @@ Logo images
 .tech-logo,
 .work-logo {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.tech-logo-item,
+.work-logo-item {
+  list-style: none;
 }
 
 .tech-logo img,
 .work-logo img {
-  filter: hue-rotate(90deg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
+.image-ratio {
+  position: relative;
+  display: block;
+}
+
+.image-ratio:before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-bottom: 55%;
+  background: var(--colour-bright);
+  box-shadow:inset 0px 0px 0px 1px var(--colour-dark);
+}
+
+
+
+

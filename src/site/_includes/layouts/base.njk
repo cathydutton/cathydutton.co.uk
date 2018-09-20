@@ -22,6 +22,7 @@
 
 <body>
   <div class="container">
+  <a href="#" class="skip-link" id="js-skip-link">skip to main content</a>
     <aside class="sidebar">
       {% include "sidebar.njk" %}
     </aside>
@@ -30,14 +31,8 @@
         {% include "header.njk" %}
       </header>
       <main id="main">
-      <h1 id="js-skip-link-target">{{title}}<h1>
+        <h2 id="js-skip-link-target">{{pageTitle}}<h2>
         {{ content | safe }}
-        {% if pageName == "Home" %}
-          {% include "work.njk" %}
-        {% endif %}
-        {% if pageName == "About" %}
-          {% include "tech.njk" %}
-        {% endif %}
       </main>
       <footer class="footer">
         {% include "footer.njk" %}

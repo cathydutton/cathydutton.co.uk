@@ -8,58 +8,17 @@
   CSS variables for fonts, colors, etc.
   ----------------------------------- */
 
-/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=F0DAF1&v=E61E9C&v=780C83&v=1E0321&v=110213 */
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=E3E3E3&v=E61E9C&v=780C83&v=1E0321&v=110213 */
 
 /* Colors */
 
 :root {
   --colour-black: hsl(293, 81%, 4%);
-  --colour-dark: #1d0320;
-  --colour-medium: #780C83;
-  --colour-light: #F0DAF1;
-  --colour-white: hsl(0, 0%, 100%);
-  --colour-bright: #e61e9c;
-
-
-
-  --colour-black--h: 293;
-  --colour-black--s: 81%;
-  --colour-black--l: 4%;
-  --colour-black: hsl(293, 81%, 4%);
-  --colour-black: hsl(var(--colour-black--h), var(--colour-black--s), var(--colour-black--l));
-
-  --colour-dark--h: 294;
-  --colour-dark--s: 83%;
-  --colour-dark--l: 7%;
   --colour-dark: hsl(294, 83%, 7%);
-  --colour-dark: hsl(var(--colour-dark--h), var(--colour-dark--s), var(--colour-dark--l));
-
-  --colour-medium--h: 294;
-  --colour-medium--s: 84%;
-  --colour-medium--l: 17%;
-  --colour-medium: hsl(294, 84%, 17%);
-  --colour-medium: hsl(var(--colour-medium--h), var(--colour-medium--s), var(--colour-medium--l));
-
-  --colour-light--h: 0;
-  --colour-light--s: 0%;
-  --colour-light--l: 95%;
-  --colour-light: hsl(0, 0%, 95%);
-  --colour-light: hsl(var(--colour-light--h), var(--colour-light--s), var(--colour-light--l));
-
-  --colour-white--h: 0;
-  --colour-white--s: 0%;
-  --colour-white--l: 1004%;
-  --colour-white: hsl(0, 0%, 1004%);
-  --colour-white: hsl(var(--colour-white--h), var(--colour-white--s), var(--colour-white--l));
-
-  --colour-bright--h: 322;
-  --colour-bright--s: 80%;
-  --colour-bright--l: 51%;
+  --colour-medium: hsl(294, 83%, 28%);
+  --colour-light: hsl(0, 0%, 89%);
+  --colour-white: hsl(0, 0%, 100%);
   --colour-bright: hsl(322, 80%, 51%);
-  --colour-bright: hsl(var(--colour-bright--h), var(--colour-bright--s), var(--colour-bright--l));
-
-
-
 }
 
 .theme-contrast {
@@ -638,9 +597,9 @@ pre {
     padding: .5em .5em 0em .5em;
     line-height: 1.5;
     margin-bottom: 1em;
-    background:hsl(0, 0%, 95%);
+    background:hsl(0, 0%, 89%);
     background:var(--colour-light);
-    background-image: linear-gradient( hsl(0, 0%, 1004%) 50%, transparent 0);
+    background-image: linear-gradient( hsl(0, 0%, 100%) 50%, transparent 0);
     background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
     background-size: auto 3em;
     background-origin: content-box; 
@@ -692,15 +651,11 @@ svg {
 /* Unordered lists */
 
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-left: 1em;
 }
 
 ul li {
-  margin-bottom: .4em;
   list-style: disc;
 }
 
@@ -709,13 +664,9 @@ ul li {
 .ol {
   list-style: none;
   padding: 0;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-left: 1em;
 }
 
 .ol li {
-  margin-bottom: .4em;
   list-style-type: decimal;
 }
 
@@ -762,12 +713,8 @@ dt + dt::before,,
 }
 
 /*
-  Generic
+  Generic -   Typography
   Reset and/or normalize styles, box-sizing definition, etc. 
-  ----------------------------------- */
-
-/*
-  Typography
   ----------------------------------- */
 
 h1 {
@@ -808,6 +755,7 @@ h4,
 p {
     margin-bottom: .6em;
     hyphens: auto;
+    font-size: 1em;
   }
 
 .highlight-text {
@@ -815,6 +763,15 @@ p {
     border-left: 4px solid var(--colour-bright);
     padding-left: .4em;
     hyphens: auto;
+    font-size: 1.2em;
+  }
+
+.page-name {
+    margin-bottom: 0;
+  }
+
+.page-description {
+    font-size: 1.2em;
   }
 
 input, 
@@ -822,6 +779,7 @@ input,
   textarea, 
   button {
     font-family:inherit;
+    font-size: .8em;
   }
 
 footer p {
@@ -835,7 +793,7 @@ footer p {
 
 a,
   .anchor {
-    color: hsl(294, 84%, 17%);
+    color: hsl(294, 83%, 28%);
     color: var(--colour-medium);
     text-decoration: none;
     border-bottom: solid 1px currentColor;
@@ -852,7 +810,7 @@ a:active,
   a:focus,
   .anchor:active,
   .anchor:focus {
-    color: hsl(294, 84%, 17%);
+    color: hsl(294, 83%, 28%);
     color: var(--colour-medium);
   }
 
@@ -869,7 +827,7 @@ a
 /* Anchor light */
 
 .anchor__light {
-    color: hsl(0, 0%, 1004%);
+    color: hsl(0, 0%, 100%);
     color: var(--colour-white);
   }
 
@@ -880,17 +838,17 @@ a
 
 .anchor__light:active,
   .anchor__light:focus {
-    color: hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 89%);
     color: var(--colour-light);
   }
 
 /*
-  Layout
+  Layout - Base
   LHS sidebar responsive layout
   ----------------------------------- */
 
 .container {
-    background: hsl(0, 0%, 1004%);
+    background: hsl(0, 0%, 100%);
     background: var(--colour-white);
     overflow: hidden;
     min-height: 100vh;
@@ -907,18 +865,17 @@ a
 
 .sidebar {
     min-width: 17.5em;
-    color: hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 89%);
     color: var(--colour-light);
     background: hsl(294, 83%, 7%);
     background: var(--colour-dark);
     text-align: center;
-
   }
 
 .content {
     animation: fadeIn 2s forwards;
     min-width: calc(100% - 17.5em);
-    background:hsl(0, 0%, 1004%);
+    background:hsl(0, 0%, 100%);
     background:var(--colour-white);
   }
 
@@ -926,9 +883,20 @@ header,
   main,
   footer {
     margin: 0 1em;
+    padding: 1em 0;
   }
 
 footer {
-    padding: 1em 0;
     text-align: center;
+  }
+
+/*
+  Layout - Header
+  Page title and a11y buttons
+  ----------------------------------- */
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    grid-gap:
   }

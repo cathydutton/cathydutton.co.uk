@@ -13,12 +13,12 @@
     font-weight: bold;
     box-shadow: 0;
     transition: all 0.3s ease-in-out;
-    background: var(--colour-medium);
+    background: var(--colour-dark);
   }
 
   button:hover,
   .button:hover {
-    opacity: 0.74;
+    background: var(--colour-bright);
     text-decoration: underline;
     border-radius: .8em;
   }
@@ -37,23 +37,14 @@
   .button[disabled]:hover {
     border-radius: .0;
     text-decoration: none;
+    background: var(--colour-medium);
   }
 
   button:active,
   button:visited,
   .button:active,
-  .button:visited,
-   {
-    transform: translate(0px, 5px);
-    -webkit-transform: translate(0px, 5px);
-    box-shadow: 0px 1px 0px 0px;
-  }
-
-  button:focus,
-  .button:focus {
-    transform: translate(0px, 5px);
-    -webkit-transform: translate(0px, 5px);
-    box-shadow: 0px 1px 0px 0px;
+  .button:visited {
+    opacity: 0.74;
   }
 
   .button--bright,
@@ -61,6 +52,13 @@
     background: var(--colour-bright);
     color: var(--colour-dark);
   }
+
+  .button--bright:hover,
+  .button--submit:hover {
+    background: var(--colour-dark);
+    color: var(--colour-white);
+  }
+
 
   .button--right {
     float: right;

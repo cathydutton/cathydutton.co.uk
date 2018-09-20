@@ -2,6 +2,10 @@
   Navigation
   ----------------------------------- */
 
+  .navigation {
+    margin: 1em 0;
+  }
+
   .navigation .list {
     padding: 0 1em;
     display: grid;
@@ -24,7 +28,7 @@
     display: block;
     background: linear-gradient(to right, var(--colour-bright) 50%, transparent 50%);
     background-size: 200% 100%;
-    background-position:100% bottom;
+    background-position: 99% bottom;
   }
 
   .navigation a:hover,
@@ -36,7 +40,7 @@
   
   .navigation .list-item__current a,
   .navigation a:active {
-    background: var(--colour-light);
+    background: var(--colour-white);
     color:  var(--colour-dark);
   }
 
