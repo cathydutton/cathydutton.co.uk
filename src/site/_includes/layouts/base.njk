@@ -31,7 +31,9 @@
         {% include "header.njk" %}
       </header>
       <main id="main">
-        <h2 id="js-skip-link-target">{{pageTitle}}<h2>
+        <p class="highlight-text" id="js-skip-link-target">
+          {{pageIntro}}
+        <p>
         {{ content | safe }}
       </main>
       <footer class="footer">

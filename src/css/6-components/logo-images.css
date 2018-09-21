@@ -32,8 +32,8 @@ Logo images
   display: block;
   width: 100%;
   padding-bottom: 55%;
-  background: var(--colour-bright);
-  box-shadow:inset 0px 0px 0px 1px var(--colour-dark);
+  background: var(--colour-light);
+  box-shadow:inset 0px 0px 0px 1px var(--colour-medium);
 }
 
 

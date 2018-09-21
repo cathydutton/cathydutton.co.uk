@@ -54,88 +54,91 @@
   }
 
 
+  /* SELECT */
+  ::selection {
+    background: lighten(map-get($colours, 'accent'), 25%);
+  }
+
+  /* IMGAES */
+  img {
+    image-rendering: auto;
+  }
+
+  /* SVG */
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* LISTS */
+
+  /* Unordered lists */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul li {
+    list-style: disc;
+  }
+
+  /* Ordered lists */
+  .ol {
+    list-style: none;
+    padding: 0;
+  }
+
+  .ol li {
+    list-style-type: decimal;
+  }
 
 
 
-/* SELECT */
-::selection {
-  background: lighten(map-get($colours, 'accent'), 25%);
-}
+  /* DESCRIPTION LIST */
+  dl,
+  .description-list {
+    margin-top: .4em;
+    margin-bottom: 1em;
+  }
 
-/* IMGAES */
-img {
-  image-rendering: auto;
-}
+  dt,
+  .description-list__title {
+    font-weight: bold;
+  }
 
-/* SVG */
-svg {
-  width: 100%;
-  height: 100%;
-}
+  dt,
+  dd,
+  .description-list__title, 
+  .description-list__description {
+    display: inline;
+    margin: 0;
+  }
 
-/* LISTS */
+  dd + dt::before 
+  .description-list__description + .description-list__title::before {
+    content: "\A";
+    white-space: pre;
+  }
 
-/* Unordered lists */
-ul {
-  list-style: none;
-  padding: 0;
-}
+  dt + dd::before,
+  .description-list__title + .description-list__description::before {
+    content: "\A";
+    white-space: pre;
+  }
 
-ul li {
-  list-style: disc;
-}
-
-/* Ordered lists */
-.ol {
-  list-style: none;
-  padding: 0;
-}
-
-.ol li {
-  list-style-type: decimal;
-}
-
+  dd + dd::before,
+  dt + dt::before,,
+  .description-list__description + .description-list__description::before,
+  .description-list__title + .description-list__title::before {
+    content: ', ';
+    font-weight: normal;
+    margin-left: -.25em;
+  }
 
 
-/* DESCRIPTION LIST */
-dl,
-.description-list {
-  margin-top: .4em;
-  margin-bottom: 1em;
-}
 
-dt,
-.description-list__title {
-  font-weight: bold;
-}
-
-dt,
-dd,
-.description-list__title, 
-.description-list__description {
-  display: inline;
-  margin: 0;
-}
-
-dd + dt::before 
-.description-list__description + .description-list__title::before {
-  content: "\A";
-  white-space: pre;
-}
-
-dt + dd::before,
-.description-list__title + .description-list__description::before {
-  content: "\A";
-  white-space: pre;
-}
-
-dd + dd::before,
-dt + dt::before,,
-.description-list__description + .description-list__description::before,
-.description-list__title + .description-list__title::before {
-  content: ', ';
-  font-weight: normal;
-  margin-left: -.25em;
+  [hidden], template {
+    display: none;
 }
 
 

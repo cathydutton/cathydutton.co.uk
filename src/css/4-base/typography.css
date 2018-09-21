@@ -6,13 +6,13 @@
   h1 {
     font-size: calc(4vw + 4vh + 2vmin);
     color: var(--colour-dark);
-    margin-bottom: .8em;
+    margin: 0;
     line-height: 1.2;
     hyphens: auto;
   }
   
   h2 {
-    font-size: calc(3vw + 3vh + 2vmin);
+    font-size: calc(2.5vw + 2.5vh + 2vmin);
     color: var(--colour-dark);
     margin-bottom: .6em;
     hyphens: auto;
@@ -35,23 +35,19 @@
   }
 
   p {
-    margin-bottom: .6em;
-    hyphens: auto;
+    margin-bottom: .8em;
     font-size: 1em;
   }
 
-  .highlight-text {
+  p.highlight-text {
     border-left: 4px solid var(--colour-bright);
     padding-left: .4em;
     hyphens: auto;
     font-size: 1.2em;
   }
 
-  .page-name {
-    margin-bottom: 0;
-  }
-
-  .page-description {
+  p.page-description {
+    hyphens: auto;
     font-size: 1.2em;
   }
 
