@@ -1,6 +1,7 @@
  [
     {
-      "logo": "CSS"
+      "logo": "CSS",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3"
     },
     {
       "logo": "PostCSS",
@@ -11,7 +12,8 @@
       "url": "https://itcss.io/"
     },
     {
-      "logo": "HTML5"
+      "logo": "HTML5",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
     },
     {
       "logo": "JavaScript",

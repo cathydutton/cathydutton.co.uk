@@ -8,8 +8,8 @@ Logo images
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
-.tech-logo-item,
-.work-logo-item {
+.tech-logo__item,
+.work-logo__item {
   list-style: none;
 }
 
@@ -21,6 +21,48 @@ Logo images
   top: 0;
   left: 0;
 }
+
+.tech-logo__anchor,
+.work-logo__anchor {
+  display: block;
+  position: relative;
+}
+
+.tech-logo__anchor:focus,
+.work-logo__anchor:focus {
+  outline: 0;
+}
+
+.tech-logo__anchor:before,
+.work-logo__anchor:before {
+  background-color:var(--colour-bright);
+  color: var(--colour-white);
+  content: attr(aria-label);
+  font-weight: bold;
+  display: inline-block;
+  opacity: 0;
+  padding: 5px 10px;
+  position: absolute;
+  text-align: center;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+
+.tech-logo__anchor:focus:before,
+.tech-logo__anchor:hover:before,
+.work-logo__anchor:focus:before,
+.work-logo__anchor:hover:before {
+  transition: all .3s ease-in-out;
+  opacity: .90;
+}
+
+
+
+
+
+
+
 
 .image-ratio {
   position: relative;
