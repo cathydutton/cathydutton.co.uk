@@ -1,5 +1,7 @@
 {
   "layout" : "layouts/post.md",
   "tags" : "post",
-  "templateEngineOverride": "njk,md"
+  "author": "Cathy Dutton",
+  "templateEngineOverride": "njk,md",
+  "permalink": "posts/{{ page.fileSlug }}/index.html"
 }

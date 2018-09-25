@@ -6,13 +6,16 @@
   margin-bottom: 1em;
   padding: .4em;
   min-width: 150px;
-  word-break: break-all;
 }
 
 .accessibility-tools legend {
   padding: .4em;
   hyphens: auto;
-  word-break: break-all;
 }
+
+.button--ally {
+  font-size: .7em;
+}
+
 
 

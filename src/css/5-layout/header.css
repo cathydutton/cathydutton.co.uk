@@ -4,9 +4,24 @@
   ----------------------------------- */
 
   .header {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap:
+    
   }
+
+  .page-introduction {
+    width: 70%;
+    min-width: 25em;
+    max-width: 70%;
+    margin-right: 5%;
+    float: left;
+
+  }
+
+  .accessibility-tools {
+   float: right;
+   width: 25%;
+   min-width: 25em;
+   max-width: 25%;
+  }
+  
   
   

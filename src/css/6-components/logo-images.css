@@ -5,7 +5,12 @@ Logo images
 .tech-logo,
 .work-logo {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(9.375em, 1fr));
+}
+
+.tech-logo a,
+.work-logo a {
+  border: 0;
 }
 
 .tech-logo__item,
@@ -35,7 +40,7 @@ Logo images
 
 .tech-logo__anchor:before,
 .work-logo__anchor:before {
-  background-color:var(--colour-bright);
+  background-color:var(--colour-dark);
   color: var(--colour-white);
   content: attr(aria-label);
   font-weight: bold;
