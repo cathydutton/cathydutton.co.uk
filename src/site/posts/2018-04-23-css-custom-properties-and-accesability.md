@@ -2,7 +2,7 @@
 title: CSS custom properties and accessibility
 description: A look at CSS custom properties and there uses in building accessible websites
 date:   2018-04-02 
-tags: CSS, Accessibility
+tags: [CSS, Accessibility]
 ---
 
 Giving users the ability to control the way they see content improves the accessibility and usability of a site. This is traditionally achieved with a <a href="https://en.wikibooks.org/wiki/Cascading_Style_Sheets/User_Style_Sheets" title="User stylesheet information">user stylesheet </a>(although this is no longer supported in Chrome without the use of additional plugins).

@@ -5,6 +5,16 @@ module.exports = function(config) {
   config.addFilter("timestamp", require("./filters/timestamp.js") );
   config.addFilter("squash", require("./filters/squash.js") );
 
+  // Blog post collection
+  config.addCollection("posts", function(collection) {
+    return collection.getFilteredByGlob("**/posts/**.md").reverse();
+  });
+
+  // Latest posts include
+   config.addCollection("latestPosts", function(collection) {
+    return collection.getFilteredByGlob("**/posts/**.md").slice(-5).reverse();
+  });
+
   return {
     dir: {
       input: "src/site",
@@ -17,4 +27,30 @@ module.exports = function(config) {
     markdownTemplateEngine : "njk"
   };
 
+
+    // // Add post collection
+    // config.addCollection('posts', collection => {
+    //   return collection.getFilteredByGlob('**/posts/*.md').reverse()
+    // })
+
+    // // Add latest post collection
+    // config.addCollection('latestPosts', collection => {
+    //   return collection
+    //     .getFilteredByGlob('**/posts/*.md')
+    //     .slice(-5)
+    //     .reverse()
+    // })
+
+ 
+
+
+
 };
+
+
+
+
+
+
+
+

@@ -1,13 +1,66 @@
 ---
-title: My Title
-description: frefrefrf
+metaTitle: Interaction Design, UX and Front End Development blog - Cathy Dutton
+metaDescription: Front End Developer, CSS, Sass, UX, PostCSS and JavaScript
 pageName: Blog
-pageDescription: ferferfe
-pageTitle: About me
+pageDescription: Latest posts and tutorials
+pageTitle: Blog
 layout: layouts/base.njk
 ---
 
 
 
-dwedel;f;ewmf;em;m;wmf
+{# <ul>
+  {%- for post in collections.post -%}
+    <li>
+      {{ post.data.title }}
+    </li>
+  {%- endfor -%}
+</ul> #}
 
+{# 
+{%- for post in collections.post | reverse -%}
+  <article>
+    <header>
+      <time>{{ entry.date }}</time>
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    </header>
+    <div>
+      <p>{{ post.data.description | safe }}</p>
+      {% if post.data.tags %}
+        <p>Tagged: {% for tag in post.data.tags %}<a href="/posts/tagged/{{ tag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+      {% endif %}
+    </div>
+  </article>
+ {%- endfor -%} #}
+
+{# <section>
+    <div class="c-prose">
+      <h2>Latest posts</h2>
+      <ul>
+        {% for entry in collections.latestPosts %}
+        <li>
+          <a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section> #}
+
+
+  
+
+<h2>All posts</h2>
+{% for post in collections.posts %}
+  <article>
+    <h3>{{post.data.title}}</h3>
+    Testing!
+  </article>
+{% endfor %}
+
+<h2>Latest posts</h2>
+{% for post in collections.latestPosts %}
+  <article>
+    <h3>{{post.data.title}}</h3>
+    Testing!
+  </article>
+{% endfor %}

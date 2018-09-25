@@ -1,8 +1,7 @@
 ---
 title: Have no fear
 description: Accepting failure and designing without fear
-date:   2017-03-05
-
+date: 2017-03-05
 ---
 
 Designing new products or services can be a daunting or even intimidating process at times. How do you create an experience that works well for everybody? How do you design for edge and stress cases you don't yet know exist? What if people don't like, or worse cant use the service?

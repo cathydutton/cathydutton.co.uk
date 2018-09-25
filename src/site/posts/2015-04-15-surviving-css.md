@@ -2,7 +2,7 @@
 title: Surviving CSS
 description: A look at how to work effectively with CSS
 date: 2015-04-15
-tags: CSS
+tags: [CSS]
 ---
 
 [Article originally posted on medium.](https://medium.com/@cathy_dutton/surviving-css-be306ef3de6d#.k8czem45b)
