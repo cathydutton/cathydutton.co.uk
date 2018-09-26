@@ -2,6 +2,7 @@
 title: 'What&#8217;s in a name'
 description: Naming things well
 date: 2014-03-28
+tags: [CSS, Front end development, HTML]
 ---
 
 Back when front end frameworks like Foundation were built using css instead of Sass the class names were presentational as opposed to semantic. The mark up used in grid systems was similar to the code example below.</p>

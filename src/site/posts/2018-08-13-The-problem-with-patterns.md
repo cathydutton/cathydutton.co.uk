@@ -2,7 +2,7 @@
 title: The problem with patterns
 description: A look at design patterns and the problems they can cause
 date:   2018-08-14
-tags: [User experience, UX, Component libraries, Design patterns]
+tags: [Design]
 ---
 
 Originally posted on [A List Apart](https://alistapart.com/article/problem-with-patterns)

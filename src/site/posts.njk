@@ -1,0 +1,44 @@
+---
+metaTitle: Interaction Design, UX and Front End Development blog - Cathy Dutton
+metaDescription: Front End Developer, CSS, Sass, UX, PostCSS and JavaScript
+pageName: Blog
+pageDescription: Latest posts and tutorials
+pageTitle: Blog
+layout: layouts/base.njk
+pagination:
+  data: collections.posts
+  size: 1
+---
+
+<section>
+  {%- for post in collections.posts -%}
+    <article class="js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+      <header>
+        <h2>
+          <a href="{{ post.url }}">
+            <span class="visually-hidden">Article title</span>
+            {{ post.data.title }}
+          </a>
+        </h2>
+        <p>
+          <span class="visually-hidden">Published on</span>
+          <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
+        </p>
+      </header>
+      <div>
+        <p>{{ post.data.description | safe }}</p>
+        {% if post.data.tags %}
+          <p>Tagged in: {% for tag in post.data.tags %}<a href="/posts/tags/{{ tag | lower | replace(" ", "-") }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+        {% endif %}
+      </div>
+    </article>
+  {%- endfor -%} 
+</section>
+
+
+
+
+
+
+
+

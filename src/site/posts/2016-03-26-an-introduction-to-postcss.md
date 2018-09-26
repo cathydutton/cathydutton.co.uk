@@ -2,6 +2,7 @@
 title: Getting started with PostCSS
 description: How to get started with PostCSS
 date: 2016-03-26
+tags: [CSS]
 ---
 
 

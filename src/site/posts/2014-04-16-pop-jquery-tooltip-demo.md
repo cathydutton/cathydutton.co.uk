@@ -2,6 +2,7 @@
 title: Pop jQuery tooltip demo
 description: jQuery tooltip demo and code
 date: 2014-04-16
+tags: [JavaScript, Front end development]
 ---
 
 Pop is a simple to use, responsive jQuery tooltip with css animations. The jQuery is written below and includes a click function as well a hover to support desktop and touch screen devices.

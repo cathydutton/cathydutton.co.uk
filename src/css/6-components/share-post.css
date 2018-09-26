@@ -1,0 +1,38 @@
+/*
+Social Share buttons
+----------------------------------- */
+
+.share-post {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  grid-gap: 1em;
+}
+
+.share-post a {
+  display: block;
+  padding: .5em;
+  color: var(--colour-white);
+}
+
+.share-post a:hover,
+.share-post a:active {
+  color: var(--colour-bright);
+}
+
+.share-post__twitter {
+  background: #4099ff;
+  border: 0;
+  border-bottom: solid 2px #0f4481;
+}
+
+.share-post__facebook {
+  background: #3b5998;
+  border: 0;
+  border-bottom: solid 2px #142547;
+}
+
+.share-post__google {
+  background: #008744;
+  border: 0;
+  border-bottom: solid 2px #013f20;
+}

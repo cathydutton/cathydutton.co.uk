@@ -2,6 +2,7 @@
 title: Sass variables and how to use them
 description: An introduction to Sass variables
 date: 2014-06-18
+tags: [CSS]
 ---
 
 Sass variables are used to store information that you want to reuse throughout your project. Using variables allows you to make site wide changes by adjusting just one value, making updates much simpler and quicker.

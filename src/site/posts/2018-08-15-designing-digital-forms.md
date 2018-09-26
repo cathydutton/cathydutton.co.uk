@@ -2,7 +2,7 @@
 title: Designing digital forms
 description: Designing digital forms to create the simplest user journeys.
 date:   2018-08-15
-tags: [User experience, UX, Form design]
+tags: [Design]
 ---
 
 Every day more and more users interact with businesses and organisations online, to register for a service, book an appointment, apply for a licence or to submit information. Often these digital services are direct replacements for legacy paper based services.

@@ -2,6 +2,7 @@
 title: 7 reasons to start using PostCSS today
 description: 7 reasons to jump into PostCSS today
 date: 2016-02-23
+tags: [CSS]
 ---
 
 PostCSS makes it possible to transform or extend syntaxes and features of CSS. Nothing groundbreaking there then, but unlike existing pre-processors PostCSS aims to improve the usability of CSS by solving long standing issues with CSS at scale such as global scope and inheritance.

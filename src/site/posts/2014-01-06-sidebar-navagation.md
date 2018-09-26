@@ -2,6 +2,7 @@
 title: Sidebar navigation
 description: A look at sidebar navigation in website design
 date: 2014-01-06
+tags: [Design]
 ---
 
 Over the last few months I have found myself reading more on more about conversion rate optimisation and thinking much more about how a websites layout can help improve a users journey and encourage them to either make a purchase or an enquiry.

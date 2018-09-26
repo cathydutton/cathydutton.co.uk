@@ -47,9 +47,11 @@
   --font-size: 16px;
 }
 
+/* MOVE THIS PLEASE */
 
-
-
+.clickable {
+  cursor: pointer;
+}
 
 
 

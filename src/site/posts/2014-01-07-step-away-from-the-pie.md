@@ -2,6 +2,7 @@
 title: Step away from the pie
 description: Graceful degradation over plugins and polly-fills
 date: 2014-01-07
+tags: [Front end development]
 ---
 
 Over the last few years along with most website designers I found myself increasingly using css3 properties such as text shadow, box shadow and rounded corners. Although subtle these features add style and depth to a website&#8217;s design and allow for that little bit extra in terms of detail.

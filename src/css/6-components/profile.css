@@ -20,6 +20,7 @@ Profile image
 .profile-description {
   padding: 1em;
   width: 80%;
+  max-width: 25em;
   margin: 1em auto;
   border-top: solid 1px var(--colour-medium);
   border-bottom: solid 1px var(--colour-medium);

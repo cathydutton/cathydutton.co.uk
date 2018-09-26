@@ -2,6 +2,7 @@
 title: The end of jQuery sliders
 description:  The end of jQuery sliders
 date: 2014-01-03
+tags: [javaScript]
 ---
 
 With the current focus on conversion rate optimisation, load time and page speed it may finally be time to move away from the currently over used jQuery sliding banners.

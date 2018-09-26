@@ -2,6 +2,7 @@
 title: Optimise your CSS by taking better care of your HTML
 description: Semantic HTML for cleaner CSS
 date: 2015-01-09
+tags: [CSS, Front end development, HTML]
 ---
 
 This post looks at the role HTML can play in producing more optimised CSS. When discussing issues with CSS bloat, specificity and selector limits, focus is often drawn to the misuse of Sass. It’s true that refactoring your Sass can go a long way however paying attention to your website markup can be just as effective.

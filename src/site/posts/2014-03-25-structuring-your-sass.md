@@ -2,6 +2,7 @@
 title: Structuring your Sass
 description: How to structure a Sass project
 date: 2014-03-25
+tags: [CSS]
 ---
 
 When setting up a new web project getting things right from the beginning is hugely important. Using Sass, style sheets can now be split into more manageable chunks without adding extra http requests. The Bear boilerplate (created following <a href="https://cathydutton.co.uk/css/the-dreaded-front-end-framework" >this</a> earlier post) splits CSS into the following 5 sections&#8230;

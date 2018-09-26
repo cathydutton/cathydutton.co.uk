@@ -2,6 +2,7 @@
 title: 'Maze &#8211; responsive grid framework'
 description: Maze - A Sass responsive grid
 date: 2014-05-06
+tags: [CSS]
 ---
 
 After numerous rants regarding my disliking for Bootstrap and most other front end frameworks, I decided to have a go myself. The results can be found here <a href="http://www.get-maze.co.uk" target="_blank" >www.get-maze.co.uk</a>, an easy to customise grid built using Sass and HTML 5. My aim with Maze was to produce a simple to use set of mixins enabling percentage widths to be assigned to any selector in any layout.

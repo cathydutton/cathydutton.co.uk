@@ -2,6 +2,7 @@
 title: 'Sass structure &#8211; layout and theme files'
 description: Structuring a frontend project - CSS
 date: 2014-06-13
+tags: [CSS, Front end development]
 ---
 
 Following on from this post <a href="https://cathydutton.co.uk/css/separate-your-layout-sass" target="_blank" title="Layout Sass file" >&#8216;Separate Your Layout and skin Sass files&#8217;</a> I put together a larger working example to further demonstrate the theory.

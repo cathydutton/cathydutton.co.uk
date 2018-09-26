@@ -2,6 +2,7 @@
 title: Sass dynamic colour change
 description: A sass colour function
 date: 2014-05-15
+tags: [CSS]
 ---
 
 When building the website for <a href="http://get-maze.co.uk/" target="_blank">Maze</a> I wanted to display the content on one page with a downward scroll. Each section or slide would therefore need to have a different background colour to emphasise the content change.

@@ -1,0 +1,22 @@
+---
+metaTitle: Tags
+metaDescription: Tags
+pageName: Tags
+pageDescription: Tags
+pageTitle: Tags
+layout: layouts/base.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/
+---
+
+<h1>Tagged “{{ tag }}”</h1>
+<ol>
+{% set taglist = collections[ tag ] %}
+{% for post in taglist | reverse %}
+  <li><a href="{{ post.url | url }}">{{ post.data.title }}</li>
+{% endfor %}
+</ol>
+

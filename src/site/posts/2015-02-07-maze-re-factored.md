@@ -2,7 +2,7 @@
 title: Maze Re-factored
 description: Re-factoring Maze - A PostCSS responsive grid system
 date: 2015-02-07
-tags: [CSS, Sass, PostCSS]
+tags: [CSS]
 ---
 
 The original Maze framework was written in 2013 with the aim of removing column markup and creating a more semantic system. The grid was also developed with flexibility in mind aiming to create a basic starting point for any responsive layout. Maze was able to support any grid column size, with configurable margins and push values that could be updated from row to row. The direction in which elements stacked was also configurable. Documentation on how Maze worked can be found

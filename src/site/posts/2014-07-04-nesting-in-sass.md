@@ -2,6 +2,7 @@
 title: Say no to nesting
 description: The problems with Sass nesting
 date: 2014-07-04
+tags: [CSS]
 ---
 
 Sass, as well as making style sheets awesome, was created to take some of the pain out of writing css. It&#8217;s main purpose is to make code easier and quicker to write, modify and build upon. There are a lot of features within Sass which help achieve this, Variables, Lists, Mixins and loops to name a few.

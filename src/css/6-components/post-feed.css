@@ -1,0 +1,37 @@
+/*
+Latest posts feed
+----------------------------------- */
+
+.news-feed__post {
+  width: 100%;
+  margin-top: 1.4em;
+  padding: .8em;
+  border: solid 1px red;
+  border-left: solid 4px red;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.news-feed__post:hover,
+.news-feed__post:focus {
+  border: solid 1px red;
+ border-left: solid 8px red;
+  color: inherit;
+}
+
+.news-feed__anchor {
+  display: table-cell;
+  width: 90%;
+}
+
+
+
+.news-feed__date {
+  margin-top: 0;
+}
+
+.news-feed__description {
+  margin-top: 0;
+}
+
+

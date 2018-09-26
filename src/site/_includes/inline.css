@@ -55,6 +55,12 @@
   --font-size: 16px;
 }
 
+/* MOVE THIS PLEASE */
+
+.clickable {
+  cursor: pointer;
+}
+
 /*
   Tools
   Globally used styles mixins and functions. 
@@ -516,7 +522,6 @@ fieldset {
 legend {
   border: 0; /* 1 */
   padding: 0; /* 2 */
-  hyphens: auto;
 }
 
 /**
@@ -727,7 +732,6 @@ h1 {
     color: var(--colour-dark);
     margin: 0;
     line-height: 1.2;
-    hyphens: auto;
   }
 
 h2 {
@@ -735,7 +739,6 @@ h2 {
     color: hsl(294, 83%, 7%);
     color: var(--colour-dark);
     margin-bottom: .6em;
-    hyphens: auto;
   }
 
 h3 {
@@ -743,7 +746,6 @@ h3 {
     color: hsl(294, 83%, 7%);
     color: var(--colour-dark);
     margin-bottom: .4em;
-    hyphens: auto;
   }
 
 h4,
@@ -753,7 +755,6 @@ h4,
     color: hsl(294, 83%, 7%);
     color: var(--colour-dark);
     margin-bottom: .4em;
-    hyphens: auto;
   }
 
 p {
@@ -765,12 +766,10 @@ p.highlight-text {
     border-left: 4px solid hsl(322, 80%, 51%);
     border-left: 4px solid var(--colour-bright);
     padding-left: .4em;
-    hyphens: auto;
     font-size: 1.2em;
   }
 
 p.page-description {
-    hyphens: auto;
     font-size: 1.2em;
   }
 
