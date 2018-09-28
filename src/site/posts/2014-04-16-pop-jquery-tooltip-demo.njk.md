@@ -1,0 +1,215 @@
+---
+title: Pop jQuery tooltip demo
+description: How to build a jQuery tooltip - demo and code
+date: 2014-04-16
+tags: [JavaScript, Front end development]
+---
+
+Pop is a simple to use, responsive jQuery tooltip with css animations. The jQuery is written below and includes a click function as well a hover to support desktop and touch screen devices.
+
+<a href="https://codepen.io/cathydutton/pen/yctrI" target="_blank">View demo</a>
+
+```
+$(document).ready(function () {
+
+  $(".button").mouseenter(function () {
+    $(this).prev("div").fadeIn("slow");
+  })
+
+  .click(function () {                 
+    $(this).prev("div").fadeIn("slow");
+  })
+
+  .mouseout(function () {
+    $(this).prev("div").fadeOut("slow");
+  });
+
+  $(".tooltip").click(function () {    // tablet friendly
+    $(this).fadeOut("slow");
+  });
+
+});
+```
+
+The HTML used in the example is also pasted below
+
+```
+<div class="wrapper">
+  <h1>Pop</h1>
+  <h2>A simple jQuery and css3 tooltip example</h2>
+  <p>Hover over one of the 3 boxes below to view the tooltip.</p>
+  <div class="container">
+    <div class="inner-wrap">
+      <div class="tooltip">Pop Out Text One</div>
+      <div class="button">One</div>
+    </div>
+    <div class="inner-wrap">
+      <div class="tooltip">Pop Out Text Two</div>
+      <div class="button">Two</div>
+    </div>
+    <div class="inner-wrap">
+      <div class="tooltip">Pop Out Text Three</div>
+      <div class="button">Three</div>
+    </div>
+  </div>
+</div>
+
+```
+
+A <a href="https://cathydutton.co.uk/pop/" target="_blank">Demo</a> of the tooltip is available <a href="https://cathydutton.co.uk/pop/" target="_blank">here</a> and can be downloaded from <a href="https://github.com/cathydutton/Pop" target="_blank">GitHub</a> or viewed on <a href="http://codepen.io/cathydutton/pen/yctrI" target="_blank">CodPen</a>.
+
+The sass used in the example is written below&#8230;
+
+```
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+h1, 
+h2, 
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 2.6em;
+  text-transform: uppercase;
+}
+.container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+.inner-wrap {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 32%;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(boxsizing.htc);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-right: 2%;
+}
+.inner-wrap:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 480px) {
+  .inner-wrap {
+    width: 98%;
+    margin: 1%;
+  }
+}
+.link {
+  float: left;
+  width: 49%;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(boxsizing.htc);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-right: 2%;
+}
+.link:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 480px) {
+  .link {
+    width: 98%;
+    margin: 1%;
+  }
+}
+body {
+  background: #82d2e5;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-align: center;
+  color: #fff;
+  height: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.inner-wrap {
+  position: relative;
+}
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 90%;
+  background: #fff;
+  border: solid 1px #fff;
+  color: #82d2e5;
+  padding: 20px 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(boxsizing.htc);
+}
+.tooltip:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 0;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -15px;
+  left: 45%;
+}
+.button, .link {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+  position: relative;
+  bottom: 0;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-top: 100px;
+  padding: 20px 10px;
+}
+.button:hover, .link:hover {
+  -moz-transition: all 1s ease-in;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  background: #82d2e5;
+  border: solid 1px #fff;
+  color: #fff;
+}
+.button {
+  background: #82d2e5;
+  color: #fff;
+  border: solid 1px #fff;
+}
+.link {
+  background: #fff;
+  color: #ffa600;
+  border: solid 1px #ffa600;
+}
+```

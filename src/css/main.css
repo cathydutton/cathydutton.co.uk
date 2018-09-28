@@ -16,6 +16,6 @@
   @import '6-components/lists';
   @import '6-components/post-feed';
   @import '6-components/share-post';
-
+  @import '6-components/pagination';
 
   @import '7-utilities/utilities';

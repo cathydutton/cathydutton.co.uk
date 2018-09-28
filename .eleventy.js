@@ -38,23 +38,6 @@ module.exports = function(config) {
   };
 
 
-    // // Add post collection
-    // config.addCollection('posts', collection => {
-    //   return collection.getFilteredByGlob('**/posts/*.md').reverse()
-    // })
-
-    // // Add latest post collection
-    // config.addCollection('latestPosts', collection => {
-    //   return collection
-    //     .getFilteredByGlob('**/posts/*.md')
-    //     .slice(-5)
-    //     .reverse()
-    // })
-
- 
-
-
-
 };
 
 

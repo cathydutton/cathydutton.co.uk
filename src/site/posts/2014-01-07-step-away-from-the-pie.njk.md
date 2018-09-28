@@ -1,6 +1,6 @@
 ---
 title: Step away from the pie
-description: Graceful degradation over plugins and polly-fills
+description: A look at the benefits of graceful degradation over plugins and polly-fills when using CSS3 features 
 date: 2014-01-07
 tags: [Front end development]
 ---

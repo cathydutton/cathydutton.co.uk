@@ -6,32 +6,31 @@ Latest posts feed
   width: 100%;
   margin-top: 1.4em;
   padding: .8em;
-  border: solid 1px red;
-  border-left: solid 4px red;
+  border: solid 1px var(--colour-light);
+}
+
+.news-feed__post:hover {
   transition: all .3s ease-in-out;
-  cursor: pointer;
+  background: var(--colour-light);
 }
 
-.news-feed__post:hover,
-.news-feed__post:focus {
-  border: solid 1px red;
- border-left: solid 8px red;
-  color: inherit;
+.news-feed__title {
+  font-size: 2em;
 }
 
-.news-feed__anchor {
-  display: table-cell;
-  width: 90%;
+.news-feed__header {
+  margin: 0;
+  padding: 0;
 }
 
+/* .news-feed__date {
 
-
-.news-feed__date {
-  margin-top: 0;
 }
+ */
 
-.news-feed__description {
-  margin-top: 0;
-}
+
+
+
+
 
 

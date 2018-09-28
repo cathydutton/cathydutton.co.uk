@@ -599,22 +599,27 @@ body {
   }
 
 pre { 
-    padding: .5em .5em 0em .5em;
+    padding: .5em;
     line-height: 1.5;
     margin-bottom: 1em;
+    font-family: Consolas, Monaco, monospace;
+    tab-size: 4;
+    white-space: unset;
+    background: hsl(0, 0%, 89%);
+    background: var(--colour-light);
+  }
+
+code { 
+    font: inherit ;
     background:hsl(0, 0%, 89%);
     background:var(--colour-light);
     background-image: linear-gradient( hsl(0, 0%, 100%) 50%, transparent 0);
     background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
     background-size: auto 3em;
     background-origin: content-box; 
-    font-family: Consolas, Monaco, monospace;
-    tab-size: 4;
-    white-space: unset;
-  }
-
-code { 
-    font: inherit 
+    border: solid 1px hsl(0, 0%, 100%); 
+    border: solid 1px var(--colour-white);
+    display: block;
   }
 
 pre code {
@@ -623,6 +628,10 @@ pre code {
     white-space: -pre-wrap;      
     white-space: -o-pre-wrap;    
     word-wrap: break-word; 
+  }
+
+pre p {
+    margin: 0;
   }
 
 /* Select */
@@ -726,7 +735,7 @@ dd + dd::before,
   Reset and/or normalize styles, box-sizing definition, etc. 
   ----------------------------------- */
 
-h1 {
+.page-intro {
     font-size: calc(4vw + 4vh + 2vmin);
     color: hsl(294, 83%, 7%);
     color: var(--colour-dark);
@@ -734,15 +743,22 @@ h1 {
     line-height: 1.2;
   }
 
-h2 {
-    font-size: calc(2.5vw + 2.5vh + 2vmin);
+h1 {
+    font-size: calc(2vw + 2vh + 2vmin);
     color: hsl(294, 83%, 7%);
     color: var(--colour-dark);
-    margin-bottom: .6em;
+    margin-bottom: .4em;
+  }
+
+h2 {
+    font-size: calc(1.4vw + 1.4vh + 2vmin);
+    color: hsl(294, 83%, 7%);
+    color: var(--colour-dark);
+    margin-bottom: .4em;
   }
 
 h3 {
-    font-size: calc(2vw + 2vh + 2vmin);
+    font-size: calc(1.3vw + 1.3vh + 2vmin);
     color: hsl(294, 83%, 7%);
     color: var(--colour-dark);
     margin-bottom: .4em;
@@ -751,7 +767,7 @@ h3 {
 h4,
   h5,
   h6 {
-    font-size: calc(1.4vw + 1.4vh + 2vmin);
+    font-size: calc(1.2vw + 1.2vh + 2vmin);
     color: hsl(294, 83%, 7%);
     color: var(--colour-dark);
     margin-bottom: .4em;
@@ -887,6 +903,10 @@ header,
 
 footer {
     text-align: center;
+  }
+
+section {
+    margin: 1em 0;
   }
 
 /*

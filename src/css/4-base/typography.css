@@ -3,21 +3,27 @@
   Reset and/or normalize styles, box-sizing definition, etc. 
   ----------------------------------- */
 
-  h1 {
+  .page-intro {
     font-size: calc(4vw + 4vh + 2vmin);
     color: var(--colour-dark);
     margin: 0;
     line-height: 1.2;
   }
+
+  h1 {
+    font-size: calc(2vw + 2vh + 2vmin);
+    color: var(--colour-dark);
+    margin-bottom: .4em;
+  }
   
   h2 {
-    font-size: calc(2.5vw + 2.5vh + 2vmin);
+    font-size: calc(1.4vw + 1.4vh + 2vmin);
     color: var(--colour-dark);
-    margin-bottom: .6em;
+    margin-bottom: .4em;
   }
   
   h3 {
-    font-size: calc(2vw + 2vh + 2vmin);
+    font-size: calc(1.3vw + 1.3vh + 2vmin);
     color: var(--colour-dark);
     margin-bottom: .4em;
   }
@@ -25,7 +31,7 @@
   h4,
   h5,
   h6 {
-    font-size: calc(1.4vw + 1.4vh + 2vmin);
+    font-size: calc(1.2vw + 1.2vh + 2vmin);
     color: var(--colour-dark);
     margin-bottom: .4em;
   }

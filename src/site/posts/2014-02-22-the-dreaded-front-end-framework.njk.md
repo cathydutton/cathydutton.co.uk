@@ -1,6 +1,6 @@
 ---
 title: The dreaded front end framework
-description: A look at frontend frameworks
+description: Frontend frameworks are everywhere these days, but are they any good? 
 date: 2014-02-22
 tags: [Front end development, HTML]
 ---

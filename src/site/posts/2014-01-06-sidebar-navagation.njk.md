@@ -1,6 +1,6 @@
 ---
 title: Sidebar navigation
-description: A look at sidebar navigation in website design
+description: A look at the use of sidebar navigation systems in website design
 date: 2014-01-06
 tags: [Design]
 ---
@@ -17,22 +17,22 @@ Below are some examples of recent designs utilising sidebars to create a clearer
   Beautiful Type
 </h3>
 
-<a href="http://beautifultype.net/" rel="nofollow"><img alt="Beautiful Type" src="https://cathydutton.co.uk/wp-content/uploads/2013/04/beautiful-type.jpg" /></a>
+<a href="http://beautifultype.net/" rel="nofollow"><img alt="Beautiful Type" src="/images/posts/beautiful-type.jpg" /></a>
 
 <h3 class="heading">
   Pic Fresh
 </h3>
 
-<a href="http://www.picfresh.com.au/" rel="nofollow"><img alt="Pic Fresh" src="https://cathydutton.co.uk/wp-content/uploads/2013/04/pic-fresh.jpg" /></a>
+<a href="http://www.picfresh.com.au/" rel="nofollow"><img alt="Pic Fresh" src="/images/posts/pic-fresh.jpg" /></a>
 
 <h3 class="heading">
   Astrel Creative
 </h3>
 
-<a href="http://www.astrelcreative.com/" rel="nofollow"><img alt="Astrel Creative" src="https://cathydutton.co.uk/wp-content/uploads/2013/04/astrel.jpg" /></a>
+<a href="http://www.astrelcreative.com/" rel="nofollow"><img alt="Astrel Creative" src="/images/posts/astrel.jpg" /></a>
 
 <h3 class="heading">
   Carbonica
 </h3>
 
-<a href="http://www.carbonica.org/" rel="nofollow"><img alt="Carbonica" src="https://cathydutton.co.uk/wp-content/uploads/2013/04/carbonica.jpg" /></a>
+<a href="http://www.carbonica.org/" rel="nofollow"><img alt="Carbonica" src="/images/posts/carbonica.jpg" /></a>

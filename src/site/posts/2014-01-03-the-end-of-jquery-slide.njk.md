@@ -1,6 +1,6 @@
 ---
 title: The end of jQuery sliders
-description:  The end of jQuery sliders
+description:  A look at the jQuery banner design trend and the negative impacts on performance and information architecture.
 date: 2014-01-03
 tags: [javaScript]
 ---

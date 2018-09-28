@@ -1,7 +1,6 @@
 <ul class="list">
   {% for item in navigation %}
     <li class="list-item list-item--{{ item.menu_item }}{% if pageName == item.menu_name %} list-item__current{% endif %}">
-    {# <a href="../{{ item.menu_item | lower | replace(" ", "-") }}/">{{ item.menu_item }}</a></li> #}
       <a href="{{ item.url }}">{{ item.menu_item }}</a></li>
   {% endfor %}
 </ul>

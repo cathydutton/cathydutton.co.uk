@@ -1,6 +1,6 @@
 ---
-title: 'Maze &#8211; responsive grid framework'
-description: Maze - A Sass responsive grid
+title: Maze a responsive grid framework
+description: Maze - A flexible responsive grid built with Sass
 date: 2014-05-06
 tags: [CSS]
 ---
@@ -11,20 +11,20 @@ After numerous rants regarding my disliking for Bootstrap and most other front e
 
 I decided to build the framework for two main reasons. Firstly to get up to speed with Sass, and secondly to address some of the common issues I have with a lot of the grids already out there. Some of these issues are listed below&#8230;
 
-<ul class="list">
-  <li>
+<ul class="unordered-list">
+  <li class="unordered-list__list-item">
     <strong>Presentational class names</strong> &#8211; Such as span-1 or large-9.columns are used instead of more semantic selectors.
   </li>
-  <li>
+  <li class="unordered-list__list-item">
     <strong>Full width defaults</strong> &#8211; All elements default to full width at tablet view creating extra long websites that could be better arranged.
   </li>
-  <li>
+  <li class="unordered-list__list-item">
     <strong>Set  breakpoints</strong> &#8211; Set media queries and column numbers make the systems to rigid.
   </li>
-  <li>
+  <li class="unordered-list__list-item">
     <strong>Excess class names</strong> &#8211; Extra class names need to be added to style the content of div&#8217;s using the same layout style.
   </li>
-  <li>
+  <li class="unordered-list__list-item">
     <strong>Style guides and library includes</strong> &#8211; Unnecessary functionality creates bloat.
   </li>
 </ul>
@@ -35,53 +35,57 @@ My goal was to create a more adaptable grid, using Sass variables and formulae t
 
 The number of grid columns, push value and gutter width can be easily changed by editing the variables shown below. The percentage width of a single column span is created using the $grid-columns value and assigned to the variable $unit.
 
-```
-$grid-columns: 12;
-$unit: (100%  / $grid-columns);
-$gutter: 2% !default;
-$push: 0 !default;
-```
+<code>
+  <pre>
+    $grid-columns: 12;
+    $unit: (100%  / $grid-columns);
+    $gutter: 2% !default;
+    $push: 0 !default;
+  </pre>
+</code>
 
 A Sass mixin is used to output the grid CSS. Each elements width is calculated using the values passed from the variables described above and user inputted values for the required column span ($col) and float direction ($fold). the $fold variable determines whether the columns will collapse from the right or the left as the grid is re-sized. By default the right column will move to a new row, setting a value of $fold:right will move the left column.
 
-```
-@mixin grid($col, $fold:"left", $push:$push, $margin:$gutter) {
-  @include transition;
-  float:#{$fold};
-  background: $base-color;
-  cursor: pointer;
-  padding: 20px;
-  width: (($unit * $col) - $margin ) + ( $margin / ( $grid-columns / $col) );
+<code>
+  <pre>
+    @mixin grid($col, $fold:"left", $push:$push, $margin:$gutter) {
+      @include transition;
+      float:#{$fold};
+      background: $base-color;
+      cursor: pointer;
+      padding: 20px;
+      width: (($unit * $col) - $margin ) + ( $margin / ( $grid-columns / $col) );
 
-  @if $push &gt; 1 {
-    margin-left: (($unit * $push) ) + ( $gutter / ( $grid-columns / $push) );
-  }
+      @if $push &gt; 1 {
+        margin-left: (($unit * $push) ) + ( $gutter / ( $grid-columns / $push) );
+      }
 
-  @if $fold == left {
-    margin-right: $margin;
+      @if $fold == left {
+        margin-right: $margin;
 
-    &:last-child {
-      margin-right: 0;
+        &:last-child {
+          margin-right: 0;
+        }
+
+      }
+
+      @if $fold == right {
+        margin-left: $margin;
+
+        &:last-child {
+          margin-left: 0;
+        }
+
+      }
+
+      &:hover {
+        background: $brown;
+        color: $white;
+      }
+
     }
-
-  }
-
-  @if $fold == right {
-    margin-left: $margin;
-
-    &:last-child {
-      margin-left: 0;
-    }
-
-  }
-
-  &:hover {
-    background: $brown;
-    color: $white;
-  }
-
-}
-```
+  </pre>
+</code>
 
 <h3 class="heading">How</h3>
 

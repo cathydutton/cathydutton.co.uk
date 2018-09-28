@@ -24,20 +24,23 @@
 
 
   pre { 
-    padding: .5em .5em 0em .5em;
+    padding: .5em;
     line-height: 1.5;
     margin-bottom: 1em;
+    font-family: Consolas, Monaco, monospace;
+    tab-size: 4;
+    white-space: unset;
+    background: var(--colour-light);
+  }
+  
+  code { 
+    font: inherit ;
     background:var(--colour-light);
     background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
     background-size: auto 3em;
     background-origin: content-box; 
-    font-family: Consolas, Monaco, monospace;
-    tab-size: 4;
-    white-space: unset;
-  }
-  
-  code { 
-    font: inherit 
+    border: solid 1px var(--colour-white);
+    display: block;
   }
 
   pre code {
@@ -47,6 +50,11 @@
     white-space: -o-pre-wrap;    
     word-wrap: break-word; 
   }
+
+  pre p {
+    margin: 0;
+  }
+
 
   /* Select */
   ::selection {
