@@ -4,99 +4,122 @@ description: Common misconceptions of CSS
 date: 2017-06-19
 tags: [CSS]
 ---
+<p>CSS gets a lot of stick, the internet is full of articles describing ways to fix one, or all of it's so called failings. Most of the time however, these criticisms are unfair, untrue or both. This post aims to highlight some of the common misconceptions or myths around CSS and it's capabilities.</p>
 
-CSS gets a lot of stick, the internet is full of articles describing ways to fix one, or all of it's so called failings. Most of the time however, these criticisms are unfair, untrue or both. This post aims to highlight some of the common misconceptions or myths around CSS and it's capabilities.
+<h3 id="1cssisbroken">1) CSS is broken</h3>
 
-### 1) CSS is broken
+<p>So first of all CSS is not broken, it just isn't a programming language and so should not be expected to behave like one. Many of the CSS in JavaScript methodologies that have appeared over the past couple of years aim to 'fix' CSS by forcing it to behave in a more conventional programming way, in doing so some key CSS features are lost.</p>
 
-So first of all CSS is not broken, it just isn't a programming language and so should not be expected to behave like one. Many of the CSS in JavaScript methodologies that have appeared over the past couple of years aim to 'fix' CSS by forcing it to behave in a more conventional programming way, in doing so some key CSS features are lost.
+<p>You can read more on the topic of broken CSS in these two awesome articles...</p>
 
-You can read more on the topic of broken CSS in these two awesome articles...
+<ul>
+<li>Danielle Huntrods: <a href="https://clearleft.com/posts/454" title="There are maps for these territories">There are maps for these territories</a></li>
 
- * Danielle Huntrods: [There are maps for these territories](https://clearleft.com/posts/454 "There are maps for these territories")
- * Keith j Grant: [CSS is not broken](http://keithjgrant.com/posts/2017/03/css-is-not-broken "CSS is not broken")
+<li>Keith j Grant: <a href="http://keithjgrant.com/posts/2017/03/css-is-not-broken" title="CSS is not broken">CSS is not broken</a></li>
+</ul>
 
+<h3 id="2cssiseasy">2) CSS is easy</h3>
 
-### 2) CSS is easy
-CSS is not easy, it may be seen as the simplest of the client side languages, but creating a maintainable CSS code base at scale is a difficult skill to master. Like no other front end language any changes made in CSS have the potential to affect the global landscape, meaning extra discipline and knowledge are required.
+<p>CSS is not easy, it may be seen as the simplest of the client side languages, but creating a maintainable CSS code base at scale is a difficult skill to master. Like no other front end language any changes made in CSS have the potential to affect the global landscape, meaning extra discipline and knowledge are required.</p>
 
-To work effectively a detailed understanding of key CSS features is essential:
+<p>To work effectively a detailed understanding of key CSS features is essential:</p>
 
+<h4 id="icascade">i. Cascade</h4>
 
-#### i. Cascade
-The cascade determines which properties will be applied, and can be thought of as a way of resolving conflicting styles. Which selector wins out in the cascade depends on three factors:
+<p>The cascade determines which properties will be applied, and can be thought of as a way of resolving conflicting styles. Which selector wins out in the cascade depends on three factors:</p>
 
-* Importance
-* Specificity
-* Source order
+<ul>
+<li>Importance</li>
 
-On larger projects a misunderstanding of the cascade can lead to excessive use of the !important rule as well as unmaintainable CSS.
+<li>Specificity</li>
 
-#### ii. Importance
-There are three origins of styles, each one has a level of importance used by the cascade to determine which properties will be applied.
+<li>Source order</li>
+</ul>
 
-1. Author
-2. User 
-3. Default (User agent or browser style sheet)
+<p>On larger projects a misunderstanding of the cascade can lead to excessive use of the !important rule as well as unmaintainable CSS.</p>
 
-This order can be reversed by using the !important rule allowing a property in the user style sheet to override a matching declaration in the author stylesheet.
+<h4 id="iiimportance">ii. Importance</h4>
 
-#### iii. Specificity 
-Specificity comes into play if the importance of two declarations is the same. A 4 digit number is given to each selector, this number is derived from the 4 factors below, the selector with the higher specificity will be applied.
+<p>There are three origins of styles, each one has a level of importance used by the cascade to determine which properties will be applied.</p>
 
-1. Inline styles (Style attribute)
-2. The number of ID's in the selector
-3. The number of classes, attributes and pseudo-classes in the selector
-4. The number of elements and pseudo-elements in the selector
+<ol>
+<li>Author</li>
 
-#### Examples:
+<li>User </li>
 
-```
-#nav .selected > a:hover  // Specificity =  0,1,2,1
-```
+<li>Default (User agent or browser style sheet)</li>
+</ol>
 
-```
-.wrapper .box ul li  // Specificity =  0,0,2,2
-```
+<p>This order can be reversed by using the !important rule allowing a property in the user style sheet to override a matching declaration in the author stylesheet.</p>
 
-The !important rule is not directly related to specificity as it does not have a value assigned to it. It does however automatically win out against any other selectors. The only way to override and !important deceleration is to use another !important declaration on a selector of equal or higher specificity.
+<h4 id="iiispecificity">iii. Specificity</h4>
 
+<p>Specificity comes into play if the importance of two declarations is the same. A 4 digit number is given to each selector, this number is derived from the 4 factors below, the selector with the higher specificity will be applied.</p>
 
-#### iv. Source order 
-Source order comes into play if the importance and specificity of two declarations is the same. Declarations that appear at the bottom of a style sheet will effectively overwrite any matching declarations from above.
+<ol>
+<li>Inline styles (Style attribute)</li>
 
+<li>The number of ID's in the selector</li>
 
-#### v. Inheritance
-CSS properties like font-family and color can be applied to a single element and be passed down to the elements children. Inheritance can be controlled using three CSS properties:
+<li>The number of classes, attributes and pseudo-classes in the selector</li>
 
-* inherit
-* initial
-* unset
+<li>The number of elements and pseudo-elements in the selector</li>
+</ol>
 
- A directly targeted element will always take precedence over rules which an element inherits from its ancestor.
+<h4 id="examples">Examples:</h4>
 
+<pre><code>#nav .selected &gt; a:hover  // Specificity =  0,1,2,1
+</code></pre>
 
-###  3) Global scope is a bad thing
-CSS is often compared unfavourably to the localised scoping features of JavaScript. A misunderstanding of the global scope leads to an overuse of the !important declarations and excessively long selectors (both of which introduce a new set of problems). However, the global by default feature of CSS is actually a great asset, if you know how to use it. The cascade and inheritance together determine how all elements will be styled, this allows you to create base level rules just once and have them applied across a projects code base. 
+<pre><code>.wrapper .box ul li  // Specificity =  0,0,2,2
+</code></pre>
 
-Benefits of the CSS global scope include:
- 
- * New pages or features are instantly styled
- * Typography and spacing are consistent
- * Design patterns are consistent
- * CSS is re-usable
- * CSS remains scalable and easy to update
+<p>The !important rule is not directly related to specificity as it does not have a value assigned to it. It does however automatically win out against any other selectors. The only way to override and !important deceleration is to use another !important declaration on a selector of equal or higher specificity.</p>
 
+<h4 id="ivsourceorder">iv. Source order</h4>
 
-###  4) There is no local scope
+<p>Source order comes into play if the importance and specificity of two declarations is the same. Declarations that appear at the bottom of a style sheet will effectively overwrite any matching declarations from above.</p>
 
-CSS, where required can be scoped, the simplest method for this would be by using double classes and a naming convention such as [BEM](http://getbem.com/ "BEM - methodology") to target a specific chunks of UI.
+<h4 id="vinheritance">v. Inheritance</h4>
 
-```
-// Default button
+<p>CSS properties like font-family and color can be applied to a single element and be passed down to the elements children. Inheritance can be controlled using three CSS properties:</p>
+
+<ul>
+<li><p>inherit</p></li>
+
+<li><p>initial</p></li>
+
+<li><p>unset</p>
+
+<p>A directly targeted element will always take precedence over rules which an element inherits from its ancestor.</p></li>
+</ul>
+
+<h3 id="3globalscopeisabadthing">3) Global scope is a bad thing</h3>
+
+<p>CSS is often compared unfavourably to the localised scoping features of JavaScript. A misunderstanding of the global scope leads to an overuse of the !important declarations and excessively long selectors (both of which introduce a new set of problems). However, the global by default feature of CSS is actually a great asset, if you know how to use it. The cascade and inheritance together determine how all elements will be styled, this allows you to create base level rules just once and have them applied across a projects code base. </p>
+
+<p>Benefits of the CSS global scope include:</p>
+
+<ul>
+<li>New pages or features are instantly styled</li>
+
+<li>Typography and spacing are consistent</li>
+
+<li>Design patterns are consistent</li>
+
+<li>CSS is re-usable</li>
+
+<li>CSS remains scalable and easy to update</li>
+</ul>
+
+<h3 id="4thereisnolocalscope">4) There is no local scope</h3>
+
+<p>CSS, where required can be scoped, the simplest method for this would be by using double classes and a naming convention such as <a href="http://getbem.com/" title="BEM - methodology">BEM</a> to target a specific chunks of UI.</p>
+
+<pre><code>// Default button
 .button {
   display: inline-block;
-	text-align: center;
+    text-align: center;
   background-color: #00823b;
   color: #fff;
 }
@@ -107,32 +130,30 @@ CSS, where required can be scoped, the simplest method for this would be by usin
 }
 
 // cancel button
-.button--cancel	{ 
+.button--cancel    { 
   background-color: $primary-color--featured; 
 }
+</code></pre>
 
-```
+<p>You can also add scope to your CSS using custom properties. Custom properties, allow values to be saved and re-used throughout a project. In that respect they are similar to Sass or Less variables, but have the added bonus of being dynamically updated (More on this in section 9).</p>
 
-You can also add scope to your CSS using custom properties. Custom properties, allow values to be saved and re-used throughout a project. In that respect they are similar to Sass or Less variables, but have the added bonus of being dynamically updated (More on this in section 9).
+<p>Custom properties are defined like this...</p>
 
-Custom properties are defined like this...
-
-```
-:root {
+<pre><code>:root {
   --button-color: #ffa600;
 }
-```
-and used like this...
+</code></pre>
 
-```
-.button {
+<p>and used like this...</p>
+
+<pre><code>.button {
   background-color: var(--button-color);
 }
-```
-Custom properties can be scoped by declaring values inside a class or element. In the below example the value assigned to the buttons background color is changed for all elements within a header block.
+</code></pre>
 
-```
-:root {
+<p>Custom properties can be scoped by declaring values inside a class or element. In the below example the value assigned to the buttons background color is changed for all elements within a header block.</p>
+
+<pre><code>:root {
   --button-color: #ffa600;
 }
 
@@ -143,45 +164,46 @@ header {
 .button {
   background-color: var(--button-color);
 }
-```
+</code></pre>
 
-### 5) if you use important! you're writing bad CSS
-It is true that an over-reliance on the !important rule can be a warning sign for underlying issues with the CSS architecture, but providing it is used responsibly and for it's intended purposes it is perfectly fine to use.
+<h3 id="5ifyouuseimportantyourewritingbadcss">5) if you use important! you're writing bad CSS</h3>
 
-Firstly by using the !important declaration rules from the author style sheet are able to be overwritten in the user style sheet. This is particularly useful for accessibility enhancements such as increasing font size or re-adding the underline property to anchors.
+<p>It is true that an over-reliance on the !important rule can be a warning sign for underlying issues with the CSS architecture, but providing it is used responsibly and for it's intended purposes it is perfectly fine to use.</p>
 
-!important can also be used effectively in the author style sheet itself, the most common use case is for utility (helper) classes. Utility classes are often used to set up base rules for a project, these are rules which should always be applied, yet are usually defined at the top of a style sheet and have low specificity. 
+<p>Firstly by using the !important declaration rules from the author style sheet are able to be overwritten in the user style sheet. This is particularly useful for accessibility enhancements such as increasing font size or re-adding the underline property to anchors.</p>
 
-```
-.margin-bottom {
+<p>!important can also be used effectively in the author style sheet itself, the most common use case is for utility (helper) classes. Utility classes are often used to set up base rules for a project, these are rules which should always be applied, yet are usually defined at the top of a style sheet and have low specificity. </p>
+
+<pre><code>.margin-bottom {
   margin-bottom: 10px;
 }
-```
-The specificity of the selector above is just 0,0,1,0 and so the value could be easily overwritten further down the style sheet. To address this and make helper classes more resilient the !important rule can be applied.
+</code></pre>
 
-```
-.margin-bottom {
+<p>The specificity of the selector above is just 0,0,1,0 and so the value could be easily overwritten further down the style sheet. To address this and make helper classes more resilient the !important rule can be applied.</p>
+
+<pre><code>.margin-bottom {
   margin-bottom: 10px!important;
 }
-```
-Finally, although not a valid long term use case the !important rule can be very useful for getting quick fixes shipped to production. There isn't always time for a detailed assessment of the CSS structure or for re-factoring large chunks of code to fix a style bug. In these cases it can be helpful to use !important as a make shift fix, providing the real work is addressed afterwards. It is usually helpful to keep these styles in a separate CSS file, [csswizardry.com ](https://csswizardry.com/2013/04/shame-css/ "shame.css - csswizardry.com") has more information on this concept.
+</code></pre>
 
-### 6) There is no feature detection
-Progressive enhancement promotes the idea of adding extra functionality for modern browsers and devices, only after delivering core content and functionality to all bowsers and devices. This is often achieved with JavaScript feature detection. 
+<p>Finally, although not a valid long term use case the !important rule can be very useful for getting quick fixes shipped to production. There isn't always time for a detailed assessment of the CSS structure or for re-factoring large chunks of code to fix a style bug. In these cases it can be helpful to use !important as a make shift fix, providing the real work is addressed afterwards. It is usually helpful to keep these styles in a separate CSS file, <a href="https://csswizardry.com/2013/04/shame-css/" title="shame.css - csswizardry.com">csswizardry.com </a> has more information on this concept.</p>
 
-It is possible to detect support for a property within CSS without the need to include a third-party script such as Modernizr or Autoprefixer. The @supports rule is a conditional rule which allows for different styles to be applied depending on browser support. 
+<h3 id="6thereisnofeaturedetection">6) There is no feature detection</h3>
 
-By defining core css properties at the top of a selector you ensure they are rendered in all browsers, extra 'nice to have' features can be conditionally added underneath without effecting this core styling.
+<p>Progressive enhancement promotes the idea of adding extra functionality for modern browsers and devices, only after delivering core content and functionality to all bowsers and devices. This is often achieved with JavaScript feature detection. </p>
 
-An example would be CSS blend modes which are used to add styling to backgrounds and images. This could create problems with the readability of overlaying text in browsers that don't support blend modes. 
+<p>It is possible to detect support for a property within CSS without the need to include a third-party script such as Modernizr or Autoprefixer. The @supports rule is a conditional rule which allows for different styles to be applied depending on browser support. </p>
 
-By using @supports you can ensure browsers without support are served a more appropriate font-color.
+<p>By defining core css properties at the top of a selector you ensure they are rendered in all browsers, extra 'nice to have' features can be conditionally added underneath without effecting this core styling.</p>
 
-```
-.banner {
+<p>An example would be CSS blend modes which are used to add styling to backgrounds and images. This could create problems with the readability of overlaying text in browsers that don't support blend modes. </p>
+
+<p>By using @supports you can ensure browsers without support are served a more appropriate font-color.</p>
+
+<pre><code>.banner {
       background-image: url(image-url);
       color: black
-    
+
       @supports (background-blend-mode: multiply) {
         .banner {
           background-color: green;
@@ -189,23 +211,31 @@ By using @supports you can ensure browsers without support are served a more app
           color: white
         }
 }
-```
-You can also check for features which are not supported as well as combine properties with either 'and' or 'or' statements.
+</code></pre>
 
-### 7) CSS is just for making things pretty
-CSS can do more than simply apply the aesthetics to an applications UI. It can also play a role in enhancing the accessibility and usability of a project.
+<p>You can also check for features which are not supported as well as combine properties with either 'and' or 'or' statements.</p>
 
-CSS can among other things also be used to...
+<h3 id="7cssisjustformakingthingspretty">7) CSS is just for making things pretty</h3>
 
-- Enhance the readability of written content 
-- Improve the readability of anchor tags
-- Provide navigation assistance with active and visited classes
-- Provide screen reader specific content such as 'Skip to content' links
-- Ensure hidden content isn't picked up by screen readers with a visibility:hidden; class
-- Insert descriptive text for icons or external links...
+<p>CSS can do more than simply apply the aesthetics to an applications UI. It can also play a role in enhancing the accessibility and usability of a project.</p>
 
-```
-a[target=_blank]::after {
+<p>CSS can among other things also be used to...</p>
+
+<ul>
+<li>Enhance the readability of written content </li>
+
+<li>Improve the readability of anchor tags</li>
+
+<li>Provide navigation assistance with active and visited classes</li>
+
+<li>Provide screen reader specific content such as 'Skip to content' links</li>
+
+<li>Ensure hidden content isn't picked up by screen readers with a visibility:hidden; class</li>
+
+<li>Insert descriptive text for icons or external links...</li>
+</ul>
+
+<pre><code>a[target=_blank]::after {
   display: inline-block;
   overflow: hidden;
   width: 0;
@@ -213,44 +243,49 @@ a[target=_blank]::after {
   white-space: nowrap;
   content: '(opens new window)';
 }
-```
+</code></pre>
 
-### 8) Shorthand is better
-Shorthand properties allow multiple values to be set simultaneously and are a nice way of keeping your style sheets concise and readable. There are currently 6 shorthand property groups:
+<h3 id="8shorthandisbetter">8) Shorthand is better</h3>
 
-- font
-- background
-- margin
-- border
-- padding
-- list
+<p>Shorthand properties allow multiple values to be set simultaneously and are a nice way of keeping your style sheets concise and readable. There are currently 6 shorthand property groups:</p>
 
-There can be performance gains from using the shorthand syntax correctly, for example...
+<ul>
+<li>font</li>
 
-```
-margin-top: 10px;
+<li>background</li>
+
+<li>margin</li>
+
+<li>border</li>
+
+<li>padding</li>
+
+<li>list</li>
+</ul>
+
+<p>There can be performance gains from using the shorthand syntax correctly, for example...</p>
+
+<pre><code>margin-top: 10px;
 margin-right: 0;
 margin-bottom: 10px;
 margin-left: 0;
-```
-could be written as...
+</code></pre>
 
-```
-margin: 10px 0;
-```
+<p>could be written as...</p>
 
-However, it is important to note that a property which is not specified is automatically set to its initial value. This can lead to properties needing to be overwritten further down the style sheet. For example...
+<pre><code>margin: 10px 0;
+</code></pre>
 
-```
-html {
+<p>However, it is important to note that a property which is not specified is automatically set to its initial value. This can lead to properties needing to be overwritten further down the style sheet. For example...</p>
+
+<pre><code>html {
   font: 16px Helvetica Neue
 }
+</code></pre>
 
-```
-will actually set...
+<p>will actually set...</p>
 
-```
-html {
+<pre><code>html {
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -258,58 +293,60 @@ html {
   line-height: normal;
   font-family: Helvetica Neue;  
 }
-```
-On larger applications problems can arise from setting too many styles to soon, in the example above it would be more efficient to set only the values that we are using...
+</code></pre>
 
-```
-html {
+<p>On larger applications problems can arise from setting too many styles to soon, in the example above it would be more efficient to set only the values that we are using...</p>
+
+<pre><code>html {
   font-size: 16px;
   font-family: Helvetica Neue;  
 }
-```
+</code></pre>
 
+<h3 id="9cssdoesnthavefunctions">9) CSS doesn't have functions</h3>
 
-### 9) CSS doesn't have functions
-CSS is defined as a markup language not a programing or scripting language, but it does come with some basic functions included The most common functions deal with colour manipulation and animations, functions like linear-gradient(), blur(), translate() and rotate(). 
+<p>CSS is defined as a markup language not a programing or scripting language, but it does come with some basic functions included The most common functions deal with colour manipulation and animations, functions like linear-gradient(), blur(), translate() and rotate(). </p>
 
-One of the more powerful functions is calc() which can be used to replace number values with simple mathematical equations. Calc() also allows for mixed units making it an effective way to build native responsive layouts.
+<p>One of the more powerful functions is calc() which can be used to replace number values with simple mathematical equations. Calc() also allows for mixed units making it an effective way to build native responsive layouts.</p>
 
-```
-.sidebar {
+<pre><code>.sidebar {
   width: 300px;
 }
 
 .content {
   width: calc(100% - 300px);
 }
-```
+</code></pre>
 
- Using custom properties can open up new posabilities for functions within CSS. Unlike Sass or Less variables, which compile to set values in CSS, custom properties can be updated dynamically. This allows for direct interaction between CSS and JavaScript. The below JavaScript allows a CSS custom property value to be retrived or set...
+<p>Using custom properties can open up new posabilities for functions within CSS. Unlike Sass or Less variables, which compile to set values in CSS, custom properties can be updated dynamically. This allows for direct interaction between CSS and JavaScript. The below JavaScript allows a CSS custom property value to be retrived or set...</p>
 
-```
-var backgroundColor = bodyStyles.getPropertyValue('--background-color'); // Retrieve
-```
+<pre><code>var backgroundColor = bodyStyles.getPropertyValue('--background-color'); // Retrieve
+</code></pre>
 
-```
-body.style.setProperty('--background-color', 'black'); // Set
-```
+<pre><code>body.style.setProperty('--background-color', 'black'); // Set
+</code></pre>
 
-Example use cases for dynamic CSS include [Generating colors](https://blog.hospodarets.com/demos/css-colors-from-custom-props/ "Generating colors from CSS custom properties"), [Contrast theming](https://codepen.io/pawelgrzybek/pen/KVLmXQ "Contrast theming") and [Animation](https://codepen.io/danwilson/pen/oBrOGW "Dynamic animation")
+<p>Example use cases for dynamic CSS include <a href="https://blog.hospodarets.com/demos/css-colors-from-custom-props/" title="Generating colors from CSS custom properties">Generating colors</a>, <a href="https://codepen.io/pawelgrzybek/pen/KVLmXQ" title="Contrast theming">Contrast theming</a> and <a href="https://codepen.io/danwilson/pen/oBrOGW" title="Dynamic animation">Animation</a></p>
 
+<h3 id="10frameworksarebad">10) Frameworks are bad</h3>
 
-### 10) Frameworks are bad
-There are literally hundreds of CSS frameworks, grids and methodologies available to speed up development and help lay the foundations for scalable well structured CSS. These frameworks can be hugely beneficial but are often heavily criticised.
+<p>There are literally hundreds of CSS frameworks, grids and methodologies available to speed up development and help lay the foundations for scalable well structured CSS. These frameworks can be hugely beneficial but are often heavily criticised.</p>
 
-A few common criticisms are:
+<p>A few common criticisms are:</p>
 
- - They discourage beginners to learn the basics of CSS 
- - The markup is not semantic
- - The CSS is bloated and often unnecessary for smaller projects
- - Framework CSS is overwritten in the project code
- 
-Despite these concerns frameworks can help improve a project. The important thing is that you understand how and why the framework works, and that it adds value to your project. It's important that the framework is seen as a helper and not as an essential component. 
-It's wise to use only the parts of the framework that you need, strip out the excess and make changes where required.
+<ul>
+<li>They discourage beginners to learn the basics of CSS </li>
 
-### In summary
+<li>The markup is not semantic</li>
 
-In summary CSS is not a bad programing language, its a very good style sheet language. The features of CSS are not secret, anyone can read up on and learn to write good CSS, if you choose not to it can become a nightmare.
+<li>The CSS is bloated and often unnecessary for smaller projects</li>
+
+<li>Framework CSS is overwritten in the project code</li>
+</ul>
+
+<p>Despite these concerns frameworks can help improve a project. The important thing is that you understand how and why the framework works, and that it adds value to your project. It's important that the framework is seen as a helper and not as an essential component. 
+It's wise to use only the parts of the framework that you need, strip out the excess and make changes where required.</p>
+
+<h3 id="insummary">In summary</h3>
+
+<p>In summary CSS is not a bad programing language, its a very good style sheet language. The features of CSS are not secret, anyone can read up on and learn to write good CSS, if you choose not to it can become a nightmare.</p>

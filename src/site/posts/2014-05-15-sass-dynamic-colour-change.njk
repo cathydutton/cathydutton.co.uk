@@ -4,50 +4,45 @@ description: A sass colour function
 date: 2014-05-15
 tags: [CSS]
 ---
+<p>When building the website for <a href="http://get-maze.co.uk/" target="_blank">Maze</a> I wanted to display the content on one page with a downward scroll. Each section or slide would therefore need to have a different background colour to emphasise the content change.</p>
 
-When building the website for <a href="http://get-maze.co.uk/" target="_blank">Maze</a> I wanted to display the content on one page with a downward scroll. Each section or slide would therefore need to have a different background colour to emphasise the content change.
+<p>To achieve this I took advantage of some of the new features in Sass. Firstly using variables I was able to store my colour values&#8230;</p>
 
-To achieve this I took advantage of some of the new features in Sass. Firstly using variables I was able to store my colour values&#8230;
-
-```
-$orange: #ffa600;
+<pre><code>$orange: #ffa600;
 $blue: #82d2e5;
 $green:#c1d72e;
 $light-grey: #b2b2b2 ;
 $dark-grey: #5e5e5e ;
-```
+</code></pre>
 
-I then used a list to assign a colour variable to each slide in the site&#8230;
+<p>I then used a list to assign a colour variable to each slide in the site&#8230;</p>
 
-```
-$color :
+<pre><code>$color :
 (1, $orange),
 (2, $blue),
 (3, $green),
 (4, $light-grey),
 (5, $dark-grey);
-```
+</code></pre>
 
-An @each loop is then used to run through the list and generate the css for each slide.
+<p>An @each loop is then used to run through the list and generate the css for each slide.</p>
 
-```
-@each $number, $bg in $color {
+<pre><code>@each $number, $bg in $color {
 
   .slide-#{$number} {
     background:$bg;
   }
 
 }
-```
+</code></pre>
 
-The loop generates the css code for each slide takeing the relavant value for $bg from the $color list.
+<p>The loop generates the css code for each slide takeing the relavant value for $bg from the $color list.</p>
 
-```
-.slide-1 {background: #ffa600;}
+<pre><code>.slide-1 {background: #ffa600;}
 .slide-2 {background: #82d2e5;}
 .slide-3 {background: #c1d72e;}
 .slide-4 {background: #b2b2b2;}
 .slide-5 {background: #5e5e5e;}
-```
+</code></pre>
 
-A working example can be found on <a href="http://codepen.io/cathydutton/pen/ndfHh" target="_blank">Codepen </a>
+<p>A working example can be found on <a href="http://codepen.io/cathydutton/pen/ndfHh" target="_blank">Codepen </a></p>

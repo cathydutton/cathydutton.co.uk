@@ -5,48 +5,65 @@ date: 2016-03-26
 tags: [CSS]
 ---
 
+<p>Before diving straight into PostCSS it is first necessary to look at CSS processing in general. Processors like Less, Sass and Stylus allow you to start re-using CSS properties and patterns, keeping stylesheets DRY and easier to maintain. Each preprocessor has a slightly different syntax but all support the original vanilla CSS syntax as well.</p>
 
+<h4 id="benefitsofpreprocessors">Benefits of Pre Processors</h4>
 
-Before diving straight into PostCSS it is first necessary to look at CSS processing in general. Processors like Less, Sass and Stylus allow you to start re-using CSS properties and patterns, keeping stylesheets DRY and easier to maintain. Each preprocessor has a slightly different syntax but all support the original vanilla CSS syntax as well.
+<ul>
+<li>Fewer HTTP requests with the use of @import</li>
 
-#### Benefits of Pre Processors
+<li>Re-usable properties with variables</li>
 
-*   Fewer HTTP requests with the use of @import
-*   Re-usable properties with variables
-*   modular code blocks
-*   Re-usable patterns with mixins
-*   Scalable projects
-*   Maintainable code
+<li>modular code blocks</li>
 
-## So why stop now?
+<li>Re-usable patterns with mixins</li>
 
-Despite the advantages listed above, numerous disadvantages have emerged from the mis-use of Pre processors. Each language comes with numerous features (Extends, Functions, Mixins, Variables, Nesting) some more harmful then others. In each case it is not possible to restrict usage of an offending feature, making codebases harder to maintain and keep clean.
+<li>Scalable projects</li>
 
-#### Disadvantages of Pre Processors
+<li>Maintainable code</li>
+</ul>
 
-*   Bloated stylesheets
-*   Overly specific selectors created from excessive nesting
-*   Confusing or overly complicated mixins and functions
-*   Excessive config
+<h2 id="sowhystopnow">So why stop now?</h2>
 
-## What is PostCSS?
+<p>Despite the advantages listed above, numerous disadvantages have emerged from the mis-use of Pre processors. Each language comes with numerous features (Extends, Functions, Mixins, Variables, Nesting) some more harmful then others. In each case it is not possible to restrict usage of an offending feature, making codebases harder to maintain and keep clean.</p>
 
-PostCSS makes it possible to transform and extend the features of CSS using JavaScript plugins. Each plugin is installed individually allowing teams to create there own processors with the exact features they need and nothing more. This allows developers to take much greater control over the features used and as a result the output CSS.
+<h4 id="disadvantagesofpreprocessors">Disadvantages of Pre Processors</h4>
 
-#### Syntax sugar
+<ul>
+<li>Bloated stylesheets</li>
 
-PostCSS has plugins available to replicate all of the features developers have become accustomed to with pre processors. Variables, Mixins, Functions, Extends and even Nesting can be accomplished with existing plugins...
+<li>Overly specific selectors created from excessive nesting</li>
 
-*   postcss-mixins - Enables mixins more powerful than Sass.
-*   postcss-nested - Unwraps nested rules.
-*   postcss-simple-extend - Lightweight extending of silent classes, like Sass' @extend.
-*   postcss-simple-vars - Support for Sass-style variables.
-*   postcss-nested-vars - Supports nested Sass-style variables.
-*   postcss-precss - Plugin pack that allows you to use Sass-like CSS.
+<li>Confusing or overly complicated mixins and functions</li>
 
-#### Maintainable CSS
+<li>Excessive config</li>
+</ul>
 
-PostCSS offers more then just the syntax changes associated with Sass, Less and Stylus. With PostCSS you can also extend the functionality of CSS and begin to tackle some of the languages shortcomings.
+<h2 id="whatispostcss">What is PostCSS?</h2>
+
+<p>PostCSS makes it possible to transform and extend the features of CSS using JavaScript plugins. Each plugin is installed individually allowing teams to create there own processors with the exact features they need and nothing more. This allows developers to take much greater control over the features used and as a result the output CSS.</p>
+
+<h4 id="syntaxsugar">Syntax sugar</h4>
+
+<p>PostCSS has plugins available to replicate all of the features developers have become accustomed to with pre processors. Variables, Mixins, Functions, Extends and even Nesting can be accomplished with existing plugins...</p>
+
+<ul>
+<li>postcss-mixins - Enables mixins more powerful than Sass.</li>
+
+<li>postcss-nested - Unwraps nested rules.</li>
+
+<li>postcss-simple-extend - Lightweight extending of silent classes, like Sass' @extend.</li>
+
+<li>postcss-simple-vars - Support for Sass-style variables.</li>
+
+<li>postcss-nested-vars - Supports nested Sass-style variables.</li>
+
+<li>postcss-precss - Plugin pack that allows you to use Sass-like CSS.</li>
+</ul>
+
+<h4 id="maintainablecss">Maintainable CSS</h4>
+
+<p>PostCSS offers more then just the syntax changes associated with Sass, Less and Stylus. With PostCSS you can also extend the functionality of CSS and begin to tackle some of the languages shortcomings.</p>
 
 <blockquote>
 “…the single hardest problem in CSS: Getting your rules to match the elements you want, without them accidentally
@@ -54,56 +71,63 @@ matching the elements you don’t.”
 <i>Philip Walton, Engineer at Google</i>
 </blockquote>
 
-Quotes like the one above accurately sum up the struggles all developers have had with CSS inheritance, scope and specificity, with PostCSS these issues and more can be resolved. There are also plugins to help with readability, linting and implementing the latest CSS properties safely.
+<p>Quotes like the one above accurately sum up the struggles all developers have had with CSS inheritance, scope and specificity, with PostCSS these issues and more can be resolved. There are also plugins to help with readability, linting and implementing the latest CSS properties safely.</p>
 
-*   postcss-use - Enable PostCSS plugins directly in your stylesheet.
-*   postcss-modules - Allows to use CSS Modules everywhere.
-*   postcss-autoreset - Automatically adds reset styles.
-*   postcss-cssnext - Plugin pack that allows you to use future CSS features today.
-*   cq-prolyfill - Adds support for CSS container queries (aka element query) like `:container(width > 100px)`.
+<ul>
+<li>postcss-use - Enable PostCSS plugins directly in your stylesheet.</li>
 
+<li>postcss-modules - Allows to use CSS Modules everywhere.</li>
 
-#### Customisable
+<li>postcss-autoreset - Automatically adds reset styles.</li>
 
-Because PostCSS uses Javascript to transform CSS, it is much more accessible for front end developers to create their own plugins. Projects can therefore be customised to create the optimum workflow with no limitations or boundaries set by language choices.
+<li>postcss-cssnext - Plugin pack that allows you to use future CSS features today.</li>
 
-Plugins can be created for any CSS task large or small, a collection of current plugins can be found
-[here](http://postcss.parts/). More information will be provided on how to create a plugin later in this article
+<li>cq-prolyfill - Adds support for CSS container queries (aka element query) like <code>:container(width &gt; 100px)</code>.</li>
+</ul>
 
-## Why use PostCSS?
+<h4 id="customisable">Customisable</h4>
 
-PostCSS has many benefits when compared to other CSS processors, including speed, performance, adaptability and innovation. Perhaps its biggest advantage though is that it is not attempting to compete with these languages and can instead be used alongside them.
+<p>Because PostCSS uses Javascript to transform CSS, it is much more accessible for front end developers to create their own plugins. Projects can therefore be customised to create the optimum workflow with no limitations or boundaries set by language choices.</p>
 
-To begin using PostCSS you do not have to abandon your current front end set up and can continue to use the Functions, Mixins and Variables you already have, whatever language they are in. This allows the more forward thinking PostCSS plugins to be added to legacy projects, not just new builds.
+<p>Plugins can be created for any CSS task large or small, a collection of current plugins can be found
+<a href="http://postcss.parts/">here</a>. More information will be provided on how to create a plugin later in this article</p>
 
-#### Benefits
+<h2 id="whyusepostcss">Why use PostCSS?</h2>
 
-*   Use tomorrow’s CSS syntax, today.
-*   Easy to contribute to in the form of custom plugins.
-*   More control over the features used.
-*   Faster compile times.
+<p>PostCSS has many benefits when compared to other CSS processors, including speed, performance, adaptability and innovation. Perhaps its biggest advantage though is that it is not attempting to compete with these languages and can instead be used alongside them.</p>
 
+<p>To begin using PostCSS you do not have to abandon your current front end set up and can continue to use the Functions, Mixins and Variables you already have, whatever language they are in. This allows the more forward thinking PostCSS plugins to be added to legacy projects, not just new builds.</p>
 
-## Getting started
+<h4 id="benefits">Benefits</h4>
 
-Another plus point for PostCSS is the ease with which it can be integrated into your current workflow. PostCSS has a JavaScript API and integrates seamlessly with task runners like Gulp, Grunt and webpack.
+<ul>
+<li>Use tomorrow’s CSS syntax, today.</li>
 
-#### JS API
+<li>Easy to contribute to in the form of custom plugins.</li>
 
-```
-var postcss = require('postcss');
+<li>More control over the features used.</li>
+
+<li>Faster compile times.</li>
+</ul>
+
+<h2 id="gettingstarted">Getting started</h2>
+
+<p>Another plus point for PostCSS is the ease with which it can be integrated into your current workflow. PostCSS has a JavaScript API and integrates seamlessly with task runners like Gulp, Grunt and webpack.</p>
+
+<h4 id="jsapi">JS API</h4>
+
+<pre><code>var postcss = require('postcss');
 postcss([ require('autoprefixer'), require('cssnano') ])
     .process(css, { from: 'src/app.css', to: 'app.css' })
     .then(function (result) {
         fs.writeFileSync('app.css', result.css);
         if ( result.map ) fs.writeFileSync('app.css.map', result.map);
     });
-```
+</code></pre>
 
-#### Gulp
+<h4 id="gulp">Gulp</h4>
 
-```
-gulp.task('css', function () {
+<pre><code>gulp.task('css', function () {
     var postcss    = require('gulp-postcss');
     var sourcemaps = require('gulp-sourcemaps');
 
@@ -113,33 +137,29 @@ gulp.task('css', function () {
         .pipe( sourcemaps.write('.') )
         .pipe( gulp.dest('build/') );
 });
-```
+</code></pre>
 
-PostCSS also has a command line interface available for those who don't wish to use a task runner. By installing postcss-cli CSS can be compiled with the following command...
+<p>PostCSS also has a command line interface available for those who don't wish to use a task runner. By installing postcss-cli CSS can be compiled with the following command...</p>
 
-```
-postcss -c config.json -o result.css input.css
-```
+<pre><code>postcss -c config.json -o result.css input.css
+</code></pre>
 
+<h2 id="demo">Demo</h2>
 
-## Demo
+<p>To demonstrate how PostCSS works we will look at the simple PostCSS Clearfix plugin. The plugin adds fix and fix-legacy values to the clear property. With the plugin installed you can set the clear property to fix or fix-legacy depending on your level of browser support.</p>
 
-To demonstrate how PostCSS works we will look at the simple PostCSS Clearfix plugin. The plugin adds fix and fix-legacy values to the clear property. With the plugin installed you can set the clear property to fix or fix-legacy depending on your level of browser support.
-
-```
-.foo {
+<pre><code>.foo {
   clear: fix; /* IE8+ */
 }
 
 .bar {
   clear: fix-legacy; /* IE6+ */
 }
-```
-The CSS above would compile to...
+</code></pre>
 
+<p>The CSS above would compile to...</p>
 
-```
-.foo:after{
+<pre><code>.foo:after{
   content: '';
   display: block;
   clear: both;
@@ -156,6 +176,6 @@ The CSS above would compile to...
 .bar {
   zoom: 1;
 }
-```
+</code></pre>
 
-The plugin iterates through each declaration in the input CSS file matching values of fix of fix-legacy. In the output CSS these declarations are removed and replaced with the relevant CSS.
+<p>The plugin iterates through each declaration in the input CSS file matching values of fix of fix-legacy. In the output CSS these declarations are removed and replaced with the relevant CSS.</p>

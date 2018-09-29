@@ -5,100 +5,92 @@ date: 2015-06-12
 tags: [CSS]
 ---
 
-[Article originally posted on Medium.](https://medium.com/@cathy_dutton/css-layers-afff4ae66649#.8iozwx4us )
+<p><a href="https://medium.com/@cathy_dutton/css-layers-afff4ae66649#.8iozwx4us">Article originally posted on Medium.</a></p>
 
-A follow up to Surviving CSS, using Naming Conventions and CSS Methodologies to separate CSS into meaningful layers, aiding scalability, performance and organisation.
+<p>A follow up to Surviving CSS, using Naming Conventions and CSS Methodologies to separate CSS into meaningful layers, aiding scalability, performance and organisation.</p>
 
-Many of the CSS issues discussed in my previous post can be easily avoided with the use of an appropriate CSS strategy. In this article I will look at the benefits to be gained from using a Methodology and/or a Naming Convention.
+<p>Many of the CSS issues discussed in my previous post can be easily avoided with the use of an appropriate CSS strategy. In this article I will look at the benefits to be gained from using a Methodology and/or a Naming Convention.</p>
 
-There are numerous Front End Methodologies and Naming Conventions available for use, each with there own advantages and disadvantages. In almost all cases the CSS is split into more manageable ‘chunks’ of code. The manner in which the CSS is split is what defines each methodology.
+<p>There are numerous Front End Methodologies and Naming Conventions available for use, each with there own advantages and disadvantages. In almost all cases the CSS is split into more manageable ‘chunks’ of code. The manner in which the CSS is split is what defines each methodology.</p>
 
 <h2 class="heading">Naming Conventions</h2>
 
-The importance of a solid naming convention should not be overlooked. As well as organisational benefits there are numerous performance benefits to naming your selectors consistently and responsibly.
+<p>The importance of a solid naming convention should not be overlooked. As well as organisational benefits there are numerous performance benefits to naming your selectors consistently and responsibly.</p>
 
-The proper implementation of any convention will also play a key part in reducing the fear factor associated with CSS on large scale projects.
+<p>The proper implementation of any convention will also play a key part in reducing the fear factor associated with CSS on large scale projects.</p>
 
-<i>BEM</i>
+<p><i>BEM</i></p>
 
-One of the most popular Naming Conventions around is BEM (Block, Element, Modifier). By prefixing each element with it’s parent block modules become much easier to target safely. BEM can also help remove the reliance on nesting or attaching styles to page and body classes.
+<p>One of the most popular Naming Conventions around is BEM (Block, Element, Modifier). By prefixing each element with it’s parent block modules become much easier to target safely. BEM can also help remove the reliance on nesting or attaching styles to page and body classes.</p>
 
-```
-.block {}
+<pre><code>.block {}
 .block__element {}
 .block--modifier {}
-```
+</code></pre>
 
-The example above shows the class structure of a BEM project, underscores are used to separate elements, with hyphens for modifiers. Below is a real world example…
+<p>The example above shows the class structure of a BEM project, underscores are used to separate elements, with hyphens for modifiers. Below is a real world example…</p>
 
-```
-.product-details {}
+<pre><code>.product-details {}
 .product-details__price {}
 .product-details__price--sale {}
-```
+</code></pre>
 
-One pitfall of BEM is the temptation to add utility style classes into the modifier section. Modifier selectors such as, large, small, green or bold introduce opinions into the markup which could be subject to change at a later date.
+<p>One pitfall of BEM is the temptation to add utility style classes into the modifier section. Modifier selectors such as, large, small, green or bold introduce opinions into the markup which could be subject to change at a later date.</p>
 
-```
-.product-details {}
+<pre><code>.product-details {}
 .product-details__title {}
 .product-details__title--small {}
-```
+</code></pre>
 
-As with most utility classes the intentions are clear at the beginning of a project, but often lead to contradicting CSS if a design changes.
+<p>As with most utility classes the intentions are clear at the beginning of a project, but often lead to contradicting CSS if a design changes.</p>
 
-<i>SUIT</i>
+<p><i>SUIT</i></p>
 
-Suit takes it’s roots from BEM, but uses camel case for component names and hyphens to separate components from their modifiers and descendants.
+<p>Suit takes it’s roots from BEM, but uses camel case for component names and hyphens to separate components from their modifiers and descendants.</p>
 
-```
-.u-utility {}
+<pre><code>.u-utility {}
 .ComponentName {}
 .ComponentName--modifierName {}
 .ComponentName-descendantName {}
 .ComponentName.is-someState {}
-```
+</code></pre>
 
-This makes selectors a little more readable by removing potentially confusing hyphenated element names.
+<p>This makes selectors a little more readable by removing potentially confusing hyphenated element names.</p>
 
-```
-.ProductDetails {}
+<pre><code>.ProductDetails {}
 .ProductDetails-price {}
 .ProductDetails-title--sale {}
-```
+</code></pre>
 
-<i>Prefixing</i>
+<p><i>Prefixing</i></p>
 
-If you don’t want to use such a strict or complicated naming convention prefixing each selector can work just as well.
+<p>If you don’t want to use such a strict or complicated naming convention prefixing each selector can work just as well.</p>
 
-```
-.s-product-details {}
+<pre><code>.s-product-details {}
 .t-product-details {}
 .js-product-details {}
-```
+</code></pre>
 
-This method makes it easy to identify a structural class from a presentational class but is simpler to write and to understand. In the above example the structural properties would be applies to the s-product-details selector. The theming properties would be applied to the t-product-details selector.
+<p>This method makes it easy to identify a structural class from a presentational class but is simpler to write and to understand. In the above example the structural properties would be applies to the s-product-details selector. The theming properties would be applied to the t-product-details selector.</p>
 
-Elements can be be defined in a similar way or by using base and modifier classes…
+<p>Elements can be be defined in a similar way or by using base and modifier classes…</p>
 
-```
-<button class="button">Button</button>
-<button class="button button-checkout">Checkout Button</button>
-<button class="button button-search">Search Button</button>
-```
+<pre><code>&lt;button class="button"&gt;Button&lt;/button&gt;
+&lt;button class="button button-checkout"&gt;Checkout Button&lt;/button&gt;
+&lt;button class="button button-search"&gt;Search Button&lt;/button&gt;
+</code></pre>
 
-<i>On a side note prefixing Sass partials is also a huge help when locating files in a larger project as it removes the need to store partials in folders. This method is used in ITCSS.</i>
+<p><i>On a side note prefixing Sass partials is also a huge help when locating files in a larger project as it removes the need to store partials in folders. This method is used in ITCSS.</i></p>
 
-It doesn’t matter which if any you choose, the important thing is that you document your choices and stick to them for the entirety of the project.
+<p>It doesn’t matter which if any you choose, the important thing is that you document your choices and stick to them for the entirety of the project.</p>
 
 <h3 class="heading">Methodologies</h3>
 
-With the addition of a naming convention the CSS is now much safer and more performant. The need to Nest selectors should also be reduced resulting in smaller CSS files and less specificity issues.
+<p>With the addition of a naming convention the CSS is now much safer and more performant. The need to Nest selectors should also be reduced resulting in smaller CSS files and less specificity issues.</p>
 
-Despite these improvements you can still end up with duplicate CSS like the example below.
+<p>Despite these improvements you can still end up with duplicate CSS like the example below.</p>
 
-```
-.product-details__title {
+<pre><code>.product-details__title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     color: #333;
@@ -109,95 +101,89 @@ Despite these improvements you can still end up with duplicate CSS like the exam
    text-transform: uppercase;
    color: #FF0000;
 }
-```
+</code></pre>
 
-This is where Front End Methodologies come in, splitting your CSS into layers will help prevent both duplicate styles and large grouped selectors. Common or base styles are defined separately, with the more specific or modifier styles added on top of the inherited styling.
+<p>This is where Front End Methodologies come in, splitting your CSS into layers will help prevent both duplicate styles and large grouped selectors. Common or base styles are defined separately, with the more specific or modifier styles added on top of the inherited styling.</p>
 
 <h3 class="heading">OOCSS</h3>
 
-Object Orientated CSS has two main principles the first is separating structure from skin, the second is the separation of containers and content. Both of these principles are designed to increase performance by creating modules of re-usable CSS.
+<p>Object Orientated CSS has two main principles the first is separating structure from skin, the second is the separation of containers and content. Both of these principles are designed to increase performance by creating modules of re-usable CSS.</p>
 
-<i>Separating Structure from Skin</i>
+<p><i>Separating Structure from Skin</i></p>
 
-```
-<div class="box-padded product-image"></div>
-<div class="box-padded product-description"></div>
-```
+<pre><code>&lt;div class="box-padded product-image"&gt;&lt;/div&gt;
+&lt;div class="box-padded product-description"&gt;&lt;/div&gt;
+</code></pre>
 
-```
-.product-image {
-	   width: 400px;
-   	overflow: hidden;
+<pre><code>.product-image {
+       width: 400px;
+       overflow: hidden;
 }
 
 .product-description {
-   	width: 500px;
-   	min-height: 200px;
-   	overflow: auto;
+       width: 500px;
+       min-height: 200px;
+       overflow: auto;
 }
 
 .box-padded {
-   	background: #FFF;
+       background: #FFF;
    padding: 10px;
 }
-```
+</code></pre>
 
-<i>Separating Containers from Content</i>
+<p><i>Separating Containers from Content</i></p>
 
-```
-<div class="wrapper recently-viewed"></div>
-<div class="wrapper suggested-products"></div>
-```
+<pre><code>&lt;div class="wrapper recently-viewed"&gt;&lt;/div&gt;
+&lt;div class="wrapper suggested-products"&gt;&lt;/div&gt;
+</code></pre>
 
-```
-.wrapper {
-	   width: 400px;
-   margin: 0 auto;   	
+<pre><code>.wrapper {
+       width: 400px;
+   margin: 0 auto;       
    overflow: hidden;
 }
 
 .recently-viewed {
-	   border: solid 1px #ccc;
-	   background: #FFF;
+       border: solid 1px #ccc;
+       background: #FFF;
    color: £666;
 }
 
 .suggested-products {
-	   border: solid 1px #ccc;
-	   background: #FFF;
+       border: solid 1px #ccc;
+       background: #FFF;
    color: £666;
 }
-```
+</code></pre>
 
-This Object Orientated way of working creates a series of utility classes which can be used to access sets of CSS properties. This way of working can improve site performance and maintenance as well as keeping CSS files DRY.
+<p>This Object Orientated way of working creates a series of utility classes which can be used to access sets of CSS properties. This way of working can improve site performance and maintenance as well as keeping CSS files DRY.</p>
 
-If however the markup is consistent across multiple themes an Object Orientated approach can result in the addition of correctional CSS used to override or remove unwanted inherited styles.
+<p>If however the markup is consistent across multiple themes an Object Orientated approach can result in the addition of correctional CSS used to override or remove unwanted inherited styles.</p>
 
-```
-product-delivry.padded-box {
-	   padding:0
+<pre><code>product-delivry.padded-box {
+       padding:0
 }
-```
+</code></pre>
 
-As a result of this a white label approach with purely Semantic markup may be a wiser choice for projects with multiple skins and one code base.
+<p>As a result of this a white label approach with purely Semantic markup may be a wiser choice for projects with multiple skins and one code base.</p>
 
 <h3 class="heading">SMACSS </h3>
 
-Scalable and Modular Architecture for CSS, like OOCSS is based around the reduction of repetitive styling. SMACSS however uses a set of 5 layers to separate the CSS and to bring a more structured approach to projects.
+<p>Scalable and Modular Architecture for CSS, like OOCSS is based around the reduction of repetitive styling. SMACSS however uses a set of 5 layers to separate the CSS and to bring a more structured approach to projects.</p>
 
-```
-Base - HTML elements & defaults
+<pre><code>Base - HTML elements &amp; defaults
 Layout -Page structure
 Module - Re-usable code bloks
 State - Active/Inactive etc
 Theme - Typography and colour schemes etc
-```
+</code></pre>
 
-This added organisation and structure improve the efficiency of the output CSS. The methodology can alos be adapted where needed by adding or removing layers.
+<p>This added organisation and structure improve the efficiency of the output CSS. The methodology can alos be adapted where needed by adding or removing layers.</p>
 
 <h3 class="heading">ITCSS</h3>
 
-Inverted Triangle CSS is a fairly new methodology not to dissimilar to SMACSS, which creates a series of layers to manage dependancies and aid scalability. The base layer covers generic and broad selectors. The top layer covers localised module specific selectors. The full set of layers are as follows…
+<p>Inverted Triangle CSS is a fairly new methodology not to dissimilar to SMACSS, which creates a series of layers to manage dependancies and aid scalability. The base layer covers generic and broad selectors. The top layer covers localised module specific selectors. The full set of layers are as follows…</p>
 
 <ul>
 <li><b>Settings</b> — Global variables & config</li>
@@ -209,12 +195,11 @@ Inverted Triangle CSS is a fairly new methodology not to dissimilar to SMACSS, w
 <li><b>Trumps</b> — Helpers & overrides</li>
 </ul>
 
-The specificity increases with each layer, allowing for only the additional requirements to be added.
+<p>The specificity increases with each layer, allowing for only the additional requirements to be added.</p>
 
-Taking the same example as above, the CSS would be split into the base and component layers.
+<p>Taking the same example as above, the CSS would be split into the base and component layers.</p>
 
-```
-p {
+<pre><code>p {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
 }
@@ -226,9 +211,10 @@ p {
 .latest-news__title {
     color: #FF0000;
 }
-```
+</code></pre>
+
 <h3 class="heading">Think before you use </h3>
 
-Just because you decide to implement one of the above strategies you are not tied to it in it’s entirety. If a certain layer doesn't work for your project then don’t use it. You can also adapt or add things to fit the needs of your project and team. No naming conventions or methodologies will work 100% for all projects all of the time.
+<p>Just because you decide to implement one of the above strategies you are not tied to it in it’s entirety. If a certain layer doesn't work for your project then don’t use it. You can also adapt or add things to fit the needs of your project and team. No naming conventions or methodologies will work 100% for all projects all of the time.</p>
 
-You can also create your own Methodology or Naming Convention, allowing for a tailored solution that perfectly fits the requirements of your project. One disadvantage to bespoke solutions however is the lack of community support and documentation.
+<p>You can also create your own Methodology or Naming Convention, allowing for a tailored solution that perfectly fits the requirements of your project. One disadvantage to bespoke solutions however is the lack of community support and documentation.</p>

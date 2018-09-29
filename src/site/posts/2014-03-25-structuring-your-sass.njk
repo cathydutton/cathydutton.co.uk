@@ -5,7 +5,7 @@ date: 2014-03-25
 tags: [CSS]
 ---
 
-When setting up a new web project getting things right from the beginning is hugely important. Using Sass, style sheets can now be split into more manageable chunks without adding extra http requests. The Bear boilerplate (created following <a href="https://cathydutton.co.uk/css/the-dreaded-front-end-framework" >this</a> earlier post) splits CSS into the following 5 sections&#8230;
+<p>When setting up a new web project getting things right from the beginning is hugely important. Using Sass, style sheets can now be split into more manageable chunks without adding extra http requests. The Bear boilerplate (created following <a href="https://cathydutton.co.uk/css/the-dreaded-front-end-framework" >this</a> earlier post) splits CSS into the following 5 sections&#8230;</p>
 
 <ul class="unordered-list">
   <li class="unordered-list__list-item">
@@ -25,32 +25,24 @@ When setting up a new web project getting things right from the beginning is hug
   </li>
 </ul>
 
-**Vendor** &#8211; This folder contains third party Sass files such as normalize and Font Awesome. More files can be added as and when they are needed such as print resets and browser fallbacks.
+<p><b>Vendor</b> &#8211; This folder contains third party Sass files such as normalize and Font Awesome. More files can be added as and when they are needed such as print resets and browser fallbacks.</p>
 
-**Base** &#8211; This folder contains the starting points for the project, global variables, mixins and placeholders.
+<p><b>Base</b> &#8211; This folder contains the starting points for the project, global variables, mixins and placeholders.</p>
 
-**Framework** &#8211; Here the layout of the site is defined with a grid function (<a href="http://get-maze.co.uk/">Maze</a>) and breakpoints. The layout.scss file is used to create the page wireframe blocks.
+<p><b>Framework</b> &#8211; Here the layout of the site is defined with a grid function (<a href="http://get-maze.co.uk/">Maze</a>) and breakpoints. The layout.scss file is used to create the page wireframe blocks.</p>
 
-**Modules** &#8211; Reusable blocks of code are defined including list items, buttons and typography.
+<p><b>Modules</b> &#8211; Reusable blocks of code are defined including list items, buttons and typography.</p>
 
-**Theme** &#8211; The theme files contain the sites unique styling elements broken down in to site sections including Header, Footer, Nav etc.
+<p><b>Theme</b> &#8211; The theme files contain the sites unique styling elements broken down in to site sections including Header, Footer, Nav etc.</p>
 
-Below is the start up style.scss file used to pull in each sub file:
+<p>Below is the start up style.scss file used to pull in each sub file:</p>
 
 <pre>
 	<code>
-		/* ==========================================================================
-
-				Bear Scss Structure
-				- https://cathydutton.co.uk
-				Version: 0.1.1
-
-
 		/* VENDOR - Default fall backs & external .scss files.
 		========================================================================== */
 
 			@import vendor/_normalize.scss;
-
 
 		/* Base - Base variable file along with starting points mixins & placeholders.
 		========================================================================== */
@@ -60,23 +52,19 @@ Below is the start up style.scss file used to pull in each sub file:
 			@import base/_placeholders.scss;
 
 
-
 		/* FRAMEWORK - Structure & layout files including the Maze grid function.
 		========================================================================== */
 
-			
 			@import framework/_grid.scss;
 			@import framework/_layout.scss;
 			@import framework/_breakpoints.scss;
 
-
 		/* MODULES - Individual site elements.
 		========================================================================== */
 
-				@import modules/_buttons.scss;
-				@import modules/_lists.scss;
-				@import modules/_color-manipulation.scss;
-
+			@import modules/_buttons.scss;
+			@import modules/_lists.scss;
+			@import modules/_color-manipulation.scss;
 
 		/* Theme - Theme styles for each area of the site.
 		========================================================================== */
@@ -98,8 +86,8 @@ Below is the start up style.scss file used to pull in each sub file:
 
 <h2 class="heading">Expansion</h2>
 
-The structured folders make future development much easier, allowing anybody to quickly find the files they wish to edit or to add new mixins and placeholders.
+<p>The structured folders make future development much easier, allowing anybody to quickly find the files they wish to edit or to add new mixins and placeholders.</p>
 
-The site structure can also be expanded for larger or more complex projects, each theme component for example can be expanded to include a layout and style section, replacing the generic layout file used for smaller projects.
+<p>The site structure can also be expanded for larger or more complex projects, each theme component for example can be expanded to include a layout and style section, replacing the generic layout file used for smaller projects.</p>
 
-The full set of files can be viewed or downloaded from <a href="https://github.com/cathydutton/bear" target="_blank">GitHub</a>.
+<p>The full set of files can be viewed or downloaded from <a href="https://github.com/cathydutton/bear" target="_blank">GitHub</a>.</p>

@@ -7,22 +7,22 @@ module.exports = function(config) {
 
   // Blog post collection
   config.addCollection("posts", function(collection) {
-    return collection.getFilteredByGlob("**/posts/**.md").reverse();
+    return collection.getFilteredByGlob("**/posts/**.njk").reverse();
   });
 
   // Latest posts include
    config.addCollection("latestPosts", function(collection) {
-    return collection.getFilteredByGlob("**/posts/**.md").slice(-3).reverse();
+    return collection.getFilteredByGlob("**/posts/**.njk").slice(-3).reverse();
   });
 
   // PostCSS plugin collection
   config.addCollection("PostCSS", function(collection) {
-    return collection.getFilteredByGlob("**/PostCSS/**.md");
+    return collection.getFilteredByGlob("**/PostCSS/**.njk");
   });
 
   // Portfolio collection
   config.addCollection("portfolio", function(collection) {
-    return collection.getFilteredByGlob("**/portfolio/**.md");
+    return collection.getFilteredByGlob("**/portfolio/**.njk");
   });
 
   return {
