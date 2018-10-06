@@ -641,16 +641,20 @@ pre p {
     background: var(--colour-bright);
   }
 
-/* SELECT */
+/* Tables */
 
-::selection {
-    background: lighten(map-get($colours, 'accent'), 25%);
+table {
+    border-collapse: collapse;
+    margin: 1em 0;
   }
 
-/* IMGAES */
+table, th, td {
+    border: 1px solid black;
+  }
 
-img {
-    image-rendering: auto;
+th, td {
+    padding: 15px;
+    text-align: left;
   }
 
 /* SVG */
@@ -751,14 +755,14 @@ h1 {
   }
 
 h2 {
-    font-size: calc(1.4vw + 1.4vh + 2vmin);
+    font-size: calc(1.2vw + 1.2vh + 2vmin);
     color: hsl(294, 83%, 7%);
     color: var(--colour-dark);
     margin-bottom: .4em;
   }
 
 h3 {
-    font-size: calc(1.3vw + 1.3vh + 2vmin);
+    font-size: calc(.8vw + .8vh + 2vmin);
     color: hsl(294, 83%, 7%);
     color: var(--colour-dark);
     margin-bottom: .4em;
@@ -767,7 +771,7 @@ h3 {
 h4,
   h5,
   h6 {
-    font-size: calc(1.2vw + 1.2vh + 2vmin);
+    font-size: calc(.6vw + .6vh + 1vmin);
     color: hsl(294, 83%, 7%);
     color: var(--colour-dark);
     margin-bottom: .4em;
@@ -856,6 +860,45 @@ a
     color: hsl(0, 0%, 89%);
     color: var(--colour-light);
   }
+
+/*
+  Generic -   Images
+  
+  275 x 150
+  550 x 300
+  825 x 450
+  ----------------------------------- */
+
+img {
+  image-rendering: auto;
+}
+
+.image-ratio {
+  position: relative;
+  display: block;
+  margin: 1em 0;
+  border: solid 1px hsl(0, 0%, 89%);
+  border: solid 1px var(--colour-light);
+}
+
+.image-ratio:before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-bottom: 55%;
+  background: hsl(0, 0%, 89%);
+  background: var(--colour-light);
+  box-shadow:inset 0px 0px 0px 1px hsl(294, 83%, 28%);
+  box-shadow:inset 0px 0px 0px 1px var(--colour-medium);
+}
+
+.image-ratio img {
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+}
 
 /*
   Layout - Base

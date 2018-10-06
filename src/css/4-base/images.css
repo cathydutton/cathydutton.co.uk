@@ -1,0 +1,38 @@
+/*
+  Generic -   Images
+  
+  275 x 150
+  550 x 300
+  825 x 450
+  ----------------------------------- */
+
+ img {
+  image-rendering: auto;
+}
+
+.image-ratio {
+  position: relative;
+  display: block;
+  margin: 1em 0;
+  border: solid 1px var(--colour-light);
+}
+
+.image-ratio:before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-bottom: 55%;
+  background: var(--colour-light);
+  box-shadow:inset 0px 0px 0px 1px var(--colour-medium);
+}
+
+.image-ratio img {
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+}
+
+
+

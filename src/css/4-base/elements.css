@@ -61,15 +61,21 @@
     background: var(--colour-bright);
   }
 
+  
+  /* Tables */
 
-  /* SELECT */
-  ::selection {
-    background: lighten(map-get($colours, 'accent'), 25%);
+  table {
+    border-collapse: collapse;
+    margin: 1em 0;
   }
 
-  /* IMGAES */
-  img {
-    image-rendering: auto;
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: left;
   }
 
   /* SVG */
@@ -148,6 +154,11 @@
   [hidden], template {
     display: none;
 }
+
+
+
+
+
 
 
 

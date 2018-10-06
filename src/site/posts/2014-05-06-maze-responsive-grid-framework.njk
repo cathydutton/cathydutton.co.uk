@@ -4,8 +4,7 @@ description: Maze - A flexible responsive grid built with Sass
 date: 2014-05-06
 tags: [CSS]
 ---
-
-<p>After numerous rants regarding my disliking for Bootstrap and most other front end frameworks, I decided to have a go myself. The results can be found here <a href="http://www.get-maze.co.uk" target="_blank" >www.get-maze.co.uk</a>, an easy to customise grid built using Sass and HTML 5. My aim with Maze was to produce a simple to use set of mixins enabling percentage widths to be assigned to any selector in any layout.</p>
+<p>After numerous rants regarding my disliking for Bootstrap and most other front end frameworks, I decided to have a go myself. The results can be found here <a href="https://github.com/cathydutton/maze" target="_blank" >www.get-maze.co.uk</a>, an easy to customise grid built using Sass and HTML 5. My aim with Maze was to produce a simple to use set of mixins enabling percentage widths to be assigned to any selector in any layout.</p>
 
 <h2 class="heading">Why?</h2>
 
@@ -35,103 +34,47 @@ tags: [CSS]
 
 <p>The number of grid columns, push value and gutter width can be easily changed by editing the variables shown below. The percentage width of a single column span is created using the $grid-columns value and assigned to the variable $unit.</p>
 
-<code>
-  <pre>
-    $grid-columns: 12;
-    $unit: (100%  / $grid-columns);
-    $gutter: 2% !default;
-    $push: 0 !default;
-  </pre>
-</code>
-
 <p>A Sass mixin is used to output the grid CSS. Each elements width is calculated using the values passed from the variables described above and user inputted values for the required column span ($col) and float direction ($fold). the $fold variable determines whether the columns will collapse from the right or the left as the grid is re-sized. By default the right column will move to a new row, setting a value of $fold:right will move the left column.</p>
-
-<code>
-  <pre>
-    @mixin grid($col, $fold:"left", $push:$push, $margin:$gutter) {
-      @include transition;
-      float:#{$fold};
-      background: $base-color;
-      cursor: pointer;
-      padding: 20px;
-      width: (($unit * $col) - $margin ) + ( $margin / ( $grid-columns / $col) );
-
-      @if $push &gt; 1 {
-        margin-left: (($unit * $push) ) + ( $gutter / ( $grid-columns / $push) );
-      }
-
-      @if $fold == left {
-        margin-right: $margin;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-      }
-
-      @if $fold == right {
-        margin-left: $margin;
-
-        &:last-child {
-          margin-left: 0;
-        }
-
-      }
-
-      &:hover {
-        background: $brown;
-        color: $white;
-      }
-
-    }
-  </pre>
-</code>
 
 <h3 class="heading">How</h3>
 
 <p>Firstly a single span column width is calculated and stored in a new variable $unit&#8230;</p>
 
-```
-$unit: (100%  / $grid-columns);  
-```
+<pre><code>$unit: (100%  / $grid-columns);  
+</code></pre>
 
 <p>If we have a 12 column grid then a single span column will be (100% / 12) which is equal to 8.333%. This value is used to generate the percentage widths of any column span&#8230;</p>
 
-```
-width: (($unit * $col) - $gutter ) + ( $gutter / ( $grid-columns / $col) );
-```
+<pre><code>width: (($unit * $col) - $gutter ) + ( $gutter / ( $grid-columns / $col) );
+</code></pre>
 
 <p>In our example $unit is equal to 8.333%, $grid-columns is equal to 12 and $gutter is equal to 2%. To find the width for an element spanning 5 columns the formulae would be&#8230;</p>
 
-```
-width: ((8.333 * 5) - 2 ) + ( 2 / ( 12 / 5) );  //  which equals  40.5%
-```
+<pre><code>width: ((8.333 * 5) - 2 ) + ( 2 / ( 12 / 5) );  //  which equals  40.5%
+</code></pre>
 
 <p>The width for a 5 column span would therefore be 40.5%. The first part of the formulae calculates the width by multiplying the value for one span by the desired span and removing the gutter value. The second part of the formulae adds to the width to compensate for the missing gutter value which is not applied to the last child in each row. (see below code)</p>
 
-```
-&:last-child {
+<pre><code>&amp;:last-child {
   margin-right: 0;
 }
-```
+</code></pre>
 
 <p>The gutter percentage is set using the variable $gutter. This value is used throughout the site build for all column margins. If a layout uses multiple margin values the $gutter variable can be over-ridden using the mixin.</p>
 
-```
-.logo {
+<pre><code>.logo {
   @include grid(3); // Default, uses the variable $gutter value
   @include grid(3, $margin:0);  // Sets margin to 0
   @include grid(3, $margin:4%);  // Sets margin to 4%
 }   
-```
+</code></pre>
 
 <p>The mixin adds the gutter value to a margin property dependant on the value of the $fold variable. If $fold is set to left, (the default option) then a margin-right is applied to all elements except the last child, the right column will be moved to the row below as the grid is re-sized. If $fold is set to right, a margin-left is applied to all elements except the last child, the left column will then be moved to the row below as the grid is re-sized.</p>
 
-```
-@if $fold == left {
+<pre><code>@if $fold == left {
   margin-right: $gutter;
 
-  &:last-child {
+  &amp;:last-child {
     margin-right: 0;
   }
 
@@ -140,25 +83,23 @@ width: ((8.333 * 5) - 2 ) + ( 2 / ( 12 / 5) );  //  which equals  40.5%
 @if $fold == right {
   margin-left: $gutter;
 
-  &:last-child {
+  &amp;:last-child {
     margin-left: 0;
   }
 
 }
-```
+</code></pre>
 
 <p>If a push value is set a margin-left is added to that element using this part of the formulae&#8230;</p>
 
-```
-@if $push &gt; 1 {
+<pre><code>@if $push &amp;gt; 1 {
   margin-left: (($unit * $push) ) + ( $gutter / ( $grid-columns / $push) );
 }
-```
+</code></pre>
 
-<p>The mixin in full is written below, the full grid set up can be viewed here <a href="http://www.get-maze.co.uk/maze/" target="_blank"> Maze demo</a></p>
+<p>The mixin in full is written below, the full grid set up can be viewed here <a href="https://github.com/cathydutton/maze" target="_blank"> Maze demo</a></p>
 
-```
-@mixin grid($col, $fold:"left", $push:$push, $margin:$gutter) {
+<pre><code>@mixin grid($col, $fold:"left", $push:$push, $margin:$gutter) {
   @include transition;
   float:#{$fold};
   background: $base-color;
@@ -166,14 +107,14 @@ width: ((8.333 * 5) - 2 ) + ( 2 / ( 12 / 5) );  //  which equals  40.5%
   padding: 20px;
   width: (($unit * $col) - $margin ) + ( $margin / ( $grid-columns / $col) );
 
-    @if $push &gt; 1 {
+    @if $push &amp;gt; 1 {
       margin-left: (($unit * $push) ) + ( $gutter / ( $grid-columns / $push) );
     }
 
     @if $fold == left {
       margin-right: $margin;
 
-      &:last-child {
+      &amp;:last-child {
         margin-right: 0;
       }
 
@@ -182,19 +123,19 @@ width: ((8.333 * 5) - 2 ) + ( 2 / ( 12 / 5) );  //  which equals  40.5%
     @if $fold == right {
       margin-left: $margin;
 
-      &:last-child {
+      &amp;:last-child {
         margin-left: 0;
       }
 
     }
 
-    &:hover {
+    &amp;:hover {
       background: $brown;
       color: $white;
     }
 
 }
-```
+</code></pre>
 
 <h3 class="heading">Responsive</h3>
 
@@ -202,47 +143,44 @@ width: ((8.333 * 5) - 2 ) + ( 2 / ( 12 / 5) );  //  which equals  40.5%
 
 <p>Firstly the break points are stored as variables&#8230;</p>
 
-```
-$break-wide: 1240px;
+<pre><code>$break-wide: 1240px;
 $break-desktop: 990px;
 $break-tablet: 767px;
 $break-mobile: 480px;
-```
+</code></pre>
 
 <p>The media query mixin has two arguments $media and $width, allowing the column span to be edited at the desired points.</p>
 
-```
-@mixin break($media, $col) {
-	@if $media == tablet {
-		@media only screen and (max-width:$break-tablet) {
-			width: (($unit * $col) - $gutter ) + ( $gutter / ( $grid-columns / $col) );
-			margin: $gutter / 2;
-			margin-left: 0;
-		}
-	}
-	@else if $media == mobile {
-		@media only screen and (max-width:$break-mobile) {
-			width: (($unit * $col) - $gutter ) + ( $gutter / ( $grid-columns / $col) );
-			margin: $gutter / 2;
-		}
-	}
+<pre><code>@mixin break($media, $col) {
+    @if $media == tablet {
+        @media only screen and (max-width:$break-tablet) {
+            width: (($unit * $col) - $gutter ) + ( $gutter / ( $grid-columns / $col) );
+            margin: $gutter / 2;
+            margin-left: 0;
+        }
+    }
+    @else if $media == mobile {
+        @media only screen and (max-width:$break-mobile) {
+            width: (($unit * $col) - $gutter ) + ( $gutter / ( $grid-columns / $col) );
+            margin: $gutter / 2;
+        }
+    }
 }
-```
+</code></pre>
 
 <p>Finally by using @include the selectors are free from presentational classes and can adopt any naming convention.</p>
 
-```
-.logo {
+<pre><code>.logo {
   @include grid(3);
   @include break(tablet, 6);
   @include break(mobile, 12);
 }
-```
+</code></pre>
 
 <h3 class="heading">Benefits</h3>
 
-<p>**Semantics**- Maze removes the need to add unfriendly classes to your mark-up, and allows for cleaner semantic naming conventions. This in turn ensures sites scalable and easy to maintain.</p>
+<p><b>Semantics</b>- Maze removes the need to add unfriendly classes to your mark-up, and allows for cleaner semantic naming conventions. This in turn ensures sites scalable and easy to maintain.</p>
 
-<p>**Control** &#8211; A common practice in responsive web design is to set each element to 100% at either the tablet or mobile break point. Maze allows for full control over the re-sizing of each HTML block allowing the content to respond as and where needed</p>
+<p><b>Control</b> &#8211; A common practice in responsive web design is to set each element to 100% at either the tablet or mobile break point. Maze allows for full control over the re-sizing of each HTML block allowing the content to respond as and where needed</p>
 
-<p>**Customise** &#8211; Using the existing media query mixins and variables as a guide any number of break points can be created ensuring the site is fully fluid. Maze will work for 8, 12 & 16 column layouts, and has an easily adjustable gutter width percentages.</p>
+<p><b>Customise</b> &#8211; Using the existing media query mixins and variables as a guide any number of break points can be created ensuring the site is fully fluid. Maze will work for 8, 12 & 16 column layouts, and has an easily adjustable gutter width percentages.</p>

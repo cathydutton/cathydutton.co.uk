@@ -1,6 +1,6 @@
 ---
 title: CSS Myths
-description: Common misconceptions of CSS
+description: Common misconceptions of CSS - CSS gets a lot of stick, the internet is full of articles describing ways to fix one, or all of it's so called failings. Most of the time however, these criticisms are unfair, untrue or both
 date: 2017-06-19
 tags: [CSS]
 ---
@@ -12,10 +12,9 @@ tags: [CSS]
 
 <p>You can read more on the topic of broken CSS in these two awesome articles...</p>
 
-<ul>
-<li>Danielle Huntrods: <a href="https://clearleft.com/posts/454" title="There are maps for these territories">There are maps for these territories</a></li>
-
-<li>Keith j Grant: <a href="http://keithjgrant.com/posts/2017/03/css-is-not-broken" title="CSS is not broken">CSS is not broken</a></li>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">Danielle Huntrods: <a href="https://clearleft.com/posts/454" title="There are maps for these territories">There are maps for these territories</a></li>
+<li class="unordered-list__list-item">Keith j Grant: <a href="http://keithjgrant.com/posts/2017/03/css-is-not-broken" title="CSS is not broken">CSS is not broken</a></li>
 </ul>
 
 <h3 id="2cssiseasy">2) CSS is easy</h3>
@@ -28,12 +27,10 @@ tags: [CSS]
 
 <p>The cascade determines which properties will be applied, and can be thought of as a way of resolving conflicting styles. Which selector wins out in the cascade depends on three factors:</p>
 
-<ul>
-<li>Importance</li>
-
-<li>Specificity</li>
-
-<li>Source order</li>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">Importance</li>
+<li class="unordered-list__list-item">Specificity</li>
+<li class="unordered-list__list-item">Source order</li>
 </ul>
 
 <p>On larger projects a misunderstanding of the cascade can lead to excessive use of the !important rule as well as unmaintainable CSS.</p>
@@ -42,12 +39,10 @@ tags: [CSS]
 
 <p>There are three origins of styles, each one has a level of importance used by the cascade to determine which properties will be applied.</p>
 
-<ol>
-<li>Author</li>
-
-<li>User </li>
-
-<li>Default (User agent or browser style sheet)</li>
+<ol class="ordered-list">
+<li class="ordered-list__list-item">Author</li>
+<li class="ordered-list__list-item">User </li>
+<li class="ordered-list__list-item">Default (User agent or browser style sheet)</li>
 </ol>
 
 <p>This order can be reversed by using the !important rule allowing a property in the user style sheet to override a matching declaration in the author stylesheet.</p>
@@ -56,14 +51,11 @@ tags: [CSS]
 
 <p>Specificity comes into play if the importance of two declarations is the same. A 4 digit number is given to each selector, this number is derived from the 4 factors below, the selector with the higher specificity will be applied.</p>
 
-<ol>
-<li>Inline styles (Style attribute)</li>
-
-<li>The number of ID's in the selector</li>
-
-<li>The number of classes, attributes and pseudo-classes in the selector</li>
-
-<li>The number of elements and pseudo-elements in the selector</li>
+<ol class="ordered-list">
+<li class="ordered-list__list-item">Inline styles (Style attribute)</li>
+<li class="ordered-list__list-item">The number of ID's in the selector</li>
+<li class="ordered-list__list-item">The number of classes, attributes and pseudo-classes in the selector</li>
+<li class="ordered-list__list-item">The number of elements and pseudo-elements in the selector</li>
 </ol>
 
 <h4 id="examples">Examples:</h4>
@@ -84,12 +76,10 @@ tags: [CSS]
 
 <p>CSS properties like font-family and color can be applied to a single element and be passed down to the elements children. Inheritance can be controlled using three CSS properties:</p>
 
-<ul>
-<li><p>inherit</p></li>
-
-<li><p>initial</p></li>
-
-<li><p>unset</p>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">inherit</li>
+<li class="unordered-list__list-item">initial</li>
+<li class="unordered-list__list-item">unset</li>
 
 <p>A directly targeted element will always take precedence over rules which an element inherits from its ancestor.</p></li>
 </ul>
@@ -100,16 +90,12 @@ tags: [CSS]
 
 <p>Benefits of the CSS global scope include:</p>
 
-<ul>
-<li>New pages or features are instantly styled</li>
-
-<li>Typography and spacing are consistent</li>
-
-<li>Design patterns are consistent</li>
-
-<li>CSS is re-usable</li>
-
-<li>CSS remains scalable and easy to update</li>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">New pages or features are instantly styled</li>
+<li class="unordered-list__list-item">Typography and spacing are consistent</li>
+<li class="unordered-list__list-item">Design patterns are consistent</li>
+<li class="unordered-list__list-item">CSS is re-usable</li>
+<li class="unordered-list__list-item">CSS remains scalable and easy to update</li>
 </ul>
 
 <h3 id="4thereisnolocalscope">4) There is no local scope</h3>
@@ -201,15 +187,15 @@ header {
 <p>By using @supports you can ensure browsers without support are served a more appropriate font-color.</p>
 
 <pre><code>.banner {
-      background-image: url(image-url);
-      color: black
+  background-image: url(image-url);
+  color: black
 
-      @supports (background-blend-mode: multiply) {
-        .banner {
-          background-color: green;
-          background-blend-mode: multiply;
-          color: white
-        }
+  @supports (background-blend-mode: multiply) {
+    .banner {
+      background-color: green;
+      background-blend-mode: multiply;
+      color: white
+    }
 }
 </code></pre>
 
@@ -221,18 +207,13 @@ header {
 
 <p>CSS can among other things also be used to...</p>
 
-<ul>
-<li>Enhance the readability of written content </li>
-
-<li>Improve the readability of anchor tags</li>
-
-<li>Provide navigation assistance with active and visited classes</li>
-
-<li>Provide screen reader specific content such as 'Skip to content' links</li>
-
-<li>Ensure hidden content isn't picked up by screen readers with a visibility:hidden; class</li>
-
-<li>Insert descriptive text for icons or external links...</li>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">Enhance the readability of written content </li>
+<li class="unordered-list__list-item">Improve the readability of anchor tags</li>
+<li class="unordered-list__list-item">Provide navigation assistance with active and visited classes</li>
+<li class="unordered-list__list-item">Provide screen reader specific content such as 'Skip to content' links</li>
+<li class="unordered-list__list-item">Ensure hidden content isn't picked up by screen readers with a visibility:hidden; class</li>
+<li class="unordered-list__list-item">Insert descriptive text for icons or external links...</li>
 </ul>
 
 <pre><code>a[target=_blank]::after {
@@ -249,18 +230,13 @@ header {
 
 <p>Shorthand properties allow multiple values to be set simultaneously and are a nice way of keeping your style sheets concise and readable. There are currently 6 shorthand property groups:</p>
 
-<ul>
-<li>font</li>
-
-<li>background</li>
-
-<li>margin</li>
-
-<li>border</li>
-
-<li>padding</li>
-
-<li>list</li>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">font</li>
+<li class="unordered-list__list-item">background</li>
+<li class="unordered-list__list-item">margin</li>
+<li class="unordered-list__list-item">border</li>
+<li class="unordered-list__list-item">padding</li>
+<li class="unordered-list__list-item">list</li>
 </ul>
 
 <p>There can be performance gains from using the shorthand syntax correctly, for example...</p>
@@ -334,14 +310,11 @@ margin-left: 0;
 
 <p>A few common criticisms are:</p>
 
-<ul>
-<li>They discourage beginners to learn the basics of CSS </li>
-
-<li>The markup is not semantic</li>
-
-<li>The CSS is bloated and often unnecessary for smaller projects</li>
-
-<li>Framework CSS is overwritten in the project code</li>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">They discourage beginners to learn the basics of CSS </li>
+<li class="unordered-list__list-item">The markup is not semantic</li>
+<li class="unordered-list__list-item">The CSS is bloated and often unnecessary for smaller projects</li>
+<li class="unordered-list__list-item">Framework CSS is overwritten in the project code</li>
 </ul>
 
 <p>Despite these concerns frameworks can help improve a project. The important thing is that you understand how and why the framework works, and that it adds value to your project. It's important that the framework is seen as a helper and not as an essential component. 

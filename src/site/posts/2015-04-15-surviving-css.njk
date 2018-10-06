@@ -1,19 +1,18 @@
 ---
 title: Surviving CSS
-description: A look at how to work effectively with CSS
+description: A few simple techniques to keep your CSS in check
 date: 2015-04-15
 tags: [CSS]
 ---
 
-<p><a href="https://medium.com/@cathy_dutton/surviving-css-be306ef3de6d#.k8czem45b">Article originally posted on medium.</a></p>
-
-<h4 class="heading">A few simple techniques to keep your CSS in check...</h4>
-
 <p>The ultimate goal of any CSS is to style the intended element with selectors that do not introduce side effects to the rest of the code base. Seemingly a simple request, but on large projects that lack structure or guidelines this task can lead to some pretty ugly usage of CSS.</p>
 
-<blockquote> <i>“…the single hardest problem in CSS: Getting your rules to match the elements you want, without them accidentally matching the elements you don’t.”</i>
-
-Philip Walton, Engineer at Google </blockquote>
+<figure class="quote">
+  <blockquote> …the single hardest problem in CSS: Getting your rules to match the elements you want, without them accidentally matching the elements you don’t.”</i>
+</blockquote>
+<figcaption>
+Philip Walton, Engineer at Google</figcaption>
+</figure>
 
 <p>We have all at some point been forced to write the kind of CSS that would drive any good developer crazy.</p>
 
@@ -40,19 +39,19 @@ Philip Walton, Engineer at Google </blockquote>
 }
 </code></pre>
 
-<p><i>Specific selectors</i></p>
+<p><b>Specific selectors</b></p>
 
 <p>Using long, specific selectors is sometimes viewed as way of safe guarding a code base. If the target selector is preceded by one or two parent selectors the risk of accidentally effecting existing code is reduced. Adding extra selectors however reduces the efficiency of the CSS and will cause problems with older browsers that have selector limits. They could also hinder future development, forcing equally specific selectors or !important to be used to override styles.</p>
 
-<p><i>Correctional CSS</i></p>
+<p><b>Correctional CSS</b></p>
 
 <p>If you have to remove unwanted styles from an element the chances are there is a previously added selector which is too generic and therefor effecting additional elements unintentionally.</p>
 
-<p><i>Contradicting selectors and properties</i></p>
+<p><b>Contradicting selectors and properties</b></p>
 
 <p>Although not necessarily adding to CSS bloat, having CSS properties which contradict the selectors they are applied to is not good practice. Contradicting styles can make a code base confusing or difficult to work with.</p>
 
-<p><i>Bade code creates bad code</i></p>
+<p><b>Bade code creates bad code</b></p>
 
 <p>In most cases selectors like the above examples are not written out of choice, but because they are needed to overwrite poorly written existing CSS or markup. Because of this it is hugely important to plan each project thoroughly, defining coding patterns, naming conventions and style guides before the build begins.</p>
 
@@ -64,14 +63,14 @@ Philip Walton, Engineer at Google </blockquote>
 
 <p>Keeping style related classes out of the markup will also help to keep the CSS readable and remove the need to use specific selectors to override styling. This is turn provides better performance and increases usability.</p>
 
-<p><i>HTML</i></p>
+<p><b>HTML</b></p>
 
 <pre><code>&lt;button class="button-primary"&gt;Checkout&lt;/button&gt;
 &lt;button class="button-secondary"&gt;More Information&lt;/button&gt;
 &lt;button class="button-primary"&gt;Log In&lt;/button&gt;
 </code></pre>
 
-<p><i>CSS</i></p>
+<p><b>CSS</b></p>
 
 <pre><code>.button-primary {
    @extend %button-primary;
@@ -90,13 +89,13 @@ Philip Walton, Engineer at Google </blockquote>
 
 <p>By using content classes for the markup and style selectors in the CSS, updates like this can be carried out in a more logical manor.</p>
 
-<p><i>HTML</i></p>
+<p><b>HTML</b></p>
 
 <pre><code>&lt;button class="button-checkout"&gt;Checkout&lt;/button&gt;
 &lt;button class="button-information"&gt;More Information&lt;/button&gt; &lt;button class="button-log-in"&gt;Log In&lt;/button&gt;
 </code></pre>
 
-<p><i>CSS</i></p>
+<p><b>CSS</b></p>
 
 <pre><code>.button-checkout {
    @extend %button-primary;
@@ -201,7 +200,7 @@ Philip Walton, Engineer at Google </blockquote>
 
 <p>Keeping structural classes free of presentational properties such as borders, background, colours and padding also helps ensure that those classes can be re-used throughout a project.</p>
 
-<p><i>Example</i></p>
+<p><b>Example</b></p>
 
 <pre><code>.sidebar {
    width: 23%;
@@ -229,7 +228,7 @@ Philip Walton, Engineer at Google </blockquote>
 
 <p>When a team of developers are working on one project it can be difficult to have complete confidence that your selectors haven’t been used elsewhere. Having a naming convention can help remove this fear and enable elements to be targeted directly instead of through nesting.</p>
 
-<p><i>Bad Example</i></p>
+<p><b>Bad Example</b></p>
 
 <pre><code>#mediaGalleryHolder #mediaGallery .mediaGalleryImageHolder img {           
    border: 1px solid #e3e3e3;
@@ -237,7 +236,7 @@ Philip Walton, Engineer at Google </blockquote>
 }
 </code></pre>
 
-<p><i>Good Example</i></p>
+<p><b>Good Example</b></p>
 
 <pre><code>.media-gallery__image {
    width: 100%;
@@ -247,7 +246,7 @@ Philip Walton, Engineer at Google </blockquote>
 
 <p>Working in this way will help keep the CSS output modular and lightweight. By targeting elements individually the styling will also be applied correctly regardless of page positioning, body classes or parent selectors.</p>
 
-<p><i>Nested navigation example</i></p>
+<p><b>Nested navigation example</b></p>
 
 <pre><code>.main-nav {
    background: #0060C1;
@@ -261,7 +260,7 @@ Philip Walton, Engineer at Google </blockquote>
 }
 </code></pre>
 
-<p><i>Individually targeted navigation</i></p>
+<p><b>Individually targeted navigation</b></p>
 
 <pre><code>.main-nav {
    background: #0060C1;
@@ -279,7 +278,7 @@ Philip Walton, Engineer at Google </blockquote>
 
 <p>Any styling relating to an elements positioning is risky, particularly in responsive websites. A very basic example of this would be the use of a ‘last-column’ class. Classes like this are often used to solve margin issues in grid layouts.</p>
 
-<p><i>HTML</i></p>
+<p><b>HTML</b></p>
 
 <pre><code>&lt;div class="content-wrapper"&gt;
    &lt;div class="content-block"&gt;&lt;/div&gt;
@@ -289,7 +288,7 @@ Philip Walton, Engineer at Google </blockquote>
 &lt;/div&gt;
 </code></pre>
 
-<p><i>CSS</i></p>
+<p><b>CSS</b></p>
 
 <pre><code>.content-block {
    @include grid(span-3);

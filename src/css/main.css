@@ -2,7 +2,7 @@
   Component style sheet
   Includes all the components and utilities
   ----------------------------------- */
-  
+
   @import '6-components/profile';
   @import '6-components/skip-link';
   @import '6-components/buttons'; 
@@ -17,5 +17,9 @@
   @import '6-components/post-feed';
   @import '6-components/share-post';
   @import '6-components/pagination';
+
+
+
+
 
   @import '7-utilities/utilities';

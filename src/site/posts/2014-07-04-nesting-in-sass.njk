@@ -1,6 +1,6 @@
 ---
 title: Say no to nesting
-description: The problems with Sass nesting
+description: Sass introduced a lot of new features to CSS, Tbut some, like nesting, afre not always an improvement
 date: 2014-07-04
 tags: [CSS]
 ---
@@ -17,15 +17,17 @@ tags: [CSS]
 
 <p><strong>HTML</strong></p>
 
-<pre><code>&amp;lt;nav class="primary-navigation"&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;Home&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;About us&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Services&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Contact&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;/nav&amp;gt;
-</code></pre>
+<pre>
+<code>&lt;nav class="primary-navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/about"&gt;About us&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;ul&gt;
+&lt;/nav&gt;
+</code>
+</pre>
 
 <p><strong>Sass</strong></p>
 
@@ -85,14 +87,15 @@ tags: [CSS]
 
 <p><strong>HTML</strong></p>
 
-<pre><code>&amp;lt;nav class="secondary-navigation"&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;Terms and conditions&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Privacy Policy&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Sitemap&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;/nav&amp;gt;
-</code></pre>
+<pre>
+<code>&lt;nav class="secondary-navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/terms"&gt;Terms and conditions&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/privacy"&gt;Privacy policy&lt;/a&gt;&lt;/li&gt;
+  &lt;ul&gt;
+&lt;/nav&gt;
+</code>
+</pre>
 
 <p>None of the css already written can be used on this secondary navigation as the selectors are too specific due to the nested Sass approach. To style this navigation we would need to add the below Sass creating another chunk of css which is mostly duplicated code&#8230;</p>
 
@@ -156,22 +159,21 @@ tags: [CSS]
 
 <p><strong>HTML</strong></p>
 
-<pre><code>&amp;lt;nav class="primary-navigation"&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li class="navigation-item"&amp;gt;Home&amp;lt;/li&amp;gt;
-&amp;lt;li class="navigation-item"&amp;gt;About us&amp;lt;/li&amp;gt;
-&amp;lt;li class="navigation-item"&amp;gt;Services&amp;lt;/li&amp;gt;
-&amp;lt;li class="navigation-item"&amp;gt;Contact&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;/nav&amp;gt;
+<pre><code>&lt;nav class="primary-navigation"&gt;
+  &lt;ul&gt;
+    &lt;li class="navigation-item"&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-item"&gt;&lt;a href="/about"&gt;About us&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-item"&gt;&lt;a href="/services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-item"&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;ul&gt;
+&lt;/nav&gt;
 
-&amp;lt;nav class="secondary-navigation"&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li class="navigation-item"&amp;gt;Terms and conditions&amp;lt;/li&amp;gt;
-&amp;lt;li class="navigation-item"&amp;gt;Privacy Policy&amp;lt;/li&amp;gt;
-&amp;lt;li class="navigation-item"&amp;gt;Sitemap&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;/nav&amp;gt;
+&lt;nav class="secondary-navigation"&gt;
+  &lt;ul&gt;
+    &lt;li class="navigation-item"&gt;&lt;a href="/terms"&gt;Terms and conditions&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-item"&gt;&lt;a href="/privacy"&gt;Privacy policy&lt;/a&gt;&lt;/li&gt;
+  &lt;ul&gt;
+&lt;/nav&gt;
 </code></pre>
 
 <p><strong>CSS</strong></p>

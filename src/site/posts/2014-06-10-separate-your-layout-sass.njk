@@ -1,6 +1,6 @@
 ---
 title: Separate Your Layout and skin Sass files
-description: A look at CSS layout and styling files
+description: Tacking advantage of Sass partials to better organise CSS, with seperate skin and layout files
 date: 2014-06-10
 tags: [CSS, Front end development]
 ---
@@ -14,32 +14,6 @@ tags: [CSS, Front end development]
 
 <p>The layout file should be for structural styles only, building the wireframe of a page without applying any of it&#8217;s look or feel. The layout.scss file will therefore remain small and easy to follow for any developer picking up the project and needing to make a quick edit to the page layout.</p>
 
-<h2 class="heading">Example</h2>
-
-<p>The example code below uses the Maze grid system to demonstrate. The example shows three layout blocks <strong>.logo</strong>, <strong>.search</strong> and <strong>.social-share</strong> within the row <strong>.container</strong>. Using the grid mixin each selector in the row is assigned a column span with all 3 adding up to 12. (More information on the grid set up can be found <a href="https://cathydutton.co.uk/css/maze-responsive-grid-framework" title="Maze - Sass grid system" target="_blank">here</a>).</p>
-
-<header class="container">
-
-<div class="demo-logoo">
-  Logo
-</div>
-
-<div class="demo-searchh">
-  Search
-</div>
-
-<div class="demo-social-share">
-  Social
-</div></header>
-
-<pre><code>&amp;lt;!-- Header --&amp;gt;
-&amp;lt;header class="container"&amp;gt;
-    &amp;lt;div class="logo"&amp;gt;Logo&amp;lt;/div&amp;gt;
-    &amp;lt;div class="search"&amp;gt;Search&amp;lt;/div&amp;gt;
-     &amp;lt;div class="social-share"&amp;gt;Social&amp;lt;/div&amp;gt;
-  &amp;lt;/header&amp;gt;
-&amp;lt;!--End  Header --&amp;gt;
-</code></pre>
 
 <pre><code>.container {
     @include clearfix;
@@ -62,25 +36,7 @@ tags: [CSS, Front end development]
 
 <p>The css above is easy to read as each selector has only the layout includes assigned to it. As pages get bigger and more elements are added keeping the grid includes clear and easy to find becomes essential. Making changes to the widths or even adding in a new column can be easily done by adjusting the values passed to the grid mixin.</p>
 
-<h3 class="heading">Adding a new column&#8230; </h3>
 
-<header class="container">
-
-<div class="demo-logoo">
-  Logo
-</div>
-
-<div class="demo2-search">
-  Search
-</div>
-
-<div class="demo2-social-share">
-  Social
-</div>
-
-<div class="demo2-call-us">
-  Call Us
-</div></header>
 
 <pre><code>.logo {
    @include grid(3);
@@ -111,15 +67,15 @@ tags: [CSS, Front end development]
 <pre><code>/* PRODUCT PAGE - Unique product page styles
 ========================================================================== */
 
-    @import &amp;#039;product-page/_layout.scss&amp;#039;;
-    @import &amp;#039;product-page/_theme.scss&amp;#039;;
-    @import &amp;#039;product-page/_responsive.scss&amp;#039;;
+    @import &amp;amp;#039;product-page/_layout.scss&amp;amp;#039;;
+    @import &amp;amp;#039;product-page/_theme.scss&amp;amp;#039;;
+    @import &amp;amp;#039;product-page/_responsive.scss&amp;amp;#039;;
 
 
 /* CATEGORY PAGE - Unique category page styles
 ========================================================================== */
 
-    @import &amp;#039;category-page/_layout.scss&amp;#039;;
-    @import &amp;#039;category-page/_theme.scss&amp;#039;;
-    @import &amp;#039;category-page/_responsive.scss&amp;#039;;
+    @import &amp;amp;#039;category-page/_layout.scss&amp;amp;#039;;
+    @import &amp;amp;#039;category-page/_theme.scss&amp;amp;#039;;
+    @import &amp;amp;#039;category-page/_responsive.scss&amp;amp;#039;;
 </code></pre>

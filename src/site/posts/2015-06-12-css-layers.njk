@@ -1,11 +1,9 @@
 ---
 title: CSS Layers
-description: CSS layers of responsibility
+description: Following on from Surviving CSS, CSS layers looks at layers of responsibility in CSS
 date: 2015-06-12
 tags: [CSS]
 ---
-
-<p><a href="https://medium.com/@cathy_dutton/css-layers-afff4ae66649#.8iozwx4us">Article originally posted on Medium.</a></p>
 
 <p>A follow up to Surviving CSS, using Naming Conventions and CSS Methodologies to separate CSS into meaningful layers, aiding scalability, performance and organisation.</p>
 
@@ -19,7 +17,7 @@ tags: [CSS]
 
 <p>The proper implementation of any convention will also play a key part in reducing the fear factor associated with CSS on large scale projects.</p>
 
-<p><i>BEM</i></p>
+<p><b>BEM</b></p>
 
 <p>One of the most popular Naming Conventions around is BEM (Block, Element, Modifier). By prefixing each element with it’s parent block modules become much easier to target safely. BEM can also help remove the reliance on nesting or attaching styles to page and body classes.</p>
 
@@ -44,7 +42,7 @@ tags: [CSS]
 
 <p>As with most utility classes the intentions are clear at the beginning of a project, but often lead to contradicting CSS if a design changes.</p>
 
-<p><i>SUIT</i></p>
+<p><b>SUIT</b></p>
 
 <p>Suit takes it’s roots from BEM, but uses camel case for component names and hyphens to separate components from their modifiers and descendants.</p>
 
@@ -62,7 +60,7 @@ tags: [CSS]
 .ProductDetails-title--sale {}
 </code></pre>
 
-<p><i>Prefixing</i></p>
+<p><b>Prefixing</b></p>
 
 <p>If you don’t want to use such a strict or complicated naming convention prefixing each selector can work just as well.</p>
 
@@ -80,7 +78,7 @@ tags: [CSS]
 &lt;button class="button button-search"&gt;Search Button&lt;/button&gt;
 </code></pre>
 
-<p><i>On a side note prefixing Sass partials is also a huge help when locating files in a larger project as it removes the need to store partials in folders. This method is used in ITCSS.</i></p>
+<p><b>On a side note prefixing Sass partials is also a huge help when locating files in a larger project as it removes the need to store partials in folders. This method is used in ITCSS.</b></p>
 
 <p>It doesn’t matter which if any you choose, the important thing is that you document your choices and stick to them for the entirety of the project.</p>
 
@@ -109,7 +107,7 @@ tags: [CSS]
 
 <p>Object Orientated CSS has two main principles the first is separating structure from skin, the second is the separation of containers and content. Both of these principles are designed to increase performance by creating modules of re-usable CSS.</p>
 
-<p><i>Separating Structure from Skin</i></p>
+<p><b>Separating Structure from Skin</b></p>
 
 <pre><code>&lt;div class="box-padded product-image"&gt;&lt;/div&gt;
 &lt;div class="box-padded product-description"&gt;&lt;/div&gt;
@@ -132,7 +130,7 @@ tags: [CSS]
 }
 </code></pre>
 
-<p><i>Separating Containers from Content</i></p>
+<p><b>Separating Containers from Content</b></p>
 
 <pre><code>&lt;div class="wrapper recently-viewed"&gt;&lt;/div&gt;
 &lt;div class="wrapper suggested-products"&gt;&lt;/div&gt;
@@ -185,14 +183,14 @@ Theme - Typography and colour schemes etc
 
 <p>Inverted Triangle CSS is a fairly new methodology not to dissimilar to SMACSS, which creates a series of layers to manage dependancies and aid scalability. The base layer covers generic and broad selectors. The top layer covers localised module specific selectors. The full set of layers are as follows…</p>
 
-<ul>
-<li><b>Settings</b> — Global variables & config</li>
-<li><b>Tools</b> — Default mixins & functions</li>
-<li><b>Generic</b> — Normalize, resets, box-sizing</li>
-<li><b>Base</b> — HTML elements</li>
-<li><b>Objects</b> — Design patterns</li>
-<li><b>Components</b> — Modules & blocks of code</li>
-<li><b>Trumps</b> — Helpers & overrides</li>
+<ul class="unordered-list">
+<li class="unordered-list__list-item"><b>Settings</b> — Global variables & config</li>
+<li class="unordered-list__list-item"><b>Tools</b> — Default mixins & functions</li>
+<li class="unordered-list__list-item"><b>Generic</b> — Normalize, resets, box-sizing</li>
+<li class="unordered-list__list-item"><b>Base</b> — HTML elements</li>
+<li class="unordered-list__list-item"><b>Objects</b> — Design patterns</li>
+<li class="unordered-list__list-item"><b>Components</b> — Modules & blocks of code</li>
+<li class="unordered-list__list-item"><b>Trumps</b> — Helpers & overrides</li>
 </ul>
 
 <p>The specificity increases with each layer, allowing for only the additional requirements to be added.</p>
