@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+---
+
+<h1 class="project-title">{{ title }}</h1>
+<p class="project--date">
+  Project date <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+</p>
+
+ 
+<main>
+  {{ content | safe }}
+</main>
+
+<a href="/projects">Back to all projects</a>
+
+
+

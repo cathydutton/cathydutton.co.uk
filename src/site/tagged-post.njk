@@ -1,19 +1,18 @@
 ---
-title: Tags
+title: Post tags
 description: Tags
 layout: layouts/base.njk
 pagination:
   data: collections
   size: 1
-  alias: tag
-permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/
+  alias: postTag
+permalink: posts/tags/{{ postTag | lower | replace(" ", "-") }}/
 ---
 
-<h1>{{ tag }} posts</h1>
+<h1>{{ postTag }} posts</h1>
 
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
 
-{% set taglist = collections[ tag ] %}
+{% set taglist = collections[ postTag ] %}
 {% for post in taglist | reverse %}
   {# <li><a href="{{ post.url | url }}">{{ post.data.title }}</li> #}
   <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">

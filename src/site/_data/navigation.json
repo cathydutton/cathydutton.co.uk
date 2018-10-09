@@ -11,8 +11,8 @@
     },
     {
       "menu_item": "Portfolio",
-      "menu_name": "Portfolio",
-      "url": "/portfolio/"
+      "menu_name": "My Portfolio",
+      "url": "/projects/"
     },
     {
       "menu_item": "Posts",

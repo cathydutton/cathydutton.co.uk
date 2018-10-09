@@ -1,9 +1,8 @@
 ---
-metaTitle: Interaction Design, UX and Front End Development blog - Cathy Dutton
-metaDescription: Front End Developer, CSS, Sass, UX, PostCSS and JavaScript
+title: Interaction Design, UX and Front End Development blog - Cathy Dutton
+description: Front End Developer, CSS, Sass, UX, PostCSS and JavaScript
 pageName: Posts
 pageDescription: Latest posts and tutorials
-pageTitle: Posts
 layout: layouts/base.njk
 pagination:
   data: collections.posts
@@ -28,7 +27,7 @@ permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
     <div>
       <p>{{ post.data.description | safe }}</p>
       {% if post.data.tags %}
-        <p>Tagged in: {% for tag in post.data.tags %}<a href="/posts/tags/{{ tag | lower | replace(" ", "-") }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+        <p>Tagged in: {% for postTag in post.data.tags %}<a href="/posts/tags/{{ postTag | lower | replace(" ", "-") }}/">{{ postTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
       {% endif %}
     </div>
   </article>

@@ -3,17 +3,20 @@
   Reset and/or normalize styles, box-sizing definition, etc. 
   ----------------------------------- */
 
-  .page-intro {
-    font-size: calc(4vw + 4vh + 2vmin);
-    color: var(--colour-dark);
-    margin: 0;
-    line-height: 1.2;
-  }
 
   h1 {
-    font-size: calc(2vw + 2vh + 2vmin);
+    font-size: calc(2.8vw + 2.8vh + 3vmin);
     color: var(--colour-dark);
     margin-bottom: .4em;
+    line-height: 1;
+  }
+
+  .page-description {
+    display: block;
+    font-size: .6em;
+    text-transform: lowercase;
+    line-height: .5;
+    font-weight: normal;
   }
   
   h2 {
@@ -44,10 +47,6 @@
   p.highlight-text {
     border-left: 4px solid var(--colour-bright);
     padding-left: .4em;
-    font-size: 1.2em;
-  }
-
-  p.page-description {
     font-size: 1.2em;
   }
 

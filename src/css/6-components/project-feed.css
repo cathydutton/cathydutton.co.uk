@@ -1,8 +1,8 @@
 /*
-Latest posts feed
+Latest project feed
 ----------------------------------- */
 
-.news-feed__post {
+.project__post {
   width: 100%;
   margin-top: 1.4em;
   padding: .8em;
@@ -10,24 +10,21 @@ Latest posts feed
   border-radius: 0.5em;
 }
 
-.news-feed__post:hover {
+.project__post:hover {
   transition: all .3s ease-in-out;
   background: var(--colour-light);
 }
 
-.news-feed__title {
+.project__title {
   font-size: 2em;
 }
 
-.news-feed__header {
+.project__header {
   margin: 0;
   padding: 0;
 }
 
-/* .news-feed__date {
 
-}
- */
 
 
 

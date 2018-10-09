@@ -21,8 +21,8 @@ module.exports = function(config) {
   });
 
   // Portfolio collection
-  config.addCollection("portfolio", function(collection) {
-    return collection.getFilteredByGlob("**/portfolio/**.njk");
+  config.addCollection("projects", function(collection) {
+    return collection.getFilteredByGlob("**/projects/**.njk");
   });
 
   return {

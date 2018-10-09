@@ -641,22 +641,6 @@ pre p {
     background: var(--colour-bright);
   }
 
-/* Tables */
-
-table {
-    border-collapse: collapse;
-    margin: 1em 0;
-  }
-
-table, th, td {
-    border: 1px solid black;
-  }
-
-th, td {
-    padding: 15px;
-    text-align: left;
-  }
-
 /* SVG */
 
 svg {
@@ -739,19 +723,20 @@ dd + dd::before,
   Reset and/or normalize styles, box-sizing definition, etc. 
   ----------------------------------- */
 
-.page-intro {
-    font-size: calc(4vw + 4vh + 2vmin);
-    color: hsl(294, 83%, 7%);
-    color: var(--colour-dark);
-    margin: 0;
-    line-height: 1.2;
-  }
-
 h1 {
-    font-size: calc(2vw + 2vh + 2vmin);
+    font-size: calc(2.8vw + 2.8vh + 3vmin);
     color: hsl(294, 83%, 7%);
     color: var(--colour-dark);
     margin-bottom: .4em;
+    line-height: 1;
+  }
+
+.page-description {
+    display: block;
+    font-size: .6em;
+    text-transform: lowercase;
+    line-height: .5;
+    font-weight: normal;
   }
 
 h2 {
@@ -786,10 +771,6 @@ p.highlight-text {
     border-left: 4px solid hsl(322, 80%, 51%);
     border-left: 4px solid var(--colour-bright);
     padding-left: .4em;
-    font-size: 1.2em;
-  }
-
-p.page-description {
     font-size: 1.2em;
   }
 
@@ -862,7 +843,7 @@ a
   }
 
 /*
-  Generic -   Images
+  Elements -   Images
   
   275 x 150
   550 x 300
@@ -895,10 +876,36 @@ img {
 .image-ratio img {
   width: 100%;
   height: 100%;
-  /* position: absolute; */
   top: 0;
   left: 0;
 }
+
+.image-ratio--half img {
+  width: 50%;
+}
+
+/*
+  Elements -   Tables
+  
+  ----------------------------------- */
+
+.table-wrapper {
+    overflow-x: auto;
+  }
+
+table {
+    border-collapse: collapse;
+    margin: 1em 0;
+  }
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+th, td {
+    padding: 15px;
+    text-align: left;
+  }
 
 /*
   Layout - Base
@@ -952,27 +959,3 @@ section {
     margin: 1em 0;
   }
 
-/*
-  Layout - Header
-  Page title and a11y buttons
-  ----------------------------------- */
-
-.header {
-    
-  }
-
-.page-introduction {
-    width: 70%;
-    min-width: 25em;
-    max-width: 70%;
-    margin-right: 5%;
-    float: left;
-
-  }
-
-.accessibility-tools {
-   float: right;
-   width: 25%;
-   min-width: 25em;
-   max-width: 25%;
-  }

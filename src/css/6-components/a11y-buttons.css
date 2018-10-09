@@ -2,10 +2,14 @@
   A11y buttons
   ----------------------------------- */
 
+.accessibility-tools {
+  float: right;
+}
+
 .accessibility-tools fieldset {
-  margin-bottom: 1em;
+  margin: 0 1em 1em 0;
   padding: .4em;
-  min-width: 150px;
+  float: right;
 }
 
 .accessibility-tools legend {

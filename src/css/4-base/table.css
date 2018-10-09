@@ -1,0 +1,22 @@
+/*
+  Elements -   Tables
+  
+  ----------------------------------- */
+  
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 1em 0;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
