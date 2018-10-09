@@ -22,7 +22,7 @@ module.exports = function(config) {
 
   // Portfolio collection
   config.addCollection("projects", function(collection) {
-    return collection.getFilteredByGlob("**/projects/**.njk");
+    return collection.getFilteredByGlob("**/projects/**.njk").reverse();;
   });
 
   return {
