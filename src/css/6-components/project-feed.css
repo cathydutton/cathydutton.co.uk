@@ -2,28 +2,41 @@
 Latest project feed
 ----------------------------------- */
 
+.project {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(17.5em, 1fr) );
+  grid-gap: 1em;
+}
+
 .project__post {
-  width: 100%;
-  margin-top: 1.4em;
-  padding: .8em;
+  display: flex; 
+  flex-direction: column;
   border: 2px dotted var(--colour-light);
   border-radius: 0.5em;
+  padding: .8em;
+}
+
+.project__title {
+  font-size: 2em;
+  flex: 1 0 auto;
+}
+
+.project__img {;
+
+}
+
+.project__date {
+ 
+}
+
+.project__tags {
+
 }
 
 .project__post:hover {
   transition: all .3s ease-in-out;
   background: var(--colour-light);
 }
-
-.project__title {
-  font-size: 2em;
-}
-
-.project__header {
-  margin: 0;
-  padding: 0;
-}
-
 
 
 

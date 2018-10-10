@@ -16,13 +16,13 @@ module.exports = function(config) {
   });
 
   // PostCSS plugin collection
-  config.addCollection("PostCSS", function(collection) {
-    return collection.getFilteredByGlob("**/PostCSS/**.njk");
+  config.addCollection("postcss", function(collection) {
+    return collection.getFilteredByGlob("**/postcss/**.njk").reverse();
   });
 
   // Portfolio collection
   config.addCollection("projects", function(collection) {
-    return collection.getFilteredByGlob("**/projects/**.njk").reverse();;
+    return collection.getFilteredByGlob("**/projects/**.njk").reverse();
   });
 
   return {
