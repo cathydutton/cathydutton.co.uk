@@ -21,7 +21,8 @@ Latest project feed
   flex: 1 0 auto;
 }
 
-.project__img {;
+/* .project__img {;
+ 
 
 }
 
@@ -31,7 +32,7 @@ Latest project feed
 
 .project__tags {
 
-}
+} */
 
 .project__post:hover {
   transition: all .3s ease-in-out;

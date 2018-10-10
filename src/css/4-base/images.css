@@ -8,30 +8,31 @@
 
  img {
   image-rendering: auto;
+  padding: .2em;
+  display: block;
 }
 
 .image-ratio {
+  height: 0;
+  overflow: hidden;
   position: relative;
-  display: block;
   margin: 1em 0;
+  padding-bottom: 55%;
+  background: url(/images/placeholder.png) center center no-repeat var(--colour-light);
   border: solid 1px var(--colour-light);
 }
 
-.image-ratio:before {
-  content: '';
-  display: block;
-  width: 100%;
-  padding-bottom: 55%;
-  background: var(--colour-light);
-  box-shadow:inset 0px 0px 0px 1px var(--colour-medium);
-}
-
 .image-ratio img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
 }
+
+
+
+/* /// MOve??? */
 
 .image-ratio--half img {
   width: 50%;

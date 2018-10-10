@@ -13,6 +13,11 @@ Logo images
   border: 0;
 }
 
+.tech-logo img,
+.work-logo img{
+  padding: 0;
+}
+
 .tech-logo__item,
 .work-logo__item {
   list-style: none;
@@ -55,7 +60,7 @@ Logo images
 .work-logo__anchor:focus:before,
 .work-logo__anchor:hover:before {
   transition: all .3s ease-in-out;
-  opacity: .85;
+  opacity: .90;
 }
 
 
