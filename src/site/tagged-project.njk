@@ -11,24 +11,24 @@ permalink: projects/tags/{{ projectTag | lower | replace(" ", "-") }}/
 
 <h1>{{ projectTag }} projects</h1>
 
-
-{% set taglist = collections[ projectTag ] %}
-{% for post in taglist | reverse %}
-  <article class="projects__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-    <h3 class="projects__title">
-      <a href="{{ post.url }}" title="{{post.data.title}}" class="projects__anchor">
-        <span class="visually-hidden">Article title</span>
-        {{post.data.title}}
-      </a>
-    </h3>
-    <p class="projects__date">
-      <span class="visually-hidden">Published on</span>
-      <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
-    </p>
-    <p>{{ post.data.description | safe }}</p>
-    {% if post.data.tags %}
-    {% endif %}
-  </article>
-{% endfor %}
-
+<section class="project">
+  {% set taglist = collections[ projectTag ] %}
+  {% for post in taglist | reverse %}
+    <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+        <div class="image-ratio project__img"> 
+          <img data-src="{{ post.data.image }}" class="lazyload" alt="{{ post.data.title }} image">
+        </div>
+        <h3 class="project__title">
+          <a href="{{ post.url }}">
+            <span class="visually-hidden">Project title</span>
+            {{ post.data.title }} 
+          </a>
+        </h3>
+        <p class="project__date">
+            <span class="visually-hidden">Project date</span>
+            <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
+        </p>
+      </article>
+  {% endfor %}
+</section>
 

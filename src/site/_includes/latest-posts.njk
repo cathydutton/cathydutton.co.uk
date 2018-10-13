@@ -12,8 +12,8 @@
       <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
     </p>
     <p>{{ post.data.description | safe }}</p>
-    {% if post.data.tags %}
-      <p>Tagged in: {% for postTag in post.data.tags %}<a href="/posts/tags/{{ postTag | lower | replace(" ", "-")}}/">{{ postTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+    {% if post.data.postTag %}
+      <p>Tagged in: {% for postTag in post.data.postTag %}<a href="/posts/tags/{{ postTag | lower | replace(" ", "-")}}/">{{ postTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
     {% endif %}
   </article>
 {% endfor %}
