@@ -4,16 +4,17 @@ Latest project feed
 
 .project {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(17.5em, 1fr) );
+  grid-template-columns: repeat( auto-fill, minmax(17.5em, 1fr) );
   grid-gap: 1em;
+  padding: 1em;
 }
 
 .project__post {
   display: flex; 
   flex-direction: column;
-  border: 2px dotted var(--colour-light);
-  border-radius: 0.5em;
   padding: .8em;
+  background: var(--colour-light);
+  border-bottom: solid 4px var(--colour-bright);
 }
 
 .project__title {
@@ -21,28 +22,12 @@ Latest project feed
   flex: 1 0 auto;
 }
 
-/* .project__img {;
- 
-
+.project__img {
+ background: var(--colour-white);
 }
-
-.project__date {
- 
-}
-
-.project__tags {
-
-} */
 
 .project__post:hover {
   transition: all .3s ease-in-out;
-  background: var(--colour-light);
+  background: var(--colour-white);
+  outline: solid 1px var(--colour-light);
 }
-
-
-
-
-
-
-
-

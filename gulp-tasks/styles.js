@@ -5,6 +5,7 @@ var autoprefixer = require('autoprefixer');
 var postcssImport = require('postcss-import');
 var csswring = require('csswring');
 var postCSSCustomProperties = require('postcss-custom-properties');
+var cssDeclarationSorter = require('css-declaration-sorter');
 var gulpif = require('gulp-if');
 var argv = require('yargs').argv;
 var concat = require('gulp-concat');
@@ -19,6 +20,7 @@ gulp.task('inline', function() {
   .pipe(postcss([
     autoprefixer,
     postcssImport,
+    cssDeclarationSorter({order: 'concentric-css'}),
     postCSSCustomProperties(),
   ]))
     .pipe(gulpif(isProd, postcss([
@@ -39,6 +41,7 @@ gulp.task('main', function() {
   .pipe(postcss([
     autoprefixer,
     postcssImport,
+    cssDeclarationSorter({order: 'concentric-css'}),
     postCSSCustomProperties(),
   ]))
     .pipe(gulpif(isProd, postcss([

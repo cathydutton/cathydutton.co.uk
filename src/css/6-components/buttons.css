@@ -2,66 +2,66 @@
   Buttons
   ----------------------------------- */
 
-  button,
-  .button {
-    display: inline-block;
-    margin: .5em 0 0;
-    padding: .5em 1em;
-    border-radius: .2em;
-    color: var(--colour-white);
-    line-height: 2.2;
-    font-weight: bold;
-    box-shadow: 0;
-    transition: all 0.3s ease-in-out;
-    background: var(--colour-dark);
-  }
+button,
+.button {
+  display: inline-block;
+  margin: .5em 0 0;
+  padding: .5em 1em;
+  border-radius: .2em;
+  color: var(--colour-white);
+  line-height: 2.2;
+  font-weight: bold;
+  box-shadow: 0;
+  transition: all 0.3s ease-in-out;
+  background: var(--colour-dark);
+}
 
-  button:hover,
-  .button:hover {
-    background: var(--colour-bright);
-    text-decoration: underline;
-    border-radius: .8em;
-  }
+button:hover,
+.button:hover {
+  background: var(--colour-bright);
+  text-decoration: underline;
+  border-radius: .8em;
+}
 
-  button[disabled="disabled"],
-  button[disabled],
-  .button[disabled="disabled"],
-  .button[disabled] {
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
+button[disabled="disabled"],
+button[disabled],
+.button[disabled="disabled"],
+.button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
 
-  button[disabled="disabled"]:hover,
-  button[disabled]:hover,
-  .button[disabled="disabled"]:hover,
-  .button[disabled]:hover {
-    border-radius: .0;
-    text-decoration: none;
-    background: var(--colour-medium);
-  }
+button[disabled="disabled"]:hover,
+button[disabled]:hover,
+.button[disabled="disabled"]:hover,
+.button[disabled]:hover {
+  border-radius: .0;
+  text-decoration: none;
+  background: var(--colour-medium);
+}
 
-  button:active,
-  button:visited,
-  .button:active,
-  .button:visited {
-    opacity: 0.74;
-  }
+button:active,
+button:visited,
+.button:active,
+.button:visited {
+  opacity: 0.74;
+}
 
-  .button--bright,
-  .button--submit {
-    background: var(--colour-bright);
-    color: var(--colour-dark);
-  }
+.button--bright,
+.button--submit {
+  background: var(--colour-bright);
+  color: var(--colour-dark);
+}
 
-  .button--bright:hover,
-  .button--submit:hover {
-    background: var(--colour-dark);
-    color: var(--colour-white);
-  }
+.button--bright:hover,
+.button--submit:hover {
+  background: var(--colour-dark);
+  color: var(--colour-white);
+}
 
-  .button--right {
-    float: right;
-  }
+.button--right {
+  float: right;
+}
 
 
 

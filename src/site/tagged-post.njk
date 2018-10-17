@@ -27,7 +27,7 @@ permalink: posts/tags/{{ postTag | lower | replace(" ", "-") }}/
       <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
     </p>
     <p>{{ post.data.description | safe }}</p>
-    {% if post.data.tags %}
+    {% if post.data.postTag %}
     {% endif %}
   </article>
 {% endfor %}

@@ -2,53 +2,51 @@
   Navigation
   ----------------------------------- */
 
-  .navigation {
-    margin: 1em 0;
-  }
+.navigation {
+  margin: 1em 0;
+}
 
-  .navigation .list {
-    padding: 0 1em;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-  }
+.navigation .list {
+  padding: 0 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+}
   
-  .navigation .list-item {
-    justify-content: center;
-    margin: .4em;
-    list-style: none;
-    hyphens: auto;
-    border: solid 1px var(--colour-medium);
-  }
+.navigation .list-item {
+  justify-content: center;
+  margin: .4em;
+  list-style: none;
+  hyphens: auto;
+  border: solid 1px var(--colour-medium);
+}
   
-  .navigation a {
-    color: var(--colour-light);
-    padding: .4em .8em;
-    border-bottom: 0;
-    border-left: 3px solid var(--colour-bright);
-    display: block;
-    background: linear-gradient(to right, var(--colour-bright) 50%, transparent 50%);
-    background-size: 200% 100%;
-    background-position: 99% bottom;
-  }
+.navigation a {
+  color: var(--colour-light);
+  padding: .4em .8em;
+  border-bottom: 0;
+  border-left: 3px solid var(--colour-bright);
+  display: block;
+  background: linear-gradient(to right, var(--colour-bright) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 99% bottom;
+}
 
-  .navigation a:hover,
-  .navigation a:focus {
-    color: var(--colour-bright);
-    text-decoration: underline;
-    background-position: 90% bottom;
-  }
+.navigation a:hover,
+.navigation a:focus {
+  color: var(--colour-bright);
+  text-decoration: underline;
+  background-position: 90% bottom;
+  transition: all .3s ease-in-out;
+}
   
-  .navigation .list-item__current a,
-  .navigation a:active {
-    background: var(--colour-white);
-    color:  var(--colour-dark);
-  }
+.navigation .list-item__current a,
+.navigation a:active {
+  background: var(--colour-white);
+  color:  var(--colour-dark);
+}
 
-  .navigation a:active:hover {
-    text-decoration: none;
-    cursor: not-allowed;
-  }
-  
- 
-  
+.navigation a:active:hover {
+  text-decoration: none;
+  cursor: not-allowed;
+}
   

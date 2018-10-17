@@ -2,38 +2,35 @@
   Lists
   ----------------------------------- */
   
-  /* Unordered lists */
-  .unordered-list {
-    padding: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
-  .unordered-list__list-item {
-    list-style: none;
-    margin-bottom: .4em;
-  }
-
-  .unordered-list__list-item:before {
-    padding-right: .6em;
-    content: "\2022";
-    font-size: 1.2em;
-    color: var(--colour-bright);
+ /* Unordered lists */
+.unordered-list {
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-  /* Ordered lists */
-  .ordered-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding-left: 1em;
-  }
+.unordered-list__list-item {
+  list-style: none;
+  margin-bottom: .4em;
+}
 
-  .ordered-list__list-item {
-    margin-bottom: .4em;
-    list-style-type: decimal;
-  }
+.unordered-list__list-item:before {
+  padding-right: .6em;
+  content: "\2022";
+  font-size: 1.2em;
+  color: var(--colour-bright);
+}
 
+/* Ordered lists */
+.ordered-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
 
-
+.ordered-list__list-item {
+  margin-bottom: .4em;
+  list-style-type: decimal;
+}

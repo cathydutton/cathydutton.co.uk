@@ -1,6 +1,6 @@
 var project = require('./_project.js');
 var gulp    = require('gulp');
-var csslint = require('gulp-csslint');
+var gulpStylelint = require('gulp-stylelint');
 var access = require('gulp-accessibility');
 var mocha = require('gulp-mocha');
 var rename = require("gulp-rename");
@@ -9,10 +9,12 @@ var rename = require("gulp-rename");
   Run CSS lint 
 */
 gulp.task('cssLint', function() {
-  return gulp.src(project.buildSrc + '/css/**/**.css')
-  .pipe(csslint())
-  .pipe(csslint.formatter())
-  .pipe(csslint.formatter('fail')); 
+  return gulp.src(project.buildDest + '/css/**/**.css')
+  .pipe(gulpStylelint({
+    reporters: [
+      {formatter: 'string', console: true}
+    ]
+  }));
 });
 
 

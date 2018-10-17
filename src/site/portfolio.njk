@@ -20,21 +20,21 @@ permalink: /projects/
 <section class="project">
   {% for post in collections.projects %}
     <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-      <div class="image-ratio project__img"> 
-        <img data-src="{{ post.data.image }}" class="lazyload" alt="{{ post.data.title }} image">
-      </div>
       <h3 class="project__title">
         <a href="{{ post.url }}">
           <span class="visually-hidden">Project title</span>
           {{ post.data.title }} 
         </a>
       </h3>
+      <div class="image-ratio project__img"> 
+        <img data-src="{{ post.data.image }}" class="lazyload" alt="{{ post.data.title }} image">
+      </div>
       <p class="project__date">
           <span class="visually-hidden">Project date</span>
           <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
       </p>
       {% if post.data.tags %}
-        <p class="project__tags">Tagged in: {% for projectTag in post.data.tags %}<a href="/projects/tags/{{ projectTag | lower | replace(" ", "-") }}/">{{ projectTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+        <p class="project__tags">Tagged in: {% for projectTag in post.data.tags %}<a href="/projects/tags/{{ projectTag | lower | replace(" ", "-") }}/" class="anchor">{{ projectTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
       {% endif %}
     </article>
   {%- endfor -%} 

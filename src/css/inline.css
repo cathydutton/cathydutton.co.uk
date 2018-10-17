@@ -11,9 +11,10 @@
 
 @import '4-base/elements';
 @import '4-base/typography';
-@import '4-base/anchors';
 @import '4-base/images';
 @import '4-base/table';
 
 @import '5-layout/main';
 
+
+/* @import '4-base/anchors'; */

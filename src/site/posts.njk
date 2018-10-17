@@ -27,7 +27,7 @@ permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
     <div>
       <p>{{ post.data.description | safe }}</p>
       {% if post.data.tags %}
-        <p>Tagged in: {% for postTag in post.data.tags %}<a href="/posts/tags/{{ postTag | lower | replace(" ", "-") }}/">{{ postTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+        <p>Tagged in: {% for postTag in post.data.tags %}<a href="/posts/tags/{{ postTag | lower | replace(" ", "-") }}/" class="anchor">{{ postTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
       {% endif %}
     </div>
   </article>

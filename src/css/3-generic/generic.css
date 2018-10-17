@@ -3,21 +3,21 @@
   Reset and/or normalize styles, box-sizing definition, etc. 
   ----------------------------------- */
 
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-  }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
 
 
-  /**
+/**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
- */
+*/
 
 html {
   font-family: sans-serif; /* 1 */
@@ -453,8 +453,8 @@ form, fieldset, legend,
 figure,
 table, th, td, caption,
 hr {
-    margin:  0;
-    padding: 0;
+  margin:  0;
+  padding: 0;
 }
 
 

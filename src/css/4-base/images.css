@@ -6,7 +6,7 @@
   825 x 450
   ----------------------------------- */
 
- img {
+img {
   image-rendering: auto;
   padding: .2em;
   display: block;
@@ -30,13 +30,9 @@
   height: 100%;
 }
 
-
-
 /* /// MOve??? */
 
 .image-ratio--half img {
   width: 50%;
 }
-
-
 

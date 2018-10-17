@@ -1,0 +1,27 @@
+{
+
+  "rules": {
+    "block-no-empty": null,
+    "color-no-invalid-hex": true,
+    "at-rule-no-vendor-prefix": true,
+    "length-zero-no-unit": true,
+    "no-duplicate-selectors": true,
+    "no-invalid-double-slash-comments": true,
+    "value-no-vendor-prefix": true,
+    "comment-empty-line-before": [ "always", {
+      "ignore": ["stylelint-commands", "after-comment"]
+    } ],
+    "declaration-colon-space-after": "always",
+    "indentation": 2,
+    "max-empty-lines": 2,
+    "rule-empty-line-before": [ "always", {
+      "except": ["first-nested"],
+      "ignore": ["after-comment"]
+    } ],
+    "unit-blacklist": ["px"],
+    
+  },
+
+        
+  
+}

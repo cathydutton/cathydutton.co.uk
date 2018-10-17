@@ -59,7 +59,6 @@ Social media icons
 
 
 /* Footer colour overrides */
-
 footer .social-media__anchor {
   color: var(--colour-dark);
   fill: var(--colour-dark);
@@ -76,8 +75,3 @@ footer .social-media__anchor:before {
   background-color:var(--colour-dark);
   color: var(--colour-white);
 }
-
-
-
-
-

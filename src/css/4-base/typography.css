@@ -4,60 +4,60 @@
   ----------------------------------- */
 
 
-  h1 {
-    font-size: calc(2.8vw + 2.8vh + 3vmin);
-    color: var(--colour-dark);
-    margin-bottom: .4em;
-    line-height: 1;
-  }
+h1 {
+  font-size: calc(2.8vw + 2.8vh + 3vmin);
+  color: var(--colour-dark);
+  margin-bottom: .4em;
+  line-height: 1;
+}
 
-  .page-description {
-    display: block;
-    font-size: .6em;
-    text-transform: lowercase;
-    line-height: .5;
-    font-weight: normal;
-  }
+.page-description {
+  display: block;
+  font-size: .6em;
+  text-transform: lowercase;
+  line-height: .5;
+  font-weight: normal;
+}
   
-  h2 {
-    font-size: calc(1.2vw + 1.2vh + 2vmin);
-    color: var(--colour-dark);
-    margin-bottom: .4em;
-  }
+h2 {
+  font-size: calc(1.2vw + 1.2vh + 2vmin);
+  color: var(--colour-dark);
+  margin-bottom: .4em;
+}
   
-  h3 {
-    font-size: calc(.8vw + .8vh + 2vmin);
-    color: var(--colour-dark);
-    margin-bottom: .4em;
-  }
+h3 {
+  font-size: calc(.8vw + .8vh + 2vmin);
+  color: var(--colour-dark);
+  margin-bottom: .4em;
+}
   
-  h4,
-  h5,
-  h6 {
-    font-size: calc(.6vw + .6vh + 1vmin);
-    color: var(--colour-dark);
-    margin-bottom: .4em;
-  }
+h4,
+h5,
+h6 {
+  font-size: calc(.6vw + .6vh + 1vmin);
+  color: var(--colour-dark);
+  margin-bottom: .4em;
+}
 
-  p {
-    margin-bottom: .8em;
-    font-size: 1em;
-  }
+p {
+  margin-bottom: .8em;
+  font-size: 1em;
+}
 
-  p.highlight-text {
-    border-left: 4px solid var(--colour-bright);
-    padding-left: .4em;
-    font-size: 1.2em;
-  }
+p.highlight-text {
+  border-left: 4px solid var(--colour-bright);
+  padding-left: .4em;
+  font-size: 1.2em;
+}
 
-  input, 
-  select, 
-  textarea, 
-  button {
-    font-family:inherit;
-    font-size: .8em;
-  }
+input, 
+select, 
+textarea, 
+button {
+  font-family:inherit;
+  font-size: .8em;
+}
 
-  footer p {
-    font-size: .8em;
-  }
+footer p {
+  font-size: .8em;
+}
