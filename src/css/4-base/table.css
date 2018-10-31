@@ -12,6 +12,12 @@ table {
   margin: 1em 0;
 }
 
+table::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
+}
+
 table, 
 th, 
 td {

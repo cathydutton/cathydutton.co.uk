@@ -1,8 +1,8 @@
 {
-  "name": "EleventyOne",
+  "name": "",
   "version": "1.0.1",
-  "description": "A project bootstrap for Eleventy sites. With pipelines for Sass, Js, and Lambdas",
-  "author": "Phil Hawksworth",
+  "description": "Online portfolio and blog of Cathy Dutton",
+  "author": "Cathy Dutton",
   "license": "MIT",
   "scripts": {
     "prod": "gulp production --prod",
@@ -15,7 +15,6 @@
     "url": "https://github.com/cathydutton/cathydutton.co.uk"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.5.2",
     "concurrent-transform": "^1.0.0",
     "gravatar": "^1.6.0",
     "gulp": "^4.0.0",
@@ -35,6 +34,7 @@
     }
   },
   "devDependencies": {
+    "@11ty/eleventy": "^0.5.4",
     "autoprefixer": "^9.1.4",
     "css-declaration-sorter": "^4.0.1",
     "csswring": "^7.0.0",

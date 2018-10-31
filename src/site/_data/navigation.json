@@ -10,8 +10,8 @@
       "url": "/about-me/"
     },
     {
-      "menu_item": "Portfolio",
-      "menu_name": "My portfolio",
+      "menu_item": "Projects",
+      "menu_name": "Projects",
       "url": "/projects/"
     },
     {

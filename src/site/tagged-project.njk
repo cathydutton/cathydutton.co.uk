@@ -1,19 +1,23 @@
 ---
 title: Project tags
 description: Tags
+pageName: Projects
+pageDescription: A collection design and front end development work
 layout: layouts/base.njk
 pagination:
-  data: collections
+  data: collections.projects
   size: 1
-  alias: projectTag
-permalink: projects/tags/{{ projectTag | lower | replace(" ", "-") }}/
+  alias: tag
+permalink: projects/tags/{{ tag.data.projectTags[0] | lower | replace(" ", "-")}}/ 
 ---
 
-<h1>{{ projectTag }} projects</h1>
+
+<h1> {{ tag.data.projectTags[0] }} projects</h1>
 
 <section class="project">
-  {% set taglist = collections[ projectTag ] %}
-  {% for post in taglist | reverse %}
+
+{% for post in collections.projects %}
+ {% if tag.data.projectTags[0] in post.data.projectTags %}
     <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
       <h3 class="project__title">
         <a href="{{ post.url }}">
@@ -28,7 +32,16 @@ permalink: projects/tags/{{ projectTag | lower | replace(" ", "-") }}/
         <span class="visually-hidden">Project date</span>
         <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
       </p>
-    </article>
-  {% endfor %}
-</section>
+    </article> 
+  {% endif %}
+{% endfor %}
+
+
+
+
+
+
+
+  
+</section> 
 

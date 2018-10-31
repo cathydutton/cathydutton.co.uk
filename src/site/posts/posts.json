@@ -2,6 +2,5 @@
   "layout" : "layouts/post.njk",
   "author": "Cathy Dutton",
   "permalink": "posts/{{ page.fileSlug }}/index.html",
-  "templateEngineOverride": "njk,md",
-  "tags": "postTag"
+  "templateEngineOverride": "njk,md"
 }

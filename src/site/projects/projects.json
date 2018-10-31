@@ -1,6 +1,7 @@
 {
   "layout" : "layouts/portfolio.njk",
   "permalink": "projects/{{ page.fileSlug }}/index.html",
-  "templateEngineOverride": "njk,md",
-  "tags": "projectTag"
+  "templateEngineOverride": "njk,md"
 }
+
+

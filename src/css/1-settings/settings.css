@@ -10,7 +10,7 @@
   --colour-black: hsl(293, 81%, 4%);
   --colour-dark: hsl(294, 83%, 7%);
   --colour-medium: hsl(294, 83%, 28%);
-  --colour-light: rgb(226, 226, 226);
+  --colour-light: rgb(240, 239, 239);
   --colour-white: hsl(0, 0%, 100%);
   --colour-bright: hsl(322, 80%, 51%);
 }

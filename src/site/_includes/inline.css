@@ -16,7 +16,7 @@
   --colour-black: hsl(293, 81%, 4%);
   --colour-dark: hsl(294, 83%, 7%);
   --colour-medium: hsl(294, 83%, 28%);
-  --colour-light: rgb(226, 226, 226);
+  --colour-light: rgb(240, 239, 239);
   --colour-white: hsl(0, 0%, 100%);
   --colour-bright: hsl(322, 80%, 51%);
 }
@@ -602,7 +602,7 @@ body {
 
 pre {
   margin-bottom: 1em;
-  background: rgb(226, 226, 226);
+  background: rgb(240, 239, 239);
   background: var(--colour-light); 
   padding: .5em;
   font-family: Consolas, Monaco, monospace;
@@ -615,7 +615,7 @@ code {
   display: block; 
   border: solid 1px hsl(0, 0%, 100%); 
   border: solid 1px var(--colour-white);
-  background:rgb(226, 226, 226);
+  background:rgb(240, 239, 239);
   background:var(--colour-light);
   background-image: linear-gradient( hsl(0, 0%, 100%) 50%, transparent 0);
   background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
@@ -805,9 +805,9 @@ img {
 .image-ratio {
   position: relative;
   margin: 1em 0;
-  border: solid 1px rgb(226, 226, 226);
+  border: solid 1px rgb(240, 239, 239);
   border: solid 1px var(--colour-light);
-  background: url(/images/placeholder.png) center center no-repeat rgb(226, 226, 226);
+  background: url(/images/placeholder.png) center center no-repeat rgb(240, 239, 239);
   background: url(/images/placeholder.png) center center no-repeat var(--colour-light);
   padding-bottom: 55%;
   height: 0;
@@ -840,6 +840,12 @@ img {
 table {
   margin: 1em 0;
   border-collapse: collapse;
+}
+
+table::-webkit-scrollbar {
+  background-color: #aaa; /* or add it to the track */
+  width: 5px;
+  height: 8px;
 }
 
 table, 
@@ -879,7 +885,7 @@ td {
   background: hsl(294, 83%, 7%);
   background: var(--colour-dark);
   min-width: 17.5em;
-  color: rgb(226, 226, 226);
+  color: rgb(240, 239, 239);
   color: var(--colour-light);
   text-align: center;
 }

@@ -12,7 +12,7 @@ module.exports = function(config) {
 
   // Latest posts include
    config.addCollection("latestPosts", function(collection) {
-    return collection.getFilteredByGlob("**/posts/**.njk").slice(-3).reverse();
+    return collection.getFilteredByGlob("**/posts/**.njk").reverse().slice(-3);
   });
 
   // PostCSS plugin collection
@@ -20,10 +20,24 @@ module.exports = function(config) {
     return collection.getFilteredByGlob("**/postcss/**.njk").reverse();
   });
 
-  // Portfolio collection
+   // Portfolio collection
+  //  config.addCollection("projects", function(collection) {
+  //   return collection.getFilteredByGlob("**/projects/**.njk").reverse();
+  // });
+
+  // Merge tags experiment
+  // config.addExperiment("DATA_DEEP_MERGE");
+
+
+  // Filter using `Array.filter`
   config.addCollection("projects", function(collection) {
-    return collection.getFilteredByGlob("**/projects/**.njk").reverse();
+    return collection.getFilteredByGlob("**/projects/**.njk").reverse().filter(function(item) {
+      // Side-step tags and do your own filtering
+      return "projectTags" in item.data;
+    });
   });
+
+
 
   return {
     dir: {

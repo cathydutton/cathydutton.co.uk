@@ -6,17 +6,19 @@ PostCSS  feed
   width: 100%;
   margin-top: 1.4em;
   padding: .8em;
-  border: 2px dotted var(--colour-light);
-  border-radius: 0.5em;
+  background: var(--colour-light);
+  border-bottom: solid 4px var(--colour-bright);
 }
 
 .postcss__post:hover {
   transition: all .3s ease-in-out;
-  background: var(--colour-light);
+  background: var(--colour-white);
+  outline: solid 1px var(--colour-light);
 }
 
 .postcss__title {
   font-size: 2em;
+  color: var(--colour-dark);
 }
 
 .postcss__header {

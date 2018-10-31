@@ -5,13 +5,19 @@ Latest project feed
 .project {
   display: grid;
   grid-template-columns: repeat( auto-fill, minmax(17.5em, 1fr) );
+  /* grid-template-rows: auto auto auto auto; */
+  /* grid-auto-rows: 1fr; */
+  /* grid-auto-rows: auto auto auto auto; */
   grid-gap: 1em;
   padding: 1em;
 }
 
 .project__post {
-  display: flex; 
-  flex-direction: column;
+  /* display: flex; 
+  flex-direction: column; */
+  /* display: grid;
+  grid-auto-rows: 100px 200px auto auto; */
+  /* display: contents; */
   padding: .8em;
   background: var(--colour-light);
   border-bottom: solid 4px var(--colour-bright);
@@ -19,11 +25,21 @@ Latest project feed
 
 .project__title {
   font-size: 2em;
-  flex: 1 0 auto;
+  /* flex: 1 0 auto; */
+  color: var(--colour-dark);
 }
 
 .project__img {
  background: var(--colour-white);
+}
+
+.project__date {
+  /* flex: 1 0 auto; */
+}
+
+.project__tags {
+  /* flex: 1 0 auto; */
+
 }
 
 .project__post:hover {

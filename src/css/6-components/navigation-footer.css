@@ -31,7 +31,8 @@
   height: 3px;
 }
 
-.navigation-footer .list-item a:hover:after {
+.navigation-footer .list-item a:hover:after,
+.navigation-footer .list-item a:focus:after {
   width: 100%;
 }
 

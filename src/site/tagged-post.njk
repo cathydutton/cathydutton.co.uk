@@ -1,35 +1,46 @@
 ---
 title: Post tags
 description: Tags
+pageName: Projects
+pageDescription: A collection design and front end development work
 layout: layouts/base.njk
 pagination:
   data: collections
   size: 1
-  alias: postTag
-permalink: posts/tags/{{ postTag | lower | replace(" ", "-") }}/
+  alias: tag
+  filter:
+    - project
+    - projects
+    - all
+    - latestPosts
+    - postcss
+    - posts
+permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/ 
 ---
 
-<h1>{{ postTag }} posts</h1>
 
 
-{% set taglist = collections[ postTag ] %}
-{% for post in taglist | reverse %}
-  {# <li><a href="{{ post.url | url }}">{{ post.data.title }}</li> #}
-  <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-    <h3 class="news-feed__title">
-      <a href="{{ post.url }}" title="{{post.data.title}}" class="news-feed__anchor">
-        <span class="visually-hidden">Article title</span>
-        {{post.data.title}}
-      </a>
-    </h3>
-    <p class="news-feed__date">
-      <span class="visually-hidden">Published on</span>
-      <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
-    </p>
-    <p>{{ post.data.description | safe }}</p>
-    {% if post.data.postTag %}
-    {% endif %}
-  </article>
-{% endfor %}
+<h1>{{ tag }} posts</h1>
+
+
+
+  {% set taglist = collections[tag]  %}
+
+  {% for post in taglist | reverse %}
+
+    <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+      <h3 class="news-feed__title">
+        <a href="{{ post.url }}" title="{{post.data.title}}" class="news-feed__anchor">
+          <span class="visually-hidden">Article title</span>
+          {{post.data.title}}
+        </a>
+      </h3>
+      <p class="news-feed__date">
+        <span class="visually-hidden">Published on</span>
+        <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
+      </p>
+      <p>{{ post.data.description | safe }}</p>
+    </article>
+  {% endfor %}
 
 
