@@ -1,32 +1,26 @@
  [
     {
       "menu_item": "Home",
-      "menu_name": "Hello",
       "url": "/"
     },
     {
       "menu_item": "About me",
-      "menu_name": "About me",
       "url": "/about-me/"
     },
     {
       "menu_item": "Projects",
-      "menu_name": "Projects",
       "url": "/projects/"
     },
     {
       "menu_item": "Posts",
-      "menu_name": "Posts",
       "url": "/posts/"
     },
     {
       "menu_item": "Component library",
-      "menu_name": "Component library",
       "url": "/component-library/"
     },
     {
       "menu_item": "PostCSS plugins",
-      "menu_name": "PostCSS plugins",
       "url": "/postcss-plugins/"
     }
   ]

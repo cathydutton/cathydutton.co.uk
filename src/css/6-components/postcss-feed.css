@@ -18,7 +18,7 @@ PostCSS  feed
 
 .postcss__title {
   font-size: 2em;
-  color: var(--colour-dark);
+  color: var(--colour-medium);
 }
 
 .postcss__header {

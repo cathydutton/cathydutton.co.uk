@@ -26,7 +26,7 @@ Latest project feed
 .project__title {
   font-size: 2em;
   /* flex: 1 0 auto; */
-  color: var(--colour-dark);
+  color: var(--colour-medium);
 }
 
 .project__img {

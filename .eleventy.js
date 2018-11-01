@@ -20,14 +20,6 @@ module.exports = function(config) {
     return collection.getFilteredByGlob("**/postcss/**.njk").reverse();
   });
 
-   // Portfolio collection
-  //  config.addCollection("projects", function(collection) {
-  //   return collection.getFilteredByGlob("**/projects/**.njk").reverse();
-  // });
-
-  // Merge tags experiment
-  // config.addExperiment("DATA_DEEP_MERGE");
-
 
   // Filter using `Array.filter`
   config.addCollection("projects", function(collection) {

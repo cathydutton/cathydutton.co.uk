@@ -28,13 +28,7 @@
       {% include "sidebar.njk" %}
     </aside>
     <div class="content">
-      <header role="banner" class="header clear">
-        {% include "header.njk" %}
-      </header>
-      <main id="main">
-        <p class="highlight-text" id="js-skip-link-target">
-          {{pageIntro}}
-        <p>
+    <main id="main">
         {{ content | safe }}
       </main>
       <footer class="footer">

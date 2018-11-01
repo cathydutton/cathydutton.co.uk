@@ -1,14 +1,24 @@
 ---
-title: Interaction Design, UX and Front End Development blog - Cathy Dutton
-description: Front End Developer, CSS, Sass, UX, PostCSS and JavaScript
-pageName: Posts
-pageDescription: Latest posts and tutorials
+title: Design, User Experience and Front End Development posts - Cathy Dutton
+description: A collection of my posts and tutorials on Design, User Experience, CSS, PostCSS, and Front End Development
 layout: layouts/base.njk
 pagination:
   data: collections.posts
   size: 10
 permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
+pageName: Posts
 ---
+
+<header role="banner" class="header clear">
+  <h1>
+    Posts
+    <span class="page-description">Latest posts and tutorials</span>
+  </h1>
+</header>
+
+<p class="highlight-text" id="js-skip-link-target">
+  ckmwdeg gergergge gremcflmf;m;em,le  
+<p>
 
 <section class="post">
   {% for post in pagination.items %}

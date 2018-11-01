@@ -6,17 +6,18 @@
 
 h1 {
   font-size: calc(2.8vw + 2.8vh + 3vmin);
-  color: var(--colour-dark);
+  color: var(--colour-medium);
   margin-bottom: .4em;
   line-height: 1;
 }
 
 .page-description {
   display: block;
-  font-size: .6em;
+  font-size: .4em;
   text-transform: lowercase;
   line-height: .5;
   font-weight: normal;
+  color: var(--colour-dark);
 }
   
 h2 {

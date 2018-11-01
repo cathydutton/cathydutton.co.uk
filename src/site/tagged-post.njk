@@ -1,8 +1,6 @@
 ---
-title: Post tags
-description: Tags
-pageName: Projects
-pageDescription: A collection design and front end development work
+title: Design, User Experience and Front End Development posts - Cathy Dutton
+description: A collection of my posts and tutorials on Design, User Experience, CSS, PostCSS, and Front End Development
 layout: layouts/base.njk
 pagination:
   data: collections
@@ -18,11 +16,18 @@ pagination:
 permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/ 
 ---
 
+<header role="banner" class="header clear">
+  <h1>
+    {{ tag }} posts
+    <span class="page-description">Latest posts and tutorials</span>
+  </h1>
+</header>
 
 
-<h1>{{ tag }} posts</h1>
 
-
+<p class="highlight-text" id="js-skip-link-target">
+  ckmwdeg gergergge gremcflmf;m;em,le  
+<p>
 
   {% set taglist = collections[tag]  %}
 
