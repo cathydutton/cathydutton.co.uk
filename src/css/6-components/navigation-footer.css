@@ -44,6 +44,6 @@
 
 .navigation-footer .list-item__current a,
 .navigation-footer .list-item a:active {
-  color: var(--colour-bright);
-  border-bottom: solid 3px var(--colour-bright); 
+  color: var(--colour-medium)!important;
+  border-bottom: solid 3px var(--colour-medium); 
 }

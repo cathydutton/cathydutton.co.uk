@@ -41,7 +41,7 @@ a:hover {
   width: 100%;
 }
   
-.anchor:visited:after{
+.anchor:visited:after {
   content: '(visited)';
 }
   

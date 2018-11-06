@@ -3,19 +3,24 @@
   LHS sidebar responsive layout
   ----------------------------------- */
 
-.container {
+.wrapper {
   background: var(--colour-white);
+}
+
+.container {
   overflow: hidden;
   min-height: 100vh;
+  max-width: 85.333em;
 }
   
 .sidebar,
 .content {
-  max-width: 100%;
+  max-width: 100%; 
   width: calc((1024px - 100%) * 1024);
   float: left;
   margin-bottom: -9999px;
   padding-bottom: 9999px;
+
 }
   
 .sidebar {
@@ -31,9 +36,7 @@
   background: var(--colour-white);
 }
 
-header,
-main,
-footer {
+main {
   margin: 0 1em;
   padding: 1em 0;
 }

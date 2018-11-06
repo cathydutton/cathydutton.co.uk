@@ -733,7 +733,7 @@ h1 {
   margin-bottom: .4em;
   color: hsl(294, 83%, 28%);
   color: var(--colour-medium);
-  font-size: calc(2.8vw + 2.8vh + 3vmin);
+  font-size: calc(3.6vw + 3.6vh + 3vmin);
   line-height: 1;
 }
 
@@ -741,7 +741,7 @@ h1 {
   display: block;
   color: hsl(294, 83%, 7%);
   color: var(--colour-dark);
-  font-size: .4em;
+  font-size: .3em;
   font-weight: normal;
   line-height: .5;
   text-transform: lowercase;
@@ -828,12 +828,6 @@ img {
   height: 100%;
 }
 
-/* /// MOve??? */
-
-.image-ratio--half img {
-  width: 50%;
-}
-
 /*
   Elements -   Tables
   
@@ -871,9 +865,13 @@ td {
   LHS sidebar responsive layout
   ----------------------------------- */
 
-.container {
+.wrapper {
   background: hsl(0, 0%, 100%);
   background: var(--colour-white);
+}
+
+.container {
+  max-width: 85.333em;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -882,9 +880,10 @@ td {
 .content {
   float: left;
   margin-bottom: -9999px;
-  padding-bottom: 9999px;
+  padding-bottom: 9999px; 
   width: calc((1024px - 100%) * 1024);
   max-width: 100%;
+
 }
 
 .sidebar {
@@ -903,9 +902,7 @@ td {
   min-width: calc(100% - 17.5em);
 }
 
-header,
-main,
-footer {
+main {
   margin: 0 1em;
   padding: 1em 0;
 }
