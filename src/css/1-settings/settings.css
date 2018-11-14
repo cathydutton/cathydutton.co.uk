@@ -3,7 +3,7 @@
   CSS variables for fonts, colors, etc.
   ----------------------------------- */
 
-  /* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=E3E3E3&v=E61E9C&v=780C83&v=1E0321&v=110213 */
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FCFCFC&v=E3E3E3&v=E61E9C&v=780C83&v=1E0321&v=333333 */
 
 /* Colors */
 :root {
@@ -11,14 +11,14 @@
   --colour-dark: hsl(294, 83%, 7%);
   --colour-medium: hsl(294, 83%, 28%);
   --colour-light: rgb(240, 239, 239);
-  --colour-white: hsl(0, 0%, 100%);
+  --colour-white: hsl(0, 0%, 99%);
   --colour-bright: hsl(322, 80%, 51%);
 }
 
 /* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=001E3D&v=00356C&v=9C2064&v=FE9F00&v=FFFA06&v=FFFFFF */
 
 .theme-contrast {
-  --colour-black: hsl(0, 0%, 100%);
+  --colour-black: hsl(0, 0%, 20%);
   --colour-dark: hsl(59, 100%, 51%);
   --colour-medium: hsl(38, 100%, 50%);
   --colour-light: hsl(211, 100%, 21%);
@@ -39,7 +39,8 @@
 
 /* Fonts */
 :root {
-  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  --font-family: "Source Sans Pro", sans-serif;
 }
 
 .dyslexic {
@@ -48,7 +49,7 @@
 
 /* Font size */
 :root {
-  --font-size: 16px;
+  --font-size: 18.4px;
 }
 
 /* MOVE THIS PLEASE */

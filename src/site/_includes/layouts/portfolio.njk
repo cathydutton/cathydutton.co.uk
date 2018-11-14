@@ -7,12 +7,14 @@ layout: layouts/base.njk
   Project date <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
 </p>
 
- 
-<main>
-  {{ content | safe }}
-</main>
+{{ content | safe }}
 
-<a href="/projects">Back to all projects</a>
+<a href="/projects" class="anchor">Back to all projects</a>
+
+
+
+
+
 
 
 

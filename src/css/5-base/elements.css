@@ -19,7 +19,8 @@ body {
   background: var(--colour-bright);
   font-family: var(--font-family);
   font-size: var(--font-size);
-  line-height: 1.5;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 pre { 

@@ -8,7 +8,7 @@
   CSS variables for fonts, colors, etc.
   ----------------------------------- */
 
-/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=E3E3E3&v=E61E9C&v=780C83&v=1E0321&v=110213 */
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FCFCFC&v=E3E3E3&v=E61E9C&v=780C83&v=1E0321&v=333333 */
 
 /* Colors */
 
@@ -17,14 +17,14 @@
   --colour-dark: hsl(294, 83%, 7%);
   --colour-medium: hsl(294, 83%, 28%);
   --colour-light: rgb(240, 239, 239);
-  --colour-white: hsl(0, 0%, 100%);
+  --colour-white: hsl(0, 0%, 99%);
   --colour-bright: hsl(322, 80%, 51%);
 }
 
 /* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=001E3D&v=00356C&v=9C2064&v=FE9F00&v=FFFA06&v=FFFFFF */
 
 .theme-contrast {
-  --colour-black: hsl(0, 0%, 100%);
+  --colour-black: hsl(0, 0%, 20%);
   --colour-dark: hsl(59, 100%, 51%);
   --colour-medium: hsl(38, 100%, 50%);
   --colour-light: hsl(211, 100%, 21%);
@@ -46,7 +46,8 @@
 /* Fonts */
 
 :root {
-  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  --font-family: "Source Sans Pro", sans-serif;
 }
 
 .dyslexic {
@@ -56,7 +57,7 @@
 /* Font size */
 
 :root {
-  --font-size: 16px;
+  --font-size: 18.4px;
 }
 
 /* MOVE THIS PLEASE */
@@ -577,296 +578,12 @@ hr {
 }
 
 /*
-  Elements
-  styling for bare HTML elements (like H1, A, etc.). 
-  These come with default styling from the browser so we can redefine them here.
-  ----------------------------------- */
-
-html,
-body {
-  height: 100%;
-}
-
-html {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: hsl(322, 80%, 51%);
-  background: var(--colour-bright);
-  color: hsl(293, 81%, 4%);
-  color: var(--colour-black);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-family: var(--font-family);
-  font-size: 16px;
-  font-size: var(--font-size);
-  line-height: 1.5;
-}
-
-pre {
-  margin-bottom: 1em;
-  background: rgb(240, 239, 239);
-  background: var(--colour-light); 
-  padding: .5em;
-  font-family: Consolas, Monaco, monospace;
-  line-height: 1.5;
-  white-space: unset;
-  tab-size: 4;
-}
-
-code {
-  display: block; 
-  border: solid 1px hsl(0, 0%, 100%); 
-  border: solid 1px var(--colour-white);
-  background:rgb(240, 239, 239);
-  background:var(--colour-light);
-  background-image: linear-gradient( hsl(0, 0%, 100%) 50%, transparent 0);
-  background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
-  background-origin: content-box;
-  background-size: auto 3em; 
-  font: inherit ;
-}
-
-pre code {    
-  word-wrap: break-word;
-  white-space: pre-wrap;       
-  white-space: -moz-pre-wrap;  
-  white-space: -pre-wrap;      
-  white-space: -o-pre-wrap; 
-}
-
-pre p {
-  margin: 0;
-}
-
-/* Select */
-
-::selection {
-  background: hsl(322, 80%, 51%);
-  background: var(--colour-bright);
-}
-
-/* SVG */
-
-svg {
-  width: 100%;
-  height: 100%;
-}
-
-/* LISTS */
-
-/* Unordered lists */
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-ul li {
-  list-style: disc;
-}
-
-/* Ordered lists */
-
-.ol {
-  padding: 0;
-  list-style: none;
-}
-
-.ol li {
-  list-style-type: decimal;
-}
-
-/* DESCRIPTION LIST */
-
-dl,
-.description-list {
-  margin-top: .4em;
-  margin-bottom: 1em;
-}
-
-dt,
-.description-list__title {
-  font-weight: bold;
-}
-
-dt,
-dd,
-.description-list__title, 
-.description-list__description {
-  display: inline;
-  margin: 0;
-}
-
-dd + dt::before 
-.description-list__description + .description-list__title::before {
-  white-space: pre;
-  content: "\A";
-}
-
-dt + dd::before,
-.description-list__title + .description-list__description::before {
-  white-space: pre;
-  content: "\A";
-}
-
-dd + dd::before,
-dt + dt::before,,
-.description-list__description + .description-list__description::before,
-.description-list__title + .description-list__title::before {
-  margin-left: -.25em;
-  font-weight: normal;
-  content: ', ';
-}
-
-[hidden], template {
-  display: none;
-}
-
-/*
-  Generic -   Typography
-  Reset and/or normalize styles, box-sizing definition, etc. 
-  ----------------------------------- */
-
-h1 {
-  margin-bottom: .4em;
-  color: hsl(294, 83%, 28%);
-  color: var(--colour-medium);
-  font-size: calc(3.6vw + 3.6vh + 3vmin);
-  line-height: 1;
-}
-
-.page-description {
-  display: block;
-  color: hsl(294, 83%, 7%);
-  color: var(--colour-dark);
-  font-size: .3em;
-  font-weight: normal;
-  line-height: .5;
-  text-transform: lowercase;
-}
-
-h2 {
-  margin-bottom: .4em;
-  color: hsl(294, 83%, 7%);
-  color: var(--colour-dark);
-  font-size: calc(1.2vw + 1.2vh + 2vmin);
-}
-
-h3 {
-  margin-bottom: .4em;
-  color: hsl(294, 83%, 7%);
-  color: var(--colour-dark);
-  font-size: calc(.8vw + .8vh + 2vmin);
-}
-
-h4,
-h5,
-h6 {
-  margin-bottom: .4em;
-  color: hsl(294, 83%, 7%);
-  color: var(--colour-dark);
-  font-size: calc(.6vw + .6vh + 1vmin);
-}
-
-p {
-  margin-bottom: .8em;
-  font-size: 1em;
-}
-
-p.highlight-text {
-  border-left: 4px solid hsl(322, 80%, 51%);
-  border-left: 4px solid var(--colour-bright);
-  padding-left: .4em;
-  font-size: 1.2em;
-}
-
-input, 
-select, 
-textarea, 
-button {
-  font-family:inherit;
-  font-size: .8em;
-}
-
-footer p {
-  font-size: .8em;
-}
-
-/*
-  Elements -   Images
-  
-  275 x 150
-  550 x 300
-  825 x 450
-  ----------------------------------- */
-
-img {
-  display: block;
-  padding: .2em;
-  image-rendering: auto;
-}
-
-.image-ratio {
-  position: relative;
-  margin: 1em 0;
-  border: solid 1px rgb(240, 239, 239);
-  border: solid 1px var(--colour-light);
-  background: url(/images/placeholder.png) center center no-repeat rgb(240, 239, 239);
-  background: url(/images/placeholder.png) center center no-repeat var(--colour-light);
-  padding-bottom: 55%;
-  height: 0;
-  overflow: hidden;
-}
-
-.image-ratio img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/*
-  Elements -   Tables
-  
-  ----------------------------------- */
-
-.table-wrapper {
-  overflow-x: auto;
-}
-
-table {
-  margin: 1em 0;
-  border-collapse: collapse;
-}
-
-table::-webkit-scrollbar {
-  background-color: #aaa; /* or add it to the track */
-  width: 5px;
-  height: 8px;
-}
-
-table, 
-th, 
-td {
-  border: 1px solid black;
-}
-
-th, 
-td {
-  padding: 15px;
-  text-align: left;
-}
-
-/*
   Layout - Base
   LHS sidebar responsive layout
   ----------------------------------- */
 
 .wrapper {
-  background: hsl(0, 0%, 100%);
+  background: hsl(0, 0%, 99%);
   background: var(--colour-white);
 }
 
@@ -897,7 +614,7 @@ td {
 
 .content {
   animation: fadeIn 2s forwards;
-  background: hsl(0, 0%, 100%);
+  background: hsl(0, 0%, 99%);
   background: var(--colour-white);
   min-width: calc(100% - 17.5em);
 }
@@ -915,4 +632,13 @@ section {
   margin: 1em 0;
 }
 
-/* @import '4-base/anchors'; */
+/*
+  Layout - Columns
+  Column layouts
+  ----------------------------------- */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9.375em, 1fr));
+}
+

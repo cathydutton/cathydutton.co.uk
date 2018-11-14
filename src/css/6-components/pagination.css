@@ -43,10 +43,6 @@ Pagination
   fill: var(--colour-medium);
 }
 
-.navigation__title {
-  border-bottom: solid 1px var(--colour-medium);
-}
-
 .pagination__anchor:hover  {
   background: var(--colour-light);
 }
