@@ -2,6 +2,7 @@ module.exports = function(config) {
 
   // Add a date formatter filter to Nunjucks
   config.addFilter("dateDisplay", require("./filters/dates.js") );
+  config.addFilter("dateDisplayProject", require("./filters/datesProject.js") );
   config.addFilter("timestamp", require("./filters/timestamp.js") );
   config.addFilter("squash", require("./filters/squash.js") );
 

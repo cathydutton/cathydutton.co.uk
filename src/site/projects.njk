@@ -42,7 +42,7 @@ pageName: Projects
       </h3>
       <p class="project__date">
           <span class="visually-hidden">Project date</span>
-          <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
+          <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplayProject }}</time>
       </p>
       {% if post.data.projectTags %}
         <p class="project__tags">Tagged in: {% for projectTag in post.data.projectTags %}<a href="/projects/tags/{{ projectTag | lower | replace(" ", "-") }}/" class="anchor">{{ projectTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
