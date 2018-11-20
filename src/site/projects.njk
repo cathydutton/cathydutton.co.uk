@@ -1,10 +1,5 @@
----
-title: Design, User Experience and Front End Development portfolio - Cathy Dutton
-description: A collection of my work from employers including Defra, Barclays, EE, The Hut Group and AO.com
-layout: layouts/base.njk
-permalink: /projects/
-pageName: Projects
----
+--- title: Design, User Experience and Front End Development portfolio - Cathy Dutton description: A collection of my work from employers including Defra, Barclays, EE, The Hut Group and AO.com layout: layouts/base.njk permalink: /projects/ pageName:
+Projects ---
 
 <header role="banner" class="header clear">
   <h1>
@@ -14,40 +9,49 @@ pageName: Projects
 </header>
 
 <p class="highlight-text" id="js-skip-link-target">
-  ckmwdeg gergergge gremcflmf;m;em,le  
-<p>
+  ckmwdeg gergergge gremcflmf;m;em,le
+  <p>
 
- <h3>The important bits</h3>
+    <h3>The important bits</h3>
 
-<ol class="ordered-list">
-  <li class="ordered-list__list-item"><strong>An opening statement,</strong> addressed to a particular person, introducing myself and stating clearly why I’d be a great fit for the position.</li>
-  <li class="ordered-list__list-item"><strong>A collection of my work,</strong> specifically tailored to speak to this particular job description. For example, this job description uses specific phrases like “product presentation“ and “retail business targets,” so I used those same phrases in talking about my work.</li>
-  <li class="ordered-list__list-item"><strong>Something special about me</strong> professionally or personally that sets me above everyone else applying for this job. I’m not just another designer; I’m a designer that’s also a sneakerhead.</li>
-</ol>
+    <ol class="ordered-list">
+      <li class="ordered-list__list-item">
+        <strong>An opening statement,</strong>
+        addressed to a particular person, introducing myself and stating clearly why I’d be a great fit for the position.</li>
+      <li class="ordered-list__list-item">
+        <strong>A collection of my work,</strong>
+        specifically tailored to speak to this particular job description. For example, this job description uses specific phrases like “product presentation“ and “retail business targets,” so I used those same phrases in talking about my work.</li>
+      <li class="ordered-list__list-item">
+        <strong>Something special about me</strong>
+        professionally or personally that sets me above everyone else applying for this job. I’m not just another designer; I’m a designer that’s also a sneakerhead.</li>
+    </ol>
 
+    <section class="project">
+      {% for post in collections.projects %}
 
-<section class="project">
-  {% for post in collections.projects %}
-
-
-    <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-      <div class="image-ratio"> 
-        <img data-src="{{ post.data.image }}" class="lazyload" alt="{{ post.data.title }} image">
-      </div>
-      <h3 class="project__title">
-        <a href="{{ post.url }}">
-          <span class="visually-hidden">Project title</span>
-          {{ post.data.title }} 
-        </a>
-      </h3>
-      <p class="project__date">
-          <span class="visually-hidden">Project date</span>
-          <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplayProject }}</time>
-      </p>
-      {% if post.data.projectTags %}
-        <p class="project__tags">Tagged in: {% for projectTag in post.data.projectTags %}<a href="/projects/tags/{{ projectTag | lower | replace(" ", "-") }}/" class="anchor">{{ projectTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
-      {% endif %}
-    </article>
-  {%- endfor -%} 
-</section>
-
+        <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+          <div class="image-ratio">
+            <img data-src="{{ post.data.image }}" class="lazyload" alt="{{ post.data.title }} image">
+          </div>
+          <h3 class="project__title">
+            <a href="{{ post.url }}">
+              <span class="visually-hidden">Project title</span>
+              {{ post.data.title }}
+            </a>
+          </h3>
+          <p class="project__date">
+            <span class="visually-hidden">Project date</span>
+            <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplayProject }}</time>
+          </p>
+          {% if post.data.projectTags %}
+            <p class="project__tags">Tagged in:
+              {% for projectTag in post.data.projectTags %}
+                <a href="/projects/tags/{{ projectTag | lower | replace(" ", " -") }}/"="-") }}/"" class="anchor">{{ projectTag }}</a>
+                {% if not loop.last %},
+                {% endif %}
+              {% endfor %}
+            </p>
+          {% endif %}
+        </article>
+      {%- endfor -%}
+    </section>

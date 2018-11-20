@@ -1,29 +1,30 @@
----
-title: Optimise your CSS by taking better care of your HTML
-description: Semantic HTML for cleaner CSS, this post looks at the role HTML can play in producing more optimised CSS
-date: 2015-01-09
-tags: [CSS, Front end development, HTML]
----
+--- title: Optimise your CSS by taking better care of your HTML description: Semantic HTML for cleaner CSS, this post looks at the role HTML can play in producing more optimised CSS date: 2015-01-09 tags: [CSS, Front end development, HTML] ---
 
-<p>This post looks at the role HTML can play in producing more optimised CSS. When discussing issues with CSS bloat, specificity and selector limits, focus is often drawn to the misuse of Sass. It’s true that refactoring your Sass can go a long way however paying attention to your website markup can be just as effective.</p>
+<p>This post looks at the role HTML can play in producing more optimised CSS. When discussing issues with CSS bloat, specificity and selector limits, focus is often drawn to the misuse of Sass. It’s true that refactoring your Sass can go a long way
+  however paying attention to your website markup can be just as effective.</p>
 
-<p>Going back to basics and creating meaningful class names could dramatically improve your website performance. Naming classes effectively can aid modular CSS coding and will therefore reduce CSS bloat and help control the number of selectors used (Necessary for large sites due to the IE selector limit).</p>
+<p>Going back to basics and creating meaningful class names could dramatically improve your website performance. Naming classes effectively can aid modular CSS coding and will therefore reduce CSS bloat and help control the number of selectors used
+  (Necessary for large sites due to the IE selector limit).</p>
 
-<h2 class="heading"> Make better use of classes </h2>
+<h2 class="heading">
+  Make better use of classes
+</h2>
 
 <p>The best way to reduce selectors is to target tags individually rather then using the DOM structure as a guide. Take the following navigation example&#8230;</p>
 
 <pre><code>&lt;nav class="navigation-main"&gt;;
-  &lt;ul&gt;  
-    &lt;li class="navigation-main-list"&gt;&lt;a href="" class="navigation-main-link"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="navigation-main-list"&gt;&lt;a href="" class="navigation-main-link"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="navigation-main-list"&gt;&lt;a href="" class="navigation-main-link"&gt;Blog&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="navigation-main-list"&gt;&lt;a href="" class="navigation-main-link"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;li class="navigation-main-list"&gt;&lt;a href="" class="navigation-main-link"&gt;home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-main-list"&gt;&lt;a href="" class="navigation-main-link"&gt;about&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-main-list"&gt;&lt;a href="" class="navigation-main-link"&gt;blog&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-main-list"&gt;&lt;a href="" class="navigation-main-link"&gt;contact&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
 </code></pre>
 
-<p><strong>Bad example&#8230;</strong></p>
+<p>
+  <strong>Bad example&#8230;</strong>
+</p>
 
 <pre><code>
 nav {
@@ -51,7 +52,9 @@ nav ul li a:hover {
 }
 </code></pre>
 
-<p><strong>Good example&#8230;</strong></p>
+<p>
+  <strong>Good example&#8230;</strong>
+</p>
 
 <pre><code>
 
@@ -80,9 +83,12 @@ nav ul li a:hover {
 }
 </code></pre>
 
-<p>In the second example the styles are not effected by the HTML structure making the code a little more future proof. We have also avoided using generic element selectors like nav, ul or li reducing the risk of effecting other areas of the website unintentionally. Most importantly though the second example uses significantly less selectors and will load faster as a result.</p>
+<p>In the second example the styles are not effected by the HTML structure making the code a little more future proof. We have also avoided using generic element selectors like nav, ul or li reducing the risk of effecting other areas of the website
+  unintentionally. Most importantly though the second example uses significantly less selectors and will load faster as a result.</p>
 
-<h2 class="heading"> Keep your classes semantic </h2>
+<h2 class="heading">
+  Keep your classes semantic
+</h2>
 
 <p>Markup should also be free of specific style or grid related class names such as .eight-columns or .grid-6, classes like these have become commonplace in responsive grids and frameworks but become meaningless at smaller breakpoints&#8230;.</p>
 
@@ -93,9 +99,12 @@ nav ul li a:hover {
 }
 </code></pre>
 
-<p>A major issue with this markup is that it restricts how a layout adapts to different screen sizes. Any element with the class .eight-columns will be forced to take on the same styles as the site responds. For example in the layout below there are two rows each with three blocks. As the class names will all be .four-columns there is no way to differ the behaviour of each row at tablet or mobile size.</p>
+<p>A major issue with this markup is that it restricts how a layout adapts to different screen sizes. Any element with the class .eight-columns will be forced to take on the same styles as the site responds. For example in the layout below there are
+  two rows each with three blocks. As the class names will all be .four-columns there is no way to differ the behaviour of each row at tablet or mobile size.</p>
 
-<h3 class="heading"> Why is this bad for CSS? </h3>
+<h3 class="heading">
+  Why is this bad for CSS?
+</h3>
 
 <p>Lets say we wanted to change how the two rows above respond at the mobile breakpoint we would need to target them separately using parent selectors&#8230;</p>
 
@@ -114,16 +123,16 @@ nav ul li a:hover {
   <li class="unordered-list__list-item">
     Layout changes can be made in the CSS only.
   </li>
-   <li class="unordered-list__list-item">
+  <li class="unordered-list__list-item">
     Every row can respond individually.
   </li>
-   <li class="unordered-list__list-item">
+  <li class="unordered-list__list-item">
     Media queries are more logical.
   </li>
- <li class="unordered-list__list-item">
+  <li class="unordered-list__list-item">
     Less selectors are used.
   </li>
-   <li class="unordered-list__list-item">
+  <li class="unordered-list__list-item">
     Code is easier to re-use.
   </li>
 </ul>
@@ -143,10 +152,12 @@ nav ul li a:hover {
 }
 </code></pre>
 
+<h3 class="heading">
+  Don&#8217;t be to unique
+</h3>
 
-<h3 class="heading"> Don&#8217;t be to unique </h3>
-
-<p>Being too content unique with your class names can however be equally damaging. In order to successfully minimise your CSS a modular approach is needed, creating re-usable blocks of code will keep file size and selectors down as well as being easier to maintain.</p>
+<p>Being too content unique with your class names can however be equally damaging. In order to successfully minimise your CSS a modular approach is needed, creating re-usable blocks of code will keep file size and selectors down as well as being
+  easier to maintain.</p>
 
 <p>Naming every element uniquely will create repetitive CSS&#8230;</p>
 
@@ -157,7 +168,7 @@ nav ul li a:hover {
  font-size:14px;
  text-align:center;
  padding: 10px;
- width:150px;     
+ width:150px;
 }
 
 .secondary-button {
@@ -167,7 +178,7 @@ nav ul li a:hover {
  font-size:14px;
  text-align:center;
  padding: 10px;
- width:120px;  
+ width:120px;
 }
 </code></pre>
 
@@ -184,13 +195,13 @@ nav ul li a:hover {
 .primary-button {
  @extend %btn;
  background: $orange;
- width:150px;     
+ width:150px;
 }
 
 .secondary-button {
  @extend %btn;
  background: $blue;
- width:120px;  
+ width:120px;
 }
 </code></pre>
 
@@ -207,16 +218,18 @@ nav ul li a:hover {
 
 .primary-button {
  background: $orange;
- width:150px;     
+ width:150px;
 }
 
 .secondary-button {
  background: $blue;
- width:120px;  
+ width:120px;
 }
 </code></pre>
 
-<h3 class="heading"> A better way </h3>
+<h3 class="heading">
+  A better way
+</h3>
 
 <p>Using a Base Class and a Modifier Class in your markup is a much cleaner way to re-use styles, reduce selectors and keep file size down&#8230;</p>
 
@@ -234,12 +247,12 @@ nav ul li a:hover {
 
 .primary-button {
  a: $orange;
- width:150px;     
+ width:150px;
 }
 
 .secondary-button {
  background: $blue;
- width:120px;  
+ width:120px;
 }
 </code></pre>
 

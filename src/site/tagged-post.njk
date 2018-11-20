@@ -1,51 +1,33 @@
----
-title: Design, User Experience and Front End Development posts - Cathy Dutton
-description: A collection of my posts and tutorials on Design, User Experience, CSS, PostCSS, and Front End Development
-layout: layouts/base.njk
-pagination:
-  data: collections
-  size: 1
-  alias: tag
-  filter:
-    - project
-    - projects
-    - all
-    - latestPosts
-    - postcss
-    - posts
-permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/ 
----
+--- title: Design, User Experience and Front End Development posts - Cathy Dutton description: A collection of my posts and tutorials on Design, User Experience, CSS, PostCSS, and Front End Development layout: layouts/base.njk pagination: data:
+collections size: 1 alias: tag filter: - project - projects - all - latestPosts - postcss - posts permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/ ---
 
 <header role="banner" class="header clear">
   <h1>
-    {{ tag }} posts
+    {{ tag }}
+    posts
     <span class="page-description">Latest posts and tutorials</span>
   </h1>
 </header>
 
-
-
 <p class="highlight-text" id="js-skip-link-target">
-  ckmwdeg gergergge gremcflmf;m;em,le  
-<p>
+  ckmwdeg gergergge gremcflmf;m;em,le
+  <p>
 
-  {% set taglist = collections[tag]  %}
+    {% set taglist = collections[tag] %}
 
-  {% for post in taglist | reverse %}
+    {% for post in taglist | reverse %}
 
-    <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-      <h3 class="news-feed__title">
-        <a href="{{ post.url }}" title="{{post.data.title}}" class="news-feed__anchor">
-          <span class="visually-hidden">Article title</span>
-          {{post.data.title}}
-        </a>
-      </h3>
-      <p class="news-feed__date">
-        <span class="visually-hidden">Published on</span>
-        <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
-      </p>
-      <p>{{ post.data.description | safe }}</p>
-    </article>
-  {% endfor %}
-
-
+      <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+        <h3 class="news-feed__title">
+          <a href="{{ post.url }}" title="{{post.data.title}}" class="news-feed__anchor">
+            <span class="visually-hidden">Article title</span>
+            {{post.data.title}}
+          </a>
+        </h3>
+        <p class="news-feed__date">
+          <span class="visually-hidden">Published on</span>
+          <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
+        </p>
+        <p>{{ post.data.description | safe }}</p>
+      </article>
+    {% endfor %}

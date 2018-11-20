@@ -1,32 +1,29 @@
----
-title: Pop jQuery tooltip demo
-description: How to build a jQuery tooltip - demo and code
-date: 2014-04-16
-tags: [JavaScript, Front end development]
----
+--- title: Pop jQuery tooltip demo description: How to build a jQuery tooltip - demo and code date: 2014-04-16 tags: [JavaScript, Front end development] ---
 
 <p>Pop is a simple to use, responsive jQuery tooltip with css animations. The jQuery is written below and includes a click function as well a hover to support desktop and touch screen devices.</p>
 
-<p><a href="https://codepen.io/cathydutton/pen/yctrI" target="_blank">View demo</a></p>
+<p>
+	<a href="https://codepen.io/cathydutton/pen/yctrI" target="_blank">View demo</a>
+</p>
 
 <pre>
 	<code>
 $(document).ready(function () {
 
   $(".button").mouseenter(function () {
-    $(this).prev("div").fadeIn("slow");
+    $(this).prev("div").fadein("slow");
   })
 
-  .click(function () {                 
-    $(this).prev("div").fadeIn("slow");
+  .click(function () {
+    $(this).prev("div").fadein("slow");
   })
 
   .mouseout(function () {
-    $(this).prev("div").fadeOut("slow");
+    $(this).prev("div").fadeout("slow");
   });
 
   $(".tooltip").click(function () {    // tablet friendly
-    $(this).fadeOut("slow");
+    $(this).fadeout("slow");
   });
 
 });
@@ -36,27 +33,34 @@ $(document).ready(function () {
 <p>The HTML used in the example is also pasted below</p>
 
 <pre><code>&lt;div class="wrapper"&gt;
-  &lt;h1&gt;Pop&lt;/h1&gt;
-  &lt;h2&gt;A simple jQuery and css3 tooltip example&lt;/h2&gt;
-  &lt;p&gt;Hover over one of the 3 boxes below to view the tooltip.&lt;/p&gt;
+  &lt;h1&gt;pop&lt;/h1&gt;
+  &lt;h2&gt;a simple jquery and css3 tooltip example&lt;/h2&gt;
+  &lt;p&gt;hover over one of the 3 boxes below to view the tooltip.&lt;/p&gt;
   &lt;div class="container"&gt;
     &lt;div class="inner-wrap"&gt;
-      &lt;div class="tooltip"&gt;Pop Out Text One&lt;/div&gt;
-      &lt;div class="button"&gt;One&lt;/div&gt;
+      &lt;div class="tooltip"&gt;pop out text one&lt;/div&gt;
+      &lt;div class="button"&gt;one&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class="inner-wrap"&gt;
-      &lt;div class="tooltip"&gt;Pop Out Text Two&lt;/div&gt;
-      &lt;div class="button"&gt;Two&lt;/div&gt;
+      &lt;div class="tooltip"&gt;pop out text two&lt;/div&gt;
+      &lt;div class="button"&gt;two&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class="inner-wrap"&gt;
-      &lt;div class="tooltip"&gt;Pop Out Text Three&lt;/div&gt;
-      &lt;div class="button"&gt;Three&lt;/div&gt;
+      &lt;div class="tooltip"&gt;pop out text three&lt;/div&gt;
+      &lt;div class="button"&gt;three&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
-<p>A <a href="https://cathydutton.co.uk/pop/" target="_blank">Demo</a> of the tooltip is available <a href="https://cathydutton.co.uk/pop/" target="_blank">here</a> and can be downloaded from <a href="https://github.com/cathydutton/Pop" target="_blank">GitHub</a> or viewed on <a href="http://codepen.io/cathydutton/pen/yctrI" target="_blank">CodPen</a>.</p>
+<p>A
+	<a href="https://cathydutton.co.uk/pop/" target="_blank">Demo</a>
+	of the tooltip is available
+	<a href="https://cathydutton.co.uk/pop/" target="_blank">here</a>
+	and can be downloaded from
+	<a href="https://github.com/cathydutton/Pop" target="_blank">GitHub</a>
+	or viewed on
+	<a href="http://codepen.io/cathydutton/pen/yctrI" target="_blank">CodPen</a>.</p>
 
 <p>The sass used in the example is written below&#8230;</p>
 
@@ -69,10 +73,10 @@ $(document).ready(function () {
   margin: 30px auto;
 }
 
-h1, 
-h2, 
+h1,
+h2,
 h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'roboto', sans-serif;
   font-weight: 100;
   font-size: 2.6em;
   text-transform: uppercase;
@@ -106,7 +110,7 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  
+
   .inner-wrap {
     width: 98%;
     margin: 1%;
@@ -133,7 +137,7 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  
+
   .link {
     width: 98%;
     margin: 1%;
@@ -143,7 +147,7 @@ h3 {
 
 body {
   background: #82d2e5;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "helveticaneue-light", "helvetica neue light", "helvetica neue", helvetica, arial, "lucida grande", sans-serif;
   text-align: center;
   color: #fff;
   height: 100%;
@@ -153,7 +157,7 @@ body {
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'roboto', sans-serif;
   font-weight: 100;
   text-transform: uppercase;
   padding: 0;
@@ -193,7 +197,7 @@ h2 {
   position: absolute;
   border-style: solid;
   border-width: 15px 15px 0;
-  border-color: #FFFFFF transparent;
+  border-color: #ffffff transparent;
   display: block;
   width: 0;
   z-index: 1;

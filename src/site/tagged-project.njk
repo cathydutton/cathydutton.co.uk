@@ -1,55 +1,40 @@
----
-title: Design portfolio - Cathy Dutton
-description: A collection of my work from employers including Defra, Barclays, EE, The Hut Group and AO.com
-layout: layouts/base.njk
-pagination:
-  data: collections.projects
-  size: 1
-  alias: tag
-permalink: projects/tags/{{ tag.data.projectTags[0] | lower | replace(" ", "-")}}/ 
----
+--- title: Design portfolio - Cathy Dutton description: A collection of my work from employers including Defra, Barclays, EE, The Hut Group and AO.com layout: layouts/base.njk pagination: data: collections.projects size: 1 alias: tag permalink:
+projects/tags/{{ tag.data.projectTags[0] | lower | replace(" ", "-")}}/ ---
 
 <header role="banner" class="header clear">
   <h1>
-    {{ tag.data.projectTags[0] }} projects
-    <span class="page-description">Latest {{ tag.data.projectTags[0] }} projects</span>
+    {{ tag.data.projectTags[0] }}
+    projects
+    <span class="page-description">Latest
+      {{ tag.data.projectTags[0] }}
+      projects</span>
   </h1>
 </header>
 
-
 <p class="highlight-text" id="js-skip-link-target">
-  ckmwdeg gergergge gremcflmf;m;em,le  
-<p>
+  ckmwdeg gergergge gremcflmf;m;em,le
+  <p>
 
+    <section class="project">
 
-<section class="project">
+      {% for post in collections.projects %}
+        {% if tag.data.projectTags[0] in post.data.projectTags %}
+          <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+            <div class="image-ratio project__img">
+              <img data-src="{{ post.data.image }}" class="lazyload" alt="{{ post.data.title }} image">
+            </div>
+            <h3 class="project__title">
+              <a href="{{ post.url }}">
+                <span class="visually-hidden">Project title</span>
+                {{ post.data.title }}
+              </a>
+            </h3>
+            <p class="project__date">
+              <span class="visually-hidden">Project date</span>
+              <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
+            </p>
+          </article>
+        {% endif %}
+      {% endfor %}
 
-{% for post in collections.projects %}
- {% if tag.data.projectTags[0] in post.data.projectTags %}
-    <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-      <div class="image-ratio project__img"> 
-        <img data-src="{{ post.data.image }}" class="lazyload" alt="{{ post.data.title }} image">
-      </div>
-      <h3 class="project__title">
-        <a href="{{ post.url }}">
-          <span class="visually-hidden">Project title</span>
-          {{ post.data.title }} 
-        </a>
-      </h3>
-      <p class="project__date">
-        <span class="visually-hidden">Project date</span>
-        <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
-      </p>
-    </article> 
-  {% endif %}
-{% endfor %}
-
-
-
-
-
-
-
-  
-</section> 
-
+    </section>

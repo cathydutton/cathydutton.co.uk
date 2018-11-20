@@ -1,11 +1,7 @@
----
-title: 7 reasons to start using PostCSS today
-description: 7 reasons to start using PostCSS including creativity, intergration and accessibility
-date: 2016-02-23
-tags: [CSS]
----
+--- title: 7 reasons to start using PostCSS today description: 7 reasons to start using PostCSS including creativity, intergration and accessibility date: 2016-02-23 tags: [CSS] ---
 
-<p>PostCSS makes it possible to transform or extend syntaxes and features of CSS. Nothing groundbreaking there then, but unlike existing pre-processors PostCSS aims to improve the usability of CSS by solving long standing issues with CSS at scale such as global scope and inheritance.</p>
+<p>PostCSS makes it possible to transform or extend syntaxes and features of CSS. Nothing groundbreaking there then, but unlike existing pre-processors PostCSS aims to improve the usability of CSS by solving long standing issues with CSS at scale
+  such as global scope and inheritance.</p>
 
 <p>PostCSS is not an all or nothing tool, plugins can be added to what is an otherwise clean slate allowing developers to take much greater control over the features used and the resulting CSS.</p>
 
@@ -36,7 +32,9 @@ gulp.task('css', function () {
 
 <p>Compile tools like Prepros also offer support for some of PostCSS's most popular plugins. Interfaces like this however would not be suitable for custom plugins.</p>
 
-<p>Further reading on installation can be found on the PostCSS <a href="https://github.com/postcss/postcss">Github page</a></p>
+<p>Further reading on installation can be found on the PostCSS
+  <a href="https://github.com/postcss/postcss">Github page</a>
+</p>
 
 <h3 id="2integrationwithcurrentpreprocessors">2) Integration with current pre-processors</h3>
 
@@ -50,81 +48,118 @@ gulp.task('css', function () {
 
 <p>As most developers have now found out some of the functions available in pre-processors can have a negative impact on CSS performance.</p>
 
-<p>Unlike existing pre processors such as Sass, Less and Stylus with PostCSS you have full control over which features are enabled. This unique approach gives developers full control over the codebase and limits the potential for creating bloated or badly written CSS.</p>
+<p>Unlike existing pre processors such as Sass, Less and Stylus with PostCSS you have full control over which features are enabled. This unique approach gives developers full control over the codebase and limits the potential for creating bloated or
+  badly written CSS.</p>
 
 <p>This is hugely beneficial when it comes to maintaining large projects and safeguarding the output CSS code.</p>
 
 <h3 id="4accessibilityhelpers">4) Accessibility helpers</h3>
 
-<p>We are all guilty of missing the occasional focus selector here and there, or of putting of repetitive CSS tasks in favor of the more creative ones. Fortunately there are PostCSS plugins that can take care of repetitive tasks and accessibility checks like this for us.</p>
+<p>We are all guilty of missing the occasional focus selector here and there, or of putting of repetitive CSS tasks in favor of the more creative ones. Fortunately there are PostCSS plugins that can take care of repetitive tasks and accessibility
+  checks like this for us.</p>
 
-<p><a href="https://github.com/postcss/postcss-focus">postcss-focus</a> checks the CSS for instances of :hover and automatically adds the :focus selector alongside.</p>
+<p>
+  <a href="https://github.com/postcss/postcss-focus">postcss-focus</a>
+  checks the CSS for instances of :hover and automatically adds the :focus selector alongside.</p>
 
-<p><a href="https://github.com/btholt/postcss-colorblind">postcss-colorblind</a> will check all instances of colour in your stylesheet and then highlight potential issues for users with any of the following conditions...</p>
+<p>
+  <a href="https://github.com/btholt/postcss-colorblind">postcss-colorblind</a>
+  will check all instances of colour in your stylesheet and then highlight potential issues for users with any of the following conditions...</p>
 
 <ul class="unordered-list">
-<li class="unordered-list__list-item">protanomaly</li>
-<li class="unordered-list__list-item">protanopia</li>
-<li class="unordered-list__list-item">deuteranomaly</li>
-<li class="unordered-list__list-item">deuteranopia</li>
-<li class="unordered-list__list-item">tritanomaly</li>
-<li class="unordered-list__list-item">tritanopia</li>
-<li class="unordered-list__list-item">achromatomaly</li>
-<li class="unordered-list__list-item">achromatopsia</li>
+  <li class="unordered-list__list-item">protanomaly</li>
+  <li class="unordered-list__list-item">protanopia</li>
+  <li class="unordered-list__list-item">deuteranomaly</li>
+  <li class="unordered-list__list-item">deuteranopia</li>
+  <li class="unordered-list__list-item">tritanomaly</li>
+  <li class="unordered-list__list-item">tritanopia</li>
+  <li class="unordered-list__list-item">achromatomaly</li>
+  <li class="unordered-list__list-item">achromatopsia</li>
 </ul>
 
 <h3 id="5thefuturetoday">5) The Future, today</h3>
 
-<p>PostCSS is a forward thinking tool. Plugins like <a href="http://cssnext.io/">cssnext</a> allow developers to use the latest CSS syntax and features straight away without compatibility issues. Fallbacks for older browsers are added automatically by the plugin.</p>
+<p>PostCSS is a forward thinking tool. Plugins like
+  <a href="http://cssnext.io/">cssnext</a>
+  allow developers to use the latest CSS syntax and features straight away without compatibility issues. Fallbacks for older browsers are added automatically by the plugin.</p>
 
 <p>Aside from the syntax plugins, browser prefixes and polyfills PostCSS also provides opportunities to improve the way we use CSS and attempt to fix some fundamental flaws in the CSS language. A few popular plugins are listed below...</p>
 
 <ul class="unordered-list">
-<li class="unordered-list__list-item"><a href="https://github.com/css-modules/postcss-modules-scope">postcss-modules</a> - Isolates selectors in components, creating local scope in CSS.</li>
-<li class="unordered-list__list-item"><a href="https://github.com/ausi/cq-prolyfill">cq-prolyfill</a> - Adds component queries to allow elements to be styled based on their dimensions instead of the viewport dimensions.</li>
-<li class="unordered-list__list-item"><a href="https://www.npmjs.com/package/postcss-autoreset">postcss-autoreset</a> - Uses local resets instead of global one.</li>
+  <li class="unordered-list__list-item">
+    <a href="https://github.com/css-modules/postcss-modules-scope">postcss-modules</a>
+    - Isolates selectors in components, creating local scope in CSS.</li>
+  <li class="unordered-list__list-item">
+    <a href="https://github.com/ausi/cq-prolyfill">cq-prolyfill</a>
+    - Adds component queries to allow elements to be styled based on their dimensions instead of the viewport dimensions.</li>
+  <li class="unordered-list__list-item">
+    <a href="https://www.npmjs.com/package/postcss-autoreset">postcss-autoreset</a>
+    - Uses local resets instead of global one.</li>
 </ul>
 
-<p>With plugins like these concepts like element queries and localised CSS become a reality. This opens up the  possibility to create stand alone web components in line with design components. Each component can be added without the need for complex naming conventions to prevent unwanted inheritance.</p>
+<p>With plugins like these concepts like element queries and localised CSS become a reality. This opens up the possibility to create stand alone web components in line with design components. Each component can be added without the need for complex
+  naming conventions to prevent unwanted inheritance.</p>
 
 <h3 id="6getcreative">6) Get creative</h3>
 
-<p>If you have a specific need or requirement that is not currently being catered for you can always build your own PostCSS plugin. Built in JavaScript PostCSS is an accessible tool for Front End Developers easy to contribute to in the form of custom plugins.</p>
+<p>If you have a specific need or requirement that is not currently being catered for you can always build your own PostCSS plugin. Built in JavaScript PostCSS is an accessible tool for Front End Developers easy to contribute to in the form of custom
+  plugins.</p>
 
 <p>Each project can be custolmised to create the optimum workflow with no limitations or boundaries set by language choices. There is plenty of helpful documentation to get you started with this...</p>
 
 <ul class="unordered-list">
-<li class="unordered-list__list-item"><a href="https://github.com/postcss/postcss/blob/master/docs/api.md">PostCSS API</a></li>
-<li class="unordered-list__list-item"><a href="https://github.com/postcss/postcss-plugin-boilerplate">PostCSS plugin boilerplate</a></li>
+  <li class="unordered-list__list-item">
+    <a href="https://github.com/postcss/postcss/blob/master/docs/api.md">PostCSS API</a>
+  </li>
+  <li class="unordered-list__list-item">
+    <a href="https://github.com/postcss/postcss-plugin-boilerplate">PostCSS plugin boilerplate</a>
+  </li>
 </ul>
 
 <h3 id="7performance">7) Performance</h3>
 
 <p>Because PostCSS is built in Javascript it runs much faster then Sass and less, especially if you're yet to upgrade to libsass. As well as improvements in compile times PostCSS also has plugins to help you write more performant CSS.</p>
 
-<p><a href="https://github.com/hail2u/node-css-mqpacker">CSS MQPacker</a> combines CSS media queries to reduce code and optimise the CSS.</p>
+<p>
+  <a href="https://github.com/hail2u/node-css-mqpacker">CSS MQPacker</a>
+  combines CSS media queries to reduce code and optimise the CSS.</p>
 
-<p><a href="https://github.com/ben-eb/postcss-zindex">postcss-zindex</a> reduces z-index values throughout a stylesheet without effecting the layouts intended order.</p>
+<p>
+  <a href="https://github.com/ben-eb/postcss-zindex">postcss-zindex</a>
+  reduces z-index values throughout a stylesheet without effecting the layouts intended order.</p>
 
-<p><a href="https://github.com/ben-eb/cssnano">cssnano</a> is more like an umbrella plugin and includes a selection of optimisation tools including...</p>
+<p>
+  <a href="https://github.com/ben-eb/cssnano">cssnano</a>
+  is more like an umbrella plugin and includes a selection of optimisation tools including...</p>
 
 <ul class="unordered-list">
-<li class="unordered-list__list-item">Comment removal</li>
-<li class="unordered-list__list-item">Stripping whitespace</li>
-<li class="unordered-list__list-item">Minify selectors</li>
-<li class="unordered-list__list-item">Remove duplicate rules</li>
+  <li class="unordered-list__list-item">Comment removal</li>
+  <li class="unordered-list__list-item">Stripping whitespace</li>
+  <li class="unordered-list__list-item">Minify selectors</li>
+  <li class="unordered-list__list-item">Remove duplicate rules</li>
 </ul>
 
 <h3 id="summingup">Summing up</h3>
 
-<p>In summery PostCSS is more performant, less risky and easier to develop, customise and extend. Above all to start using PostCSS today you do not need to abandon your current code base or pre-processor. Starting small and adding just one or two plugins to an existing site will still have measurable benefits. PostCSS will work alongside any mixins, functions and variables already in place and open up new possibilities.</p>
+<p>In summery PostCSS is more performant, less risky and easier to develop, customise and extend. Above all to start using PostCSS today you do not need to abandon your current code base or pre-processor. Starting small and adding just one or two
+  plugins to an existing site will still have measurable benefits. PostCSS will work alongside any mixins, functions and variables already in place and open up new possibilities.</p>
 
 <h3 id="furtherreading">Further reading</h3>
 
 <ul class="unordered-list">
-<li class="unordered-list__list-item"><a href="https://github.com/postcss/postcss">PostCSS</a></li>
-<li class="unordered-list__list-item"><a href="http://davidtheclark.com/its-time-for-everyone-to-learn-about-postcss/">It's Time for Everyone to Learn About PostCSS</a></li>
-<li class="unordered-list__list-item"><a href="http://www.sitepoint.com/build-css-preprocessor-postcss/">How to Build Your Own CSS Preprocessor With PostCSS</a></li>
-<li class="unordered-list__list-item"><a href="https://benfrain.com/breaking-up-with-sass-postcss/">Breaking up with Sass</a></li>
-<li class="unordered-list__list-item"><a href="https://www.npmjs.com/package/postcss-cli">PostCSS CLI</a></li>
+  <li class="unordered-list__list-item">
+    <a href="https://github.com/postcss/postcss">PostCSS</a>
+  </li>
+  <li class="unordered-list__list-item">
+    <a href="http://davidtheclark.com/its-time-for-everyone-to-learn-about-postcss/">It's Time for Everyone to Learn About PostCSS</a>
+  </li>
+  <li class="unordered-list__list-item">
+    <a href="http://www.sitepoint.com/build-css-preprocessor-postcss/">How to Build Your Own CSS Preprocessor With PostCSS</a>
+  </li>
+  <li class="unordered-list__list-item">
+    <a href="https://benfrain.com/breaking-up-with-sass-postcss/">Breaking up with Sass</a>
+  </li>
+  <li class="unordered-list__list-item">
+    <a href="https://www.npmjs.com/package/postcss-cli">PostCSS CLI</a>
+  </li>
 </ul>

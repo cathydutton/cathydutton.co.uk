@@ -1,26 +1,24 @@
----
-title: Sass structure & layout and theme files
-description: At deeper look at skin and structure Sass partials - Structuring CSS in a frontend project
-date: 2014-06-13
-tags: [CSS, Front end development]
----
-<p>Following on from this post <a href="/posts/separate-your-layout-sass" title="Layout Sass file" >&#8216;Separate Your Layout and skin Sass files&#8217;</a> I put together a larger working example to further demonstrate the theory.</p>
+--- title: Sass structure & layout and theme files description: At deeper look at skin and structure Sass partials - Structuring CSS in a frontend project date: 2014-06-13 tags: [CSS, Front end development] ---
+<p>Following on from this post
+  <a href="/posts/separate-your-layout-sass" title="Layout Sass file">&#8216;Separate Your Layout and skin Sass files&#8217;</a>
+  I put together a larger working example to further demonstrate the theory.</p>
 
-<h2 class="heading">Base stylesheet &#8211; style.scss </h2>
+<h2 class="heading">Base stylesheet &#8211; style.scss
+</h2>
 
 <p>Style.scss is used to pull in all the usual folders for base styles, framework mixins, modules and vendor includes. There is also a folder for each page or section of the website which is broken down into 3 sections, layout, theme and responsive.</p>
 
-<pre><code>/* DEMO STYLESHEET
+<pre><code>/* demo stylesheet
 ==========================================================================
 
 
-/* VENDOR - Default fall backs &amp; external .scss files.
+/* vendor - default fall backs &amp; external .scss files.
 ========================================================================== */
 
     @import &amp;#039;vendor/_normalize.scss&amp;#039;;
 
 
-/* BASE - Base variable file along with starting point mixins &amp; placeholders.
+/* base - base variable file along with starting point mixins &amp; placeholders.
 ========================================================================== */
 
     @import &amp;#039;base/_base.scss&amp;#039;;
@@ -28,14 +26,14 @@ tags: [CSS, Front end development]
     @import &amp;#039;base/_placeholders.scss&amp;#039;;
 
 
-/* FRAMEWORK - Structure &amp; layout files including the Maze grid function.
+/* framework - structure &amp; layout files including the maze grid function.
 ========================================================================== */
 
     @import &amp;#039;framework/_grid.scss&amp;#039;;
     @import &amp;#039;framework/_breakpoints.scss&amp;#039;;
 
 
-/* MODULES - Reusable site elements.
+/* modules - reusable site elements.
 ========================================================================== */
 
     @import &amp;#039;modules/_buttons.scss&amp;#039;;
@@ -43,7 +41,7 @@ tags: [CSS, Front end development]
     @import &amp;#039;modules/_tabs.scss&amp;#039;;
 
 
-/* PRODUCT PAGE - Unique product page styles
+/* product page - unique product page styles
 ========================================================================== */
 
     @import &amp;#039;product-page/_layout.scss&amp;#039;;
@@ -51,7 +49,7 @@ tags: [CSS, Front end development]
     @import &amp;#039;product-page/_responsive.scss&amp;#039;;
 
 
-/* CATEGORY PAGE - Unique category page styles
+/* category page - unique category page styles
 ========================================================================== */
 
     @import &amp;#039;category-page/_layout.scss&amp;#039;;
@@ -59,17 +57,18 @@ tags: [CSS, Front end development]
     @import &amp;#039;category-page/_responsive.scss&amp;#039;;
 </code></pre>
 
-<h2 class="heading">Layout stylesheet &#8211; layout.scss </h2>
+<h2 class="heading">Layout stylesheet &#8211; layout.scss
+</h2>
 
 <p>This stylesheet holds all of the structural css for a specific page or section of a website. separating the wireframe from the styling css keeps it clean and easy to edit/maintain.</p>
 
-<pre><code>/* LAYOUT STYLES
+<pre><code>/* layout styles
 ==========================================================================
 
-// Seperated layout styles to create the page framework.
+// seperated layout styles to create the page framework.
 
 
-/* CONTAINERS
+/* containers
 ========================================================================== */
 
 .full-width{
@@ -85,7 +84,7 @@ tags: [CSS, Front end development]
 }
 
 
-/* 3 COLUMNS
+/* 3 columns
 ========================================================================== */
 
 .logo {
@@ -104,7 +103,7 @@ tags: [CSS, Front end development]
 }
 
 
-/* 4 COLUMNS
+/* 4 columns
 ========================================================================== */
 
 .tab {
@@ -113,7 +112,7 @@ tags: [CSS, Front end development]
 }
 
 
-/* EQUAL HEIGHT
+/* equal height
 ========================================================================== */
 
 .equal-height {
@@ -123,7 +122,7 @@ tags: [CSS, Front end development]
     padding-bottom: 99999px;
 }
 
-/* NESTED
+/* nested
 ========================================================================== */
 
 .nest-left{
@@ -147,7 +146,7 @@ tags: [CSS, Front end development]
 }
 
 
-/* GRID - CENTERED
+/* grid - centered
 ========================================================================== */
 
 .center-child {
@@ -159,22 +158,23 @@ tags: [CSS, Front end development]
 }
 </code></pre>
 
-<h3 class="heading">Skin stylesheet &#8211; theme.scss </h3>
+<h3 class="heading">Skin stylesheet &#8211; theme.scss
+</h3>
 
 <p>The theme sass file contains all of the styling or theme css for a specific page or section of a website.</p>
 
-<pre><code>/* THEME STYLES
+<pre><code>/* theme styles
 ==========================================================================
 
-// Page specific styles and theming.
+// page specific styles and theming.
 
 
-/* TYPE
+/* type
 ========================================================================== */
 
 %header {
     text-align: center;
-    font-family: ozBold, Arial, Helvetica, sans-serif;
+    font-family: ozbold, arial, helvetica, sans-serif;
     font-weight: normal;
     color:#fff;
 }
@@ -202,13 +202,13 @@ h6 {
 }
 
 p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: arial, helvetica, sans-serif;
     font-weight: normal;
     font-size:16px;
 }
 
 
-/* 3 COLUMNS
+/* 3 columns
 ========================================================================== */
 
 .logo, .search, .contact {
@@ -218,7 +218,7 @@ p {
 }
 
 
-/* 4 COLUMNS
+/* 4 columns
 ========================================================================== */
 
 .tab {
@@ -228,7 +228,7 @@ p {
 }
 
 
-/* EQUAL HEIGHT
+/* equal height
 ========================================================================== */
 
 .equal-height {
@@ -239,7 +239,7 @@ p {
     padding-left:10px;
 }
 
-/* NESTED
+/* nested
 ========================================================================== */
 
 .nest-left {
@@ -264,7 +264,7 @@ p {
     border:solid 1px #e3e3e3;
 }
 
-/* CENTERED
+/* centered
 ========================================================================== */
 
 .center-child, .center-child2 {
@@ -273,17 +273,18 @@ p {
 }
 </code></pre>
 
-<h3 class="heading">Media query stylesheet &#8211; respond.scss </h3>
+<h3 class="heading">Media query stylesheet &#8211; respond.scss
+</h3>
 
 <p>The media query sass file holds all the device dependant css. Keeping this in a separate file to the skin and layout css allows for specific device styles to be located and edited easily.</p>
 
-<pre><code>/* RESPONSIVE STYLES
+<pre><code>/* responsive styles
 ==========================================================================
 
-// Media queries arranged in size order largest to smallest.
+// media queries arranged in size order largest to smallest.
 
 
-/* WIDE SCREEN
+/* wide screen
 ========================================================================== */
 @media (min-width:($break-desktop))  {
     body {
@@ -294,7 +295,7 @@ p {
     }
 }
 
-/* DESKTOP
+/* desktop
 ========================================================================== */
 
 @media (max-width:$break-desktop) and (min-width : $break-tablet) {
@@ -306,7 +307,7 @@ p {
     }
 }
 
-/* TABLET
+/* tablet
 ========================================================================== */
 
 @media (max-width:$break-tablet) and (min-width : $break-mobile) {
@@ -323,7 +324,7 @@ p {
 }
 
 
-/* MOBILE
+/* mobile
 ========================================================================== */
 
 @media (max-width:$break-mobile) {

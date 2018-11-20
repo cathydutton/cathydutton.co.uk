@@ -1,29 +1,39 @@
----
-title: A Dynamic Gradient Text Function in Sass
-description: In this post a common text color function will be extended to work with gradient backgrounds. The effect is achieved by first creating a gradient background from a list of values. The function then appends corresponding color values to a new list to create a text gradient.
-date: 2015-03-27
-tags: [CSS]
----
+--- title: A Dynamic Gradient Text Function in Sass description: In this post a common text color function will be extended to work with gradient backgrounds. The effect is achieved by first creating a gradient background from a list of values. The
+function then appends corresponding color values to a new list to create a text gradient. date: 2015-03-27 tags: [CSS] ---
 
+<p>Article originally posted on
+  <a href="http://www.sitepoint.com/dynamic-gradient-text-function-sass/">Sitepoint</a>.</p>
 
-<p>Article originally posted on <a href="http://www.sitepoint.com/dynamic-gradient-text-function-sass/">Sitepoint</a>.</p>
+<p>An example of the code used can be found on
+  <a href="http://codepen.io/cathydutton/pen/vEeORQ">Codepen</a>.</p>
 
-<p>An example of the code used can be found on <a href="http://codepen.io/cathydutton/pen/vEeORQ">Codepen</a>.</p>
-
-<p>In this post a common text color function will be extended to work with gradient backgrounds. The effect is achieved by first creating a gradient background from a list of values. The function then appends corresponding color values to a new list to create a text gradient.</p>
-<p><strong>A little background&hellip;</strong></p>
-<p>The ability to change the color of text depending on its background is a common request, one way to do this is to test for the lightness of the background and then modify the text accordingly. A popular and well documented function exists to do just that&hellip;</p>
+<p>In this post a common text color function will be extended to work with gradient backgrounds. The effect is achieved by first creating a gradient background from a list of values. The function then appends corresponding color values to a new list
+  to create a text gradient.</p>
+<p>
+  <strong>A little background&hellip;</strong>
+</p>
+<p>The ability to change the color of text depending on its background is a common request, one way to do this is to test for the lightness of the background and then modify the text accordingly. A popular and well documented function exists to do
+  just that&hellip;</p>
 <pre><code class="language-sass">@function set-notification-text-color($color) {
   @if (lightness($color) &gt; 50) {
-    @return #000000; // Lighter background, return dark color
-  } 
+    @return #000000; // lighter background, return dark color
+  }
   @else {
-    @return #ffffff; // Darker background, return light color
+    @return #ffffff; // darker background, return light color
   }
 }</code></pre>
-<div class="widget maestro maestro-content-type-html " id="maestro-727"><div class="proper-ad-unit">
-    <div id="proper-ad-sitepoint_content_1"> <script> propertag.cmd.push(function() { proper_display('sitepoint_content_1'); }); </script></div>
-</div></div><p>The above function is applied like this:</p>
+<div class="widget maestro maestro-content-type-html " id="maestro-727">
+  <div class="proper-ad-unit">
+    <div id="proper-ad-sitepoint_content_1">
+      <script>
+        propertag.cmd.push(function () {
+          proper_display('sitepoint_content_1');
+        });
+      </script>
+    </div>
+  </div>
+</div>
+<p>The above function is applied like this:</p>
 <pre><code class="language-sass">.notification-confirm {
   background: $notification-confirm;
   color: set-notification-text-color($notification-confirm);
@@ -31,7 +41,9 @@ tags: [CSS]
 <h2>Step 1 &ndash; The background gradient mixin</h2>
 <p>Before we look at the text gradient function we need to create a list to hold the values for our background gradient and create the mixin&hellip;</p>
 <pre><code class="language-sass">$list: $orange, $white, $orange, $white;</code></pre>
-<p>This list above and a direction are used as the arguments for the background mixin. Using a list has two main advantages, firstly it has an open ended number of arguments allowing for any combination of colors and/or percentages. Secondly, and importantly for this function we can iterate through the list to create the same number of new values for the text gradient. More information on mixin arguments and when to use them can be found <a href="http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/">in this post</a>.</p>
+<p>This list above and a direction are used as the arguments for the background mixin. Using a list has two main advantages, firstly it has an open ended number of arguments allowing for any combination of colors and/or percentages. Secondly, and
+  importantly for this function we can iterate through the list to create the same number of new values for the text gradient. More information on mixin arguments and when to use them can be found
+  <a href="http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/">in this post</a>.</p>
 <p>The gradient mixin looks like this:</p>
 <pre><code class="language-sass">@mixin gradient($direction, $list) {
   background: -webkit-linear-gradient($direction, $list);
@@ -43,7 +55,7 @@ tags: [CSS]
 <h2>Step 2 &ndash; The text gradient function</h2>
 <p>In webkit/blink based browsers it is possible to display text gradients using the text clip property along with text-fill-color as shown below:</p>
 <pre><code class="language-sass">.text {
-  background: -webkit-linear-gradient(left, #000, #fff); // We will need to generate gradient colors to complement the background.
+  background: -webkit-linear-gradient(left, #000, #fff); // we will need to generate gradient colors to complement the background.
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }</code></pre>
@@ -56,7 +68,7 @@ tags: [CSS]
 <pre><code class="language-sass">@function text-color($list){
   $text-list:();
   @each $color in $list {
-    // Do something...
+    // do something...
   }
   @return $text-list;
 }</code></pre>
@@ -65,24 +77,24 @@ tags: [CSS]
   $text-list:();
   @each $color in $list {
     @if lightness($color) &gt; 50% {
-      // Create a dark text color
-    } 
+      // create a dark text color
+    }
     @else {
-      // Create a light text color
+      // create a light text color
     }
   }
   @return $text-list;
 }</code></pre>
 <p>To create the dark or light text color we need to add the value to $text-list. This is done using the append function:</p>
-<pre><code class="language-sass">$text-list:append($text-list, $black, comma);  // Adds $black to $text-list
-$text-list:append($text-list, $white, comma); // Adds $white to $text-list</code></pre>
+<pre><code class="language-sass">$text-list:append($text-list, $black, comma);  // adds $black to $text-list
+$text-list:append($text-list, $white, comma); // adds $white to $text-list</code></pre>
 <p>The final function would therefore be:</p>
 <pre><code class="language-sass">@function text-color($list){
   $text-list:();
   @each $color in $list {
     @if lightness($color) &gt; 50% {
       $text-list:append($text-list, $black, comma);
-    } 
+    }
     @else {
       $text-list:append($text-list, $white, comma);
     }
@@ -99,7 +111,8 @@ $text-list:append($text-list, $white, comma); // Adds $white to $text-list</code
   }
 }</code></pre>
 <h2>Sass color functions:</h2>
-<p>This function is fine in most cases but is a little restrictive in that the text can only be black or white. By using some of the built in Sass color manipulations the function can generate a text color dynamically based on input, removing the need for the if statement. A few examples of this would be:</p>
+<p>This function is fine in most cases but is a little restrictive in that the text can only be black or white. By using some of the built in Sass color manipulations the function can generate a text color dynamically based on input, removing the
+  need for the if statement. A few examples of this would be:</p>
 <pre><code class="language-sass">@function text-color($list){
   $text-list:();
   @each $color in $list {
@@ -137,16 +150,18 @@ $text-list:append($text-list, $white, comma); // Adds $white to $text-list</code
   }
   @return $text-list;
 }</code></pre>
-<p>Using CSS Keyframes we can animate a gradient to create some interesting effects for progress bars or loading animations. Demonstrations of some of the effects discussed can be found <a href="http://codepen.io/SitePoint/pen/MYoPPE/">in this CodePen</a>.</p>
+<p>Using CSS Keyframes we can animate a gradient to create some interesting effects for progress bars or loading animations. Demonstrations of some of the effects discussed can be found
+  <a href="http://codepen.io/SitePoint/pen/MYoPPE/">in this CodePen</a>.</p>
 <h2>Limitations and fallbacks</h2>
-<p>As I mentioned previously text gradients work in blink/webkit browsers only, we can however ensure they degrade gracefully in other browsers. To do this simply use the webkit prefix only for your gradient, fill-color and background clip properties for this technique. You could also add a fallback color and background to the mixin&hellip;</p>
+<p>As I mentioned previously text gradients work in blink/webkit browsers only, we can however ensure they degrade gracefully in other browsers. To do this simply use the webkit prefix only for your gradient, fill-color and background clip properties
+  for this technique. You could also add a fallback color and background to the mixin&hellip;</p>
 <pre><code class="language-sass">@mixin gradient($direction, $list) {
-  background: $white; // Fallback solid background color for unsupported browsers
+  background: $white; // fallback solid background color for unsupported browsers
   background: -webkit-linear-gradient($direction, $list);
 }
 
 p {
-  color: $orange; // Fallback solid text color for unsupported browsers
+  color: $orange; // fallback solid text color for unsupported browsers
   @include gradient(left, text-color($list));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
