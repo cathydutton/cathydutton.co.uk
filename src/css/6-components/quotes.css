@@ -3,7 +3,7 @@ Quotations
 ----------------------------------- */
 .quote {
   background: var(--colour-light);
-  margin: 1em;
+  margin: 1em 0;
   padding: 1em;
 }
 

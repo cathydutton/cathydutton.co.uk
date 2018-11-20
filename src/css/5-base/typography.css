@@ -5,19 +5,24 @@
 
 
 h1 {
-  font-size: calc(3.6vw + 3.6vh + 3vmin);
+  font-size: calc(3.2vw + 3.2vh + 3vmin);
   color: var(--colour-medium);
-  margin-bottom: .4em;
+  margin-bottom: 0;
   line-height: 1;
+  max-width: 8em;
 }
 
 .page-description {
   display: block;
   font-size: .3em;
   text-transform: lowercase;
-  line-height: .5;
   font-weight: normal;
   color: var(--colour-dark);
+  margin-bottom: 1em;
+}
+
+.project-date {
+  margin-bottom: 1em;
 }
   
 h2 {
@@ -48,7 +53,7 @@ p {
 p.highlight-text {
   border-left: 4px solid var(--colour-bright);
   padding-left: .4em;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 input, 

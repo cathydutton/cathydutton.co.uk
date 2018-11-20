@@ -5,7 +5,7 @@ Latest project feed
 .project {
   --ratio-padding: 55%;
   display: grid;
-  grid-template-columns: repeat( auto-fill, minmax(17.5em, 1fr) );
+  grid-template-columns: repeat( auto-fill, minmax(12em, 1fr) );
   /* grid-template-rows: auto auto auto auto; */
   /* grid-auto-rows: 1fr; */
   /* grid-auto-rows: auto auto auto auto; */
@@ -25,13 +25,9 @@ Latest project feed
 }
 
 .project__title {
-  font-size: 2em;
+  /* font-size: 2em; */
   /* flex: 1 0 auto; */
   color: var(--colour-medium);
-}
-
-.project__img {
- background: var(--colour-white);
 }
 
 .project__date {

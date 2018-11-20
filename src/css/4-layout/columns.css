@@ -1,9 +1,0 @@
-/*
-  Layout - Columns
-  Column layouts
-  ----------------------------------- */
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(9.375em, 1fr));
-}

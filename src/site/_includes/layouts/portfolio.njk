@@ -4,7 +4,7 @@ layout: layouts/base.njk
 
 <h1 class="project-title">{{ title }}</h1>
 <p class="project--date">
-  Project date <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+  <span class="visually-hidden">Project date</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
 </p>
 
 {{ content | safe }}

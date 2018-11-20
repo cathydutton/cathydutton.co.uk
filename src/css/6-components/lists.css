@@ -4,21 +4,26 @@
   
  /* Unordered lists */
 .unordered-list {
-  padding: 0;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  padding: 0 0 0 1em;
+  margin: 1em 0;
+  list-style: none;
 }
 
 .unordered-list__list-item {
   list-style: none;
-  margin-bottom: .4em;
+  text-indent: -0.75em;
+  margin: .5em 0;
 }
 
 .unordered-list__list-item:before {
-  padding-right: .6em;
-  content: "\2022";
-  font-size: 1.2em;
-  color: var(--colour-bright);
+  display: inline-block;
+  content: '';
+  -webkit-border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: var(--colour-medium);
 }
 
 /* Ordered lists */
