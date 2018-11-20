@@ -1,5 +1,20 @@
---- title: Design, User Experience and Front End Development posts - Cathy Dutton description: A collection of my posts and tutorials on Design, User Experience, CSS, PostCSS, and Front End Development layout: layouts/base.njk pagination: data:
-collections size: 1 alias: tag filter: - project - projects - all - latestPosts - postcss - posts permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/ ---
+--- 
+title: Design, User Experience and Front End Development posts - Cathy Dutton 
+description: A collection of my posts and tutorials on Design, User Experience, CSS, PostCSS, and Front End Development 
+layout: layouts/base.njk 
+pagination: 
+  data: collections 
+  size: 1 
+  alias: tag 
+  filter: 
+    - project 
+    - projects 
+    - all 
+    - latestPosts 
+    - postcss 
+    - posts 
+permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/ 
+---
 
 <header role="banner" class="header clear">
   <h1>

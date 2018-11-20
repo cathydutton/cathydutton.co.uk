@@ -1,5 +1,13 @@
---- title: Design portfolio - Cathy Dutton description: A collection of my work from employers including Defra, Barclays, EE, The Hut Group and AO.com layout: layouts/base.njk pagination: data: collections.projects size: 1 alias: tag permalink:
-projects/tags/{{ tag.data.projectTags[0] | lower | replace(" ", "-")}}/ ---
+--- 
+title: Design portfolio - Cathy Dutton 
+description: A collection of my work from employers including Defra, Barclays, EE, The Hut Group and AO.com 
+layout: layouts/base.njk 
+pagination: 
+  data: collections.projects 
+  size: 1 
+  alias: tag 
+permalink: projects/tags/{{ tag.data.projectTags[0] | lower | replace(" ", "-")}}/ 
+---
 
 <header role="banner" class="header clear">
   <h1>
