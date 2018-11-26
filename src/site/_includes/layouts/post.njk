@@ -3,11 +3,10 @@ layout: layouts/base.njk
 ---
 
 <h1 class="post-title">{{ title }}
-  <span class="page-description">
-    Published on <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
-  </span>
 </h1>
-
+<p class="post-date">
+  <span class="visually-hidden">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+</p>
 
 {{ content | safe }}
 

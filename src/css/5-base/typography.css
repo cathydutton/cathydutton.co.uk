@@ -9,12 +9,16 @@ h1 {
   color: var(--colour-medium);
   margin-bottom: .4em;
   line-height: .9;
-  max-width: 8em;
+  max-width: 9em;
 }
 
 .post-title,
 .project-title {
   font-size: calc(2.2vw + 2.2vh + 2vmin);
+}
+
+.post-date {
+  font-style: italic;
 }
 
 .page-description {

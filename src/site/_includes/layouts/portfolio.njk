@@ -4,6 +4,10 @@ layout: layouts/base.njk
 
 <h1 class="project-title">{{ title }}</h1>
 
+<p class="post-date">
+  <time datetime="{{ date }}">{{ date | dateDisplayProject }}</time>
+</p>
+
 {{ content | safe }}
 
 <a href="/projects" class="anchor">Back to all projects</a>

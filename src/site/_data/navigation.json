@@ -8,6 +8,10 @@
       "url": "/about-me/"
     },
     {
+      "menu_item": "Now",
+      "url": "/now/"
+    },
+    {
       "menu_item": "Projects",
       "url": "/projects/"
     },
