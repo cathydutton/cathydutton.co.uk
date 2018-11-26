@@ -9,7 +9,7 @@
 .navigation .list {
   padding: 0 1em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
 }
   
 .navigation .list-item {

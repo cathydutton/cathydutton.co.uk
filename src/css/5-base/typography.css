@@ -7,9 +7,14 @@
 h1 {
   font-size: calc(3.2vw + 3.2vh + 3vmin);
   color: var(--colour-medium);
-  margin-bottom: 0;
-  line-height: 1;
+  margin-bottom: .4em;
+  line-height: .9;
   max-width: 8em;
+}
+
+.post-title,
+.project-title {
+  font-size: calc(2.2vw + 2.2vh + 2vmin);
 }
 
 .page-description {
@@ -17,11 +22,7 @@ h1 {
   font-size: .3em;
   font-weight: normal;
   color: var(--colour-dark);
-  margin-bottom: 1em;
-}
-
-.project-date {
-  margin-bottom: 1em;
+  margin-top: .4em;
 }
   
 h2 {
@@ -49,7 +50,7 @@ p {
   font-size: 1em;
 }
 
-p.highlight-text {
+.highlight-text {
   border-left: 4px solid var(--colour-bright);
   padding-left: .4em;
   font-size: 1.1em;

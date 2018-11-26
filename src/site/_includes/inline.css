@@ -588,7 +588,7 @@ hr {
 }
 
 .container {
-  max-width: 85.333em;
+  max-width: 64em; /* 1024px */
   min-height: 100vh;
   overflow: hidden;
 }
@@ -598,7 +598,7 @@ hr {
   float: left;
   margin-bottom: -9999px;
   padding-bottom: 9999px; 
-  width: calc((1024px - 100%) * 1024);
+  width: calc((960px - 100%) * 960);
   max-width: 100%;
 
 }
@@ -606,7 +606,7 @@ hr {
 .sidebar {
   background: hsl(294, 83%, 7%);
   background: var(--colour-dark);
-  min-width: 17.5em;
+  min-width: 15em;
   color: rgb(240, 239, 239);
   color: var(--colour-light);
   text-align: center;
@@ -616,7 +616,7 @@ hr {
   animation: fadeIn 2s forwards;
   background: hsl(0, 0%, 99%);
   background: var(--colour-white);
-  min-width: calc(100% - 17.5em);
+  min-width: calc(100% - 15em);
 }
 
 main {

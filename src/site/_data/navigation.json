@@ -16,10 +16,6 @@
       "url": "/posts/"
     },
     {
-      "menu_item": "Component library",
-      "url": "/component-library/"
-    },
-    {
       "menu_item": "PostCSS plugins",
       "url": "/postcss-plugins/"
     }
