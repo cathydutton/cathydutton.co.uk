@@ -13,7 +13,7 @@ module.exports = function(config) {
 
   // Latest posts include
    config.addCollection("latestPosts", function(collection) {
-    return collection.getFilteredByGlob("**/posts/**.njk").reverse().slice(-3);
+    return collection.getFilteredByGlob("**/posts/**.njk").slice(-3).reverse();
   });
 
   // PostCSS plugin collection

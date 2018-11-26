@@ -15,7 +15,6 @@ h1 {
 .page-description {
   display: block;
   font-size: .3em;
-  text-transform: lowercase;
   font-weight: normal;
   color: var(--colour-dark);
   margin-bottom: 1em;
