@@ -8,7 +8,7 @@
   CSS variables for fonts, colors, etc.
   ----------------------------------- */
 
-/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=E3E3E3&v=E61E9C&v=780C83&v=1E0321&v=110213 */
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FCFCFC&v=E3E3E3&v=E61E9C&v=780C83&v=1E0321&v=333333 */
 
 /* Colors */
 
@@ -16,33 +16,38 @@
   --colour-black: hsl(293, 81%, 4%);
   --colour-dark: hsl(294, 83%, 7%);
   --colour-medium: hsl(294, 83%, 28%);
-  --colour-light: hsl(0, 0%, 89%);
-  --colour-white: hsl(0, 0%, 100%);
+  --colour-light: rgb(240, 239, 239);
+  --colour-white: hsl(0, 0%, 99%);
   --colour-bright: hsl(322, 80%, 51%);
 }
 
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=001E3D&v=00356C&v=9C2064&v=FE9F00&v=FFFA06&v=FFFFFF */
+
 .theme-contrast {
   --colour-black: hsl(0, 0%, 100%);
-  --colour-dark: hsl(62, 100%, 74%);
-  --colour-medium: hsl(45, 100%, 59%);
-  --colour-light: hsl(180, 1%, 26%);
+  --colour-dark: hsl(59, 100%, 51%);
+  --colour-medium: hsl(38, 100%, 50%);
+  --colour-light: hsl(211, 100%, 21%);
   --colour-white: hsl(210, 100%, 12%);
   --colour-bright: hsl(327, 66%, 37%);
 }
 
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FCF1D8&v=FCE5B9&v=EEA60B&v=543B1C&v=3A220C&v=211505 */
+
 .theme-monochrome {
-  --colour-black: rgb(33, 21, 5);
-  --colour-dark: hsl(29, 64%, 14%);
-  --colour-medium: hsl(34, 50%, 22%);
-  --colour-light: hsl(39, 94%, 86%);
-  --colour-white: hsl(41, 90%, 92%);
+  --colour-black: hsl(34, 74%, 7%);
+  --colour-dark: hsl(29, 66%, 14%);
+  --colour-medium: hsl(33, 50%, 22%);
+  --colour-light: hsl(39, 92%, 86%);
+  --colour-white: hsl(42, 86%, 92%);
   --colour-bright: hsl(41, 91%, 49%);
 }
 
 /* Fonts */
 
 :root {
-  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  --font-family: "Source Sans Pro", sans-serif;
 }
 
 .dyslexic {
@@ -52,7 +57,7 @@
 /* Font size */
 
 :root {
-  --font-size: 16px;
+  --font-size: 18.4px;
 }
 
 /* MOVE THIS PLEASE */
@@ -69,49 +74,51 @@
 /* Print styles */
 
 @media print {
-    .container > *:not(main) {
-      display: none;
-    }
-  
+  .container > *:not(main) {
+    display: none;
   }
+  
+}
 
 /* Animation fades */
 
 @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-  }
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
 
 @keyframes fadeOut {
-    0% {opacity: 100;}
-    100% {opacity: 0;}
-  }
+  0% {opacity: 100;}
+  100% {opacity: 0;}
+}
 
 /* Animation slides */
 
 @keyframes fadeInRight {
-    0% {
-      opacity: 0;
-      transform: translate(260px, 0);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: none;
-    }
+  0% {
+    transform: translate(260px, 0);
+    opacity: 0;
   }
+  
+  100% {
+    transform: none;
+    opacity: 1;
+  
+  }
+}
 
 @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translate(0, 50px);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: none;
-    }
+  0% {
+    transform: translate(0, 50px);
+    opacity: 0;
   }
+  
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+
+}
 
 /*
   Generic
@@ -119,22 +126,21 @@
   ----------------------------------- */
 
 *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-  }
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: border-box;
+  box-sizing: inherit;
+}
 
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
- */
+*/
 
 html {
-  font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -moz-osx-font-smoothing: grayscale;
@@ -142,6 +148,7 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: sans-serif; /* 1 */
 }
 
 /**
@@ -265,8 +272,8 @@ dfn {
  */
 
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
+  font-size: 2em;
 }
 
 /**
@@ -292,10 +299,10 @@ small {
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
   position: relative;
   vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
 }
 
 sup {
@@ -386,9 +393,9 @@ input,
 optgroup,
 select,
 textarea {
+  margin: 0; /* 3 */
   color: inherit; /* 1 */
   font: inherit; /* 2 */
-  margin: 0; /* 3 */
 }
 
 /**
@@ -509,8 +516,8 @@ input[type="search"]::-webkit-search-decoration {
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
   margin: 0 2px;
+  border: 1px solid #c0c0c0;
   padding: 0.35em 0.625em 0.75em;
 }
 
@@ -566,394 +573,62 @@ form, fieldset, legend,
 figure,
 table, th, td, caption,
 hr {
-    margin:  0;
-    padding: 0;
+  margin:  0;
+  padding: 0;
 }
-
-/*
-  Elements
-  styling for bare HTML elements (like H1, A, etc.). 
-  These come with default styling from the browser so we can redefine them here.
-  ----------------------------------- */
-
-html,
-  body {
-    height: 100%;
-  }
-
-html {
-    margin: 0;
-    padding: 0;
-  }
-
-body {
-    color: hsl(293, 81%, 4%);
-    color: var(--colour-black);
-    background: hsl(322, 80%, 51%);
-    background: var(--colour-bright);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-family: var(--font-family);
-    font-size: 16px;
-    font-size: var(--font-size);
-    line-height: 1.5;
-  }
-
-pre { 
-    padding: .5em;
-    line-height: 1.5;
-    margin-bottom: 1em;
-    font-family: Consolas, Monaco, monospace;
-    tab-size: 4;
-    white-space: unset;
-    background: hsl(0, 0%, 89%);
-    background: var(--colour-light);
-  }
-
-code { 
-    font: inherit ;
-    background:hsl(0, 0%, 89%);
-    background:var(--colour-light);
-    background-image: linear-gradient( hsl(0, 0%, 100%) 50%, transparent 0);
-    background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
-    background-size: auto 3em;
-    background-origin: content-box; 
-    border: solid 1px hsl(0, 0%, 100%); 
-    border: solid 1px var(--colour-white);
-    display: block;
-  }
-
-pre code {
-    white-space: pre-wrap;       
-    white-space: -moz-pre-wrap;  
-    white-space: -pre-wrap;      
-    white-space: -o-pre-wrap;    
-    word-wrap: break-word; 
-  }
-
-pre p {
-    margin: 0;
-  }
-
-/* Select */
-
-::selection {
-    background: hsl(322, 80%, 51%);
-    background: var(--colour-bright);
-  }
-
-/* SVG */
-
-svg {
-    width: 100%;
-    height: 100%;
-  }
-
-/* LISTS */
-
-/* Unordered lists */
-
-ul {
-    list-style: none;
-    padding: 0;
-  }
-
-ul li {
-    list-style: disc;
-  }
-
-/* Ordered lists */
-
-.ol {
-    list-style: none;
-    padding: 0;
-  }
-
-.ol li {
-    list-style-type: decimal;
-  }
-
-/* DESCRIPTION LIST */
-
-dl,
-  .description-list {
-    margin-top: .4em;
-    margin-bottom: 1em;
-  }
-
-dt,
-  .description-list__title {
-    font-weight: bold;
-  }
-
-dt,
-  dd,
-  .description-list__title, 
-  .description-list__description {
-    display: inline;
-    margin: 0;
-  }
-
-dd + dt::before 
-  .description-list__description + .description-list__title::before {
-    content: "\A";
-    white-space: pre;
-  }
-
-dt + dd::before,
-  .description-list__title + .description-list__description::before {
-    content: "\A";
-    white-space: pre;
-  }
-
-dd + dd::before,
-  dt + dt::before,,
-  .description-list__description + .description-list__description::before,
-  .description-list__title + .description-list__title::before {
-    content: ', ';
-    font-weight: normal;
-    margin-left: -.25em;
-  }
-
-[hidden], template {
-    display: none;
-}
-
-/*
-  Generic -   Typography
-  Reset and/or normalize styles, box-sizing definition, etc. 
-  ----------------------------------- */
-
-h1 {
-    font-size: calc(2.8vw + 2.8vh + 3vmin);
-    color: hsl(294, 83%, 7%);
-    color: var(--colour-dark);
-    margin-bottom: .4em;
-    line-height: 1;
-  }
-
-.page-description {
-    display: block;
-    font-size: .6em;
-    text-transform: lowercase;
-    line-height: .5;
-    font-weight: normal;
-  }
-
-h2 {
-    font-size: calc(1.2vw + 1.2vh + 2vmin);
-    color: hsl(294, 83%, 7%);
-    color: var(--colour-dark);
-    margin-bottom: .4em;
-  }
-
-h3 {
-    font-size: calc(.8vw + .8vh + 2vmin);
-    color: hsl(294, 83%, 7%);
-    color: var(--colour-dark);
-    margin-bottom: .4em;
-  }
-
-h4,
-  h5,
-  h6 {
-    font-size: calc(.6vw + .6vh + 1vmin);
-    color: hsl(294, 83%, 7%);
-    color: var(--colour-dark);
-    margin-bottom: .4em;
-  }
-
-p {
-    margin-bottom: .8em;
-    font-size: 1em;
-  }
-
-p.highlight-text {
-    border-left: 4px solid hsl(322, 80%, 51%);
-    border-left: 4px solid var(--colour-bright);
-    padding-left: .4em;
-    font-size: 1.2em;
-  }
-
-input, 
-  select, 
-  textarea, 
-  button {
-    font-family:inherit;
-    font-size: .8em;
-  }
-
-footer p {
-    font-size: .8em;
-  }
-
-/*
-  Anchors
-  styling for bare a tags 
-  ----------------------------------- */
-
-a,
-  .anchor {
-    color: hsl(294, 83%, 28%);
-    color: var(--colour-medium);
-    text-decoration: none;
-    border-bottom: solid 1px currentColor;
-  }
-
-a:hover,
-  .anchor:hover {
-    transition: all .3s ease-in-out;
-    color: hsl(322, 80%, 51%);
-    color: var(--colour-bright);
-  }
-
-a:active,
-  a:focus,
-  .anchor:active,
-  .anchor:focus {
-    color: hsl(294, 83%, 28%);
-    color: var(--colour-medium);
-  }
-
-a:visited::after{
-    content: '(visited)';
-  }
-
-a
-  [target=_blank]::after {
-    display: inline-block;
-    content: '(opens new window)';
-  }
-
-/* Anchor light */
-
-.anchor__light {
-    color: hsl(0, 0%, 100%);
-    color: var(--colour-white);
-  }
-
-.anchor__light:hover {
-    color: hsl(322, 80%, 51%);
-    color: var(--colour-bright);
-  }
-
-.anchor__light:active,
-  .anchor__light:focus {
-    color: hsl(0, 0%, 89%);
-    color: var(--colour-light);
-  }
-
-/*
-  Elements -   Images
-  
-  275 x 150
-  550 x 300
-  825 x 450
-  ----------------------------------- */
-
-img {
-  image-rendering: auto;
-  padding: .2em;
-  display: block;
-}
-
-.image-ratio {
-  height: 0;
-  overflow: hidden;
-  position: relative;
-  margin: 1em 0;
-  padding-bottom: 55%;
-  background: url(/images/placeholder.png) center center no-repeat hsl(0, 0%, 89%);
-  background: url(/images/placeholder.png) center center no-repeat var(--colour-light);
-  border: solid 1px hsl(0, 0%, 89%);
-  border: solid 1px var(--colour-light);
-}
-
-.image-ratio img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* /// MOve??? */
-
-.image-ratio--half img {
-  width: 50%;
-}
-
-/*
-  Elements -   Tables
-  
-  ----------------------------------- */
-
-.table-wrapper {
-    overflow-x: auto;
-  }
-
-table {
-    border-collapse: collapse;
-    margin: 1em 0;
-  }
-
-table, th, td {
-    border: 1px solid black;
-  }
-
-th, td {
-    padding: 15px;
-    text-align: left;
-  }
 
 /*
   Layout - Base
   LHS sidebar responsive layout
   ----------------------------------- */
 
+.wrapper {
+  background: hsl(0, 0%, 99%);
+  background: var(--colour-white);
+}
+
 .container {
-    background: hsl(0, 0%, 100%);
-    background: var(--colour-white);
-    overflow: hidden;
-    min-height: 100vh;
-  }
+  max-width: 64em; /* 1024px */
+  min-height: 100vh;
+  overflow: hidden;
+}
 
 .sidebar,
-  .content {
-    max-width: 100%;
-    width: calc((1024px - 100%) * 1024);
-    float: left;
-    margin-bottom: -9999px;
-    padding-bottom: 9999px;
-  }
+.content {
+  float: left;
+  margin-bottom: -9999px;
+  padding-bottom: 9999px; 
+  width: calc((960px - 100%) * 960);
+  max-width: 100%;
+
+}
 
 .sidebar {
-    min-width: 17.5em;
-    color: hsl(0, 0%, 89%);
-    color: var(--colour-light);
-    background: hsl(294, 83%, 7%);
-    background: var(--colour-dark);
-    text-align: center;
-  }
+  background: hsl(294, 83%, 7%);
+  background: var(--colour-dark);
+  min-width: 15em;
+  color: rgb(240, 239, 239);
+  color: var(--colour-light);
+  text-align: center;
+}
 
 .content {
-    animation: fadeIn 2s forwards;
-    min-width: calc(100% - 17.5em);
-    background:hsl(0, 0%, 100%);
-    background:var(--colour-white);
-  }
+  animation: fadeIn 2s forwards;
+  background: hsl(0, 0%, 99%);
+  background: var(--colour-white);
+  min-width: calc(100% - 15em);
+}
 
-header,
-  main,
-  footer {
-    margin: 0 1em;
-    padding: 1em 0;
-  }
+main {
+  margin: 0 1em;
+  padding: 1em 0;
+}
 
 footer {
-    text-align: center;
-  }
+  text-align: center;
+}
 
 section {
-    margin: 1em 0;
-  }
+  margin: 1em 0;
+}
 

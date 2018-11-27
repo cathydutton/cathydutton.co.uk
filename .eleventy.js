@@ -2,6 +2,7 @@ module.exports = function(config) {
 
   // Add a date formatter filter to Nunjucks
   config.addFilter("dateDisplay", require("./filters/dates.js") );
+  config.addFilter("dateDisplayProject", require("./filters/datesProject.js") );
   config.addFilter("timestamp", require("./filters/timestamp.js") );
   config.addFilter("squash", require("./filters/squash.js") );
 
@@ -20,10 +21,16 @@ module.exports = function(config) {
     return collection.getFilteredByGlob("**/postcss/**.njk").reverse();
   });
 
-  // Portfolio collection
+
+  // Filter using `Array.filter`
   config.addCollection("projects", function(collection) {
-    return collection.getFilteredByGlob("**/projects/**.njk").reverse();
+    return collection.getFilteredByGlob("**/projects/**.njk").reverse().filter(function(item) {
+      // Side-step tags and do your own filtering
+      return "projectTags" in item.data;
+    });
   });
+
+
 
   return {
     dir: {

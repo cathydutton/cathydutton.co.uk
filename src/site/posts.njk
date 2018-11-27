@@ -1,38 +1,50 @@
----
-title: Interaction Design, UX and Front End Development blog - Cathy Dutton
-description: Front End Developer, CSS, Sass, UX, PostCSS and JavaScript
-pageName: Posts
-pageDescription: Latest posts and tutorials
-layout: layouts/base.njk
-pagination:
-  data: collections.posts
-  size: 10
-permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
+--- 
+title: Design, User Experience and Front End Development posts - Cathy Dutton 
+description: A collection of my posts and tutorials on Design, User Experience, CSS, PostCSS, and Front End Development 
+layout: layouts/base.njk 
+pagination: 
+  data: collections.posts 
+  size: 10 
+permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html 
+pageName: Posts 
 ---
 
-{% for post in pagination.items %}
-  <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-    <header class="news-feed__header">
-      <h3 class="news-feed__title">
-        <a href="{{ post.url }}">
-          <span class="visually-hidden">Article title</span>
-          {{ post.data.title }}
-        </a>
-      </h3>
-      <p>
-        <span class="visually-hidden">Published on</span>
-        <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
-      </p>
-    </header>
-    <div>
-      <p>{{ post.data.description | safe }}</p>
-      {% if post.data.tags %}
-        <p>Tagged in: {% for postTag in post.data.tags %}<a href="/posts/tags/{{ postTag | lower | replace(" ", "-") }}/">{{ postTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
-      {% endif %}
-    </div>
-  </article>
-{%- endfor -%} 
+<header role="banner" class="header clear">
+  <h1>
+    Posts
+    <span class="page-description">Latest posts and tutorials</span>
+  </h1>
+</header>
+
+<section class="post">
+  {% for post in pagination.items %}
+    <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+      <header class="news-feed__header">
+        <h3 class="news-feed__title">
+          <a href="{{ post.url }}">
+            <span class="visually-hidden">Article title</span>
+            {{ post.data.title }}
+          </a>
+        </h3>
+        <p>
+          <span class="visually-hidden">Published on</span>
+          <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
+        </p>
+      </header>
+      <div>
+        <p>{{ post.data.description | safe }}</p>
+        {% if post.data.tags %}
+          <p>Tagged in:
+            {% for tag in post.data.tags %}
+              <a href="/posts/tags/{{ tag | lower | replace(" ", "-") }}/"="-") }}/"" class="anchor">{{ tag }}</a>
+              {% if not loop.last %},
+              {% endif %}
+            {% endfor %}
+          </p>
+        {% endif %}
+      </div>
+    </article>
+  {%- endfor -%}
+</section>
 
 {% include "pagination.njk" %}
-  
-

@@ -1,16 +1,20 @@
----
-title: Step away from the pie
+--- 
+title: Step away from the pie 
 description: A look at the benefits of graceful degradation over plugins and polly-fills when using CSS3 features 
-date: 2014-01-07
-tags: [Front end development]
+date: 2014-01-07 
+tags: [Front end development] 
 ---
 
-<p>Over the last few years along with most website designers I found myself increasingly using css3 properties such as text shadow, box shadow and rounded corners. Although subtle these features add style and depth to a website&#8217;s design and allow for that little bit extra in terms of detail.</p>
+<p>Over the last few years along with most website designers I found myself increasingly using css3 properties such as text shadow, box shadow and rounded corners. Although subtle these features add style and depth to a website&#8217;s design and
+  allow for that little bit extra in terms of detail.</p>
 
-<p>In the past a first thought has always been &#8220;how is this going to look in older versions of IE?&#8221;. I experimented with a few fallbacks including jQuery corners, but eventually settled with css pie. At first it provided everything I needed allowing me to use multiple css3 styles with only one plug in that would work seamlessly across all browsers without compromise.</p>
+<p>In the past a first thought has always been &#8220;how is this going to look in older versions of IE?&#8221;. I experimented with a few fallbacks including jQuery corners, but eventually settled with css pie. At first it provided everything I
+  needed allowing me to use multiple css3 styles with only one plug in that would work seamlessly across all browsers without compromise.</p>
 
-<p>The joy however was short lived, the more I used Pie the more &#8216;bugs&#8217; or side effects I found particularly when used on large projects with complex functionality. All in all offering a seamlessly rolled back website was adding large amounts of time and suffering to the project, as well as weight to the site with extra code and scripts needed.</p>
+<p>The joy however was short lived, the more I used Pie the more &#8216;bugs&#8217; or side effects I found particularly when used on large projects with complex functionality. All in all offering a seamlessly rolled back website was adding large
+  amounts of time and suffering to the project, as well as weight to the site with extra code and scripts needed.</p>
 
-<p>In light of this my approach of late has changed, instead of doing everything possible to ensure the site is identical in all browsers and versions I now focus more on site speed and optimisation. I&#8217;m not going to ruin a well built compressed site with unnecessary scripts and http requests for the odd IE 7 user&#8217;s benefit.</p>
+<p>In light of this my approach of late has changed, instead of doing everything possible to ensure the site is identical in all browsers and versions I now focus more on site speed and optimisation. I&#8217;m not going to ruin a well built
+  compressed site with unnecessary scripts and http requests for the odd IE 7 user&#8217;s benefit.</p>
 
 <p>I&#8217;m now a believer that a site should &#8216;Fall back gracefully&#8217; everything will work as excepted and the overall layout will be consistent, but the little extras provided by css3 will no longer be present beyond IE 9.</p>

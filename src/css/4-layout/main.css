@@ -1,0 +1,57 @@
+/*
+  Layout - Base
+  LHS sidebar responsive layout
+  ----------------------------------- */
+
+.wrapper {
+  background: var(--colour-white);
+}
+
+.container {
+  overflow: hidden;
+  min-height: 100vh;
+  max-width: 64em; /* 1024px */
+}
+  
+.sidebar,
+.content {
+  max-width: 100%; 
+  width: calc((960px - 100%) * 960);
+  float: left;
+  margin-bottom: -9999px;
+  padding-bottom: 9999px;
+
+}
+  
+.sidebar {
+  min-width: 15em;
+  color: var(--colour-light);
+  background: var(--colour-dark);
+  text-align: center;
+}
+  
+.content {
+  animation: fadeIn 2s forwards;
+  min-width: calc(100% - 15em);
+  background: var(--colour-white);
+}
+
+main {
+  margin: 0 1em;
+  padding: 1em 0;
+}
+
+footer {
+  text-align: center;
+}
+  
+section {
+  margin: 1em 0;
+}
+
+
+
+  
+
+
+

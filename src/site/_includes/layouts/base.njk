@@ -21,25 +21,21 @@
 </head>
 
 <body>
-  <div class="container">
-  <a href="#" class="skip-link" id="js-skip-link">skip to main content</a>
-  {% include "a11y-buttons.njk" %}
-    <aside class="sidebar">
-      {% include "sidebar.njk" %}
-    </aside>
-    <div class="content">
-      <header role="banner" class="header clear">
-        {% include "header.njk" %}
-      </header>
+  <div class="wrapper">
+    <div class="container">
+    <a href="#" class="skip-link" id="js-skip-link">skip to main content</a>
+    {% include "a11y-buttons.njk" %}
+      <aside class="sidebar">
+        {% include "sidebar.njk" %}
+      </aside>
+      <div class="content">
       <main id="main">
-        <p class="highlight-text" id="js-skip-link-target">
-          {{pageIntro}}
-        <p>
-        {{ content | safe }}
-      </main>
-      <footer class="footer">
-        {% include "footer.njk" %}
-      </footer>
+          {{ content | safe }}
+        </main>
+        <footer class="footer">
+          {% include "footer.njk" %}
+        </footer>
+      </div>
     </div>
   </div>
   <script src="/js/scripts.js"></script>

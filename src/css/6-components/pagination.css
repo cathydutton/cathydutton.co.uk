@@ -43,10 +43,6 @@ Pagination
   fill: var(--colour-medium);
 }
 
-.navigation__title {
-  border-bottom: solid 1px var(--colour-medium);
-}
-
 .pagination__anchor:hover  {
   background: var(--colour-light);
 }
@@ -58,4 +54,3 @@ Pagination
 .pagination__anchor:hover .navigation__title {
   border-color: var(--colour-bright);
 }
-

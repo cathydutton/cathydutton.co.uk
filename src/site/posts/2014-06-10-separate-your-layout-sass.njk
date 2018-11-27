@@ -1,19 +1,22 @@
+--- 
+title: Separate Your Layout and skin Sass files 
+description: Tacking advantage of Sass partials to better organise CSS, with seperate skin and layout files 
+date: 2014-06-10 
+tags: [CSS, Front end development] 
 ---
-title: Separate Your Layout and skin Sass files
-description: Tacking advantage of Sass partials to better organise CSS, with seperate skin and layout files
-date: 2014-06-10
-tags: [CSS, Front end development]
----
+
 <p>One of the greatest things about Sass is the ability it provides to separate large files in to more manageable chunks of code. When working on large or complex sites and future proofing code this becomes even more significant.</p>
 
-<p>Without adding any additional requests to the web site&#8217;s head or effecting site speed and load times, css can be split out in to easy to manage folders and files. Developers should never again be faced with an endless css file packed with all the theming, styles, colours, typography, structure and media queries of an entire website.</p>
+<p>Without adding any additional requests to the web site&#8217;s head or effecting site speed and load times, css can be split out in to easy to manage folders and files. Developers should never again be faced with an endless css file packed with
+  all the theming, styles, colours, typography, structure and media queries of an entire website.</p>
 
 <p>This provides the perfect opportunity to separate the layout and structural css from the style or &#8216;skin&#8217; css. In doing this the code becomes much easier to maintain, and if necessary to change or update in the future.</p>
 
-<h2 class="heading">Layout.scss </h2>
+<h2 class="heading">Layout.scss
+</h2>
 
-<p>The layout file should be for structural styles only, building the wireframe of a page without applying any of it&#8217;s look or feel. The layout.scss file will therefore remain small and easy to follow for any developer picking up the project and needing to make a quick edit to the page layout.</p>
-
+<p>The layout file should be for structural styles only, building the wireframe of a page without applying any of it&#8217;s look or feel. The layout.scss file will therefore remain small and easy to follow for any developer picking up the project
+  and needing to make a quick edit to the page layout.</p>
 
 <pre><code>.container {
     @include clearfix;
@@ -34,9 +37,8 @@ tags: [CSS, Front end development]
 }
 </code></pre>
 
-<p>The css above is easy to read as each selector has only the layout includes assigned to it. As pages get bigger and more elements are added keeping the grid includes clear and easy to find becomes essential. Making changes to the widths or even adding in a new column can be easily done by adjusting the values passed to the grid mixin.</p>
-
-
+<p>The css above is easy to read as each selector has only the layout includes assigned to it. As pages get bigger and more elements are added keeping the grid includes clear and easy to find becomes essential. Making changes to the widths or even
+  adding in a new column can be easily done by adjusting the values passed to the grid mixin.</p>
 
 <pre><code>.logo {
    @include grid(3);
@@ -52,7 +54,8 @@ tags: [CSS, Front end development]
 }
 </code></pre>
 
-<h3 class="heading">Taking things a step further </h3>
+<h3 class="heading">Taking things a step further
+</h3>
 
 <p>The break point mixin can also be added to the layout file helping to keep all the layout properties together. For responsive sites I also recommend creating a third style sheet to deal solely with the media queries.</p>
 
@@ -64,7 +67,7 @@ tags: [CSS, Front end development]
 
 <p>The separate Sass files can be compiled using a base style.scss file. Below is an example of how that stylesheet would look using folders for the three separated sass files on each page.</p>
 
-<pre><code>/* PRODUCT PAGE - Unique product page styles
+<pre><code>/* product page - unique product page styles
 ========================================================================== */
 
     @import &amp;amp;#039;product-page/_layout.scss&amp;amp;#039;;
@@ -72,7 +75,7 @@ tags: [CSS, Front end development]
     @import &amp;amp;#039;product-page/_responsive.scss&amp;amp;#039;;
 
 
-/* CATEGORY PAGE - Unique category page styles
+/* category page - unique category page styles
 ========================================================================== */
 
     @import &amp;amp;#039;category-page/_layout.scss&amp;amp;#039;;

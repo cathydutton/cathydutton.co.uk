@@ -1,35 +1,42 @@
----
-title: Say no to nesting
-description: Sass introduced a lot of new features to CSS, Tbut some, like nesting, afre not always an improvement
-date: 2014-07-04
-tags: [CSS]
+--- 
+title: Say no to nesting 
+description: Sass introduced a lot of new features to CSS, Tbut some, like nesting, afre not always an improvement 
+date: 2014-07-04 
+tags: [CSS] 
 ---
 
-<p>Sass, as well as making style sheets awesome, was created to take some of the pain out of writing css. It&#8217;s main purpose is to make code easier and quicker to write, modify and build upon. There are a lot of features within Sass which help achieve this, Variables, Lists, Mixins and loops to name a few.</p>
+<p>Sass, as well as making style sheets awesome, was created to take some of the pain out of writing css. It&#8217;s main purpose is to make code easier and quicker to write, modify and build upon. There are a lot of features within Sass which help
+  achieve this, Variables, Lists, Mixins and loops to name a few.</p>
 
 <p>Nesting however does none of the above and has to be my least favourite and least used feature of Sass. Nesting delivers the complete opposite of the desired Sass effect, adding confusion to stylesheets and increasing code repetition.</p>
 
-<p>Scrolling through a stylesheet full of nested selectors is every bit as painful as the old fashioned 1000 plus lined css file. The Sass used is no more usable then vanilla css, is difficult to expand upon and creates selectors which are over reliant on HTML.</p>
+<p>Scrolling through a stylesheet full of nested selectors is every bit as painful as the old fashioned 1000 plus lined css file. The Sass used is no more usable then vanilla css, is difficult to expand upon and creates selectors which are over
+  reliant on HTML.</p>
 
-<h2 class="heading">Nested example </h2>
+<h2 class="heading">Nested example
+</h2>
 
 <p>The example below demonstrates the effect of nesting selectors on a simple navigation&#8230;</p>
 
-<p><strong>HTML</strong></p>
+<p>
+  <strong>HTML</strong>
+</p>
 
 <pre>
 <code>&lt;nav class="primary-navigation"&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/about"&gt;About us&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/services"&gt;Services&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/"&gt;home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/about"&gt;about us&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/services"&gt;services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact"&gt;contact&lt;/a&gt;&lt;/li&gt;
   &lt;ul&gt;
 &lt;/nav&gt;
 </code>
 </pre>
 
-<p><strong>Sass</strong></p>
+<p>
+  <strong>Sass</strong>
+</p>
 
 <pre><code>.primary-navigation {
 
@@ -58,7 +65,9 @@ tags: [CSS]
 }
 </code></pre>
 
-<p><strong>CSS</strong></p>
+<p>
+  <strong>CSS</strong>
+</p>
 
 <pre><code>.primary-navigation ul {
   margin: 0;
@@ -85,21 +94,26 @@ tags: [CSS]
 
 <p>The nested Sass creates the very specific css selectors above, this css output is difficult to re-use and relies completely on the HTML structure. The problem with this becomes apparent when a secondary navigation is added&#8230;.</p>
 
-<p><strong>HTML</strong></p>
+<p>
+  <strong>HTML</strong>
+</p>
 
 <pre>
 <code>&lt;nav class="secondary-navigation"&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href="/terms"&gt;Terms and conditions&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/privacy"&gt;Privacy policy&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/terms"&gt;terms and conditions&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/privacy"&gt;privacy policy&lt;/a&gt;&lt;/li&gt;
   &lt;ul&gt;
 &lt;/nav&gt;
 </code>
 </pre>
 
-<p>None of the css already written can be used on this secondary navigation as the selectors are too specific due to the nested Sass approach. To style this navigation we would need to add the below Sass creating another chunk of css which is mostly duplicated code&#8230;</p>
+<p>None of the css already written can be used on this secondary navigation as the selectors are too specific due to the nested Sass approach. To style this navigation we would need to add the below Sass creating another chunk of css which is mostly
+  duplicated code&#8230;</p>
 
-<p><strong>Sass</strong></p>
+<p>
+  <strong>Sass</strong>
+</p>
 
 <pre><code>.secondary-navigation {
 
@@ -128,7 +142,9 @@ tags: [CSS]
 }
 </code></pre>
 
-<p><strong>CSS</strong></p>
+<p>
+  <strong>CSS</strong>
+</p>
 
 <pre><code>.secondary-navigation ul {
   margin: 0;
@@ -153,32 +169,38 @@ tags: [CSS]
 }
 </code></pre>
 
-<h2 class="heading"> A better way </h2>
+<h2 class="heading">
+  A better way
+</h2>
 
 <p>A much cleaner approach would be to add a class to each HTML element creating selectors with no reliance or hierarchy&#8230;</p>
 
-<p><strong>HTML</strong></p>
+<p>
+  <strong>HTML</strong>
+</p>
 
 <pre><code>&lt;nav class="primary-navigation"&gt;
   &lt;ul&gt;
-    &lt;li class="navigation-item"&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="navigation-item"&gt;&lt;a href="/about"&gt;About us&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="navigation-item"&gt;&lt;a href="/services"&gt;Services&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="navigation-item"&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-item"&gt;&lt;a href="/"&gt;home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-item"&gt;&lt;a href="/about"&gt;about us&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-item"&gt;&lt;a href="/services"&gt;services&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-item"&gt;&lt;a href="/contact"&gt;contact&lt;/a&gt;&lt;/li&gt;
   &lt;ul&gt;
 &lt;/nav&gt;
 
 &lt;nav class="secondary-navigation"&gt;
   &lt;ul&gt;
-    &lt;li class="navigation-item"&gt;&lt;a href="/terms"&gt;Terms and conditions&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="navigation-item"&gt;&lt;a href="/privacy"&gt;Privacy policy&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-item"&gt;&lt;a href="/terms"&gt;terms and conditions&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="navigation-item"&gt;&lt;a href="/privacy"&gt;privacy policy&lt;/a&gt;&lt;/li&gt;
   &lt;ul&gt;
 &lt;/nav&gt;
 </code></pre>
 
-<p><strong>CSS</strong></p>
+<p>
+  <strong>CSS</strong>
+</p>
 
-<pre><code>/* Styling for both navigation areas */
+<pre><code>/* styling for both navigation areas */
 nav ul  {
     margin: 0;
     padding: 0;
@@ -199,24 +221,34 @@ nav ul  {
        text-decoration: undeline;
   }
 
-/* Styling for primary navigation */
+/* styling for primary navigation */
 .primary-navigation {
   color:grey;
   background:white;
 }
 
-/* Styling for secondary navigation */
+/* styling for secondary navigation */
 .secondary-navigation {
   color:white;
   background:black;
 }
 </code></pre>
 
-<h3 class="heading"> Not all bad </h3>
+<h3 class="heading">
+  Not all bad
+</h3>
 
-<p>Nesting however is not all bad, if used correctly. Sticking with the example from above we can use nesting to style the <strong>a</strong> and <strong>a:hover</strong> selectors. These selectors will always be associated with the <strong>.navigation-item</strong> class and by using nesting are easier to maintain should that class change in the future</p>
+<p>Nesting however is not all bad, if used correctly. Sticking with the example from above we can use nesting to style the
+  <strong>a</strong>
+  and
+  <strong>a:hover</strong>
+  selectors. These selectors will always be associated with the
+  <strong>.navigation-item</strong>
+  class and by using nesting are easier to maintain should that class change in the future</p>
 
-<p><strong>Sass</strong></p>
+<p>
+  <strong>Sass</strong>
+</p>
 
 <pre><code>.navigation-item{
     float:left;
@@ -234,6 +266,9 @@ nav ul  {
 }
 </code></pre>
 
-<h3 class="heading"> Keep it simple </h3>
+<h3 class="heading">
+  Keep it simple
+</h3>
 
-<p>In summary becoming to reliant on nesting can create over specific css selectors making it almost impossible to re-use code. It can also create large un manageable chunks of css that other developers will find difficult to work with (particularly if the code doesn&#8217;t fit neatly into a coding window). Nesting however does have a place if kept to a minimum (2 or 3 layers deep) and used only where necessary.</p>
+<p>In summary becoming to reliant on nesting can create over specific css selectors making it almost impossible to re-use code. It can also create large un manageable chunks of css that other developers will find difficult to work with (particularly
+  if the code doesn&#8217;t fit neatly into a coding window). Nesting however does have a place if kept to a minimum (2 or 3 layers deep) and used only where necessary.</p>

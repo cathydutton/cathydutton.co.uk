@@ -1,8 +1,8 @@
----
-title: What's in a name
-description: Naming things is hard, naming things well is even harder. A look ar structural and presentational class names.
-date: 2014-03-28
-tags: [CSS, Front end development, HTML]
+--- 
+title: What's in a name 
+description: Naming things is hard, naming things well is even harder. A look ar structural and presentational class names. 
+date: 2014-03-28 
+tags: [CSS, Front end development, HTML] 
 ---
 
 <p>Back when front end frameworks like Foundation were built using css instead of Sass the class names were presentational as opposed to semantic. The mark up used in grid systems was similar to the code example below.</p>
@@ -43,9 +43,11 @@ tags: [CSS, Front end development, HTML]
   </code>
 </pre>
 
-<h2 class="heading"> Colours</h2>
+<h2 class="heading">
+  Colours</h2>
 
-<p>If we have a heading which needed to be displayed in red, a descriptive selector would be .red, this however would create extra work should the colour ever change. To avoid having to update the hex colour value and the HTML selector we can call the class by a different name and use variables to set the colour scheme.</p>
+<p>If we have a heading which needed to be displayed in red, a descriptive selector would be .red, this however would create extra work should the colour ever change. To avoid having to update the hex colour value and the HTML selector we can call
+  the class by a different name and use variables to set the colour scheme.</p>
 
 <p>Example selectors include:</p>
 
@@ -61,21 +63,21 @@ tags: [CSS, Front end development, HTML]
 
 <pre>
 	<code>
-/* COLOUR DEFAULTS
+/* colour defaults
 ========================================================================== */
 
-/* Colours -  Defined only once */
+/* colours -  defined only once */
 
 $orange: #ffa600;
 $green: #c1d72e;
 $blue: #82d2e5;
-$red: #FF0000;
+$red: #ff0000;
 $white: #fff;
 $black: #000;
 $grey: #333;
 $light-grey:#ececec;
 
-/* Mark-up - selectors used throughout site. */
+/* mark-up - selectors used throughout site. */
 
 $base-color: $orange;
 $secondary-color: $green;
@@ -85,4 +87,5 @@ $error-color: $blue;
   </code>
 </pre>
 
-<p>An example of the code used above can be found on <a href="https://github.com/cathydutton/bear/blob/master/src/sass/base/_base.scss" target="_blank">GitHub</a>.</p>
+<p>An example of the code used above can be found on
+  <a href="https://github.com/cathydutton/bear/blob/master/src/sass/base/_base.scss" target="_blank">GitHub</a>.</p>

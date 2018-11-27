@@ -1,10 +1,12 @@
+--- 
+title: Maze a responsive grid framework 
+description: Maze - A flexible responsive grid built with Sass 
+date: 2014-05-06 
+tags: [CSS] 
 ---
-title: Maze a responsive grid framework
-description: Maze - A flexible responsive grid built with Sass
-date: 2014-05-06
-tags: [CSS]
----
-<p>After numerous rants regarding my disliking for Bootstrap and most other front end frameworks, I decided to have a go myself. The results can be found here <a href="https://github.com/cathydutton/maze" target="_blank" >www.get-maze.co.uk</a>, an easy to customise grid built using Sass and HTML 5. My aim with Maze was to produce a simple to use set of mixins enabling percentage widths to be assigned to any selector in any layout.</p>
+
+<p>After numerous rants regarding my disliking for Bootstrap and most other front end frameworks, I decided to have a go myself. The results can be found here
+  <a href="https://github.com/cathydutton/maze" target="_blank">www.get-maze.co.uk</a>, an easy to customise grid built using Sass and HTML 5. My aim with Maze was to produce a simple to use set of mixins enabling percentage widths to be assigned to any selector in any layout.</p>
 
 <h2 class="heading">Why?</h2>
 
@@ -12,19 +14,24 @@ tags: [CSS]
 
 <ul class="unordered-list">
   <li class="unordered-list__list-item">
-    <strong>Presentational class names</strong> &#8211; Such as span-1 or large-9.columns are used instead of more semantic selectors.
+    <strong>Presentational class names</strong>
+    &#8211; Such as span-1 or large-9.columns are used instead of more semantic selectors.
   </li>
   <li class="unordered-list__list-item">
-    <strong>Full width defaults</strong> &#8211; All elements default to full width at tablet view creating extra long websites that could be better arranged.
+    <strong>Full width defaults</strong>
+    &#8211; All elements default to full width at tablet view creating extra long websites that could be better arranged.
   </li>
   <li class="unordered-list__list-item">
-    <strong>Set  breakpoints</strong> &#8211; Set media queries and column numbers make the systems to rigid.
+    <strong>Set breakpoints</strong>
+    &#8211; Set media queries and column numbers make the systems to rigid.
   </li>
   <li class="unordered-list__list-item">
-    <strong>Excess class names</strong> &#8211; Extra class names need to be added to style the content of div&#8217;s using the same layout style.
+    <strong>Excess class names</strong>
+    &#8211; Extra class names need to be added to style the content of div&#8217;s using the same layout style.
   </li>
   <li class="unordered-list__list-item">
-    <strong>Style guides and library includes</strong> &#8211; Unnecessary functionality creates bloat.
+    <strong>Style guides and library includes</strong>
+    &#8211; Unnecessary functionality creates bloat.
   </li>
 </ul>
 
@@ -34,7 +41,8 @@ tags: [CSS]
 
 <p>The number of grid columns, push value and gutter width can be easily changed by editing the variables shown below. The percentage width of a single column span is created using the $grid-columns value and assigned to the variable $unit.</p>
 
-<p>A Sass mixin is used to output the grid CSS. Each elements width is calculated using the values passed from the variables described above and user inputted values for the required column span ($col) and float direction ($fold). the $fold variable determines whether the columns will collapse from the right or the left as the grid is re-sized. By default the right column will move to a new row, setting a value of $fold:right will move the left column.</p>
+<p>A Sass mixin is used to output the grid CSS. Each elements width is calculated using the values passed from the variables described above and user inputted values for the required column span ($col) and float direction ($fold). the $fold variable
+  determines whether the columns will collapse from the right or the left as the grid is re-sized. By default the right column will move to a new row, setting a value of $fold:right will move the left column.</p>
 
 <h3 class="heading">How</h3>
 
@@ -43,7 +51,7 @@ tags: [CSS]
 <pre><code>$unit: (100%  / $grid-columns);  
 </code></pre>
 
-<p>If we have a 12 column grid then a single span column will be (100% / 12) which is equal to 8.333%. This value is used to generate the percentage widths of any column span&#8230;</p>
+<p>If we have a 12 column grid then a single span column will be (100% / 12) which is equal to 8.333%. This value is used to generate the percentage widths of any column span&#8230;</p>
 
 <pre><code>width: (($unit * $col) - $gutter ) + ( $gutter / ( $grid-columns / $col) );
 </code></pre>
@@ -53,7 +61,8 @@ tags: [CSS]
 <pre><code>width: ((8.333 * 5) - 2 ) + ( 2 / ( 12 / 5) );  //  which equals  40.5%
 </code></pre>
 
-<p>The width for a 5 column span would therefore be 40.5%. The first part of the formulae calculates the width by multiplying the value for one span by the desired span and removing the gutter value. The second part of the formulae adds to the width to compensate for the missing gutter value which is not applied to the last child in each row. (see below code)</p>
+<p>The width for a 5 column span would therefore be 40.5%. The first part of the formulae calculates the width by multiplying the value for one span by the desired span and removing the gutter value. The second part of the formulae adds to the width
+  to compensate for the missing gutter value which is not applied to the last child in each row. (see below code)</p>
 
 <pre><code>&amp;:last-child {
   margin-right: 0;
@@ -63,13 +72,14 @@ tags: [CSS]
 <p>The gutter percentage is set using the variable $gutter. This value is used throughout the site build for all column margins. If a layout uses multiple margin values the $gutter variable can be over-ridden using the mixin.</p>
 
 <pre><code>.logo {
-  @include grid(3); // Default, uses the variable $gutter value
-  @include grid(3, $margin:0);  // Sets margin to 0
-  @include grid(3, $margin:4%);  // Sets margin to 4%
-}   
+  @include grid(3); // default, uses the variable $gutter value
+  @include grid(3, $margin:0);  // sets margin to 0
+  @include grid(3, $margin:4%);  // sets margin to 4%
+}
 </code></pre>
 
-<p>The mixin adds the gutter value to a margin property dependant on the value of the $fold variable. If $fold is set to left, (the default option) then a margin-right is applied to all elements except the last child, the right column will be moved to the row below as the grid is re-sized. If $fold is set to right, a margin-left is applied to all elements except the last child, the left column will then be moved to the row below as the grid is re-sized.</p>
+<p>The mixin adds the gutter value to a margin property dependant on the value of the $fold variable. If $fold is set to left, (the default option) then a margin-right is applied to all elements except the last child, the right column will be moved
+  to the row below as the grid is re-sized. If $fold is set to right, a margin-left is applied to all elements except the last child, the left column will then be moved to the row below as the grid is re-sized.</p>
 
 <pre><code>@if $fold == left {
   margin-right: $gutter;
@@ -78,7 +88,7 @@ tags: [CSS]
     margin-right: 0;
   }
 
-}  
+}
 
 @if $fold == right {
   margin-left: $gutter;
@@ -97,7 +107,10 @@ tags: [CSS]
 }
 </code></pre>
 
-<p>The mixin in full is written below, the full grid set up can be viewed here <a href="https://github.com/cathydutton/maze" target="_blank"> Maze demo</a></p>
+<p>The mixin in full is written below, the full grid set up can be viewed here
+  <a href="https://github.com/cathydutton/maze" target="_blank">
+    Maze demo</a>
+</p>
 
 <pre><code>@mixin grid($col, $fold:"left", $push:$push, $margin:$gutter) {
   @include transition;
@@ -179,8 +192,13 @@ $break-mobile: 480px;
 
 <h3 class="heading">Benefits</h3>
 
-<p><b>Semantics</b>- Maze removes the need to add unfriendly classes to your mark-up, and allows for cleaner semantic naming conventions. This in turn ensures sites scalable and easy to maintain.</p>
+<p>
+  <b>Semantics</b>- Maze removes the need to add unfriendly classes to your mark-up, and allows for cleaner semantic naming conventions. This in turn ensures sites scalable and easy to maintain.</p>
 
-<p><b>Control</b> &#8211; A common practice in responsive web design is to set each element to 100% at either the tablet or mobile break point. Maze allows for full control over the re-sizing of each HTML block allowing the content to respond as and where needed</p>
+<p>
+  <b>Control</b>
+  &#8211; A common practice in responsive web design is to set each element to 100% at either the tablet or mobile break point. Maze allows for full control over the re-sizing of each HTML block allowing the content to respond as and where needed</p>
 
-<p><b>Customise</b> &#8211; Using the existing media query mixins and variables as a guide any number of break points can be created ensuring the site is fully fluid. Maze will work for 8, 12 & 16 column layouts, and has an easily adjustable gutter width percentages.</p>
+<p>
+  <b>Customise</b>
+  &#8211; Using the existing media query mixins and variables as a guide any number of break points can be created ensuring the site is fully fluid. Maze will work for 8, 12 & 16 column layouts, and has an easily adjustable gutter width percentages.</p>

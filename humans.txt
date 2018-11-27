@@ -1,4 +1,34 @@
-/* TEAM */
-Cathy Dutton
-Site: https://cathydutton.co.uk
-Twitter: cathy_dutton
+/* PROJECT */
+
+	Site Name:   Online portfolio and blog - Cathy Dutton 
+	Site URL:    https://cathydutton.co.uk/
+	Created:     2018/11/20
+	Standards:   HTML5, CSS3, JavaScript
+	Components:  11ty, Nunjucks, PostCSS, Gulp
+
+
+/* AUTHOR */
+
+	Name:        Cathy Dutton
+	Title:       User Experience designer
+	Location:    Cheshire, England
+	Site:        https://cathydutton.co.uk/
+	Blog:        https://cathydutton.co.uk/posts
+
+/* SOCIAL */
+
+  Github:      https://github.com/cathydutton
+	Codepen:     https://codepen.io/cathydutton/pens/popular/
+	Linkedin:    https://www.linkedin.com/in/cathy-dutton-32250328/
+	Twitter:     https://twitter.com/cathy_dutton
+	Plugins:     https://www.npmjs.com/~cathydutton
+	Facebook:    https://www.facebook.com/cathy.dutton1
+
+
+/* META */
+
+	Built with: 11ty, Nunjucks, HTML, CSS, PostCSS, JavaScript
+
+/* THANKS */
+
+	To everyone who shares, likes, comments, and contributes!

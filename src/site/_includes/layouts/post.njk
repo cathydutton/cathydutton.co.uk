@@ -2,17 +2,15 @@
 layout: layouts/base.njk
 ---
 
-<h1 class="post-title">{{ title }}</h1>
-<p class="post--date">
-  Published on <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+<h1 class="post-title">{{ title }}
+</h1>
+<p class="post-date">
+  <span class="visually-hidden">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
 </p>
 
- 
-<main>
-  {{ content | safe }}
-</main>
+{{ content | safe }}
 
-<a href="/posts">Back to all posts</a>
+<a href="/posts" class="anchor">Back to all posts</a>
 
 
 

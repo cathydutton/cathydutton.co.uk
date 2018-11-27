@@ -3,39 +3,44 @@
   CSS variables for fonts, colors, etc.
   ----------------------------------- */
 
-  /* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=E3E3E3&v=E61E9C&v=780C83&v=1E0321&v=110213 */
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FCFCFC&v=E3E3E3&v=E61E9C&v=780C83&v=1E0321&v=333333 */
 
 /* Colors */
 :root {
   --colour-black: hsl(293, 81%, 4%);
   --colour-dark: hsl(294, 83%, 7%);
   --colour-medium: hsl(294, 83%, 28%);
-  --colour-light: hsl(0, 0%, 89%);
-  --colour-white: hsl(0, 0%, 100%);
+  --colour-light: rgb(240, 239, 239);
+  --colour-white: hsl(0, 0%, 99%);
   --colour-bright: hsl(322, 80%, 51%);
 }
 
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=001E3D&v=00356C&v=9C2064&v=FE9F00&v=FFFA06&v=FFFFFF */
+
 .theme-contrast {
   --colour-black: hsl(0, 0%, 100%);
-  --colour-dark: hsl(62, 100%, 74%);
-  --colour-medium: hsl(45, 100%, 59%);
-  --colour-light: hsl(180, 1%, 26%);
+  --colour-dark: hsl(59, 100%, 51%);
+  --colour-medium: hsl(38, 100%, 50%);
+  --colour-light: hsl(211, 100%, 21%);
   --colour-white: hsl(210, 100%, 12%);
   --colour-bright: hsl(327, 66%, 37%);
 }
 
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FCF1D8&v=FCE5B9&v=EEA60B&v=543B1C&v=3A220C&v=211505 */
+
 .theme-monochrome {
-  --colour-black: rgb(33, 21, 5);
-  --colour-dark: hsl(29, 64%, 14%);
-  --colour-medium: hsl(34, 50%, 22%);
-  --colour-light: hsl(39, 94%, 86%);
-  --colour-white: hsl(41, 90%, 92%);
+  --colour-black: hsl(34, 74%, 7%);
+  --colour-dark: hsl(29, 66%, 14%);
+  --colour-medium: hsl(33, 50%, 22%);
+  --colour-light: hsl(39, 92%, 86%);
+  --colour-white: hsl(42, 86%, 92%);
   --colour-bright: hsl(41, 91%, 49%);
 }
 
 /* Fonts */
 :root {
-  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  --font-family: "Source Sans Pro", sans-serif;
 }
 
 .dyslexic {
@@ -44,7 +49,7 @@
 
 /* Font size */
 :root {
-  --font-size: 16px;
+  --font-size: 18.4px;
 }
 
 /* MOVE THIS PLEASE */

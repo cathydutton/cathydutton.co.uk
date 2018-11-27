@@ -1,0 +1,73 @@
+/*
+  Generic -   Typography
+  Reset and/or normalize styles, box-sizing definition, etc. 
+  ----------------------------------- */
+
+
+h1 {
+  font-size: calc(3.2vw + 3.2vh + 3vmin);
+  color: var(--colour-medium);
+  margin-bottom: .4em;
+  line-height: .9;
+  max-width: 9em;
+}
+
+.post-title,
+.project-title {
+  font-size: calc(2.2vw + 2.2vh + 2vmin);
+}
+
+.post-date {
+  font-style: italic;
+}
+
+.page-description {
+  display: block;
+  font-size: .3em;
+  font-weight: normal;
+  color: var(--colour-dark);
+  margin-top: .4em;
+}
+  
+h2 {
+  font-size: calc(1.2vw + 1.2vh + 2vmin);
+  color: var(--colour-dark);
+  margin-bottom: .4em;
+}
+  
+h3 {
+  font-size: calc(.8vw + .8vh + 2vmin);
+  color: var(--colour-dark);
+  margin-bottom: .4em;
+}
+  
+h4,
+h5,
+h6 {
+  font-size: calc(.6vw + .6vh + 1vmin);
+  color: var(--colour-dark);
+  margin-bottom: .4em;
+}
+
+p {
+  margin-bottom: .8em;
+  font-size: 1em;
+}
+
+.highlight-text {
+  border-left: 4px solid var(--colour-bright);
+  padding-left: .4em;
+  font-size: 1.1em;
+}
+
+input, 
+select, 
+textarea, 
+button {
+  font-family:inherit;
+  font-size: .8em;
+}
+
+footer p {
+  font-size: .8em;
+}

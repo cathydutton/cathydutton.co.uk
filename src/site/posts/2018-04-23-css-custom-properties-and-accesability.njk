@@ -1,18 +1,23 @@
+--- 
+title: CSS custom properties and accessibility 
+description: A look at CSS custom properties and how they can be utilised to build accessible websites and apps. 
+date: 2018-04-02 
+tags: [CSS, Accessibility] 
 ---
-title: CSS custom properties and accessibility
-description: A look at CSS custom properties and there uses in building accessible websites
-date:   2018-04-02 
-tags: [CSS, Accessibility]
----
-<p>Giving users the ability to control the way they see content improves the accessibility and usability of a site. This is traditionally achieved with a <a href="https://en.wikibooks.org/wiki/Cascading_Style_Sheets/User_Style_Sheets" title="User stylesheet information">user stylesheet </a>(although this is no longer supported in Chrome without the use of additional plugins).</p>
 
-<p>In site features that allow a user to change the way content is displayed are nothing new, but with CSS custom properties are much easier to implement. </p>
+<p>Giving users the ability to control the way they see content improves the accessibility and usability of a site. This is traditionally achieved with a
+  <a href="https://en.wikibooks.org/wiki/Cascading_Style_Sheets/User_Style_Sheets" title="User stylesheet information">user stylesheet
+  </a>(although this is no longer supported in Chrome without the use of additional plugins).</p>
+
+<p>In site features that allow a user to change the way content is displayed are nothing new, but with CSS custom properties are much easier to implement.
+</p>
 
 <p>CSS custom properties are the improved alternatives to the variables available in pre processing languages like Sass and Less. Unlike compiled variables custom properties allow values to be updated dynamically.</p>
 
 <p>By utilising these real time updates custom properties can be used to allow users to take control of the content they see and customise the experience.</p>
 
-<h2 class="heading">Example 1 - update colour theme </h2>
+<h2 class="heading">Example 1 - update colour theme
+</h2>
 
 <p>Themed CSS became common practice with the arrival of Sass variables, by defining a set of colour variables at the top of a partial CSS can be reused quickly and easily. This practice however introduces a lot of duplicate code and CSS bloat.</p>
 
@@ -22,8 +27,8 @@ tags: [CSS, Accessibility]
 
 <pre><code>$background-color: #eee;
 $text-color: #222;
-$link-colour: #3D9970;
-$link-colour-hover: #001F3F;
+$link-colour: #3d9970;
+$link-colour-hover: #001f3f;
 
 body {
   background-color: $background-color;
@@ -33,7 +38,7 @@ body {
 a {
  colour: $link-colour;
 } &amp;:hover {
- Colour: $link-colour-hover;
+ colour: $link-colour-hover;
 }
 
 @import 'theme-dark';
@@ -43,8 +48,8 @@ a {
 <h4 id="themedarkcss">theme-dark.css</h4>
 
 <pre><code>$background-color: #111;
-$text-color: #FFF;
-$link-colour: #FFDC00;
+$text-color: #fff;
+$link-colour: #ffdc00;
 $link-colour-hover: #048386;
 
 .theme-dark {
@@ -67,15 +72,15 @@ $link-colour-hover: #048386;
 
 <pre><code>:root {
   --background-color: #111;
-  --text-color: #FFF;
-  --link-colour: #FFDC00;
+  --text-color: #fff;
+  --link-colour: #ffdc00;
   --link-colour-hover: #048386;
 }
 
 .theme-dark {
   --background-color: #111;
-  --text-color: #FFF;
-  --link-colour: #FFDC00;
+  --text-color: #fff;
+  --link-colour: #ffdc00;
   --link-colour-hover: #048386;
 }
 
@@ -87,7 +92,8 @@ body {
 
 <h2 id="namingthingsisdifficult">Naming things is difficult</h2>
 
-<p>On a side note naming CSS variables in a meaningful and user friendly way is difficult, naming colour variables that are used in multiple themes is even harder! Each variable name needs to make sense in each instance, without being overly case specific.</p>
+<p>On a side note naming CSS variables in a meaningful and user friendly way is difficult, naming colour variables that are used in multiple themes is even harder! Each variable name needs to make sense in each instance, without being overly case
+  specific.</p>
 
 <h4 id="badexamples">Bad examples</h4>
 
@@ -98,120 +104,124 @@ body {
   --colour-two: #333333;
   --colour-three: #333333;
 
-  --orange: #FB820A;
-  --red: #ED0C0C;
+  --orange: #fb820a;
+  --red: #ed0c0c;
 </code></pre>
 
 <p>The problem with the names like --orange and --red is they aren't reusable, when we switch themes red may no longer be red.</p>
 
 <p>By referencing each property like --border-colour and --text-colour we risk having an unmanageable number of variables to work with, and could end up with duplicate values.</p>
 
-<p>Finally names with no context like  --colour-one and  --colour-two become difficult to work with on large scale projects.</p>
+<p>Finally names with no context like --colour-one and --colour-two become difficult to work with on large scale projects.</p>
 
 <p>Colour variable names should be scalable and easy to manage, it also should be obvious what each variable represents in any theme just by looking at it's name.</p>
 
 <h4 id="goodexamples">Good examples</h4>
 
-<pre><code>  --colour-primary: #001F3F;
-  --colour-secondary: #E0F0FF;
-  --colour-tertiary: #3D9970;
+<pre><code>  --colour-primary: #001f3f;
+  --colour-secondary: #e0f0ff;
+  --colour-tertiary: #3d9970;
 
-  --colour-dark: #001F3F;
-  --colour-light: #E0F0FF;
-  --colour-bright: #3D9970;
+  --colour-dark: #001f3f;
+  --colour-light: #e0f0ff;
+  --colour-bright: #3d9970;
 
-  --colour-error: #A91919;
+  --colour-error: #a91919;
 </code></pre>
 
 <h4 id="threethemeexample">Three theme example</h4>
 
 <pre><code>:root {
   --colour-black: #001429;
-  --colour-dark: #001F3F;
-  --colour-medium: #003D7A;
-  --colour-light: #E0F0FF;
-  --colour-white: #FFFFFF;
-  --colour-bright: #3D9970;
-  --colour-error: #A91919; 
+  --colour-dark: #001f3f;
+  --colour-medium: #003d7a;
+  --colour-light: #e0f0ff;
+  --colour-white: #ffffff;
+  --colour-bright: #3d9970;
+  --colour-error: #a91919;
 }
 
 .theme-dark {
-  --colour-black: #FFFFFF;
-  --colour-dark: #AAAAAA;
-  --colour-medium: #2ECC40;
-  --colour-light: #048386; 
+  --colour-black: #ffffff;
+  --colour-dark: #aaaaaa;
+  --colour-medium: #2ecc40;
+  --colour-light: #048386;
   --colour-white: #111111;
-  --colour-bright: #FFDC00; 
-  --colour-error: #FF851B;
+  --colour-bright: #ffdc00;
+  --colour-error: #ff851b;
 }
 
 .theme-monochrome {
-  --colour-black: #BD9562;
-  --colour-dark: #AB773F;
-  --colour-medium: #553C1C;
+  --colour-black: #bd9562;
+  --colour-dark: #ab773f;
+  --colour-medium: #553c1c;
   --colour-light: #3c240d;
   --colour-white: #211505;
-  --colour-bright: #AF8857;
-  --colour-error: #A37A48; 
+  --colour-bright: #af8857;
+  --colour-error: #a37a48;
 }
 </code></pre>
 
 <p>Once we have the variables properties assigned for each theme we can use JavaScript to add a class name to the body.</p>
 
-<pre><code>themeDefault.onclick = function(){
-    body.className = "theme-default";
+<pre><code>themedefault.onclick = function(){
+    body.classname = "theme-default";
   };
 
- themeDark.onclick = function(){
-    body.className = "theme-dark";
+ themedark.onclick = function(){
+    body.classname = "theme-dark";
   };
 
-themeMonochrome.onclick = function(){
-  body.className = "theme-monochrome";
+thememonochrome.onclick = function(){
+  body.classname = "theme-monochrome";
   };
 </code></pre>
 
 <p>This is great, until the user navigates to a new page or refreshes the browser. To solve this issue we can store the value of the custom property using local storage, and then check for a saved value on page load.</p>
 
-<pre><code>body.className = localStorage.getItem("currentTheme");
+<pre><code>body.classname = localstorage.getitem("currenttheme");
 </code></pre>
 
-<pre><code>themeDefault.onclick = function(){
-  body.className = "theme-default";
-  localStorage.setItem("currentTheme", 'theme-default');
+<pre><code>themedefault.onclick = function(){
+  body.classname = "theme-default";
+  localstorage.setitem("currenttheme", 'theme-default');
 };
 
-themeDark.onclick = function(){
-  body.className = "theme-dark";
-  localStorage.setItem("currentTheme", 'theme-dark');
+themedark.onclick = function(){
+  body.classname = "theme-dark";
+  localstorage.setitem("currenttheme", 'theme-dark');
 };
 
-themeMonochrome.onclick = function(){
-  body.className = "theme-monochrome";
-  localStorage.setItem("currentTheme", 'theme-monochrome');
+thememonochrome.onclick = function(){
+  body.classname = "theme-monochrome";
+  localstorage.setitem("currenttheme", 'theme-monochrome');
 };
 </code></pre>
 
 <h4 class="heading">Demo</h4>
 
-<p data-height="500" data-theme-id="8492" data-slug-hash="paBMBE" data-default-tab="css,result" data-user="cathydutton" data-embed-version="2" data-pen-title="Custom property colour themes" class="codepen">See the Pen <a href="https://codepen.io/cathydutton/pen/paBMBE/">Custom property colour themes</a> by Cathy Dutton (<a href="https://codepen.io/cathydutton">@cathydutton</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="8492" data-slug-hash="paBMBE" data-default-tab="css,result" data-user="cathydutton" data-embed-version="2" data-pen-title="Custom property colour themes" class="codepen">See the Pen
+  <a href="https://codepen.io/cathydutton/pen/paBMBE/">Custom property colour themes</a>
+  by Cathy Dutton (<a href="https://codepen.io/cathydutton">@cathydutton</a>) on
+  <a href="https://codepen.io">CodePen</a>.</p>
 
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<script async="async" src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-<h2 class="heading"> Example 2 - update a font</h2>
+<h2 class="heading">
+  Example 2 - update a font</h2>
 
 <p>Updating a font type can also be achieved without custom properties using a body class...</p>
 
 <pre><code>const body = document.body;
 
-body.classList.add("comic-sans");
+body.classlist.add("comic-sans");
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
 comic-sans {
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "comic sans ms", "comic sans", cursive;
 }
 </code></pre>
 
@@ -220,7 +230,7 @@ comic-sans {
 <p>An alternative approach is to declare the font just once in CSS using a custom property.</p>
 
 <pre><code>:root {
-  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  --font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
 body {
@@ -230,47 +240,50 @@ body {
 
 <p>And allow users to update this value through javaScript</p>
 
-<pre><code>// Global
+<pre><code>// global
 const body = document.body;
-const root = document.querySelector(':root');
-const rootStyles = getComputedStyle(root);
+const root = document.queryselector(':root');
+const rootstyles = getcomputedstyle(root);
 
-dyslexicFont.onclick = function(){
-  body.style.setProperty('--font-family', '"Comic Sans MS", "Comic Sans", cursive');
+dyslexicfont.onclick = function(){
+  body.style.setproperty('--font-family', '"comic sans ms", "comic sans", cursive');
 };
 
-defaultFont.onclick = function(){
-  body.style.setProperty('--font-family', rootStyles.getPropertyValue('--font-family'));
+defaultfont.onclick = function(){
+  body.style.setproperty('--font-family', rootstyles.getpropertyvalue('--font-family'));
 };
 </code></pre>
 
 <p>When either button is clicked the value of the custom property --font-family is updated across the page, again we can store these values in local storage to save a users preferences...</p>
 
-<pre><code class="` language-`">// If no local storage value exists create one
-if (!fontFamily) {
-    body.style.setProperty("--font-family", localStorage.getItem("fontFamily"));
+<pre><code class="` language-`">// if no local storage value exists create one
+if (!fontfamily) {
+    body.style.setproperty("--font-family", localstorage.getitem("fontfamily"));
 }
 
-// Get current value
-var fontFamily = getComputedStyle(body).getPropertyValue('--font-family');
+// get current value
+var fontfamily = getcomputedstyle(body).getpropertyvalue('--font-family');
 
 
-dyslexicFont.onclick = function(){
-  body.style.setProperty('--font-family', '"Comic Sans MS", "Comic Sans", cursive');
-  localStorage.setItem("fontFamily", '"Comic Sans MS", "Comic Sans", cursive');
+dyslexicfont.onclick = function(){
+  body.style.setproperty('--font-family', '"comic sans ms", "comic sans", cursive');
+  localstorage.setitem("fontfamily", '"comic sans ms", "comic sans", cursive');
 };
 
-defaultFont.onclick = function(){
-  body.style.setProperty('--font-family', rootStyles.getPropertyValue('--font-family'));
-  localStorage.setItem("fontFamily", rootStyles.getPropertyValue('--font-family'));
+defaultfont.onclick = function(){
+  body.style.setproperty('--font-family', rootstyles.getpropertyvalue('--font-family'));
+  localstorage.setitem("fontfamily", rootstyles.getpropertyvalue('--font-family'));
 };
 </code></pre>
 
 <h4 class="heading">Demo</h4>
 
-<p data-height="500" data-theme-id="8492" data-slug-hash="OQrGab" data-default-tab="css,result" data-user="cathydutton" data-embed-version="2" data-pen-title="Custom property font switcher" class="codepen">See the Pen <a href="https://codepen.io/cathydutton/pen/OQrGab/">Custom property font switcher</a> by Cathy Dutton (<a href="https://codepen.io/cathydutton">@cathydutton</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="8492" data-slug-hash="OQrGab" data-default-tab="css,result" data-user="cathydutton" data-embed-version="2" data-pen-title="Custom property font switcher" class="codepen">See the Pen
+  <a href="https://codepen.io/cathydutton/pen/OQrGab/">Custom property font switcher</a>
+  by Cathy Dutton (<a href="https://codepen.io/cathydutton">@cathydutton</a>) on
+  <a href="https://codepen.io">CodePen</a>.</p>
 
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<script async="async" src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 <h2 class="heading">Example 3 - update text size</h2>
 
@@ -289,23 +302,23 @@ body {
 
 <h4 id="increasetextsize">Increase text size</h4>
 
-<pre><code>increaseFont.onclick = function(){
-    var number = parseFloat(fontSize) 
+<pre><code>increasefont.onclick = function(){
+    var number = parsefloat(fontsize)
     number += 0.2
-    fontSize = number;
-    body.style.setProperty('--font-size', number + 'em');
-    localStorage.setItem("fontSize", number + 'em');
+    fontsize = number;
+    body.style.setproperty('--font-size', number + 'em');
+    localstorage.setitem("fontsize", number + 'em');
 };
 </code></pre>
 
 <h4 id="decreasetextsize">Decrease text size</h4>
 
-<pre><code>decreaseFont.onclick = function(){
-    var number = parseFloat(fontSize) 
+<pre><code>decreasefont.onclick = function(){
+    var number = parsefloat(fontsize)
     number -= 0.2
-    fontSize = number;   
-    body.style.setProperty('--font-size', number + 'em');
-    localStorage.setItem("fontSize", number + 'em');
+    fontsize = number;
+    body.style.setproperty('--font-size', number + 'em');
+    localstorage.setitem("fontsize", number + 'em');
 };
 </code></pre>
 
@@ -313,6 +326,9 @@ body {
 
 <h4 class="heading">Demo</h4>
 
-<p data-height="500" data-theme-id="8492" data-slug-hash="YedMRP" data-default-tab="css,result" data-user="cathydutton" data-embed-version="2" data-pen-title="Custom property text size" class="codepen">See the Pen <a href="https://codepen.io/cathydutton/pen/YedMRP/">Custom property text size</a> by Cathy Dutton (<a href="https://codepen.io/cathydutton">@cathydutton</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="8492" data-slug-hash="YedMRP" data-default-tab="css,result" data-user="cathydutton" data-embed-version="2" data-pen-title="Custom property text size" class="codepen">See the Pen
+  <a href="https://codepen.io/cathydutton/pen/YedMRP/">Custom property text size</a>
+  by Cathy Dutton (<a href="https://codepen.io/cathydutton">@cathydutton</a>) on
+  <a href="https://codepen.io">CodePen</a>.</p>
 
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<script async="async" src="https://static.codepen.io/assets/embed/ei.js"></script>
