@@ -45,7 +45,7 @@ gulp.task('build', gulp.series(
 */
 gulp.task('production', gulp.series(
   'test',
-  'clean-build',
+  // 'clean-build',
   'build'
 ));
 
