@@ -14,7 +14,7 @@
   
 .navigation .list-item {
   justify-content: center;
-  margin: .4em;
+  margin: .2em;
   list-style: none;
   hyphens: auto;
   border: solid 1px var(--colour-medium);

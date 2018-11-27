@@ -18,7 +18,7 @@
 /* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=001E3D&v=00356C&v=9C2064&v=FE9F00&v=FFFA06&v=FFFFFF */
 
 .theme-contrast {
-  --colour-black: hsl(0, 0%, 20%);
+  --colour-black: hsl(0, 0%, 100%);
   --colour-dark: hsl(59, 100%, 51%);
   --colour-medium: hsl(38, 100%, 50%);
   --colour-light: hsl(211, 100%, 21%);
