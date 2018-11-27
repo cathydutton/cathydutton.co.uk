@@ -2,7 +2,9 @@
 layout: layouts/base.njk
 ---
 
-<h1 class="project-title">{{ title }}</h1>
+<h1 class="project-title" id="js-skip-link-target">
+  {{ title }}
+</h1>
 
 <p class="post-date">
   <time datetime="{{ date }}">{{ date | dateDisplayProject }}</time>

@@ -6,14 +6,14 @@ permalink: /projects/
 pageName: Projects 
 ---
 
-<header role="banner" class="header clear">
+<header role="banner" class="header clear" id="js-skip-link-target">
   <h1>
     Projects
     <span class="page-description">Design and Front End Development work</span>
   </h1>
 </header>
 
-<p class="highlight-text" id="js-skip-link-target">
+<p class="highlight-text">
   Over the years I have had the pleasure of working for some amazing companies and brands on a range of digital projects. Below are just a few examples of my design and development work. 
 <p>
 
@@ -23,7 +23,7 @@ pageName: Projects
 
     <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
       <div class="image-ratio">
-        <img data-src="{{ post.data.image }}" class="lazyload" alt="{{ post.data.title }} image">
+        <img data-src="{{ post.data.image }}" class="lazyload" alt="Cover image for {{ post.data.title }}">
       </div>
       <h3 class="project__title">
         <a href="{{ post.url }}">
