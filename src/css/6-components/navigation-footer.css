@@ -22,7 +22,7 @@
 }
 
 .navigation-footer .list-item a:after {
-  display:block;
+  display: block;
   content: '';
   border-bottom: solid 3px var(--colour-bright);  
   position: absolute;

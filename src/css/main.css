@@ -3,28 +3,28 @@
   Includes all the components and utilities
   ----------------------------------- */
 
-  @import '5-base/elements';
-  @import '5-base/anchors';
-  @import '5-base/typography';
-  @import '5-base/images';
-  @import '5-base/table';
+@import '5-base/elements';
+@import '5-base/anchors';
+@import '5-base/typography';
+@import '5-base/images';
+@import '5-base/table';
 
-  @import '6-components/profile';
-  @import '6-components/skip-link';
-  @import '6-components/buttons'; 
-  @import '6-components/navigation';
-  @import '6-components/navigation-footer';
-  @import '6-components/quotes';
-  @import '6-components/social-media';
-  @import '6-components/description-lists';
-  @import '6-components/logo-images';
-  @import '6-components/a11y-buttons';
-  @import '6-components/lists';
-  @import '6-components/post-feed';
-  @import '6-components/project-feed';
-  @import '6-components/project-images';
-  @import '6-components/postcss-feed';
-  @import '6-components/share-post';
-  @import '6-components/pagination';
+@import '6-components/profile';
+@import '6-components/skip-link';
+@import '6-components/buttons'; 
+@import '6-components/navigation';
+@import '6-components/navigation-footer';
+@import '6-components/quotes';
+@import '6-components/social-media';
+@import '6-components/description-lists';
+@import '6-components/logo-images';
+@import '6-components/a11y-buttons';
+@import '6-components/lists';
+@import '6-components/post-feed';
+@import '6-components/project-feed';
+@import '6-components/project-images';
+@import '6-components/postcss-feed';
+@import '6-components/share-post';
+@import '6-components/pagination';
 
-  @import '7-utilities/utilities';
+@import '7-utilities/utilities';

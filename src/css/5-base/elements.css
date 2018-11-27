@@ -35,7 +35,7 @@ pre {
   
 code { 
   font: inherit ;
-  background:var(--colour-light);
+  background: var(--colour-light);
   background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
   background-size: auto 3em;
   background-origin: content-box; 
@@ -66,7 +66,7 @@ svg {
   height: 100%;
 }
 
- /* LISTS */
+/* LISTS */
 
 /* Unordered lists */
 ul {
@@ -121,7 +121,7 @@ dt + dd::before,
 }
 
 dd + dd::before,
-dt + dt::before,,
+dt + dt::before,
 .description-list__description + .description-list__description::before,
 .description-list__title + .description-list__title::before {
   content: ', ';
@@ -129,7 +129,8 @@ dt + dt::before,,
   margin-left: -.25em;
 }
 
-[hidden], template {
+[hidden], 
+template {
   display: none;
 }
 

@@ -1,20 +1,19 @@
 var project = require('./_project.js');
 var gulp    = require('gulp');
-var gulpStylelint = require('gulp-stylelint');
 var access = require('gulp-accessibility');
-var mocha = require('gulp-mocha');
+var jsValidate = require('gulp-jsvalidate');
 var rename = require("gulp-rename");
+var postcss = require('gulp-postcss');
+var stylelint = require('stylelint');
 
 /*
   Run CSS lint 
 */
 gulp.task('cssLint', function() {
-  return gulp.src(project.buildDest + '/css/**/**.css')
-  .pipe(gulpStylelint({
-    reporters: [
-      {formatter: 'string', console: true}
-    ]
-  }));
+  return gulp.src(project.buildSrc + '/css/**/**.css')
+  .pipe(postcss([
+    stylelint({ failAfterError: true})
+  ]))
 });
 
 
@@ -37,19 +36,19 @@ gulp.task('a11y', function() {
 
 
 /*
-  Run Mocha (check JS)
+  Run JS validate
 */
-gulp.task('mocha', function () {
+gulp.task('jsTest', function () {
   return gulp.src(project.buildSrc + '/js/**/**.js')
-  .pipe(mocha({reporter: 'nyan'}))
+  .pipe(jsValidate())
 });
 
 
 /*
-  Compile dev CSS files 
+  Run all tests 
 */
 gulp.task('test', gulp.parallel(
   'cssLint',
   'a11y',
-  'mocha'
+  'jsTest'
 ));

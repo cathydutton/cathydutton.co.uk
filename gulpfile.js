@@ -27,7 +27,8 @@ gulp.task('generate', () => {
 gulp.task('assets', gulp.parallel(
   'images',
   'styles',
-  'scripts'
+  'scripts',
+  'copyScripts'
 ));
 
 

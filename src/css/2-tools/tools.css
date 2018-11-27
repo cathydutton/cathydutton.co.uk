@@ -4,38 +4,43 @@
   ----------------------------------- */
 
 /* Print styles */
-
 @media print {
   .container > *:not(main) {
     display: none;
-  }
-  
+  }  
 }
 
-/* Animation fades */
-  
+/* Animation fades */  
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
   
 @keyframes fadeOut {
-  0% {opacity: 100;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 100;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 /* Animation slides */
-
 @keyframes fadeInRight {
   0% {
     opacity: 0;
     transform: translate(260px, 0);
   }
-  
+
   100% {
     opacity: 1;
     transform: none;
-  
   }
 }
 
@@ -43,17 +48,11 @@
   0% {
     opacity: 0;
     transform: translate(0, 50px);
-  }
+  } 
   
   100% {
     opacity: 1;
     transform: none;
   }
-
 }
   
-
-
-
-
-

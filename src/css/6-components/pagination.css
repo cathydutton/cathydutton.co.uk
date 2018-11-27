@@ -34,7 +34,7 @@ Pagination
 }
 
 .pagination__list-item--next a {
- text-align: right;
+  text-align: right;
 }
 
 .pagination__svg {

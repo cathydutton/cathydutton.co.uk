@@ -4,9 +4,9 @@
   ----------------------------------- */
 
 a {
- color: currentColor;
- text-decoration: none;
- border-bottom: solid 1px currentColor
+  color: currentColor;
+  text-decoration: none;
+  border-bottom: solid 1px currentColor
 }
 
 a:hover {
@@ -45,11 +45,7 @@ a:hover {
   content: '(visited)';
 }
   
-.anchor
-[target=_blank]:after {
+.anchor [target=_blank]:after {
   display: inline-block;
   content: '(opens new window)';
 } 
-
-
-  

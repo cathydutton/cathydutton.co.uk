@@ -37,7 +37,7 @@ Social media icons
 
 
 .social-media__anchor:before {
-  background-color:var(--colour-bright);
+  background-color: var(--colour-bright);
   border-radius: 3px;
   color: var(--colour-white);
   content: attr(aria-label);
@@ -57,7 +57,6 @@ Social media icons
   transform: translate(-18% ,-144%);
 }
 
-
 /* Footer colour overrides */
 footer .social-media__anchor {
   color: var(--colour-dark);
@@ -72,6 +71,6 @@ footer .social-media__anchor:focus {
 }
 
 footer .social-media__anchor:before {
-  background-color:var(--colour-dark);
+  background-color: var(--colour-dark);
   color: var(--colour-white);
 }

@@ -1,7 +1,7 @@
 /*
   Elements -   Images
 
-  ----------------------------------- */
+----------------------------------- */
 
 :root {
   --ratio-padding: 55%; /* Square default images 275 x 150 | 550 x 300 */
@@ -10,18 +10,12 @@
 /* Full length images */
 
 .image-ratio--thin {
-   --ratio-padding: 34.37%  /* 640 x 220 */
+  --ratio-padding: 34.37%  /* 640 x 220 */
 }
 
 .image-ratio--medium {
   --ratio-padding: 51.57% /* 640 x 330 */
 } 
-
-/* tall images */
-
-.image-ratio--tall {
-  /* --ratio-padding: ??% ?? */
-}
 
 img {
   image-rendering: auto;
@@ -46,11 +40,3 @@ img {
   width: 100%;
   height: 100%;
 }
-
-
-
-
-
-
-
-

@@ -18,7 +18,7 @@
       "except": ["first-nested"],
       "ignore": ["after-comment"]
     } ],
-    "unit-blacklist": ["px"],
+    "unit-blacklist": [""],
     
   },
 

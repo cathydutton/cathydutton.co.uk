@@ -42,7 +42,7 @@
 .navigation .list-item__current a,
 .navigation a:active {
   background: var(--colour-white);
-  color:  var(--colour-dark);
+  color: var(--colour-dark);
 }
 
 .navigation a:active:hover {

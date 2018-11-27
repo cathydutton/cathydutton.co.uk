@@ -46,7 +46,6 @@
 /* Fonts */
 
 :root {
-  /* --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
   --font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -58,12 +57,6 @@
 
 :root {
   --font-size: 18.4px;
-}
-
-/* MOVE THIS PLEASE */
-
-.clickable {
-  cursor: pointer;
 }
 
 /*
@@ -83,13 +76,21 @@
 /* Animation fades */
 
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  0% {opacity: 100;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* Animation slides */
@@ -573,7 +574,7 @@ form, fieldset, legend,
 figure,
 table, th, td, caption,
 hr {
-  margin:  0;
+  margin: 0;
   padding: 0;
 }
 
@@ -600,7 +601,6 @@ hr {
   padding-bottom: 9999px; 
   width: calc((960px - 100%) * 960);
   max-width: 100%;
-
 }
 
 .sidebar {
