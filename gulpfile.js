@@ -21,9 +21,6 @@ gulp.task('generate', () => {
   .pipe(livereload());
 })
 
-
-
-
 /*
   compile the assets to the correct destination
 */
