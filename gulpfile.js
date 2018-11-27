@@ -36,7 +36,6 @@ gulp.task('assets', gulp.parallel(
   Build 
 */
 gulp.task('build', gulp.series(
-  'clean-build',
   'generate',
   'assets'
 ));
@@ -46,6 +45,7 @@ gulp.task('build', gulp.series(
 */
 gulp.task('production', gulp.series(
   'test',
+  'clean-build',
   'build'
 ));
 
