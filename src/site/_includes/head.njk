@@ -35,13 +35,3 @@
   gtag('config', 'UA-9902393-15');
 </script>
 
-<!-- Service worker -->
-<script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/scripts/serviceWorker.js').then(function(registration) {
-        }).catch(function(err) {
-        });
-      });
-    }
-</script>

@@ -39,6 +39,16 @@
     </div>
   </div>
   <script src="/js/scripts.js"></script>
+  <!-- Service worker -->
+  <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/scripts/serviceWorker.js').then(function(registration) {
+          }).catch(function(err) {
+          });
+        });
+      }
+  </script>
 </body>
 
 </html>
