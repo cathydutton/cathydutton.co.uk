@@ -5,7 +5,5 @@
     "description": "Cheshire based User Experience Designer focusing on Interaction &amp; Service Designer - Cathy Dutton ",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "var(--colour-light)",
-    "theme_color": "var(--colour-bright)"
   }
 

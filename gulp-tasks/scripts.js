@@ -21,7 +21,7 @@ gulp.task('scripts', function() {
 // Copy scripts to dist folder
 gulp.task('copyScripts', function() {
   return gulp.src(project.buildSrc + "/scripts/**/*.**")
-      .pipe(gulp.dest(project.buildDest+ '/scripts'))
+      .pipe(gulp.dest(project.buildDest+ '/'))
       .pipe(livereload());
 });
 
