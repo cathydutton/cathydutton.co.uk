@@ -2,7 +2,7 @@
 {% for post in collections.latestPosts %}
  <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
   <h3 class="news-feed__title">
-    <a href="{{ post.url }}" class="anchor "title="{{post.data.title}}" class="news-feed__anchor">
+    <a href="{{ post.url }}" title="{{post.data.title}}" class="anchor news-feed__anchor">
       <span class="visually-hidden">Article title</span>
       {{post.data.title}}
     </a>
@@ -17,5 +17,3 @@
     {% endif %}
   </article>
 {% endfor %}
-
-

@@ -16,15 +16,15 @@
                 return cache.addAll([
                   '/',
                   '/index.html',
-                  '/work-history.html',
-                  '/offline.html',
-                  '/portfolio.html',
-                  '/posts/css-myths.html',
-                  '/posts/10-reasons-to-start-using-PostCSS-today.html',
-                  '/posts/surviving-css.html',
-                  '/portfolio/Buy-a-rod-fishing-licence.html',
-                  '/portfolio/Tropic-skincare.html',
-                  '/portfolio/my-protein.html',
+                  '/about-me/index.html',
+                  '/now/index.html',
+                  '/projects/index.html',
+                  '/posts/index.html',
+                  '/offline/index.html',
+                  '/posts/designing-digital-forms/index.html',
+                  '/posts/the-problem-with-patterns/index.html',
+                  '/projects/i-want-to-fish-service/index.html',
+                  '/projects/ee/index.html',
                 ]);
             });
     };
@@ -57,7 +57,7 @@
             event.respondWith(
                 fetch(request)
                     .catch(function () {
-                        return caches.match('/offline.html');
+                        return caches.match('/offline/index.html');
                     })
             );
             return;
@@ -89,7 +89,7 @@
                     .catch(function () {
                         return caches.match(request)
                             .then(function (response) {
-                                return response || caches.match('/offline.html');
+                                return response || caches.match('/offline/index.html');
                             })
                     })
             );

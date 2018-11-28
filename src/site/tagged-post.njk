@@ -23,21 +23,19 @@ permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/
   </h1>
 </header>
 
-  {% set taglist = collections[tag] %}
-
-    {% for post in taglist | reverse %}
-
-      <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-        <h3 class="news-feed__title">
-          <a href="{{ post.url }}" title="{{post.data.title}}" class="news-feed__anchor">
-            <span class="visually-hidden">Article title</span>
-            {{post.data.title}}
-          </a>
-        </h3>
-        <p class="news-feed__date">
-          <span class="visually-hidden">Published on</span>
-          <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
-        </p>
-        <p>{{ post.data.description | safe }}</p>
-      </article>
-    {% endfor %}
+{% set taglist = collections[tag] %}
+{% for post in taglist | reverse %}
+  <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+    <h3 class="news-feed__title">
+      <a href="{{ post.url }}" title="{{post.data.title}}" class="news-feed__anchor">
+        <span class="visually-hidden">Article title</span>
+        {{post.data.title}}
+      </a>
+    </h3>
+    <p class="news-feed__date">
+      <span class="visually-hidden">Published on</span>
+      <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
+    </p>
+    <p>{{ post.data.description | safe }}</p>
+  </article>
+{% endfor %}

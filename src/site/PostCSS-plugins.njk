@@ -15,25 +15,25 @@ pageName: PostCSS plugins
 
 <p class="highlight-text">
   PostCSS is a software development tool that uses JavaScript-based plugins to automate routine CSS operations. As well as the plugins below I have also written a few articles about <a href="/posts/tags/postcss/" title="Articles about PostCSS" class="anchor">PostCSS</a>
-  <p>
+<p>
 
-    {% for post in collections.postcss %}
-      <article class="postcss__post js-content-group" data-url="{{ post.data.github }}" data-title="{{post.data.title}}">
-        <header class="postcss__header">
-          <h3 class="postcss__title">
-            <a href="{{ post.data.github }}">
-              <span class="visually-hidden">Plugin title</span>
-              {{ post.data.title }}
-            </a>
-          </h3>
-          <p>{{ post.data.description | safe }}</p>
-          <p>
-            <a href="{{ post.data.demo}}" title="View a demo">Demo</a>
-          </p>
-          <p>
-            <span class="visually-hidden">Date created</span>
-            <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
-          </p>
-        </header>
-      </article>
-    {%- endfor -%}
+{% for post in collections.postcss %}
+  <article class="postcss__post js-content-group" data-url="{{ post.data.github }}" data-title="{{post.data.title}}">
+    <header class="postcss__header">
+      <h3 class="postcss__title">
+        <a href="{{ post.data.github }}">
+          <span class="visually-hidden">Plugin title</span>
+          {{ post.data.title }}
+        </a>
+      </h3>
+      <p>{{ post.data.description | safe }}</p>
+      <p>
+        <a href="{{ post.data.demo}}" title="View a demo">Demo</a>
+      </p>
+      <p>
+        <span class="visually-hidden">Date created</span>
+        <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
+      </p>
+    </header>
+  </article>
+{%- endfor -%}

@@ -17,10 +17,8 @@ pageName: Projects
   Over the years I have had the pleasure of working for some amazing companies and brands on a range of digital projects. Below are just a few examples of my design and development work. 
 <p>
 
-
 <section class="project">
   {% for post in collections.projects %}
-
     <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
       <div class="image-ratio">
         <img data-src="{{ post.data.image }}" class="lazyload" alt="Cover image for {{ post.data.title }}">
