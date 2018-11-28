@@ -17,7 +17,7 @@ gulp.task('generate', () => {
   return gulp.src('*.js', {read: false})
   .pipe(shell([
     'eleventy'
-  ]))
+  ])) 
   .pipe(livereload());
 })
 

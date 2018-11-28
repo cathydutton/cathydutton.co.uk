@@ -38,7 +38,7 @@ pageName: Projects
       {% if post.data.projectTags %}
         <p class="project__tags">Tagged in:
           {% for projectTag in post.data.projectTags %}
-            <a href="/projects/tags/{{ projectTag | lower | replace(" ", "-") }}/"="-") }}/"" class="anchor">{{ projectTag }}</a>
+            <a href="/projects/tags/{{ projectTag | lower | replace(" ", "-") }}" class="anchor">{{ projectTag }}</a>
             {% if not loop.last %},
             {% endif %}
           {% endfor %}

@@ -1,3 +1,5 @@
+const htmlmin = require("html-minifier");
+
 module.exports = function(config) {
 
   // Add a date formatter filter to Nunjucks
@@ -30,6 +32,19 @@ module.exports = function(config) {
     });
   });
 
+
+  // Minify HTML output
+  config.addTransform('htmlmin', function(content, outputPath) {
+    if (outputPath.indexOf('.html') > -1) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      })
+      return minified
+    }
+    return content
+  })
 
 
   return {

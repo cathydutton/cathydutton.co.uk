@@ -31,7 +31,7 @@ gulp.task('a11y', function() {
     .pipe(rename({
       extname: '.txt'
     }))
-    .pipe(gulp.dest('reports/txt'));
+    .pipe(gulp.dest(project.buildDest + '/reports/txt'));
 });
 
 

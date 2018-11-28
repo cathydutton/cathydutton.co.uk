@@ -20,13 +20,10 @@ gulp.task('inline', function() {
   .pipe(postcss([
     autoprefixer,
     postcssImport,
+    csswring,
     cssDeclarationSorter({order: 'concentric-css'}),
     postCSSCustomProperties(),
   ]))
-    .pipe(gulpif(isProd, postcss([
-      csswring
-    ])
-    ))
     .pipe(concat('inline.css'))
     .pipe(gulp.dest(project.buildSrc+ '/site/_includes'))
     .pipe(gulp.dest(project.buildDest+ '/css'))

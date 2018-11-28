@@ -35,7 +35,6 @@ Social media icons
   transform: scale(1.25);
 }
 
-
 .social-media__anchor:before {
   background-color: var(--colour-bright);
   border-radius: 3px;
