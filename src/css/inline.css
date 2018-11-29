@@ -2,7 +2,8 @@
   Main style sheet
   Includes all the base level styling
   ----------------------------------- */
-
+  
+@import '1-settings/fonts';
 @import '1-settings/settings';
 @import '2-tools/tools';
 @import '3-generic/generic';

@@ -1,0 +1,38 @@
+/*
+  Fonts
+  Font face settings
+  ----------------------------------- */
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  font-weight: 400;
+  src: url("../fonts/OpenDyslexic-Regular.WOFF")
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  font-style: italic;
+  src: url("../fonts/OpenDyslexic-Italic.WOFF")
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  font-weight: 700;
+  src: url("../fonts/OpenDyslexic-Bold.WOFF")
+}
+
+@font-face {
+  font-family: OpenDyslexic;
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/OpenDyslexic-BoldItalic.WOFF")
+}
+
+@font-face { 
+  font-family: 'OpenDyslexicMono';
+  src: url("../fonts/OpenDyslexicMono-Regular.WOFF")
+}
+
+.dyslexic {
+  --font-family: OpenDyslexic, sans-serif;
+}
