@@ -9,7 +9,6 @@
 .navigation .list {
   padding: 0 1em;
   display: grid;
-  display: -ms-grid;
   grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
 }
   
