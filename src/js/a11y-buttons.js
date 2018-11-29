@@ -27,8 +27,8 @@
 
   // Dyslexic font family
   dyslexicFont.addEventListener('click', function (e) {
-    body.style.setProperty('--font-family', '"Comic Sans MS", "Comic Sans", cursive');
-    localStorage.setItem("fontFamily", '"Comic Sans MS", "Comic Sans", cursive');
+    body.style.setProperty('--font-family', '"OpenDyslexic", sans-serif');
+    localStorage.setItem("fontFamily", '"OpenDyslexic", sans-serif');
   });
 
   // Default font family

@@ -3,7 +3,7 @@ var gulp    = require('gulp');
 var livereload = require('gulp-livereload');
 
 /*
-  Watch folders for changess
+  Watch folders for changes
 */
 gulp.task("watch", function () {
   livereload.listen();
