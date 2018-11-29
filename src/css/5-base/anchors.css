@@ -22,29 +22,33 @@ a:hover {
   position: relative;
 }
 
-.anchor:after {
-  content: '';
-  display: block;
-  height: 2px;
-  background: currentColor;
-  transition: width .3s;
-  position: absolute;
+@media (hover: hover) {
+  .anchor:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width .3s;
+    position: absolute;
+  }
+
+  .anchor:hover:after {
+    width: 100%;
+  }
+
+  .anchor:active:after,
+  .anchor:focus:after {
+    width: 100%;
+  }
+
+  /* .anchor:visited:after {
+    content: '(visited)';
+  } */
+
 }
 
-.anchor:hover:after {
-  width: 100%;
-}
-  
-.anchor:active:after,
-.anchor:focus:after {
-  width: 100%;
-}
-  
-.anchor:visited:after {
-  content: '(visited)';
-}
-  
-.anchor [target=_blank]:after {
+/* .anchor [target=_blank]:after {
   display: inline-block;
-  content: '(opens new window)';
-} 
+  content: '(opens new window)'!important;
+}  */
