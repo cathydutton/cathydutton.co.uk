@@ -14,11 +14,9 @@
   --colour-white: hsl(0, 0%, 99%);
   --colour-bright: hsl(322, 80%, 51%);
 
-  --font-family: "Source Sans Pro", sans-serif;
+  --font-family: Verdana, Geneva, sans-serif;
 
   --font-size: 18.4px;
-
-
 }
 
 /* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=001E3D&v=00356C&v=9C2064&v=FE9F00&v=FFFA06&v=FFFFFF */
@@ -46,5 +44,5 @@
 /* Fonts */
 
 .dyslexic {
-  --font-family: "Comic Sans MS", "Comic Sans", cursive;
+  --font-family: "Comic Sans MS", cursive, sans-serif;
 }

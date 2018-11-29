@@ -1,0 +1,38 @@
+/*
+  Print
+  Print styles
+  ----------------------------------- */
+
+@media print {
+  
+  body {
+    font: 12pt Georgia, "Times New Roman", Times, serif;
+    line-height: 1.3;
+  }
+
+  .sidebar,
+  .accessibility-tools,
+  .footer,
+  .latest-posts,
+  .currently-using,
+  .work-history {
+    display: none;
+  }
+
+  a {
+    color: #000!important;
+    display: inherit!important;
+  }
+
+  a:before {
+    content:" (" attr(href) ") "!important;
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+
+  .anchor:after {
+    content: '';
+    display: none!important;
+  }
+
+}

@@ -3,13 +3,6 @@
   Globally used styles mixins and functions. 
   ----------------------------------- */
 
-/* Print styles */
-@media print {
-  .container > *:not(main) {
-    display: none;
-  }  
-}
-
 /* Animation fades */  
 @keyframes fadeIn {
   0% {

@@ -2,13 +2,18 @@
   A11y buttons
   ----------------------------------- */
 
-.accessibility-tools {
+.accessibility-tools-wrapper {
   float: right;
 }
 
+.accessibility-tools {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .accessibility-tools fieldset {
-  margin: 1em 1em 1em 0;
-  padding: .4em;
+  margin: 0 .5em .5em .5em;
+  padding: .2em;
   float: right;
 }
 
@@ -18,4 +23,5 @@
 
 .button--ally {
   font-size: .7em;
+  margin: .2em 0;
 }

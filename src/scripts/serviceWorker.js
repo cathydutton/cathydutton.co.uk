@@ -7,7 +7,7 @@
 
     // Update 'version' if you need to refresh the cache
     var staticCacheName = 'static';
-    var version = 'v2::';
+    var version = 'v3::';
 
     // Store core files in a cache (including a page to display when offline)
     function updateStaticCache() {
@@ -25,6 +25,8 @@
                   '/posts/the-problem-with-patterns/index.html',
                   '/projects/i-want-to-fish-service/index.html',
                   '/projects/ee/index.html',
+                  '/css/main.css',
+                  '/js/scripts.js',
                 ]);
             });
     };
