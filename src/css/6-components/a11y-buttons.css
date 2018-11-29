@@ -9,6 +9,8 @@
 .accessibility-tools {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr;
 }
 
 .accessibility-tools fieldset {

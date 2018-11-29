@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.5.4",
-    "autoprefixer": "^9.1.4",
+    "autoprefixer": "^9.3.1",
     "css-declaration-sorter": "^4.0.1",
     "csswring": "^7.0.0",
     "gulp-accessibility": "^3.1.1",

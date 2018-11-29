@@ -6,6 +6,7 @@ Logo images
 .tech-logo,
 .work-logo {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: repeat(auto-fill, minmax(6.375em, 1fr));
 }
 

@@ -18,11 +18,11 @@ var livereload = require('gulp-livereload');
 gulp.task('inline', function() {
   return gulp.src(project.buildSrc + '/css/inline.css')
   .pipe(postcss([
-    autoprefixer,
+    autoprefixer({ grid: true, browsers: ['>1%'] }),
     postcssImport,
     csswring,
-    cssDeclarationSorter({order: 'concentric-css'}),
-    postCSSCustomProperties(),
+    cssDeclarationSorter({order: 'concentric-css'})
+    // postCSSCustomProperties(),
   ]))
     .pipe(concat('inline.css'))
     .pipe(gulp.dest(project.buildSrc+ '/site/_includes'))
@@ -36,10 +36,10 @@ gulp.task('inline', function() {
 gulp.task('main', function() {
   return gulp.src(project.buildSrc + '/css/main.css')
   .pipe(postcss([
-    autoprefixer,
+    autoprefixer({ grid: true, browsers: ['>1%'] }),
     postcssImport,
-    cssDeclarationSorter({order: 'concentric-css'}),
-    postCSSCustomProperties(),
+    cssDeclarationSorter({order: 'concentric-css'})
+    // postCSSCustomProperties(),
   ]))
     .pipe(gulpif(isProd, postcss([
       csswring

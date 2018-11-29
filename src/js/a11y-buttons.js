@@ -19,7 +19,7 @@
   }
 
   // Get current value
-  var fontFamily = getComputedStyle(body).getPropertyValue('--font-family');
+  var fontFamily = getComputedStyle(body).getPropertyValue('font-family');
 
   // Set buttons
   var dyslexicFont = document.getElementById('dyslexic-font');
@@ -27,13 +27,13 @@
 
   // Dyslexic font family
   dyslexicFont.addEventListener('click', function (e) {
-    body.style.setProperty('--font-family', '"OpenDyslexic", sans-serif');
+    body.style.setProperty('font-family', '"OpenDyslexic", sans-serif');
     localStorage.setItem("fontFamily", '"OpenDyslexic", sans-serif');
   });
 
   // Default font family
   defaultFont.addEventListener('click', function (e) {
-    body.style.setProperty('--font-family', rootStyles.getPropertyValue('--font-family'));
+    body.style.setProperty('font-family', rootStyles.getPropertyValue('--font-family'));
     localStorage.setItem('fontFamily', rootStyles.getPropertyValue('--font-family'));
   });
 
