@@ -38,8 +38,8 @@ gulp.task('main', function() {
   return gulp.src(project.buildSrc + '/css/main.css')
   .pipe(postcss([
     postcssImport(),
-    postCSSCustomProperties({strict: false, warnings: false, preserve: true}),
     autoprefixer({ grid: true, browsers: ['>2%'] }),
+    postCSSCustomProperties({strict: false, warnings: false, preserve: true}),
     cssDeclarationSorter({order: 'concentric-css'}),
   ]))
     .pipe(gulpif(isProd, postcss([

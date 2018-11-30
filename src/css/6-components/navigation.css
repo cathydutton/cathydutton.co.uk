@@ -9,10 +9,11 @@
 .navigation .list {
   padding: 0 1em;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(7em, 1fr)); 
+  grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
 }
-  
+
+
 .navigation .list-item {
   justify-content: center;
   margin: .2em;

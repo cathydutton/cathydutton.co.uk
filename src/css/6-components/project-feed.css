@@ -5,7 +5,7 @@ Latest project feed
 .project {
   --ratio-padding: 55%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-columns:  1fr  1fr;
   grid-template-columns: repeat( auto-fill, minmax(12em, 1fr) );
   grid-gap: 1em;
   padding: 1em;
