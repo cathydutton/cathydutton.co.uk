@@ -6,6 +6,7 @@ Logo images
 .tech-logo,
 .work-logo {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-columns: repeat(auto-fill, minmax(6.375em, 1fr));
 }
 
@@ -45,7 +46,7 @@ Logo images
 .work-logo__anchor:before {
   background-color: var(--colour-bright);
   color: var(--colour-dark);
-  content: attr(aria-label);
+  content: '';
   font-weight: bold;
   display: inline-block;
   opacity: 0;
@@ -62,5 +63,5 @@ Logo images
 .work-logo__anchor:focus:before,
 .work-logo__anchor:hover:before {
   transition: all .3s ease-in-out;
-  opacity: .90;
+  opacity: .70;
 }
