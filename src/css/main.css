@@ -3,12 +3,16 @@
   Includes all the components and utilities
   ----------------------------------- */
 
+@import '1-settings/fonts';
+@import '1-settings/settings';
+@import '2-tools/tools';
+@import '3-generic/generic';
+@import '4-layout/layout';
 @import '5-base/elements';
 @import '5-base/anchors';
 @import '5-base/typography';
 @import '5-base/images';
 @import '5-base/table';
-
 @import '6-components/profile';
 @import '6-components/skip-link';
 @import '6-components/buttons'; 

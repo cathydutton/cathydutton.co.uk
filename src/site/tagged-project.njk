@@ -23,7 +23,7 @@ permalink: projects/tags/{{ tag.data.projectTags[0] | lower | replace(" ", "-")}
     {% if tag.data.projectTags[0] in post.data.projectTags %}
       <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
         <div class="image-ratio project__img">
-          <img src="#" data-src="{{ post.data.image }}" class="lazyload" alt="{{ post.data.title }} image">
+          <img data-src="{{ post.data.image }}" class="lazyload" alt="{{ post.data.title }} image">
         </div>
         <h3 class="project__title">
           <a href="{{ post.url }}">

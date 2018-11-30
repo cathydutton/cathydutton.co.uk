@@ -1,10 +1,14 @@
 var project = require('./_project.js');
 var gulp    = require('gulp');
 var access = require('gulp-accessibility');
-var jsValidate = require('gulp-jsvalidate');
+;
 var rename = require("gulp-rename");
 var postcss = require('gulp-postcss');
 var stylelint = require('stylelint');
+
+
+var jsValidate = require('gulp-jsvalidate')
+
 
 /*
   Run CSS lint 
@@ -12,7 +16,7 @@ var stylelint = require('stylelint');
 gulp.task('cssLint', function() {
   return gulp.src(project.buildSrc + '/css/**/**.css')
   .pipe(postcss([
-    stylelint({ failAfterError: true})
+    stylelint({ failAfterError: true, fix: true})
   ]))
 });
 
@@ -22,7 +26,7 @@ gulp.task('cssLint', function() {
   Run a11y (check HTML) 
 */
 gulp.task('a11y', function() {
-  return gulp.src(project.buildDest + '**/**.html')
+  return gulp.src(project.buildDest + '/**/**.html')
     .pipe(access({
       force: false
     }))
@@ -39,8 +43,8 @@ gulp.task('a11y', function() {
   Run JS validate
 */
 gulp.task('jsTest', function () {
-  return gulp.src(project.buildSrc + '/js/**/**.js')
-  .pipe(jsValidate())
+  return gulp.src(project.buildSrc + '/js/**.js')
+  .pipe(jsValidate());
 });
 
 

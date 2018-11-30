@@ -21,19 +21,23 @@
   position: relative;
 }
 
-.navigation-footer .list-item a:after {
-  display: block;
-  content: '';
-  border-bottom: solid 3px var(--colour-bright);  
-  position: absolute;
-  transition: width .3s;
-  width: 0;
-  height: 3px;
-}
+@media (hover: hover) {
+  .navigation-footer .list-item a:before {
+    display: block;
+    content: '';
+    border-bottom: solid 3px var(--colour-bright);  
+    position: absolute;
+    top: 100%;
+    transition: width .3s;
+    width: 0;
+    height: 3px;
+  }
 
-.navigation-footer .list-item a:hover:after,
-.navigation-footer .list-item a:focus:after {
-  width: 100%;
+  .navigation-footer .list-item a:hover:before,
+  .navigation-footer .list-item a:focus:before {
+    width: 100%;
+  }
+
 }
 
 .navigation-footer .list-item a:hover,

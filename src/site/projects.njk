@@ -21,7 +21,7 @@ pageName: Projects
   {% for post in collections.projects %}
     <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
       <div class="image-ratio">
-        <img src="#" data-src="{{ post.data.image }}" class="lazyload" alt="Cover image for {{ post.data.title }}">
+        <img data-src="{{ post.data.image }}" class="lazyload" alt="Cover image for {{ post.data.title }}">
       </div>
       <h3 class="project__title">
         <a href="{{ post.url }}">

@@ -7,9 +7,9 @@
     'use strict';
 
   // GLOBAL
-  var body = document.body
-  var root = document.querySelector(':root')
-  var rootStyles = getComputedStyle(root)
+  var body = document.body;
+  var root = document.querySelector(':root');
+  var rootStyles = getComputedStyle(root);
   
   // FONT
 

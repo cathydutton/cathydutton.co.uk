@@ -17,38 +17,10 @@ a:hover {
 .anchor {
   color: var(--colour-medium);
   text-decoration: none;
-  display: inline-block;
   border-bottom: dashed 1px currentColor;
-  position: relative;
 }
 
-@media (hover: hover) {
-  .anchor:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: currentColor;
-    transition: width .3s;
-    position: absolute;
-  }
+.anchor[target=_blank]:after {
+  content: ' (opens new window)';
+} 
 
-  .anchor:hover:after {
-    width: 100%;
-  }
-
-  .anchor:active:after,
-  .anchor:focus:after {
-    width: 100%;
-  }
-
-  /* .anchor:visited:after {
-    content: '(visited)';
-  } */
-
-}
-
-/* .anchor [target=_blank]:after {
-  display: inline-block;
-  content: '(opens new window)'!important;
-}  */
