@@ -9,11 +9,23 @@ Logo images
   grid-template-columns: repeat(auto-fill, minmax(6.375em, 1fr));
 }
 
+.tech-logo__item,
+.work-logo__item {
+  list-style: none;
+}
+
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
   .tech-logo,
   .work-logo {
+    clear: both;
+    overflow: auto;
+    position: relative;
+  }
+
+  .tech-logo__item,
+  .work-logo__item {
     float: right;
-    width: 50%;
+    width: 25%;
   }
 }
 
@@ -25,11 +37,6 @@ Logo images
 .tech-logo img,
 .work-logo img{
   padding: 0;
-}
-
-.tech-logo__item,
-.work-logo__item {
-  list-style: none;
 }
 
 .tech-logo .image-ratio,

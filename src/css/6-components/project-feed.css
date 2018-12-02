@@ -10,17 +10,24 @@ Latest project feed
   padding: 1em;
 }
 
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
-  .project {
-    float: right;
-    width: 50%;
-  }
-}
-
 .project__post {
   padding: .8em;
   background: var(--colour-light);
   border-bottom: solid 4px var(--colour-bright);
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .project {
+    clear: both;
+    overflow: auto;
+    position: relative;
+  }
+
+  .project__post {
+    float: right;
+    width: 48%;
+    margin: 1%;
+  }
 }
 
 .project__title {
