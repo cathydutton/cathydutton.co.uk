@@ -6,8 +6,15 @@ Logo images
 .tech-logo,
 .work-logo {
   display: grid;
-  grid-columns:  1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(auto-fill, minmax(6.375em, 1fr));
+}
+
+@supports not (display: grid-template-columns) {
+  .tech-logo,
+  .work-logo {
+    float: right;
+    width: 50%;
+  }
 }
 
 .tech-logo a,

@@ -5,10 +5,16 @@ Latest project feed
 .project {
   --ratio-padding: 55%;
   display: grid;
-  grid-columns:  1fr  1fr;
   grid-template-columns: repeat( auto-fill, minmax(12em, 1fr) );
   grid-gap: 1em;
   padding: 1em;
+}
+
+@supports not (display: grid-template-columns) {
+  .project {
+    float: right;
+    width: 50%;
+  }
 }
 
 .project__post {
