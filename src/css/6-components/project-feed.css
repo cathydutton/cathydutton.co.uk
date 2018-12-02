@@ -24,7 +24,7 @@ Latest project feed
   }
 
   .project__post {
-    float: right;
+    float: left;
     width: 48%;
     margin: 1%;
   }
