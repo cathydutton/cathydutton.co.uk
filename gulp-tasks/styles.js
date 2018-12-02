@@ -20,7 +20,7 @@ gulp.task('inline', function() {
   return gulp.src(project.buildSrc + '/css/inline.css')
   .pipe(postcss([
     postcssImport(),
-    autoprefixer({ grid: true, browsers: ['>2%'] }),
+    autoprefixer({ grid: false, browsers: ['>2%'] }),
     csswring(),
     cssDeclarationSorter({order: 'concentric-css'}),
     postCSSCustomProperties({strict: false, warnings: false, preserve: true}),
@@ -38,7 +38,7 @@ gulp.task('main', function() {
   return gulp.src(project.buildSrc + '/css/main.css')
   .pipe(postcss([
     postcssImport(),
-    autoprefixer({ grid: true, browsers: ['>2%'] }),
+    autoprefixer({ grid: false, browsers: ['>2%'] }),
     postCSSCustomProperties({strict: false, warnings: false, preserve: true}),
     cssDeclarationSorter({order: 'concentric-css'}),
   ]))

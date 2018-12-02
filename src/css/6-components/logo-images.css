@@ -46,7 +46,7 @@ Logo images
 .work-logo__anchor:before {
   background-color: var(--colour-bright);
   color: var(--colour-dark);
-  content: '';
+  content: attr(aria-label);
   font-weight: bold;
   display: inline-block;
   opacity: 0;
@@ -63,5 +63,5 @@ Logo images
 .work-logo__anchor:focus:before,
 .work-logo__anchor:hover:before {
   transition: all .3s ease-in-out;
-  opacity: .70;
+  opacity: .90;
 }
