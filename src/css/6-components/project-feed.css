@@ -10,7 +10,7 @@ Latest project feed
   padding: 1em;
 }
 
-@supports not (display: grid-template-columns) {
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
   .project {
     float: right;
     width: 50%;
