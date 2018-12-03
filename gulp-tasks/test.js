@@ -50,7 +50,7 @@ gulp.task('jsTest', function () {
   Run JS lint
 */
 gulp.task('jsLint', function () {
-  return gulp.src(project.buildDest + '/js/scripts.js')
+  return gulp.src(project.buildSrc + '/js/**.js')
   .pipe(eslint.failAfterError());
 });
 
