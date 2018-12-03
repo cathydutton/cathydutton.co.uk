@@ -2,6 +2,12 @@
   A11y buttons
   ----------------------------------- */
 
+@supports not ((--foo : bar)) {
+  .accessibility-tools-wrapper {
+    display: none;
+  }  
+}
+
 .accessibility-tools-wrapper {
   float: right;
 }
