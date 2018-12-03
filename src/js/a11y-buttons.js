@@ -13,7 +13,7 @@
   // FONT
   // If no local storage value exists create one
   if (!fontFamily) {
-      body.style.setProperty('--font-family', localStorage.getItem('fontFamily'));
+      body.style.setProperty('font-family', localStorage.getItem('fontFamily'));
   }
 
   // Get current value
