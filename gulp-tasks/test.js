@@ -1,11 +1,10 @@
 var project = require('./_project.js');
 var gulp    = require('gulp');
 var access = require('gulp-accessibility');
-;
 var rename = require("gulp-rename");
 var postcss = require('gulp-postcss');
 var stylelint = require('stylelint');
-
+var eslint = require('gulp-eslint');
 
 var jsValidate = require('gulp-jsvalidate')
 
@@ -47,6 +46,14 @@ gulp.task('jsTest', function () {
   .pipe(jsValidate());
 });
 
+/*
+  Run JS lint
+*/
+gulp.task('jsLint', function () {
+  return gulp.src(project.buildDest + '/js/scripts.js')
+  .pipe(eslint.failAfterError());
+});
+
 
 /*
   Run all tests 
@@ -54,5 +61,6 @@ gulp.task('jsTest', function () {
 gulp.task('test', gulp.parallel(
   'cssLint',
   'a11y',
-  'jsTest'
+  'jsTest',
+  'jsLint'
 ));

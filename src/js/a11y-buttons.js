@@ -8,11 +8,9 @@
 
   // GLOBAL
   var body = document.body;
-  var root = document.querySelector(':root');
-  var rootStyles = getComputedStyle(root);
+
   
   // FONT
-
   // If no local storage value exists create one
   if (!fontFamily) {
       body.style.setProperty('--font-family', localStorage.getItem('fontFamily'));
@@ -33,8 +31,8 @@
 
   // Default font family
   defaultFont.addEventListener('click', function (e) {
-    body.style.setProperty('font-family', rootStyles.getPropertyValue('--font-family'));
-    localStorage.setItem('fontFamily', rootStyles.getPropertyValue('--font-family'));
+    body.style.setProperty('font-family', 'Verdana, Geneva, sans-serif');
+    localStorage.setItem("fontFamily", 'Verdana, Geneva, sans-serif');
   });
 
 
