@@ -2,33 +2,33 @@
   A11y buttons
   ----------------------------------- */
 
-.accessibility-tools-wrapper {
-  float: right;
-}
-
 .accessibility-tools {
-  display: grid;
-  grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-}
+  display: none;
+}  
 
-.accessibility-tools fieldset {
-  margin: 0 .5em .5em .5em;
-  padding: .2em;
-  float: right;
-}
-
-.accessibility-tools legend {
-  padding: .4em;
-}
-
-.button--ally {
-  font-size: .7em;
-  margin: .2em 0;
-}
-
-@supports not ( (--a: 0)) {
+@supports ( (--a: 0)) {
   .accessibility-tools-wrapper {
-    display: none;
-  }  
+    float: right;
+  }
+  
+  .accessibility-tools {
+    display: grid;
+    grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .accessibility-tools fieldset {
+    margin: 0 .5em .5em .5em;
+    padding: .2em;
+    float: right;
+  }
+  
+  .accessibility-tools legend {
+    padding: .4em;
+  }
+  
+  .button--ally {
+    font-size: .7em;
+    margin: .2em 0;
+  }
 }
