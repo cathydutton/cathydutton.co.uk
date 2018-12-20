@@ -6,222 +6,183 @@ tags: [Front end deveopment, CSS]
 ---
 
 <p>
-Started doing some upgradeds to my site, adding a service wroker and updating my portfolio etc, began to look at my CSS, the site is intended to be quite minimal, no fuss etc.what was I actualy using Sass for? 
-This is not an anti Sass post, more a review of wether it was adding any value to my site, or just an extra level of complexity.
+  I try to rebuild or redesign my website at least once every year, It's a great way to keep up to date with HTML and CSS advances as workflows and site generators. I launched the latest version this month moving from Jekyll and Github pages to Eleventy and Netlify.
 </p>
 
 <p>
-ASKED ABOUT THE USES OF POSTCSS, STRUGGLE TO GIVE GOOD ANSWERS OTHER THEN EASY TO BUID A PLUGIN AND CAN ADD THE FEATURES OF SASS. 
-It is however a good way to wean your self of processors and back to vanilla CSS providing fall backs in an easy to manage way.
+  I also unintentionaly, (atleast at first) removed all traces of Sass from my codebase. This was not something I set out to do but the more I looked at my old Sass files the more I questioned wether it adding value to my site, or just an extra level of complexity and dependancy. CSS has evolved over recent years and the problems that lead me to Sass in the first place seem to be less of an issue today.
 </p>
 
-<p>
-Back to basics because the basics have moved on CSS is now more advanced. Grid variables etc. 
-</p>
+<h2>What problems was Sass solving?</h2>
 
 <p>
-Paragraph on not wanting to tie fall backs in for grid put can post Css do that for me? 
+  When I first heard about Sass I was sceptical, but as I built more and more responsive sites I began to relise how much time I could save by using reusable pieces of logic or maths from CSS functions and mixins. It also became aparent that as devices, viewports and themes changed using variables made implementing changes much easier to handle.
 </p>
 
-<p>
-Freshen up, 
-grid 
-variables
-Includes - Can this be done in CSS?
-etc
-Nesting would be missed but you should only nest states of selectors (hover focus etc) and really we shouldnt need many of those if default styles are inherited.
-</p>
+<h2>1) Layout</h2>
 
 <p>
-Anamaition in Sass is still good, but you can achieve this in SVG aswell - give examples of both! In codepen
+  Layout has been a longstanding source of frustration with CSS. Moving from table layouts to floated elements and even flexbox there has never really been an accepted standard convention. This coupled with a move to fluid or responsive layouts was a key factor in my initial decsision to use a CSS pre processor like Sass.
 </p>
 
-<p>
-. So what am I using sass for. Mixinns, nesting, functions. How else can we do that, is it worth it, post CSS
-</p>
+<h3>Before Sass</h3>
 
 <p>
-When I first heard about Sass I was sceptical, CSS could already do what I needed.... But then I realised the benefits and posabilitiees available via mixing=ns, functions and incleds!!!
-</p>
-
-<p>
-I am a  huge fan of Sass, and the posabilities it brings to CSS. Loops, functions and mixins are some of my faveoutite features, none of which are close to being available in CSS.
-</p>
-
-<p>
-https://codepen.io/cathydutton/pen/FDipu
+  I can still remember my first attempt building a responsive grid layout in CSS, it envolved creating a set of utility classes for each coloumn and then poluting the markup with non semantic class names like col-span-1 col-span-4. 
 </p>
 
 <pre>
-<code>@for $i from 1 through 120 {
-
-  [data-left="#{$i}"]:before {
-    @include fade;
-    @include rotate (#{$i}deg);
-  }
-  [data-right="#{$i}"]:before {
-    @include fade;
-    @include rotate (#{$i}deg);
-  }
-
+  <code>
+.col-span-1 {
+  float: left;
+  width: 40px;
+  margin-left: 20px;
 }
-</code></pre>
 
-<p>https://codepen.io/cathydutton/pen/vEeORQ</p>
+.col-span-4 {
+  float: left;
+  width: 220px;
+  margin-left: 20px;
+}
+  </code>
+</pre>
 
-<pre><code>@function text-color($list){
-   $text-list:();
-   @each $color, $percentage in $list {   
-    @if lightness($color) &gt; 50% {
-     $text-list:append($text-list, $black $percentage, comma);    
-    } @else {
-        $text-list:append($text-list, $white $percentage, comma);
-     }        
-    }
-  @return $text-list;
+<p>
+  By using a Sass mixin coupled with variables I was able to remove utility classes like the ones above, and also create more flexible layouts by changing the $gridColumns variable.
+</p>
+
+<h3>My first grid mixin</h3>
+
+<pre>
+  <code>
+@mixin grid($colSpan, $gridColumns: 12, $margin: 1%,) {
+  $unitWidth: $gridColumns / $colSpan;
+  float:left;
+  width: (100 - $unitWidth * $margin) / $unitWidth;
+  margin: 0 $margin/2;
+}
+
+.sidebar {
+	@include grid(3);
+}
+
+.main-content {
+	@include grid(9);
+}
+  </code>
+</pre>
+
+<h3>CSS grid</h3>
+
+<p>
+  The introduction of CSS Grid removes the need for any of this, you no longer need to build a grid system in CSS, Sass or any other processor.
+</p>
+
+  <figure class="quote" cite="http://www.worldwildlife.org/who/index.html">
+    <blockquote>
+      You don’t need a tool that helps you make it look like you have a grid, you actually have a grid!
+    </blockquote>
+    <figcaption> Rachel Andrew,
+      <cite> 
+      <a href="https://rachelandrew.co.uk/archives/2017/07/01/you-do-not-need-a-css-grid-based-grid-system/" class="anchor">You do not need a CSS Grid based Grid System</a>
+      </cite>
+    </figcaption>
+  </figure>
+
+<p>
+
+</p>
+
+
+<hr/>
+
+
+<p>
+Grid - future subgrid with no MQ's - more flexable plain CSS layout tools -  Intrinsic Web design - browser upport
+</p>
+
+
+
+
+
+
+<h2>2) Variables - not called this called quick changes or something like that</h2>
+
+
+
+<h2>3) Typography</h2>
+
+<p>
+  Why did I use Sass fro typography?
+</p>
+
+<p>
+  Variabke fonts and my current site thing
+</p>
+
+
+<h3>Sass variables</h3>
+
+
+<pre>
+  <code>
+$colour-black: #100112;
+$colour-dark: #1d0320;
+$colour-medium: #760c82;
+$colour-light: #f0efef;
+$colour-white: #fcfcfc;
+$colour-bright: #e61e9c;
+
+.wrapper {
+  background: $colour-white;
 } 
-</code></pre>
-
-<p>Despite the obvious benefits and unique features of Sass I have found myself questioning why I seem to have become so dependant on it for all my front end projects.</p>
-
-<p>It's not about wether pre-processors still serve a purpose, but more what problems am I solving by using it for this project?</p>
-
-<p>Includes
-Grid
-variables
-Mixins
-Nesting
-media queries</p>
-
-<hr />
-
-<p>I started to look at why and how I was using it, more specificaly what ptoblems was it solving?</p>
-
-<p>CSS preprocessors have become a standard feature of front end applications. Features provided by the likes of Sass, Scss, Less, Stylus and Rework allow CSS to be approached in ways not previously possible. Variables allow for the re-use of properties, mixins help output DRY CSS and functions allow for calculations to be made.</p>
-
-<p>The questions I have started to ask myself lately however are:</p>
-
-<ul>
-<li><p>What problems am I solving with Sass?</p>
-
-<p>and:</p></li>
-
-<li><p>Do I still need to use a CSS preprocessor? </p></li>
-</ul>
-
-<h2>Why I fell in love with Sass</h2>
-
-<p>I started to experiment with Sass around 5 or 6 years ago, and absolutely loved it.</p>
-
-<h3>Variables</h3>
-
-<p>Variables allowed me to set property values in one place making branding and theme creation much simpler. </p>
-
-<h3>Mixins</h3>
-
-<p>I used mixins to simplify the process of using patterns in my CSS. The ability to pass options to a mixin allows the code to remain flexible whilst removing the need to re-write lines of CSS.</p>
-
-<h3>Functions</h3>
-
-<p>Functions provided a way to use logic in CSS probably one of the most powerful features of Sass. By using functions to create flexible grid layouts the reliance on markup classes was removed, as well as the need for manual calculations.</p>
-
-<h3>Nesting</h3>
-
-<p>Nesting allowed for groups of classes to be grouped together forming a dependance tree and form of scoping. This is particularly useful for states such as anchors with active, hover and focus states.</p>
-
-<h3>Sass backlash</h3>
-
-<p>There was of course the inevitable backlash against preprocessors:  </p>
-
-<ul>
-<li><p>The code output was not always as clean as it could have been</p></li>
-
-<li><p>Over nesting created a reliance on DOM structure</p></li>
-
-<li><p>Variables became unmanageable</p></li>
-
-<li><p>Developers become reliant on a tool instead of the language</p>
-
-<p>Leading to articles like this "LINK" and "LINK2"</p>
-
-<p>Overall the pro's outweighed the cons's and like most front end developers my personal sites are all built using Sass.</p>
-
-<p>If  harnessed correctly Sass still offered more advantages then disadvantages and allowed me to solve some common CSS problems.</p></li>
-</ul>
-
-<h2 >So what problems am I solving with Sass?</h2>
-
-<!-- I looked at how and more importantly why I was using Sass. The four main things that came you cross projects were...  -->
-
-<h3>2) Includes - Sass Partials to break down CSS into managanble chunks - no more 2500 line CSS files to scroll through</h3>
-
-<h3>1) Re-usable properties</h3>
-
-<p>https://css-tricks.com/making-custom-properties-css-variables-dynamic/
-https://vgpena.github.io/winning-with-css-variables/</p>
-
-<p>Sass provides the extra functionality of color functions, meaning we can reduce the number of color variables. These are particularly useful when creating hover or active states. </p>
-
-<p>Show example of hover state code</p>
-
-<p>Show example of this with extra color values for CSS custom properties.</p>
-
-<p>Layout has been a longstanding source of frustration with CSS. Moving from table layouts to floated elements and even flex box there has never been an accepted standard convention. particularly for fluid/ responsive layouts. A Huge plus point of working with a pre processor was the ability to create mixing or functions to handle layout in a manageable way. </p>
-
-<p>Show example</p>
-
-<p>Easy markup to calculate percentage widths</p>
-
-<p>One of the first partials I create is always the grid partial, I even created a framework as later a PostCSS plugin for my grid. But is this still necessary?</p>
-
-<p>With the browser support already in place CSS grid can remove the need to rely on pre processors to perfect your layout CSS</p>
-
-<p>Show example</p>
-
-<p>From custom properties...</p>
+  </code>
+</pre>
 
 <p>However this can be resolved using CSS colour functions, like hsl() - explaining more and other functions. These CSS functions require an extra variable not necessary with Sass but avoid having to find values for colours and allow for easy iterations and consistency between colour changes.</p>
 
-<p>https://drafts.csswg.org/css-color/. </p>
 
-<p>Colour mod function - not great at support</p>
 
-<p>rgba() colour function
-https://css-tricks.com/the-power-of-rgba/</p>
 
-<p>CSS4 color() provides color transformations usually only possible with a processor.</p>
+
+<p>With the browser support already in place CSS grid can remove the need to rely on pre processors to perfect your layout CSS</p>
+
+
 
 <p>https://cloudfour.com/thinks/building-themes-with-css4-color-features/</p>
 
-<p>Could actually be better then variables and color transformations in Sass. </p>
 
-<p>Again PostCSS can supply the fallback options removing reliance on pre processors. </p>
 
-<h4>2) Layout -</h4>
 
-<h4>3) Media queries -</h4>
 
-<h4>4) Typography -</h4>
 
-<h4>Is this still the case?</h4>
-
-<h3>Legacy browsers</h3>
-
-<p>This may be the case for modern browsers, but what if you need to support older versions, or use browser specific features?</p>
+<h2>PostCSS</h2>
 
 <p>PostCSS can help with the transition without creating a reliance on bolt on languages.</p>
 
 <h3>Become less reliant on Sass, write CSS and phase out PostCSS as and when CSS gets better</h3>
 
-<p>Use Gulp to post process - less tying - free to remove from just one fie once complete
-Autoprefixer</p>
+<p>
+Autoprefixer for css grid fallbacks
+</p>
 
-<p>Now as features become more widley supported only the gulp file and the post processing needs to. The CSS remains the same, creating a more stable codebase.</p>
 
-<h3>Summary</h3>
+
+
+
+
+
+
+
+<h2>Summary</h2>
 
 <p>Its about removing relience and building future proof code (PostCSS and webpack/gulp)</p>
 
+<h2>Still use Sass for...</h2>
+
+<p>Built some cool things that I would not like to tackle in CSS alone
+https://codepen.io/cathydutton/pen/FDipu
+</p>
+
 <p>This article is not about abandoning Sass because of the poorly output code or any of the other backlash articles. I still think Sass is an amazing tool, I also still think it is capable of producing CSS to solve real problems. My point is more that the original problems that Sass helped me to solve are no longer problems. CSS has moved on and can handle my needs by itself. I would still use Sass for any bespoke CSS needs or complex pieces, but in my day to day work it's inclusion is harder and harder to justify. </p>
 
-<h3>Using PostCSS as a polyfill</h3>

@@ -8,7 +8,7 @@ tags: [CSS]
 <p>After numerous rants regarding my disliking for Bootstrap and most other front end frameworks, I decided to have a go myself. The results can be found here
   <a href="https://github.com/cathydutton/maze" target="_blank">www.get-maze.co.uk</a>, an easy to customise grid built using Sass and HTML 5. My aim with Maze was to produce a simple to use set of mixins enabling percentage widths to be assigned to any selector in any layout.</p>
 
-<h2 class="heading">Why?</h2>
+<h2>Why?</h2>
 
 <p>I decided to build the framework for two main reasons. Firstly to get up to speed with Sass, and secondly to address some of the common issues I have with a lot of the grids already out there. Some of these issues are listed below&#8230;</p>
 
@@ -37,14 +37,14 @@ tags: [CSS]
 
 <p>My goal was to create a more adaptable grid, using Sass variables and formulae to enable complete customisation. I also wanted to create a more stripped back framework with no style elements or library&#8217;s.</p>
 
-<h2 class="heading">Customisable Code</h2>
+<h2>Customisable Code</h2>
 
 <p>The number of grid columns, push value and gutter width can be easily changed by editing the variables shown below. The percentage width of a single column span is created using the $grid-columns value and assigned to the variable $unit.</p>
 
 <p>A Sass mixin is used to output the grid CSS. Each elements width is calculated using the values passed from the variables described above and user inputted values for the required column span ($col) and float direction ($fold). the $fold variable
   determines whether the columns will collapse from the right or the left as the grid is re-sized. By default the right column will move to a new row, setting a value of $fold:right will move the left column.</p>
 
-<h3 class="heading">How</h3>
+<h3>How</h3>
 
 <p>Firstly a single span column width is calculated and stored in a new variable $unit&#8230;</p>
 
@@ -150,7 +150,7 @@ tags: [CSS]
 }
 </code></pre>
 
-<h3 class="heading">Responsive</h3>
+<h3>Responsive</h3>
 
 <p>The media queries used in maze are also added to each selector using @include. This allows for media queries to be kept in line with the desktop styles making them easier to manage.</p>
 
@@ -190,7 +190,7 @@ $break-mobile: 480px;
 }
 </code></pre>
 
-<h3 class="heading">Benefits</h3>
+<h3>Benefits</h3>
 
 <p>
   <b>Semantics</b>- Maze removes the need to add unfriendly classes to your mark-up, and allows for cleaner semantic naming conventions. This in turn ensures sites scalable and easy to maintain.</p>

@@ -8,7 +8,7 @@ tags: [CSS]
 
 <p>Despite being one of the most basic features of Sass variables are still often misused&#8230;</p>
 
-<h2 class="heading">Good variable usage
+<h2>Good variable usage
 </h2>
 
 <pre><code>$color-primary: #ffa600;
@@ -24,7 +24,7 @@ button-checkout {
 
 <p>A websites primary colour will be used throughout the site on buttons, links, borders etc. If the colour is updated the change can be easily rolled out across the site by changing the variables value.</p>
 
-<h2 class="heading">
+<h2>
   Bad variable usage
 </h2>
 
@@ -56,7 +56,7 @@ button-checkout {
 
 <p>Creating excess variables like this can bulk up the Sass files and although they don&#8217;t output any extra css it is better to keep variable to a minimum.</p>
 
-<h3 class="heading">Naming
+<h3>Naming
 </h3>
 
 <p>Variables need to be named in a way which makes them simple to re-use. Keep the naming convention standard, start generic getting more specific with each word if necessary. This keeps the variables easier to identify or find further down the line.</p>
@@ -76,7 +76,7 @@ $link- external: $grey;
 
 <p>Don’t be too generic with variable names. If it is not clear where the variable may have been used updating it could cause issues or prevent people from using it in the future.</p>
 
-<h3 class="heading">Structure
+<h3>Structure
 </h3>
 
 <p>Keep variables on the correct pages, site wide variables should be kept on in variables.scss in the base folder of a site. Module specific variables should be kept on the relevant modules Sass file.</p>

@@ -20,7 +20,7 @@ date: 2018-11-11
   on a Discovery project to scope out a UK waste tracking service, aimed to track the movement of all waste, to benefit both the environment and the economy.
   <a href="https://defradigital.blog.gov.uk/2018/01/15/a-new-discovery-for-tracking-waste/" title="Waste discovery project" target="_blank" class="anchor">Read more about this project</a>.</p>
 
-<h2 class="heading">My role</h2>
+<h2>My role</h2>
 
 <p>I was part of the core project team based in Warrington working as a lead designer on a 12 week discovery project. During the discovery I was responsible for:</p>
 
@@ -33,7 +33,7 @@ date: 2018-11-11
   <li class="unordered-list__list-item">Producing two detailed service blueprints for the hazardous waste process and the duty of care process</li>
 </ul>
 
-<h3 class="heading">Understanding the existing service</h3>
+<h3>Understanding the existing service</h3>
 
 <p>Paper sketches were used to capture conversations with subject matter experts around the current waste lifecycle. Images were used to highlight loopholes in policy, areas of lost data, duplicate reporting and excess paperwork.</p>
 
@@ -42,7 +42,7 @@ date: 2018-11-11
 </div>
 
 
-<h3 class="heading">Framing the problem</h3>
+<h3>Framing the problem</h3>
 
 <p>After an initial broad phase of user research we began to list and priorities a series of problem statements in order align efforts and define the scope of the service.</p>
 
@@ -65,7 +65,7 @@ date: 2018-11-11
     Capture and make available in one place the most useful data on the movement &amp; transfer of ownership of waste.
 </p>
 
-<h3 class="heading">User needs</h3>
+<h3>User needs</h3>
 
 <p>Throughout discovery a number of research methods were used to gain insights into the current service. As a team we carried out
   <strong>17 site visits</strong>,
@@ -76,7 +76,7 @@ date: 2018-11-11
   <strong>3 surveys</strong>. The team covered every sector of the waste industry from producers to waste treatment plants, landfill sites and internal teams including data analysis, waste crime prevention and enforcement.</p>
 
 
-<h3 class="heading">User journey maps</h3>
+<h3>User journey maps</h3>
 
 <p>
   User journey maps are a visual representation of the users experience, from their point of view. Three journey maps have been created based on in-depth interviews and discussions with users. A) Landfill site owner, B) Waste broker and C) Hazardous waste data team 
@@ -89,7 +89,7 @@ date: 2018-11-11
   <img data-src="/images/portfolio/waste-tracking/journey-map.png" class="lazyload" alt="User journey map example">
 </div>
 
-<h3 class="heading">Service blueprints</h3>
+<h3>Service blueprints</h3>
 
 <p>
   A service blueprint focuses on the underlying resources and processes of a service, both seen (Front-stage) and unseen (Back-stage) by the user. Two blueprints have been created A) The movement of hazardous waste B) The movement of non hazardous waste. 
@@ -103,7 +103,7 @@ date: 2018-11-11
   <img data-src="/images/portfolio/waste-tracking/service-blueprint.png" class="lazyload" alt="Service blueprint example">
 </div>
 
-<h3 class="heading">Moving to Alpha</h3>
+<h3>Moving to Alpha</h3>
 
 <p>At the end of discovery the waste tracking project but in a successful bid for GovTech Funding.
 </p>

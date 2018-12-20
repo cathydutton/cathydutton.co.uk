@@ -69,7 +69,7 @@ patterns, naming conventions and style guides before the build begins.</p>
 
 <p>This article will look at a few tips to help keep your CSS in check and to avoid ever having to write such contradictory, correctional or overly specific selectors.</p>
 
-<h2 class="heading">Keep your markup opinion free</h2>
+<h2>Keep your markup opinion free</h2>
 
 <p>All style changes should be able to be carried out using only CSS. To achieve this the site markup needs to remain free of opinions or assumptions about the sites appearance.</p>
 
@@ -129,7 +129,7 @@ has more specificity than the button-primary selector.</p>
 }
 </code></pre>
 
-<h2 class="heading">Be wary of helper (Utility) classes</h2>
+<h2>Be wary of helper (Utility) classes</h2>
 
 <p>A utility class applies a single rule or a universal pattern to a web element. Utility classes are intended to be as reusable as possible, and should therefore be used throughout a sites markup. Below are a few examples of Utility Classes…</p>
 
@@ -154,7 +154,7 @@ classes in theme specific CSS, resulting in code like the examples below…</p>
 }
 </code></pre>
 
-<h3 class="heading">3 Avoid grid related markup</h3>
+<h3>3 Avoid grid related markup</h3>
 
 <p>Grid based markup should be avoided at all costs, a common pitfall of responsive development once implemented the markup can be very difficult to work with or to remove.</p>
 
@@ -218,7 +218,7 @@ to respond differently.</p>
 
 <p>The key benefit of this is keeping specificity low and the number of selectors down. More information on this approach to grid layouts can be found [here] (https://cathydutton.co.uk/maze-re-factored).</p>
 
-<h3 class="heading">Use structural classes</h3>
+<h3>Use structural classes</h3>
 
 <p>Keeping your layout and theme selectors separate is good practice for many reasons. In CSS terms keeping structure separate ensures the layout and theme do not become intertwined, allowing structural changes to be applied in a much quicker and
 simpler manor.</p>
@@ -249,7 +249,7 @@ simpler manor.</p>
 
 <p>Creating page specific CSS like this is not maintainable, particularly on large projects. Any presentational properties should be applied to the elements inside the sidebar, creating modular blocks that can be included on any page.</p>
 
-<h3 class="heading">Have, and stick to a naming convention</h3>
+<h3>Have, and stick to a naming convention</h3>
 
 <p>As mentioned earlier a key reason behind the use of long and specific selectors is the fear of introducing unwanted style changes.</p>
 
@@ -310,7 +310,7 @@ instead of through nesting.</p>
 }
 </code></pre>
 
-<h4 class="heading">Avoid DOM specific styling</h4>
+<h4>Avoid DOM specific styling</h4>
 
 <p>Any styling relating to an elements positioning is risky, particularly in responsive websites. A very basic example of this would be the use of a ‘last-column’ class. Classes like this are often used to solve margin issues in grid layouts.</p>
 
