@@ -30,13 +30,13 @@ h1 {
 }
   
 h2 {
-  font-size: calc(1.2vw + 1.2vh + 1vmin);
+  font-size: calc(1.1vw + 1.1vh + 1vmin);
   color: var(--colour-dark);
   margin-bottom: .4em;
 }
   
 h3 {
-  font-size: calc(.8vw + .8vh + 1vmin);
+  font-size: calc(.6vw + .6vh + 1vmin);
   color: var(--colour-dark);
   margin-bottom: .4em;
 }

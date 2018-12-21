@@ -6,18 +6,28 @@ tags: [Front end deveopment, CSS]
 ---
 
 <p>
-  I try to rebuild or redesign my website at least once every year, It's a great way to keep up to date with HTML and CSS advances as workflows and site generators. I launched the latest version this month moving from Jekyll and Github pages to Eleventy and Netlify.
+  I try to rebuild or redesign my website at least once every year, it's a great way to keep up to date with HTML and CSS advances as well as workflows and site generators. I launched the latest version this month moving from Jekyll and Github pages to Eleventy and Netlify.
 </p>
 
 <p>
-  I also unintentionaly, (atleast at first) removed all traces of Sass from my codebase. This was not something I set out to do but the more I looked at my old Sass files the more I questioned wether it adding value to my site, or just an extra level of complexity and dependancy. CSS has evolved over recent years and the problems that lead me to Sass in the first place seem to be less of an issue today.
+  I also unintentionaly, (atleast at first) removed all traces of Sass from my codebase. This was not something I set out to do but the more I looked at my old Sass files the more I questioned wether it was adding value to my site, or just an extra level of complexity and dependancy. CSS has evolved over recent years and the problems that lead me to Sass in the first place seem to be less of an issue today.
 </p>
 
 <h2>What problems was Sass solving?</h2>
 
 <p>
-  When I first heard about Sass I was sceptical, but as I built more and more responsive sites I began to relise how much time I could save by using reusable pieces of logic or maths from CSS functions and mixins. It also became aparent that as devices, viewports and themes changed using variables made implementing changes much easier to handle.
+  When I first heard about Sass I was sceptical, but as I built more and more responsive sites I began to relise how much time I could save by using reusable pieces of logic or maths from Sass functions and mixins. It also became aparent that as devices, viewports and themes changed using variables made implementing changes much easier to handle.
 </p>
+
+<p>
+  My main Sass uses were for:
+</p>
+
+<ul class="unordered-list">
+  <li class="unordered-list__list-item">Layput</li>
+  <li class="unordered-list__list-item">Variables</li>
+  <li class="unordered-list__list-item">Typograpohy</li>
+</ul>
 
 <h2>1) Layout</h2>
 
@@ -28,7 +38,7 @@ tags: [Front end deveopment, CSS]
 <h3>Before Sass</h3>
 
 <p>
-  I can still remember my first attempt building a responsive grid layout in CSS, it envolved creating a set of utility classes for each coloumn and then poluting the markup with non semantic class names like col-span-1 col-span-4. 
+  I can still remember my first attempt building a responsive grid layout in CSS, it involved creating a set of utility classes for each coloumn and then polluting the markup with non semantic class names like col-span-1 col-span-4. 
 </p>
 
 <pre>
@@ -48,7 +58,7 @@ tags: [Front end deveopment, CSS]
 </pre>
 
 <p>
-  By using a Sass mixin coupled with variables I was able to remove utility classes like the ones above, and also create more flexible layouts by changing the $gridColumns variable.
+  By using a Sass mixin paired with variables I was able to remove utility classes like the ones above, and also create more flexible layouts by changing the $gridColumns variable.
 </p>
 
 <h3>My first grid mixin</h3>
@@ -75,7 +85,7 @@ tags: [Front end deveopment, CSS]
 <h3>CSS grid</h3>
 
 <p>
-  The introduction of CSS Grid removes the need for any of this, you no longer need to build a grid system in CSS, Sass or any other processor.
+  The introduction of CSS Grid removes the need for any of this, you no longer need to build a grid system in CSS, Sass or any other processor. Rachel Andrew sais it best here...
 </p>
 
   <figure class="quote" cite="http://www.worldwildlife.org/who/index.html">
@@ -89,31 +99,94 @@ tags: [Front end deveopment, CSS]
     </figcaption>
   </figure>
 
-<p>
 
+<p>
+  Moving from a Sass based grid to CSS grid was a relativley pain free experience, not only did it reduce my dependancy on Sass it also allowed me to create a much flexable codebase, opened up wider design posabilities and allowed me to move away from media queries to restructure content.    
 </p>
+
+<p>
+  The obvious downside to switching to native CSS for my layout is the limited browser support, or so I thought. Grid is currently supported in most modern browsers and with prefixes, IE11 and IE10 too. auto-fill and auto-fit have less support, but this can be easily rectified with a feature query. 
+</p>
+
+<h2>2) Variables</h2>
+
+<p>
+ In programming a variable is a value that is likley to change, in terms of CSS there something I didnt know I needed utill I had them. Nowadays most of my projects follow the ITCSS methodology and so start of with a settings.scss partial containing all the font, color and media query defenitions.
+</p>
+
+<pre>
+  <code>
+/* COLORS */
+$colours: (
+  "black": #2a2a2a,
+  "white": #fff,
+  "grey-light": #ccc7c3,
+  "grey-dark": #2a2a2a,
+  "accent": #ffa600,
+  "off-white": #f3f3f3,
+  "sky-blue": #ccf2ff
+ );
+
+/* BREAKPOINTS */
+$breakpoints: (
+  "break-mobile": 290px,
+  "break-phablet": 480px,
+  "break-tablet": 768px,
+  "break-desktop": 1020px,
+  "break-wide": 1280px
+);
+
+/* TYPOGRAPHY */
+$font-stack: (
+  decorative: #{'oswald', Helvetica, sans-serif},
+  general: #{'Helvetica Neue', Helvetica, Arial, sans-serif}
+); 
+  </code>
+</pre>
+
+<p>
+  Using variables or maps like this allowed me to make site wide changes quickly and easily. It also helps prevent the adding of multiple shades, colour variations and anomalies common in large code bases, particularly for hover states and shadows. 
+</p>
+
+<p>
+  For example:
+</p>
+
+<code>
+  <pre>
+  .share-page__twitter {
+    @include button (#4099ff);
+    border: 0;
+    border-bottom: solid 2px darken(#4099ff, 50%);
+  </code>
+</pre>
+
+<p>
+  Can be rewritten using Sass variables and colour functions too:
+</p>
+
+<pre>
+  .share-page__twitter {
+    @include button (#4099ff);
+    border: 0;
+    border-bottom: solid 2px darken(#4099ff, 50%);
+  </code>
+</pre>
 
 
 <hr/>
 
 
-<p>
-Grid - future subgrid with no MQ's - more flexable plain CSS layout tools -  Intrinsic Web design - browser upport
-</p>
 
 
 
-
-
-
-<h2>2) Variables - not called this called quick changes or something like that</h2>
 
 
 
 <h2>3) Typography</h2>
 
 <p>
-  Why did I use Sass fro typography?
+  Why did I use Sass for typography?
 </p>
 
 <p>
@@ -121,23 +194,7 @@ Grid - future subgrid with no MQ's - more flexable plain CSS layout tools -  Int
 </p>
 
 
-<h3>Sass variables</h3>
 
-
-<pre>
-  <code>
-$colour-black: #100112;
-$colour-dark: #1d0320;
-$colour-medium: #760c82;
-$colour-light: #f0efef;
-$colour-white: #fcfcfc;
-$colour-bright: #e61e9c;
-
-.wrapper {
-  background: $colour-white;
-} 
-  </code>
-</pre>
 
 <p>However this can be resolved using CSS colour functions, like hsl() - explaining more and other functions. These CSS functions require an extra variable not necessary with Sass but avoid having to find values for colours and allow for easy iterations and consistency between colour changes.</p>
 
@@ -175,6 +232,8 @@ Autoprefixer for css grid fallbacks
 
 
 <h2>Summary</h2>
+
+Intrinsic Web design!!!!!! CSS move to content lead specs make it much more attractive to work with.
 
 <p>Its about removing relience and building future proof code (PostCSS and webpack/gulp)</p>
 
