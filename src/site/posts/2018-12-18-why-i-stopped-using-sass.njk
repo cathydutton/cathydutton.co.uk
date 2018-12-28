@@ -152,12 +152,16 @@ $font-stack: (
   For example:
 </p>
 
-<code>
-  <pre>
-  .share-page__twitter {
-    @include button (#4099ff);
-    border: 0;
-    border-bottom: solid 2px darken(#4099ff, 50%);
+<pre>
+  <code>
+.button {
+  background-color: #4CAF50; /* Green */
+  color: #FFF;
+}
+
+.button:hover {
+  background-color: #3F8C42; /* Dark Green */
+}
   </code>
 </pre>
 
@@ -166,15 +170,52 @@ $font-stack: (
 </p>
 
 <pre>
-  .share-page__twitter {
-    @include button (#4099ff);
-    border: 0;
-    border-bottom: solid 2px darken(#4099ff, 50%);
+  <code>
+$button-colour: #4CAF50;
+
+.button {
+  background-color: $button-colour; 
+  color: #FFF;
+}
+
+.button:hover {
+  background-color: darken($button-colour, 50%);
+}
+  </code>
+</pre>
+
+<p>
+  So whats changed?
+</p>
+
+<p>
+  CSS custom properties do can more then just replace pre processor variables, they have the added bonus of being updated dynamically (instead of compiled at build). This allows values to be scoped by declaring values inside a class or element. 
+</p>
+
+<pre>
+  <code>
+:root {
+  --text-color: #ffa600;
+}
+
+header {
+  --text-color: #aaa19a;
+}
+
+
   </code>
 </pre>
 
 
 <hr/>
+
+<p>
+  Colour functions arent fully supported in CSS yet, but there are PostCSS plugins that can handle this, and advanced CSS tecniques like????
+</p>
+
+
+
+
 
 
 
@@ -194,15 +235,6 @@ $font-stack: (
 </p>
 
 
-
-
-<p>However this can be resolved using CSS colour functions, like hsl() - explaining more and other functions. These CSS functions require an extra variable not necessary with Sass but avoid having to find values for colours and allow for easy iterations and consistency between colour changes.</p>
-
-
-
-
-
-<p>With the browser support already in place CSS grid can remove the need to rely on pre processors to perfect your layout CSS</p>
 
 
 
