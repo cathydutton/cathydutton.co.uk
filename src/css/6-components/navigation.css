@@ -6,7 +6,7 @@
   margin: 1em 0;
 }
 
-.navigation .list {
+.navigation .navigation__list {
   padding: 0 1em;
   display: grid;
   grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -14,7 +14,7 @@
 }
 
 
-.navigation .list-item {
+.navigation .navigation__item {
   justify-content: center;
   margin: .2em;
   list-style: none;
@@ -42,7 +42,7 @@
   transition: all .3s ease-in-out;
 }
   
-.navigation .list-item__current a,
+.navigation .navigation__item--current a,
 .navigation a:active {
   background: var(--colour-white);
   color: var(--colour-dark);

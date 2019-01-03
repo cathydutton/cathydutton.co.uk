@@ -1,0 +1,111 @@
+---
+layout: layouts/base.njk
+---
+
+{% set componentHtml %}
+  {% include "components-library/" + {{ item.component | lower | replace(" ", "-")}} + "/" + {{ item.component | lower | replace(" ", "-")}} + ".njk" %}
+{% endset %}
+
+{# {% set componentCSS %}
+  {% include "/css/6-components/" + {{ item.component | lower | replace(" ", "-")}} +".css" %}
+{% endset %}
+
+{% set componentJS %}
+  {% include "/js/" + {{ item.component | lower | replace(" ", "-")}} + ".js"  ignore missing %}
+{% endset %} #}
+
+{% block content %}
+
+
+
+  <section>
+    <h2>Demo</h2>
+    <p>Resize the panel to view the component demo in different container sizes.</p>
+
+    <div class="slidecontainer">
+      <label>Width:</label>
+      <input type='range' class="slider" min='30' max='100' value='100' step='10' 
+      onchange="setStyleOn('width', 'demo', this.value + '%')" /> 
+     </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    </div>
+
+    {# <div class="clear" id="demo">
+      {% include "component-library/" + {{ item.component | lower | replace(" ", "-")}} + "/" + {{ item.component | lower | replace(" ", "-")}} + ".njk" %}
+    </div> #}
+
+   
+   <h2>use this when</h2>
+   <h2>Do not use this when</h2>
+
+
+<script>
+function setStyleOn(rule, targetId, value) {
+    x = document.getElementById(targetId);
+    x.style[rule] = value;
+}
+</script>
+
+  </section>
+
+
+
+  <section>
+    <h2>Markup</h2>
+    <p>Use the tabbend navagation to view the component markup.</p>
+  </section>
+
+  <span class="visually-hidden">Use left and right arrows to navigate between tabs.</span>
+  {# <div class="js-tabs tabs">
+    <ul class="tab-list">
+      <li class="tab-item" data-tab-active>
+       <a class="tab-link" href="##tab-1" data-tab-active aria-selected="true">HTML</a>
+      </li>
+      <li class="tab-item">
+        <a class="tab-link" href="##tab-2">CSS</a>
+      </li>
+      {% if hasJS %}
+        <li class="tab-item">
+          <a class="tab-link" href="##tab-3">JavaScript</a>
+        </li>
+      {% endif %}
+    </ul>
+    <div id="#tab-1" class="tab-panel" role="tabpanel" aria-labelledby="tab_HTML">
+      <h3>HTML</h3>
+      <pre>
+        <button class="button--copy button--right" data-clipboard-target="#HTMLCode">Copy</button>
+        <code id="HTMLCode">{{- componentHtml | e -}}</code>
+      </pre>
+    </div>
+    <div id="#tab-2" class="tab-panel" role="tabpanel" aria-labelledby="tab_CSS">
+      <h3>CSS</h3>
+      <pre>
+        <button class="button--copy button--right" data-clipboard-target="#CSSCode">Copy</button>
+        <code id="CSSCode">{{- componentCSS | e -}}</code>
+      </pre>
+    </div>
+    {% if hasJS %}
+      <div id="#tab-3" class="tab-panel" role="tabpanel" aria-labelledby="tab_JavaScript">
+        <h3>JavaScript</h3>
+        <pre>
+          <button class="button--copy button--right" data-clipboard-target="#JavaScriptCode">Copy</button>
+          <code id="JavaScriptCode">{{- componentJS | e -}}</code>
+        </pre>
+      </div>
+    {% endif %}
+  </div> #}
+
+ {# <button>Download base files</button> #}
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
