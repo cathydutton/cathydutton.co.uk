@@ -11,12 +11,12 @@
   overflow: hidden;
   min-height: 100vh;
   max-width: 64em; /* 1024px */
-}
+} 
   
 .sidebar,
 .content {
   max-width: 100%; 
-  width: calc((960px - 100%) * 960);
+  width: calc((960px - 100%) * 960); /*  53.333em */
   float: left;
   margin-bottom: -9999px;
   padding-bottom: 9999px;
@@ -33,7 +33,7 @@
   animation: fadeIn 2s forwards;
   min-width: calc(100% - 15em);
   background: var(--colour-white);
-}
+} 
 
 main {
   margin: 0 1em;

@@ -5,38 +5,27 @@
 
 
 h1 {
-  font-size: calc(3.2vw + 3.2vh + 3vmin);
+  font-size: 2.8em;
   color: var(--colour-medium);
   margin-bottom: .4em;
   line-height: .9;
-  max-width: 9em;
-}
-
-.post-title,
-.project-title {
-  font-size: calc(2.2vw + 2.2vh + 2vmin);
-}
-
-.post-date {
-  font-style: italic;
+  max-width: 14em;
 }
 
 .page-description {
+  font-size: .4em;
   display: block;
-  font-size: .3em;
   font-weight: normal;
   color: var(--colour-dark);
   margin-top: .6em;
 }
-  
+
 h2 {
-  font-size: calc(1.1vw + 1.1vh + 1vmin);
   color: var(--colour-dark);
   margin-bottom: .4em;
 }
   
 h3 {
-  font-size: calc(.6vw + .6vh + 1vmin);
   color: var(--colour-dark);
   margin-bottom: .4em;
 }
@@ -44,20 +33,27 @@ h3 {
 h4,
 h5,
 h6 {
-  font-size: calc(.8vw + .8vh + 2vmin);
   color: var(--colour-dark);
   margin-bottom: .4em;
 }
 
 p {
   margin-bottom: .8em;
-  font-size: 1em;
 }
 
 .highlight-text {
   border-left: 4px solid var(--colour-bright);
   padding-left: .4em;
-  font-size: 1.1em;
+  font-size: 1.2em;
+}
+
+.post-title,
+.project-title {
+  font-size: 1.8em;
+}
+
+.post-date {
+  font-style: italic;
 }
 
 input, 
@@ -69,5 +65,9 @@ button {
 }
 
 footer p {
+  font-size: .8em;
+}
+
+.profile-description {
   font-size: .8em;
 }
