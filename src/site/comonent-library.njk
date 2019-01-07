@@ -1,21 +1,64 @@
 --- 
-title: Pod - Component library - Cathy Dutton 
+title: Pod - Component library - Cathy Dutton testing
 description: Patterns components and styles for cathydutton.co.uk 
 layout: layouts/base.njk 
-permalink: /component-library/components
+permalink: /component-library/ 
 pageName: Component library 
 ---
 
 <header role="banner" class="header clear" id="js-skip-link-target">
   <h1>
-    Component library
-    <span class="page-description">Patterns and components</span>
+    Pod
+    <span class="page-description">Design patterns and components</span>
   </h1>
 </header>
 
 <p class="highlight-text">
   ckmwdeg gergergge gremcflmf;m;em,le
 <p>
+
+  {% for post in pagination.items %}
+    <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+      <header class="news-feed__header">
+        <h3 class="news-feed__title">
+          <a href="{{ post.url }}">
+            <span class="visually-hidden">Article title</span>
+            {{ post.data.title }}
+          </a>
+        </h3>
+      </header>
+    </article>
+
+  
+  {%- endfor -%}
+
+  {% for post in collections.components %}
+    <ul class="unordered-list">
+      <li class="unordered-list__list-item"><a href="{{ post.url }}" class="anchor">{{ post.data.title }}</a></li>
+    </ul>
+  {%- endfor -%}
+
+
+
+  {# <ul class="unordered-list">
+    <li class="unordered-list__list-item">A11y buttons</li>
+    <li class="unordered-list__list-item">Anchor tags</li>
+    <li class="unordered-list__list-item">Buttons</li>
+    <li class="unordered-list__list-item">Description lists</li>
+    <li class="unordered-list__list-item">Lists</li>
+    <li class="unordered-list__list-item">Navigation</li>
+    <li class="unordered-list__list-item">Secondary navigation</li>
+    <li class="unordered-list__list-item">Skip link</li>
+    <li class="unordered-list__list-item">Social media icons</li>
+    <li class="unordered-list__list-item">Tabs</li>
+    <li class="unordered-list__list-item">Quotes</li>
+    <li class="unordered-list__list-item">Blockquotes</li>
+    <li class="unordered-list__list-item">Tabel</li>
+    <li class="unordered-list__list-item">Highlight text</li>
+  </ul> #}
+
+ 
+{# 
 
 <p class="highlight-text">
   am a user experience designer with over 12 years industry experience. I am passionate about accessibility, front end architecture, performance and user centered design. I work with CSS (including Sass and PostCSS), HTM
@@ -188,4 +231,6 @@ Components and service patterns have a tendency to serve the needs of the busine
       </tr>
     </tbody>
   </table>
-</figure>
+</figure> #}
+
+

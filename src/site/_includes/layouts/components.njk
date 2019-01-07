@@ -2,9 +2,9 @@
 layout: layouts/base.njk
 ---
 
-{% set componentHtml %}
+{# {% set componentHtml %}
   {% include "components-library/" + {{ item.component | lower | replace(" ", "-")}} + "/" + {{ item.component | lower | replace(" ", "-")}} + ".njk" %}
-{% endset %}
+{% endset %}  #}
 
 {# {% set componentCSS %}
   {% include "/css/6-components/" + {{ item.component | lower | replace(" ", "-")}} +".css" %}
@@ -13,6 +13,15 @@ layout: layouts/base.njk
 {% set componentJS %}
   {% include "/js/" + {{ item.component | lower | replace(" ", "-")}} + ".js"  ignore missing %}
 {% endset %} #}
+
+<h1>{{ title }}</h1>
+
+
+{% block use %}
+{% endblock %}
+
+{% block dontUse %}
+{% endblock %}
 
 {% block content %}
 
@@ -34,7 +43,16 @@ layout: layouts/base.njk
 
     {# <div class="clear" id="demo">
       {% include "component-library/" + {{ item.component | lower | replace(" ", "-")}} + "/" + {{ item.component | lower | replace(" ", "-")}} + ".njk" %}
-    </div> #}
+    </div>  #}
+
+
+
+  
+
+    {% for item in components %}
+    <li class="unordered-list__list-item">
+      <a href="{{ item.component | lower | replace(" ", "-")}}">{{ item.component }}</a></li>
+  {% endfor %}
 
    
    <h2>use this when</h2>

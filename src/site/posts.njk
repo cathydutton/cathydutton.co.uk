@@ -16,6 +16,10 @@ pageName: Posts
   </h1>
 </header>
 
+<p class="highlight-text">
+  Subscribe to the <a href="/feed.xml" class="anchor">RSS feed</a>
+</p>
+
 <section class="post">
   {% for post in pagination.items %}
     <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">

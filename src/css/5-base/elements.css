@@ -39,7 +39,6 @@ code {
   background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
   background-size: auto 3em;
   background-origin: content-box; 
-  border: solid 1px var(--colour-white);
   display: block;
 }
 
