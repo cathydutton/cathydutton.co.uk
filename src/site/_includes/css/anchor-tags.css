@@ -1,0 +1,28 @@
+/*
+  Anchors
+  styling for bare a tags 
+  ----------------------------------- */
+
+a {
+  border-bottom: solid 1px currentColor;
+  color: currentColor;
+  text-decoration: none
+}
+
+a:hover {
+  transition: all .3s ease-in-out;
+  color: var(--colour-bright);
+  color: var(--colour-bright);
+}
+
+.anchor {
+  border-bottom: dashed 1px currentColor;
+  color: var(--colour-medium);
+  color: var(--colour-medium);
+  text-decoration: none;
+}
+
+.anchor[target=_blank]:after {
+  content: ' (opens new window)';
+} 
+

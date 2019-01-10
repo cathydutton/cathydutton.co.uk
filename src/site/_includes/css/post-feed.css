@@ -1,0 +1,32 @@
+/*
+Latest posts feed
+----------------------------------- */
+
+.news-feed__post {
+  margin-top: 1.4em;
+  border-bottom: solid 4px var(--colour-bright);
+  border-bottom: solid 4px var(--colour-bright);
+  background: var(--colour-light);
+  background: var(--colour-light);
+  padding: .8em;
+  width: 100%;
+}
+
+.news-feed__post:hover {
+  transition: all .3s ease-in-out;
+  outline: solid 1px var(--colour-light);
+  outline: solid 1px var(--colour-light);
+  background: var(--colour-white);
+  background: var(--colour-white);
+}
+
+.news-feed__title {
+  color: var(--colour-medium);
+  color: var(--colour-medium);
+  font-size: 2em;
+}
+
+.news-feed__header {
+  margin: 0;
+  padding: 0;
+}

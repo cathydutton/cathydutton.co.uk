@@ -29,7 +29,7 @@ module.exports = function(config) {
 
   // Components collection
   config.addCollection("components", function(collection) {
-    return collection.getFilteredByGlob("**/component-library/**/index.njk").reverse();
+    return collection.getFilteredByGlob("**/components/**.njk").reverse();
   });
 
 

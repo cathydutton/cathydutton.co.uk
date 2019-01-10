@@ -1,0 +1,59 @@
+/*
+    Navigation footer
+    ----------------------------------- */
+
+.navigation-footer {
+  margin: 1.5em auto 2em;
+  padding: 0;
+  font-size: 1.1em;
+}
+
+.navigation-footer .navigation__item {
+  display: inline-block;
+  margin: .4em;
+}
+
+.navigation-footer .navigation__item a {
+  display: inline-block;
+  position: relative;
+  border-bottom: solid 3px var(--colour-light);
+  border-bottom: solid 3px var(--colour-light);
+  color: var(--colour-black);
+  color: var(--colour-black);
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  .navigation-footer .navigation__item a:before {
+    display: block;  
+    position: absolute;
+    top: 100%;
+    transition: width .3s;
+    border-bottom: solid 3px var(--colour-bright);
+    border-bottom: solid 3px var(--colour-bright);
+    width: 0;
+    height: 3px;
+    content: '';
+  }
+
+  .navigation-footer .navigation__item a:hover:before,
+  .navigation-footer .navigation__item a:focus:before {
+    width: 100%;
+  }
+
+}
+
+.navigation-footer .navigation__item a:hover,
+.navigation-footer .navigation__item a:focus {
+  transition: all .3s ease-in-out;
+  color: var(--colour-bright);
+  color: var(--colour-bright);
+}
+
+.navigation-footer .navigation__item--current a,
+.navigation-footer .navigation__item a:active {
+  border-bottom: solid 3px var(--colour-medium);
+  border-bottom: solid 3px var(--colour-medium);
+  color: var(--colour-medium)!important;
+  color: var(--colour-medium)!important; 
+}

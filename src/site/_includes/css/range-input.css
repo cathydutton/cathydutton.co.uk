@@ -1,0 +1,46 @@
+/*
+  Range input
+  ----------------------------------- */
+
+  .slider {
+    -webkit-appearance: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    outline: none;
+    border-radius: 5px;
+    background: var(--colour-light);
+    background: var(--colour-light);
+    width: 80%;
+    height: 15px;
+}
+
+  /* .slider:hover {
+    opacity: 1;
+} */
+
+  /* .slider::-webkit-slider-thumb {
+    /* -webkit-appearance: none;
+    appearance: none; */
+
+  /* width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background:var(--colour-dark);
+    cursor: pointer;
+    outline: 2px;
+} */
+
+  /* .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--colour-dark);
+    cursor: pointer;
+    outline: 2px;
+} */
+
+  /*
+.slider::-webkit-slider-thumb:focus,
+.slider::-moz-range-thumb:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+} */

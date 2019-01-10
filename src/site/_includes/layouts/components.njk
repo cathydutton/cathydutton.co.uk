@@ -2,71 +2,53 @@
 layout: layouts/base.njk
 ---
 
-{# {% set componentHtml %}
-  {% include "components-library/" + {{ item.component | lower | replace(" ", "-")}} + "/" + {{ item.component | lower | replace(" ", "-")}} + ".njk" %}
-{% endset %}  #}
 
-{# {% set componentCSS %}
-  {% include "/css/6-components/" + {{ item.component | lower | replace(" ", "-")}} +".css" %}
+{% set componentHtml %}
+  {% include "components/" + page.fileSlug + ".njk" %}
+{% endset %}  
+
+{% set componentCSS %}
+  {% include "css/" + page.fileSlug +".css" %}
 {% endset %}
 
 {% set componentJS %}
-  {% include "/js/" + {{ item.component | lower | replace(" ", "-")}} + ".js"  ignore missing %}
-{% endset %} #}
+  {% include "js/" + page.fileSlug + ".js"  ignore missing %}
+{% endset %}
 
 <h1>{{ title }}</h1>
 
 
-{% block use %}
-{% endblock %}
-
-{% block dontUse %}
-{% endblock %}
-
-{% block content %}
 
 
+<section>
+  <h2>Demo</h2>
+  <p>Resize the panel to view the component demo in different container sizes.</p>
 
-  <section>
-    <h2>Demo</h2>
-    <p>Resize the panel to view the component demo in different container sizes.</p>
+  <div class="slidecontainer">
+    <label>Width:</label>
+    <input type='range' class="slider" min='30' max='100' value='100' step='10' 
+    onchange="setStyleOn('width', 'demo', this.value + '%')" /> 
+  </div>
 
-    <div class="slidecontainer">
-      <label>Width:</label>
-      <input type='range' class="slider" min='30' max='100' value='100' step='10' 
-      onchange="setStyleOn('width', 'demo', this.value + '%')" /> 
-     </div>
-
-    <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-    </div>
-
-    {# <div class="clear" id="demo">
-      {% include "component-library/" + {{ item.component | lower | replace(" ", "-")}} + "/" + {{ item.component | lower | replace(" ", "-")}} + ".njk" %}
-    </div>  #}
+  <div class="clear resize" id="demo">
+    {% include "components/" + page.fileSlug + ".njk" %}
+  </div> 
 
 
 
-  
-
-    {% for item in components %}
-    <li class="unordered-list__list-item">
-      <a href="{{ item.component | lower | replace(" ", "-")}}">{{ item.component }}</a></li>
-  {% endfor %}
-
-   
    <h2>use this when</h2>
    <h2>Do not use this when</h2>
 
 
-<script>
-function setStyleOn(rule, targetId, value) {
-    x = document.getElementById(targetId);
-    x.style[rule] = value;
-}
-</script>
+  <script>
+  function setStyleOn(rule, targetId, value) {
+      x = document.getElementById(targetId);
+      x.style[rule] = value;
+  }
+  </script>
 
-  </section>
+</section>
+
 
 
 
@@ -76,7 +58,7 @@ function setStyleOn(rule, targetId, value) {
   </section>
 
   <span class="visually-hidden">Use left and right arrows to navigate between tabs.</span>
-  {# <div class="js-tabs tabs">
+  <div class="js-tabs tabs">
     <ul class="tab-list">
       <li class="tab-item" data-tab-active>
        <a class="tab-link" href="##tab-1" data-tab-active aria-selected="true">HTML</a>
@@ -113,17 +95,10 @@ function setStyleOn(rule, targetId, value) {
         </pre>
       </div>
     {% endif %}
-  </div> #}
-
- {# <button>Download base files</button> #}
+  </div> 
 
 
 
-
-
-
-
-{% endblock %}
 
 
 

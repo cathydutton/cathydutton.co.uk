@@ -1,0 +1,64 @@
+/*
+  Navigation
+  ----------------------------------- */
+
+.navigation {
+  margin: 1em 0;
+}
+
+.navigation .navigation__list {
+  grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
+  padding: 0 1em;
+}
+
+.navigation .navigation__item {
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+  justify-content: center;
+  margin: .2em;
+  border: solid 1px var(--colour-medium);
+  border: solid 1px var(--colour-medium);
+          hyphens: auto;
+  list-style: none;
+}
+
+.navigation a {
+  display: block;
+  border-bottom: 0;
+  border-left: 3px solid var(--colour-bright);
+  border-left: 3px solid var(--colour-bright);
+  background: linear-gradient(to right, var(--colour-bright) 50%, transparent 50%);
+  background: linear-gradient(to right, var(--colour-bright) 50%, transparent 50%);
+  background-position: 99% bottom;
+  background-size: 200% 100%;
+  padding: .4em .8em;
+  height: 100%;
+  color: var(--colour-light);
+  color: var(--colour-light);
+}
+
+.navigation a:hover,
+.navigation a:focus {
+  transition: all .3s ease-in-out;
+  background-position: 90% bottom;
+  color: var(--colour-bright);
+  color: var(--colour-bright);
+  text-decoration: underline;
+}
+
+.navigation .navigation__item--current a,
+.navigation a:active {
+  background: var(--colour-white);
+  background: var(--colour-white);
+  color: var(--colour-dark);
+  color: var(--colour-dark);
+  text-decoration: underline;
+}
+
+.navigation a:active:hover {
+  cursor: not-allowed;
+  text-decoration: none;
+}
+  

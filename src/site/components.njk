@@ -2,8 +2,8 @@
 title: Pod - Component library - Cathy Dutton testing
 description: Patterns components and styles for cathydutton.co.uk 
 layout: layouts/base.njk 
-permalink: /component-library/ 
-pageName: Component library 
+permalink: /components/ 
+pageName: Components 
 ---
 
 <header role="banner" class="header clear" id="js-skip-link-target">
@@ -17,24 +17,12 @@ pageName: Component library
   ckmwdeg gergergge gremcflmf;m;em,le
 <p>
 
-  {% for post in pagination.items %}
-    <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-      <header class="news-feed__header">
-        <h3 class="news-feed__title">
-          <a href="{{ post.url }}">
-            <span class="visually-hidden">Article title</span>
-            {{ post.data.title }}
-          </a>
-        </h3>
-      </header>
-    </article>
-
-  
-  {%- endfor -%}
 
   {% for post in collections.components %}
     <ul class="unordered-list">
-      <li class="unordered-list__list-item"><a href="{{ post.url }}" class="anchor">{{ post.data.title }}</a></li>
+      <li class="unordered-list__list-item">
+        <a href="{{ post.url }}" class="anchor">{{ post.data.title }}</a>
+      </li>
     </ul>
   {%- endfor -%}
 
