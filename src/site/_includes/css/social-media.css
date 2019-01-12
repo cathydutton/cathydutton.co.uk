@@ -1,0 +1,90 @@
+/*
+Social media icons
+----------------------------------- */
+
+.social-media {
+  animation: fadeIn 2s forwards;
+  margin: 2.5em 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+}
+
+.social-media__item {
+  display: inline-block;
+}
+
+.social-media__anchor {
+  fill: var(--colour-bright);
+  fill: var(--colour-bright);
+  display: block;
+  position: relative;
+  margin: 0 5px;
+  width: 44px;
+  height: 44px;
+  color: var(--colour-bright);
+  color: var(--colour-bright);
+}
+
+.social-media__anchor:hover,
+.social-media__anchor:focus {
+  fill: var(--colour-dark);
+  fill: var(--colour-dark);
+  transform: scale(1.25);
+  outline: none;
+  border-radius: 100%;
+  background: var(--colour-bright);
+  background: var(--colour-bright);
+  color: var(--colour-dark);
+  color: var(--colour-dark);
+}
+
+.social-media__anchor:before {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  transform: translateY(-150%);
+  opacity: 0;
+  transition: all 0.25s ease;
+  border-radius: 3px;
+  background-color: var(--colour-bright);
+  background-color: var(--colour-bright);
+  padding: 5px 10px;
+  color: var(--colour-white);
+  color: var(--colour-white);
+  text-align: center;
+  content: attr(aria-label);
+}
+
+.social-media__anchor:focus:before,
+.social-media__anchor:hover:before {
+  transform: translate(-18% ,-144%);
+  opacity: 1;
+}
+
+/* Footer colour overrides */
+
+footer .social-media__anchor {
+  fill: var(--colour-dark);
+  fill: var(--colour-dark);
+  color: var(--colour-dark);
+  color: var(--colour-dark);
+}
+
+footer .social-media__anchor:hover,
+footer .social-media__anchor:focus {
+  fill: var(--colour-bright);
+  fill: var(--colour-bright);
+  background: var(--colour-dark);
+  background: var(--colour-dark);
+  color: var(--colour-bright);
+  color: var(--colour-bright);
+}
+
+footer .social-media__anchor:before {
+  background-color: var(--colour-dark);
+  background-color: var(--colour-dark);
+  color: var(--colour-white);
+  color: var(--colour-white);
+}

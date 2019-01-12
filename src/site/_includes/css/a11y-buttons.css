@@ -1,0 +1,34 @@
+/*
+  A11y buttons
+  ----------------------------------- */
+
+.accessibility-tools {
+  display: none;
+}
+
+@supports ( (--a: 0)) {
+  .accessibility-tools-wrapper {
+    float: right;
+  }
+  
+  .accessibility-tools {
+    grid-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .accessibility-tools fieldset {
+    float: right;
+    margin: 0 .5em .5em .5em;
+    padding: .2em;
+  }
+  
+  .accessibility-tools legend {
+    padding: .4em;
+  }
+  
+  .button--ally {
+    margin: .2em 0;
+    font-size: .7em;
+  }
+}

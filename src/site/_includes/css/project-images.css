@@ -1,0 +1,17 @@
+/*
+Project images
+----------------------------------- */
+
+.portfolio-images {
+  grid-gap: 1em;
+  grid-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+}
+
+.portfolio-images--wide {
+  grid-gap: 1em;
+  grid-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
+}
