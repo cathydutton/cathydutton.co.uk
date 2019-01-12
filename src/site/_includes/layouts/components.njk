@@ -18,7 +18,7 @@ layout: layouts/base.njk
 <h1>{{ title }}</h1>
 
 
-
+{{ #intro | safe }}
 
 <section>
   <h2>Demo</h2>
@@ -35,7 +35,7 @@ layout: layouts/base.njk
   </div> 
 
 
-
+  {{ content | safe }}
    <h2>use this when</h2>
    <h2>Do not use this when</h2>
 
