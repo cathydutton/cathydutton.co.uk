@@ -11,7 +11,7 @@ var argv = require('yargs').argv;
 var concat = require('gulp-concat');
 var isProd = (argv.prod === undefined) ? false : true;
 var livereload = require('gulp-livereload');
-
+var path = require('path');
 
 /*
   Compile inline CSS 
@@ -26,7 +26,7 @@ gulp.task('inline', function() {
     postCSSCustomProperties({strict: false, warnings: false, preserve: true}),
   ]))
     .pipe(concat('inline.css'))
-    .pipe(gulp.dest(project.buildSrc+ '/site/_includes'))
+    .pipe(gulp.dest(project.buildSrc+ '/site/_includes/css'))
     .pipe(gulp.dest(project.buildDest+ '/css'))
     .pipe(livereload());
 });
@@ -42,16 +42,30 @@ gulp.task('main', function() {
     postCSSCustomProperties({strict: false, warnings: false, preserve: true}),
     cssDeclarationSorter({order: 'concentric-css'}),
   ]))
-    .pipe(gulpif(isProd, postcss([
-      csswring
-    ])
-    ))
-    .pipe(concat('main.css'))
-    .pipe(gulp.dest(project.buildDest+ '/css'))
-    .pipe(livereload());
+  .pipe(gulpif(isProd, postcss([
+    csswring
+  ])
+  ))
+  .pipe(concat('main.css'))
+  .pipe(gulp.dest(project.buildDest+ '/css'))
+  .pipe(livereload());
 });
 
+/*
+  Compile components 
+*/
 
+gulp.task('components', function() {
+  return gulp.src(project.buildSrc + '/css/6-components/**.css')
+  .pipe(postcss([
+    postcssImport(),
+    autoprefixer({ grid: false, browsers: ['>2%'] }),
+    postCSSCustomProperties({strict: false, warnings: false, preserve: true}),
+    cssDeclarationSorter({order: 'concentric-css'}),
+  ]))
+  .pipe(gulp.dest(project.buildSrc+ '/site/_includes/css'))
+  .pipe(livereload());
+});
 
 /*
   Compile dev CSS files 
@@ -59,6 +73,7 @@ gulp.task('main', function() {
 gulp.task('styles', gulp.parallel(
   'main',
   'inline',
+  'components',
 ));
 
 

@@ -8,12 +8,12 @@
   font-size: 1.1em;
 }
 
-.navigation-footer .list-item {
+.navigation-footer .navigation__item {
   display: inline-block;
   margin: .4em;
 }
 
-.navigation-footer .list-item a {
+.navigation-footer .navigation__item a {
   display: inline-block;
   position: relative;
   border-bottom: solid 3px var(--colour-light);
@@ -24,7 +24,7 @@
 }
 
 @media (hover: hover) {
-  .navigation-footer .list-item a:before {
+  .navigation-footer .navigation__item a:before {
     display: block;  
     position: absolute;
     top: 100%;
@@ -36,22 +36,22 @@
     content: '';
   }
 
-  .navigation-footer .list-item a:hover:before,
-  .navigation-footer .list-item a:focus:before {
+  .navigation-footer .navigation__item a:hover:before,
+  .navigation-footer .navigation__item a:focus:before {
     width: 100%;
   }
 
 }
 
-.navigation-footer .list-item a:hover,
-.navigation-footer .list-item a:focus {
+.navigation-footer .navigation__item a:hover,
+.navigation-footer .navigation__item a:focus {
   transition: all .3s ease-in-out;
   color: var(--colour-bright);
   color: var(--colour-bright);
 }
 
-.navigation-footer .list-item__current a,
-.navigation-footer .list-item a:active {
+.navigation-footer .navigation__item--current a,
+.navigation-footer .navigation__item a:active {
   border-bottom: solid 3px var(--colour-medium);
   border-bottom: solid 3px var(--colour-medium);
   color: var(--colour-medium)!important;

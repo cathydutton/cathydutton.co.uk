@@ -1,4 +1,5 @@
 const htmlmin = require("html-minifier");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(config) {
 
@@ -7,6 +8,9 @@ module.exports = function(config) {
   config.addFilter("dateDisplayProject", require("./filters/datesProject.js") );
   config.addFilter("timestamp", require("./filters/timestamp.js") );
   config.addFilter("squash", require("./filters/squash.js") );
+ 
+  // Plugins
+  config.addPlugin(pluginRss);
 
   // Blog post collection
   config.addCollection("posts", function(collection) {
@@ -21,6 +25,11 @@ module.exports = function(config) {
   // PostCSS plugin collection
   config.addCollection("postcss", function(collection) {
     return collection.getFilteredByGlob("**/postcss/**.njk").reverse();
+  });
+
+  // Components collection
+  config.addCollection("components", function(collection) {
+    return collection.getFilteredByGlob("**/components/**.njk").reverse();
   });
 
 
@@ -58,7 +67,6 @@ module.exports = function(config) {
     htmlTemplateEngine : "njk",
     markdownTemplateEngine : "njk"
   };
-
 
 };
 

@@ -9,10 +9,10 @@
 @import '3-generic/generic';
 @import '4-layout/layout';
 @import '5-base/elements';
-@import '5-base/anchors';
 @import '5-base/typography';
 @import '5-base/images';
 @import '5-base/table';
+@import '6-components/anchor-tags';
 @import '6-components/profile';
 @import '6-components/skip-link';
 @import '6-components/buttons'; 
@@ -30,6 +30,8 @@
 @import '6-components/postcss-feed';
 @import '6-components/share-post';
 @import '6-components/pagination';
+@import '6-components/range-input';
+@import '6-components/tabs';
 
 @import '7-utilities/utilities';
 @import '1-settings/print';

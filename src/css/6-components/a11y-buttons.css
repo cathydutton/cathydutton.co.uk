@@ -13,12 +13,12 @@
   
   .accessibility-tools {
     display: grid;
-    grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
   }
   
   .accessibility-tools fieldset {
-    margin: 0 .5em .5em .5em;
+    margin: 0 .3em .3em .3em;
     padding: .2em;
     float: right;
   }

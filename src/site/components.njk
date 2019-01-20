@@ -1,21 +1,37 @@
 --- 
-title: Component library - Cathy Dutton 
-description: Patterns components and styles for cathydutton.co.uk 
+title: Pod - Component library - Cathy Dutton testing
+description: Patterns, components and styles for cathydutton.co.uk 
 layout: layouts/base.njk 
-permalink: /component-library/ 
-pageName: Component library 
+permalink: /components/ 
+pageName: Components 
 ---
 
 <header role="banner" class="header clear" id="js-skip-link-target">
   <h1>
-    Component library
-    <span class="page-description">Patterns and components</span>
+    Pod
+    <span class="page-description">Design components</span>
   </h1>
 </header>
 
 <p class="highlight-text">
-  ckmwdeg gergergge gremcflmf;m;em,le
+  Reusable design components built with CSS, HTML and JavaScript. Each component is designed to work without media queries.
 <p>
+
+  <h3>Components list</h3>
+  {% for post in collections.components %}
+    <ul class="unordered-list">
+      <li class="unordered-list__list-item">
+        <a href="{{ post.url }}" class="anchor">{{ post.data.title }}</a>
+      </li>
+    </ul>
+  {%- endfor -%}
+
+
+
+
+
+ 
+{# 
 
 <p class="highlight-text">
   am a user experience designer with over 12 years industry experience. I am passionate about accessibility, front end architecture, performance and user centered design. I work with CSS (including Sass and PostCSS), HTM
@@ -188,4 +204,6 @@ Components and service patterns have a tendency to serve the needs of the busine
       </tr>
     </tbody>
   </table>
-</figure>
+</figure> #}
+
+

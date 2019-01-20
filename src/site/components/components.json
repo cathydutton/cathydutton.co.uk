@@ -1,0 +1,6 @@
+{
+  "layout" : "layouts/components.njk",
+  "templateEngineOverride": "njk,md"
+}
+
+
