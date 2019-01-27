@@ -16,7 +16,6 @@
         -ms-hyphens: auto;
     grid-column: auto / span 4;
     background: var(--colour-dark);
-    background: var(--colour-dark);
             hyphens: auto;
     list-style: none;
   }
@@ -32,11 +31,9 @@
     display: block;
     position: relative;
     border-right: solid 1px var(--colour-light);
-    border-right: solid 1px var(--colour-light);
     border-bottom: 0;
     padding: 1em 1em;
     height: 100%;
-    color: var(--colour-white);
     color: var(--colour-white);
     text-decoration: none;
     text-decoration: underline;
@@ -45,8 +42,6 @@
   .tab-link:hover  {
     transition: all .3s ease-in-out;
     background: var(--colour-bright);
-    background: var(--colour-bright);
-    color: var(--colour-dark);
     color: var(--colour-dark);
   }
 
@@ -55,8 +50,6 @@
     cursor: not-allowed;
     outline: currentColor;
     background: var(--colour-bright);
-    background: var(--colour-bright);
-    color: var(--colour-dark);
     color: var(--colour-dark);
     text-decoration: none;
     text-decoration: none;
@@ -69,8 +62,6 @@
   .tab-panel {
     margin-bottom: 1em;
     border: solid 1px var(--colour-bright);
-    border: solid 1px var(--colour-bright);
-    background: var(--colour-light);
     background: var(--colour-light);
     padding: .5em;
   }
@@ -85,7 +76,6 @@
 
   .tab-panel:focus {
     outline: 0;
-    box-shadow: inset 0 0 0 2px var(--colour-medium);
     box-shadow: inset 0 0 0 2px var(--colour-medium);
   }
   

@@ -12,8 +12,6 @@ Latest project feed
 
 .project__post {
   border-bottom: solid 4px var(--colour-bright);
-  border-bottom: solid 4px var(--colour-bright);
-  background: var(--colour-light);
   background: var(--colour-light);
   padding: .8em;
 }
@@ -34,13 +32,10 @@ Latest project feed
 
 .project__title {
   color: var(--colour-medium);
-  color: var(--colour-medium);
 }
 
 .project__post:hover {
   transition: all .3s ease-in-out;
   outline: solid 1px var(--colour-light);
-  outline: solid 1px var(--colour-light);
-  background: var(--colour-white);
   background: var(--colour-white);
 }

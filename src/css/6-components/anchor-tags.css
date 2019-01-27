@@ -1,18 +1,6 @@
 /*
   Anchors
-  styling for bare a tags 
   ----------------------------------- */
-
-a {
-  color: currentColor;
-  text-decoration: none;
-  border-bottom: solid 1px currentColor
-}
-
-a:hover {
-  transition: all .3s ease-in-out;
-  color: var(--colour-bright);
-}
 
 .anchor {
   color: var(--colour-medium);
@@ -20,7 +8,31 @@ a:hover {
   border-bottom: dashed 1px currentColor;
 }
 
+.anchor:hover {
+  transition: all .3s ease-in-out;
+  color: var(--colour-bright);
+  border-bottom: solid 1px;
+}
+
 .anchor[target=_blank]:after {
   content: ' (opens new window)';
 } 
 
+/* Print styles */
+@media print {
+  
+  .anchor{
+    color: #000!important;
+  }
+
+  .anchor:before {
+    content:" (" attr(href) ") "!important;
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+
+  .anchor:after {
+    content: '';
+  }
+
+}

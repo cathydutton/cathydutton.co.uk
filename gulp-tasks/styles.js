@@ -60,7 +60,7 @@ gulp.task('components', function() {
   .pipe(postcss([
     postcssImport(),
     autoprefixer({ grid: false, browsers: ['>2%'] }),
-    postCSSCustomProperties({strict: false, warnings: false, preserve: true}),
+    postCSSCustomProperties({strict: false, warnings: false, preserve: false}),
     cssDeclarationSorter({order: 'concentric-css'}),
   ]))
   .pipe(gulp.dest(project.buildSrc+ '/site/_includes/css'))

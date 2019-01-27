@@ -17,8 +17,6 @@
   display: inline-block;
   position: relative;
   border-bottom: solid 3px var(--colour-light);
-  border-bottom: solid 3px var(--colour-light);
-  color: var(--colour-black);
   color: var(--colour-black);
   text-decoration: none;
 }
@@ -29,7 +27,6 @@
     position: absolute;
     top: 100%;
     transition: width .3s;
-    border-bottom: solid 3px var(--colour-bright);
     border-bottom: solid 3px var(--colour-bright);
     width: 0;
     height: 3px;
@@ -47,13 +44,10 @@
 .navigation-footer .navigation__item a:focus {
   transition: all .3s ease-in-out;
   color: var(--colour-bright);
-  color: var(--colour-bright);
 }
 
 .navigation-footer .navigation__item--current a,
 .navigation-footer .navigation__item a:active {
   border-bottom: solid 3px var(--colour-medium);
-  border-bottom: solid 3px var(--colour-medium);
-  color: var(--colour-medium)!important;
   color: var(--colour-medium)!important; 
 }

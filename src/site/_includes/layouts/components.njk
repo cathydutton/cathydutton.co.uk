@@ -22,11 +22,11 @@ layout: layouts/base.njk
 </p>
 
 <section>
-  <h2>Demo</h2>
-  <p>Resize the panel to view the component demo in different container sizes.</p>
+  {# <h2>Demo</h2> #}
+  {# <p>Resize the panel to view the {{ title | lower }} demo in different container sizes.</p> #}
 
   <div class="slider-container">
-    <label>Width:</label>
+    <label>Resize the panel width:</label>
     <input type='range' class="slider" min='0' max='100' value='100' step='10' 
     onchange="setStyleOn('width', 'demo', this.value + '%')" /> 
   </div>
@@ -34,9 +34,6 @@ layout: layouts/base.njk
   <div class="clear resize" id="demo">
     {% include "components/" + page.fileSlug + ".njk" %}
   </div> 
-
-
-  {{ content | safe }}
 
   <script>
   function setStyleOn(rule, targetId, value) {
@@ -46,11 +43,13 @@ layout: layouts/base.njk
   </script>
 
 </section>
-
+ <section>
+  {{ content | safe }}
+</section>
 
   <section>
-    <h2>Markup</h2>
-    <p>Use the tabbend navagation to view the component markup.</p>
+    <h2>Code</h2>
+    <p>Use the tabs to view the {{ title | lower}} source code.</p>
   </section>
 
   <span class="visually-hidden">Use left and right arrows to navigate between tabs.</span>

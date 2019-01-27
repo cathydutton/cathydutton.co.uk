@@ -46,13 +46,21 @@ button:visited,
   opacity: 0.74;
 }
 
-.button--bright,
+.button--primary {
+  background: var(--colour-dark);
+  color: var(--colour-white);
+}
+
+.button--secondary {
+  background: var(--colour-medium);
+  color: var(--colour-white);
+}
+
 .button--submit {
   background: var(--colour-bright);
   color: var(--colour-dark);
 }
 
-.button--bright:hover,
 .button--submit:hover {
   background: var(--colour-dark);
   color: var(--colour-white);

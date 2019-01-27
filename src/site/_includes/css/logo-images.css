@@ -63,11 +63,9 @@ Logo images
   opacity: 0;
   z-index: 99;
   background-color: var(--colour-bright);
-  background-color: var(--colour-bright);
   padding: 5px 10px;
   width: 100%;
   height: 100%;
-  color: var(--colour-dark);
   color: var(--colour-dark);
   font-size: .7em;
   font-weight: bold;

@@ -29,7 +29,7 @@
     font-weight: normal;
   }
 
-  .anchor:after {
+  a:after {
     content: '';
   }
 

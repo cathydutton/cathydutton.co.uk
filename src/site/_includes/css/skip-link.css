@@ -12,7 +12,5 @@ Skip Links
 .skip-link:focus {
   right: auto;
   background: var(--colour-bright);
-  background: var(--colour-bright);
-  color: var(--colour-white);
   color: var(--colour-white);
 }
