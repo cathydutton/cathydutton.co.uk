@@ -13,12 +13,10 @@ Social Share buttons
   display: block;
   padding: .5em;
   color: var(--colour-white);
-  color: var(--colour-white);
 }
 
 .share-post a:hover,
 .share-post a:active {
-  color: var(--colour-bright);
   color: var(--colour-bright);
 }
 

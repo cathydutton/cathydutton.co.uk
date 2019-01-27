@@ -36,7 +36,7 @@
 } 
 
 main {
-  margin: 0 1em;
+  margin: 0 2em 0 1em;;
   padding: 1em 0;
 }
 
@@ -46,5 +46,5 @@ footer {
 }
   
 section {
-  margin: 1em 0;
+  margin: 1.5em 0;
 }

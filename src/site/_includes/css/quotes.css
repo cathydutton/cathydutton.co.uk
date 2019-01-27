@@ -4,7 +4,6 @@ Quotations
 .quote {
   margin: 1em 0;
   background: var(--colour-light);
-  background: var(--colour-light);
   padding: 1em;
 }
 blockquote {
@@ -13,8 +12,6 @@ blockquote {
 blockquote:before,
 blockquote:after {
   color: var(--colour-medium);
-  color: var(--colour-medium);
-  font-family: var(--font-family);
   font-family: var(--font-family);
   font-size: 2em;
   line-height: 0.1em;

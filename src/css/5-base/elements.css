@@ -23,6 +23,18 @@ body {
   font-weight: 400;
 }
 
+/* Anchor tags */
+a {
+  color: currentColor;
+  text-decoration: none;
+  border-bottom: solid 1px currentColor
+}
+
+a:hover {
+  transition: all .3s ease-in-out;
+  color: var(--colour-bright);
+}
+
 pre { 
   padding: .5em;
   line-height: 1.5;
@@ -49,6 +61,7 @@ pre code {
   white-space: -o-pre-wrap;    
   word-wrap: break-word; 
 }
+
 
 pre p {
   margin: 0;

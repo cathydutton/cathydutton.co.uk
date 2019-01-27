@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 ---
 
-
 {% set componentHtml %}
   {% include "components/" + page.fileSlug + ".njk" %}
 {% endset %}  
@@ -15,7 +14,7 @@ layout: layouts/base.njk
   {% include "js/" + page.fileSlug + ".js"  ignore missing %}
 {% endset %}
 
-<h1>{{ title }}</h1>
+<h1 id="js-skip-link-target">{{ title }}</h1>
 
 
 <p class="highlight-text">
@@ -23,22 +22,18 @@ layout: layouts/base.njk
 </p>
 
 <section>
-  <h2>Demo</h2>
-  <p>Resize the panel to view the component demo in different container sizes.</p>
+  {# <h2>Demo</h2> #}
+  {# <p>Resize the panel to view the {{ title | lower }} demo in different container sizes.</p> #}
 
-  <div class="slidecontainer">
-    <label>Width:</label>
-    <input type='range' class="slider" min='30' max='100' value='100' step='10' 
+  <div class="slider-container">
+    <label>Resize the panel width:</label>
+    <input type='range' class="slider" min='0' max='100' value='100' step='10' 
     onchange="setStyleOn('width', 'demo', this.value + '%')" /> 
   </div>
 
   <div class="clear resize" id="demo">
     {% include "components/" + page.fileSlug + ".njk" %}
   </div> 
-
-
-  {{ content | safe }}
-
 
   <script>
   function setStyleOn(rule, targetId, value) {
@@ -48,24 +43,27 @@ layout: layouts/base.njk
   </script>
 
 </section>
+ <section>
+  {{ content | safe }}
+</section>
 
   <section>
-    <h2>Markup</h2>
-    <p>Use the tabbend navagation to view the component markup.</p>
+    <h2>Code</h2>
+    <p>Use the tabs to view the {{ title | lower}} source code.</p>
   </section>
 
   <span class="visually-hidden">Use left and right arrows to navigate between tabs.</span>
   <div class="js-tabs tabs">
     <ul class="tab-list">
       <li class="tab-item" data-tab-active>
-       <a class="tab-link" href="##tab-1" data-tab-active aria-selected="true">HTML</a>
+       <a class="tab-link" href="#tab-1" data-tab-active aria-selected="true">HTML</a>
       </li>
       <li class="tab-item">
-        <a class="tab-link" href="##tab-2">CSS</a>
+        <a class="tab-link" href="#tab-2">CSS</a>
       </li>
       {% if hasJS %}
         <li class="tab-item">
-          <a class="tab-link" href="##tab-3">JavaScript</a>
+          <a class="tab-link" href="#tab-3">JavaScript</a>
         </li>
       {% endif %}
     </ul>
@@ -73,22 +71,18 @@ layout: layouts/base.njk
       <h3>HTML</h3>
       <pre>
         <button class="button--copy button--right" data-clipboard-target="#HTMLCode">Copy</button>
-        <code id="HTMLCode">{{- componentHtml | e -}}</code>
+        <code id="HTMLCode">{{componentHtml | e}}</code>
       </pre>
     </div>
     <div id="#tab-2" class="tab-panel" role="tabpanel" aria-labelledby="tab_CSS">
       <h3>CSS</h3>
-      <pre>
-        <button class="button--copy button--right" data-clipboard-target="#CSSCode">Copy</button>
-        <code id="CSSCode">{{- componentCSS | e -}}</code>
+      <pre><button class="button--copy button--right" data-clipboard-target="#CSSCode">Copy</button><code id="CSSCode">{{componentCSS | e}}</code>
       </pre>
     </div>
     {% if hasJS %}
       <div id="#tab-3" class="tab-panel" role="tabpanel" aria-labelledby="tab_JavaScript">
         <h3>JavaScript</h3>
-        <pre>
-          <button class="button--copy button--right" data-clipboard-target="#JavaScriptCode">Copy</button>
-          <code id="JavaScriptCode">{{- componentJS | e -}}</code>
+        <pre><button class="button--copy button--right" data-clipboard-target="#JavaScriptCode">Copy</button><code id="JavaScriptCode">{{componentJS | e}}</code>
         </pre>
       </div>
     {% endif %}
@@ -101,3 +95,4 @@ layout: layouts/base.njk
 
 
 
+ 

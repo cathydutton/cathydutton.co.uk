@@ -104,6 +104,7 @@ Tabs
       var attributes = {
         //'id': 'tab-link-' + i,
         'id': 'tab-link-' + tabLinkText[i],
+        'href': '#tab-link-' + tabLinkText[i],
         'role': 'tab',
         'tabIndex': '-1',
         'aria-selected': 'false',
@@ -153,10 +154,10 @@ Tabs
        
       // set up next tab link
       //nextTabLink.setAttribute('href', '#tab-link-' + nextTabLinkIndex);
-      nextTabLink.setAttribute('href', '#tab-link-' + tabLinkText[nextTabLinkIndex]);
-      nextTabLink.setAttribute('class', 'anchor');
-      nextTabLink.textContent = 'Next Tab';
-      panel.appendChild(nextTabLink);
+      // nextTabLink.setAttribute('href', '#tab-link-' + tabLinkText[nextTabLinkIndex]);
+      // nextTabLink.setAttribute('class', 'anchor');
+      // nextTabLink.textContent = 'Next Tab';
+      // panel.appendChild(nextTabLink);
  
       if (i == 0) {
         attributes['aria-hidden'] = 'false';
@@ -171,5 +172,6 @@ Tabs
 
  
 })();
+  
   
   

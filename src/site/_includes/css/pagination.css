@@ -5,8 +5,6 @@ Pagination
 .pagination {
   margin-top: 2em;
   border-top: 1px solid var(--colour-light);
-  border-top: 1px solid var(--colour-light);
-  border-bottom: 1px solid var(--colour-light);
   border-bottom: 1px solid var(--colour-light);
 }
 
@@ -42,22 +40,18 @@ Pagination
 
 .pagination__svg {
   fill: var(--colour-medium);
-  fill: var(--colour-medium);
   width: 20px;
   height: 16px;
 }
 
 .pagination__anchor:hover  {
   background: var(--colour-light);
-  background: var(--colour-light);
 }
 
 .pagination__anchor:hover svg {
   fill: var(--colour-bright);
-  fill: var(--colour-bright);
 }
 
 .pagination__anchor:hover .navigation__title {
-  border-color: var(--colour-bright);
   border-color: var(--colour-bright);
 }

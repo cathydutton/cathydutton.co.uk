@@ -5,7 +5,6 @@ Profile image
 .profile-image {
   margin: 1em auto;
   border: dashed 2px var(--colour-medium);
-  border: dashed 2px var(--colour-medium);
   border-radius: 50%;
   width: 10em;
   height: 10em;
@@ -21,8 +20,6 @@ Profile image
 .profile-description {
   margin: 1em auto;
   border-top: solid 1px var(--colour-medium);
-  border-top: solid 1px var(--colour-medium);
-  border-bottom: solid 1px var(--colour-medium);
   border-bottom: solid 1px var(--colour-medium);
   padding: 1em;
   width: 80%;
