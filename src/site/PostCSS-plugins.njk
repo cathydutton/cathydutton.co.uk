@@ -18,7 +18,7 @@ pageName: PostCSS
 <p>
 
 {% for post in collections.postcss %}
-  <article class="postcss__post js-content-group" data-url="{{ post.data.github }}" data-title="{{post.data.title}}">
+  <article class="card js-content-group" data-url="{{ post.data.github }}" data-title="{{post.data.title}}">
     <header class="postcss__header">
       <h3 class="postcss__title">
         <a href="{{ post.data.github }}">

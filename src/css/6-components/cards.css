@@ -1,8 +1,8 @@
 /*
-Latest project feed
+Cards
 ----------------------------------- */
 
-.project {
+.cards {
   --ratio-padding: 55%;
   display: grid;
   grid-template-columns: repeat( auto-fill, minmax(12em, 1fr) );
@@ -10,31 +10,31 @@ Latest project feed
   padding: 1em;
 }
 
-.project__post {
+.card {
   padding: .8em;
   background: var(--colour-light);
   border-bottom: solid 4px var(--colour-bright);
 }
 
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
-  .project {
+  .card {
     clear: both;
     overflow: auto;
     position: relative;
   }
 
-  .project__post {
+  .card__post {
     float: left;
     width: 48%;
     margin: 1%;
   }
 }
 
-.project__title {
+.card__title {
   color: var(--colour-medium);
 }
 
-.project__post:hover {
+.card__post:hover {
   transition: all .3s ease-in-out;
   background: var(--colour-white);
   outline: solid 1px var(--colour-light);

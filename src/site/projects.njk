@@ -17,24 +17,24 @@ pageName: Projects
   Over the years I have had the pleasure of working for some amazing companies and brands on a range of digital projects. Below are just a few examples of my design and development work. 
 </p>
 
-<section class="project">
+<section class="cards">
   {% for post in collections.projects %}
-    <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+    <article class="card js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
       <div class="image-ratio">
         <img data-src="{{ post.data.image }}" class="lazyload" alt="Cover image for {{ post.data.title }}">
       </div>
-      <h3 class="project__title">
+      <h3 class="card__title">
         <a href="{{ post.url }}">
           <span class="visually-hidden">Project title</span>
           {{ post.data.title }}
         </a>
       </h3>
-      <p class="project__date">
+      <p class="card__date">
         <span class="visually-hidden">Project date</span>
         <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplayProject }}</time>
       </p>
       {% if post.data.projectTags %}
-        <p class="project__tags">Tagged in:
+        <p class="card__tags">Tagged in:
           {% for projectTag in post.data.projectTags %}
             <a href="/projects/tags/{{ projectTag | lower | replace(" ", "-") }}" class="anchor">{{ projectTag }}</a>
             {% if not loop.last %},
