@@ -1,5 +1,5 @@
 /*
- Touch target
+ Cards - Touch target
  Wrap an image, or article link, and text as one large touch target, 
  while using progressively enhanced, valid HTML and keeping 
  things fully accessible.
