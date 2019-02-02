@@ -22,5 +22,9 @@
     {
       "menu_item": "PostCSS",
       "url": "/postcss-plugins/"
+    },
+    {
+      "menu_item": "Components",
+      "url": "/components/"
     }
   ]
