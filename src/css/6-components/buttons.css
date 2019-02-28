@@ -8,7 +8,6 @@ button,
   padding: .5em 1em;
   border-radius: .2em;
   color: var(--colour-white);
-  line-height: 2.2;
   font-weight: bold;
   box-shadow: 0;
   transition: all 0.3s ease-in-out;

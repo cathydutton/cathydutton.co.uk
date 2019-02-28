@@ -12,7 +12,6 @@ button,
   padding: .5em 1em;
   color: var(--colour-white);
   font-weight: bold;
-  line-height: 2.2;
 }
 
 button:hover,
