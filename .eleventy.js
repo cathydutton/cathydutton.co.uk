@@ -33,6 +33,11 @@ module.exports = function(config) {
   });
 
 
+  // Components talks
+  config.addCollection("talks", function(collection) {
+    return collection.getFilteredByGlob("**/talks/**.njk").reverse();
+  });
+
   // Filter using `Array.filter`
   config.addCollection("projects", function(collection) {
     return collection.getFilteredByGlob("**/projects/**.njk").reverse().filter(function(item) {

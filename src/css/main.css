@@ -32,6 +32,7 @@
 @import '6-components/pagination';
 @import '6-components/range-input';
 @import '6-components/tabs';
+@import '6-components/slides';
 
 @import '7-utilities/utilities';
 @import '1-settings/print';

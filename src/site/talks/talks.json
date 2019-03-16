@@ -1,0 +1,6 @@
+{
+  "layout" : "layouts/post.njk",
+  "author": "Cathy Dutton",
+  "permalink": "talks/{{ page.fileSlug }}/index.html",
+  "templateEngineOverride": "njk,md"
+}

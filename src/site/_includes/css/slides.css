@@ -1,0 +1,35 @@
+/*
+  Slides
+  ----------------------------------- */
+
+.slides figure {
+  --ratio-padding: 56.27%;
+  grid-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(12em, 1fr) );
+  padding: 1em;
+}
+
+.slides figcaption {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    
+    .slides .image-ratio {
+      position: relative;
+      clear: both;
+      overflow: auto;
+    }
+  
+    .slides figcaption {
+      float: left;
+      margin: 1%;
+      width: 48%;
+    }
+  
+
+  }
+  
+  
