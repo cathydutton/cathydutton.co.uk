@@ -10,7 +10,7 @@ var livereload = require('gulp-livereload');
 // Uglify our javascript files into one.
 gulp.task('scripts', function() {
   return gulp.src(project.buildSrc + "/js/**/*.js")
-      .pipe(gulp.dest(project.buildSrc+ '/site/_includes/js'))
+      // .pipe(gulp.dest(project.buildSrc+ '/site/_includes/js'))
       .pipe(concat('scripts.js'))
       .pipe(gulpif(isProd, uglify({
         warnings: true,

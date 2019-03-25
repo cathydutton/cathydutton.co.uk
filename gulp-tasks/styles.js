@@ -26,8 +26,7 @@ gulp.task('inline', function() {
     postCSSCustomProperties({strict: false, warnings: false, preserve: true}),
   ]))
     .pipe(concat('inline.css'))
-    .pipe(gulp.dest(project.buildSrc+ '/site/_includes/css'))
-    .pipe(gulp.dest(project.buildDest+ '/css'))
+    .pipe(gulp.dest('src/site/_includes'))
     .pipe(livereload());
 });
 
@@ -55,17 +54,17 @@ gulp.task('main', function() {
   Compile components 
 */
 
-gulp.task('components', function() {
-  return gulp.src(project.buildSrc + '/css/6-components/**.css')
-  .pipe(postcss([
-    postcssImport(),
-    autoprefixer({ grid: false, browsers: ['>2%'] }),
-    postCSSCustomProperties({strict: false, warnings: false, preserve: false}),
-    cssDeclarationSorter({order: 'concentric-css'}),
-  ]))
-  .pipe(gulp.dest(project.buildSrc+ '/site/_includes/css'))
-  .pipe(livereload());
-});
+// gulp.task('components', function() {
+//   return gulp.src(project.buildSrc + '/css/6-components/**.css')
+//   .pipe(postcss([
+//     postcssImport(),
+//     autoprefixer({ grid: false, browsers: ['>2%'] }),
+//     postCSSCustomProperties({strict: false, warnings: false, preserve: false}),
+//     cssDeclarationSorter({order: 'concentric-css'}),
+//   ]))
+//   .pipe(gulp.dest(project.buildSrc+ '/site/_includes/css'))
+//   .pipe(livereload());
+// });
 
 /*
   Compile dev CSS files 
@@ -73,7 +72,7 @@ gulp.task('components', function() {
 gulp.task('styles', gulp.parallel(
   'main',
   'inline',
-  'components',
+  // 'components',
 ));
 
 

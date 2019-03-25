@@ -19,7 +19,7 @@ function ensureDirectoryExistence(filePath) {
 module.exports = {
 
   // Some default locations
-  buildSrc: "src",
+  buildSrc: "src/site/_includes",
   buildDest: "dist",
 
   // Save some data to a local file for use in the build

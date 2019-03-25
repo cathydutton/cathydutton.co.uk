@@ -1,0 +1,10 @@
+<nav class="navigation-footer">
+  <ul class="navigation__list">
+    {% for item in navigation %}
+      <li class="navigation__item navigation__item--{{ item.menu_item | lower | replace(" ", "-")}}{% if pageName == item.menu_item %} navigation__item--current{% endif %}">
+        <a href="{{ item.url }}">{{ item.menu_item }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+

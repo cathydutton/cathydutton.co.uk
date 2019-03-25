@@ -66,6 +66,7 @@ module.exports = function(config) {
       input: "src/site",
       output: "dist",
       includes: "_includes",
+      // layouts: "_layouts",
       data: "_data"
     },
     templateFormats : ["njk", "md"],
