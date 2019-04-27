@@ -1,4 +1,4 @@
-<nav class="navigation-footer">
+<nav class="navigation">
     <ul class="navigation__list">
       {% for item in navigation %}
         <li class="navigation__item navigation__item--{{ item.menu_item | lower | replace(" ", "-")}}{% if pageName == item.menu_item %} navigation__item--current{% endif %}">
@@ -7,4 +7,3 @@
       {% endfor %}
     </ul>
   </nav>
-

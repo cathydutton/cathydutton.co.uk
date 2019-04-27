@@ -1,0 +1,14 @@
+/*
+  Ordered lists
+  ----------------------------------- */
+
+.ordered-list {
+  list-style: none;
+  margin: 1em 0;
+  padding-left: 1em;
+}
+
+.ordered-list__list-item {
+  margin-bottom: .4em;
+  list-style-type: decimal;
+}
