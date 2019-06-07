@@ -2,7 +2,7 @@
   {% for item in tech %}
     <li class="tech-logo__item">
     {% if item.url %}
-      <a href="{{ item.url }}" title="Visit the {{ item.logo }} website" target="_blank" rel="external" aria-label="{{ item.logo }}" class="work-logo__anchor">
+      <a href="{{ item.url }}" title="Visit the {{ item.logo }} website" target="_blank" rel="noopener" aria-label="{{ item.logo }}" class="work-logo__anchor">
       <span class="visually-hidden">Visit the {{ item.logo }} website.</span>
     {% endif %}  
     <div class="image-ratio"> 

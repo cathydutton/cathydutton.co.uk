@@ -1,7 +1,7 @@
 README
 ======
 
-![Facebook example](https://github.com/antijingoist/open-dyslexic/raw/master/screenshots/facebook-dyslexic.png)
+![Facebook example](https://github.com/antijingoist/open-dyslexic/raw/master/screenshots/facebook-dyslexic.jpg)
 
 ![ZDNet example](https://github.com/antijingoist/open-dyslexic/raw/master/screenshots/zdnetarticle.PNG)
 
@@ -82,4 +82,4 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
 Except as contained in this notice, the names of Gnome, the Gnome Foundation, and Bitstream Inc., shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Font Software without prior written authorization from the Gnome Foundation or Bitstream Inc., respectively. For further information, contact: fonts at gnome dot org. 
 
 Remember in 2013 where Chrome messed up the font rendering on Windows XP? At least I'll be able to know ahead of time with this now. :)
-[![BrowserStack Status](https://apathyonline.net/browserstack-logo-600x315.png)](https://browserstack.com/)
+[![BrowserStack Status](https://apathyonline.net/browserstack-logo-600x315.jpg)](https://browserstack.com/)

@@ -27,9 +27,15 @@
   white-space: pre;
 }
   
-.description-list__description + .description-list__description::before,
-.description-list__title + .description-list__title::before {
+.description-list__description + .description-list__description::before {
   content: ', ';
   font-weight: normal;
-  margin-left: -.25em;
+  margin-left: -.10em;
 }
+
+.description-list__title + .description-list__title::before {
+  content: ', ';
+  font-weight: bold;
+  margin-left: -.05em;
+}
+
