@@ -3,32 +3,22 @@
   ----------------------------------- */
 
 .accessibility-tools {
-  display: none;
-}  
+  background: var(--colour-dark);
+  border-bottom: solid 4px var(--colour-bright);
+}
+  
+.accessibility-tools fieldset {
+  /* margin: 0 .3em .3em .3em;
+  padding: .2em; */
+  float: left;
+}
+  
+.accessibility-tools legend {
+  float: left;
+  /* padding: .4em; */
+}
 
-@supports ( (--a: 0)) {
-  .accessibility-tools-wrapper {
-    float: right;
-  }
-  
-  .accessibility-tools {
-    display: grid;
-    grid-columns: 50% 50%;
-    grid-template-columns: 50% 50%;
-  }
-  
-  .accessibility-tools fieldset {
-    margin: 0 .3em .3em .3em;
-    padding: .2em;
-    float: right;
-  }
-  
-  .accessibility-tools legend {
-    padding: .4em;
-  }
-  
-  .button--ally {
-    font-size: .7em;
-    margin: .2em 0;
-  }
+.button--ally {
+    /* font-size: .7em; */
+    /* margin: .2em 0; */
 }

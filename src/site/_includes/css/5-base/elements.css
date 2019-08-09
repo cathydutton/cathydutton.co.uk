@@ -16,10 +16,10 @@ html {
 
 body {
   color: var(--colour-black);
-  background: var(--colour-bright);
+  background: var(--colour-white);
   font-family: var(--font-family);
   font-size: var(--font-size);
-  line-height: 1.7;
+  line-height: 1.2;
   font-weight: 400;
 }
 

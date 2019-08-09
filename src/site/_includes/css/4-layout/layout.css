@@ -1,50 +1,50 @@
 /*
   Layout - Base
-  LHS sidebar responsive layout
   ----------------------------------- */
 
-.wrapper {
+/* .wrapper {
   background: var(--colour-white);
+  border-top: solid 4px var(--colour-bright);
+} */
+
+body {
+  animation: fadeIn 2s forwards;
 }
 
-.container {
-  overflow: hidden;
-  min-height: 100vh;
-  max-width: 64em; /* 1024px */
-} 
-  
-.sidebar,
-.content {
-  max-width: 100%; 
-  width: calc((960px - 100%) * 960); /*  53.333em */
-  float: left;
-  margin-bottom: -9999px;
-  padding-bottom: 9999px;
+.wrapper {
+  max-width: 58rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.25rem;
 }
-  
-.sidebar {
-  min-width: 15em;
-  color: var(--colour-light);
-  background: var(--colour-dark);
-  text-align: center;
+
+.header {
+  background: var(--colour-light);
+  border-top: solid 1px var(--colour-border);
+  border-bottom: solid 1px var(--colour-border);
 }
-  
-.content {
-  animation: fadeIn 2s forwards;
-  min-width: calc(100% - 15em);
-  background: var(--colour-white);
-} 
 
 main {
-  margin: 0 2em 0 1em;;
-  padding: 1em 0;
+  /* margin: 0 2em 0 1em;;
+  padding: 1em 0; */
 }
 
 footer {
   text-align: center;
   padding: 0 .4em;
 }
-  
-section {
-  margin: 1.5em 0;
+
+.inner-wrapper {
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  position: relative;
 }
+
+
+
+
+  
+

@@ -7,7 +7,8 @@ Latest posts feed
   margin-top: 1.4em;
   padding: .8em;
   background: var(--colour-light);
-  border-bottom: solid 4px var(--colour-bright);
+  border: solid 1px var(--colour-border);
+  border-bottom: solid 1px var(--colour-bright);
 }
 
 .news-feed__post:hover {

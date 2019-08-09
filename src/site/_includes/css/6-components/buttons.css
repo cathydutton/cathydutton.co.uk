@@ -6,7 +6,6 @@ button,
 .button {
   display: inline-block;
   padding: .5em 1em;
-  border-radius: .2em;
   color: var(--colour-white);
   font-weight: bold;
   box-shadow: 0;
@@ -18,7 +17,6 @@ button:hover,
 .button:hover {
   background: var(--colour-bright);
   text-decoration: underline;
-  border-radius: .8em;
 }
 
 button[disabled="disabled"],
@@ -33,7 +31,6 @@ button[disabled="disabled"]:hover,
 button[disabled]:hover,
 .button[disabled="disabled"]:hover,
 .button[disabled]:hover {
-  border-radius: .0;
   text-decoration: none;
   background: var(--colour-medium);
 }

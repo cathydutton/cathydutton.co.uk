@@ -21,23 +21,66 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <div class="container">
-    <a href="#js-skip-link-target" class="skip-link" id="js-skip-link">skip to main content</a>
-    {% include "a11y-buttons.njk" %}
-      <div class="sidebar">
-        {% include "sidebar.njk" %}
-      </div>
-      <div class="content">
-      <main id="main">
-          {{ content | safe }}
-        </main>
-        <footer class="footer">
-          {% include "footer.njk" %}
-        </footer>
-      </div>
+  
+  <a href="#js-skip-link-target" class="skip-link" id="js-skip-link">skip to main content</a>
+    
+  <div aria-label="Accessibility tools" class="accessibility-tools">
+    <div class="wrapper clear">
+      {% include "a11y-buttons.njk" %}
     </div>
   </div>
+
+  <div class="top-bar">
+    <div class="wrapper clear">
+      <div class="profile-image">  
+        <img
+          sizes="(max-width: 369px) 100vw, 369px"
+          srcset="
+          /images/profile-image_m4cdxm_c_scale,w_200.jpg 200w,
+          /images/profile-image_m4cdxm_c_scale,w_369.jpg 369w"
+          src="/images/profile-image_m4cdxm_c_scale,w_369.jpg"
+          alt="Profile picture - Cathy Dutton" class="profile-image__img">
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/images/profile-image_m4cdxm_c_scale,w_200.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>John Doe</h1> 
+              <p>Architect & Engineer</p> 
+              <p>We love that guy</p>
+            </div>
+          </div>
+        </div>
+
+
+      <nav class="navigation">
+        {% include "navigation.njk" %}
+      </nav>
+    </div>
+  </div>
+
+  <div class="header" role="banner">
+    <div class="wrapper">
+      {% include "header.njk" %}
+    </div>
+  </div>
+
+
+  <main id="main">
+    <div class="inner-wrapper">
+    {{ content | safe }}
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      {% include "footer.njk" %}
+    </div>
+  </footer>
+
   <script src="/js/scripts.js"></script>
   <!-- Service worker -->
   <script>
@@ -59,6 +102,7 @@
         //console.log(e);
     });
   </script>
+
 </body>
 
 </html>
