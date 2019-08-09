@@ -3,22 +3,23 @@
   Reset and/or normalize styles, box-sizing definition, etc. 
   ----------------------------------- */
 
-/* 
+
 h1 {
   font-size: 2.8em;
-  color: var(--colour-medium);
-  margin-bottom: .4em;
-  line-height: .9;
-  max-width: 14em;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: .8rem;
+  max-width: 80%;
 }
 
-.page-description {
-  font-size: .4em;
-  display: block;
-  font-weight: normal;
-  color: var(--colour-dark);
+
+.page-intro {
+  font-size: 1.5em;
   margin-top: .6em;
+  max-width: 80%;
 }
+
+/* 
 
 h2 {
   color: var(--colour-dark);

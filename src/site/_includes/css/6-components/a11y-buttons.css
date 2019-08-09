@@ -3,6 +3,7 @@
   ----------------------------------- */
 
 .accessibility-tools {
+  color: var(--colour-white);
   background: var(--colour-dark);
   border-bottom: solid 4px var(--colour-bright);
 }
@@ -21,4 +22,5 @@
 .button--ally {
     /* font-size: .7em; */
     /* margin: .2em 0; */
+    background: var(--colour-bright);
 }

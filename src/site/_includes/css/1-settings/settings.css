@@ -18,7 +18,8 @@
   
   --colour-border: hsl(0, 0%, 80%);
 
-  --font-family: Lato, sans-serif;
+  --font-family: Lato,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+ 
 
   --font-size: calc(12px + 0.25vw)
 }

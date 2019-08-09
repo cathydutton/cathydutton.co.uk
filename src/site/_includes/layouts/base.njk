@@ -30,49 +30,37 @@
     </div>
   </div>
 
-  <div class="top-bar">
+  <header class="header clear" role="banner">
     <div class="wrapper clear">
-      <div class="profile-image">  
-        <img
-          sizes="(max-width: 369px) 100vw, 369px"
-          srcset="
-          /images/profile-image_m4cdxm_c_scale,w_200.jpg 200w,
-          /images/profile-image_m4cdxm_c_scale,w_369.jpg 369w"
-          src="/images/profile-image_m4cdxm_c_scale,w_369.jpg"
-          alt="Profile picture - Cathy Dutton" class="profile-image__img">
-        </div>
 
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="/images/profile-image_m4cdxm_c_scale,w_200.jpg" alt="Avatar" style="width:300px;height:300px;">
-            </div>
-            <div class="flip-card-back">
-              <h1>John Doe</h1> 
-              <p>Architect & Engineer</p> 
-              <p>We love that guy</p>
-            </div>
+      <div class="profile-image">
+        <div class="profile-image-inner">
+          <div class="profile-image-front">
+              <img
+              sizes="(max-width: 369px) 100vw, 369px"
+              srcset="
+              /images/profile-image_m4cdxm_c_scale,w_200.jpg 200w,
+              /images/profile-image_m4cdxm_c_scale,w_369.jpg 369w"
+              src="/images/profile-image_m4cdxm_c_scale,w_369.jpg"
+              alt="Profile picture - Cathy Dutton" class="profile-image__img">
+          </div>
+          <div class="profile-image-back">
+            <p>Cathy Dutton</p> 
+            <p>Interaction designer</p> 
           </div>
         </div>
-
+      </div>
 
       <nav class="navigation">
         {% include "navigation.njk" %}
       </nav>
-    </div>
-  </div>
 
-  <div class="header" role="banner">
-    <div class="wrapper">
-      {% include "header.njk" %}
     </div>
-  </div>
+  </header>
 
 
   <main id="main">
-    <div class="inner-wrapper">
-    {{ content | safe }}
-    </div>
+    {{ content | safe }}>
   </main>
 
   <footer class="footer">

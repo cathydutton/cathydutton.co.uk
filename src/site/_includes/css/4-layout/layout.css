@@ -2,11 +2,6 @@
   Layout - Base
   ----------------------------------- */
 
-/* .wrapper {
-  background: var(--colour-white);
-  border-top: solid 4px var(--colour-bright);
-} */
-
 body {
   animation: fadeIn 2s forwards;
 }
@@ -19,6 +14,15 @@ body {
 }
 
 .header {
+
+}
+
+.header .wrapper {
+
+}
+
+.page-header {
+  padding: 3.05rem 0;
   background: var(--colour-light);
   border-top: solid 1px var(--colour-border);
   border-bottom: solid 1px var(--colour-border);
