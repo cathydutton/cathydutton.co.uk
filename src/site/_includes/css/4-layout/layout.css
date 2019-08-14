@@ -8,18 +8,34 @@ body {
 
 .wrapper {
   max-width: 58rem;
-  margin-left: auto;
-  margin-right: auto;
   padding: 1.25rem;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: solid 4px red; */
 }
 
 .header {
-
+  padding: 1em 0;
 }
 
-.header .wrapper {
-
+.profile-image {
+  width: 142px;
+  height: 100px;
 }
+
+.navigation {
+  height: 100px;
+  background: green;
+  justify-content: flex-end;
+  align-items: flex-end
+}
+
+
+
 
 .page-header {
   padding: 3.05rem 0;

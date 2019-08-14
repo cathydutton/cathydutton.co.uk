@@ -6,21 +6,33 @@
   color: var(--colour-white);
   background: var(--colour-dark);
   border-bottom: solid 4px var(--colour-bright);
+  padding: .5em 0;
 }
   
 .accessibility-tools fieldset {
-  /* margin: 0 .3em .3em .3em;
-  padding: .2em; */
+  margin: 0 .3em .3em .3em;
+  padding: .2em;
   float: left;
+  border: 0;
 }
+
+/* .accessibility-tools__colour-theme {
+  
+}
+
+.accessibility-tools__font-family {
+  float: right;
+} */
   
 .accessibility-tools legend {
   float: left;
-  /* padding: .4em; */
+  padding: .4em;
 }
 
 .button--ally {
     /* font-size: .7em; */
     /* margin: .2em 0; */
-    background: var(--colour-bright);
+    background: var(--colour-medium);
+    font-weight: normal;
+    border: 0;
 }

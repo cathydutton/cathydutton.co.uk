@@ -7,7 +7,6 @@ Profile image
   border: solid 1px var(--colour-border);
   width: 10em;
   height: 10em;
-  float: left;
   background-color: transparent;
   perspective: 1000px;
 }
@@ -45,7 +44,12 @@ Profile image
 }
 
 .profile-image-back {
-  background-color: var(--colour-bright);
+  background-color: var(--colour-dark);
   color: var(--colour-white);
   transform: rotateY(180deg);
+  padding: 32% 0;
 }
+
+
+
+

@@ -21,23 +21,23 @@ Social media icons
   width: 44px;
   height: 44px;
   margin: 0 5px;
-  color: var(--colour-bright);
-  fill: var(--colour-bright);
+  color: var(--colour-dark);
+  fill: var(--colour-dark);
 }
 
 .social-media__anchor:hover,
 .social-media__anchor:focus {
   border-radius: 100%;
-  color: var(--colour-dark);
-  fill: var(--colour-dark);
-  background: var(--colour-bright);
+  color: var(--colour-bright);
+  fill: var(--colour-bright);
+  background: var(--colour-dark);
   outline: none;
   transform: scale(1.25);
 }
 
 .social-media__anchor:before {
-  background-color: var(--colour-bright);
   border-radius: 3px;
+  background-color: var(--colour-dark);
   color: var(--colour-white);
   content: attr(aria-label);
   display: inline-block;
@@ -56,20 +56,3 @@ Social media icons
   transform: translate(-18% ,-144%);
 }
 
-/* Footer colour overrides */
-footer .social-media__anchor {
-  color: var(--colour-dark);
-  fill: var(--colour-dark);
-}
-
-footer .social-media__anchor:hover,
-footer .social-media__anchor:focus {
-  color: var(--colour-bright);
-  fill: var(--colour-bright);
-  background: var(--colour-dark);
-}
-
-footer .social-media__anchor:before {
-  background-color: var(--colour-dark);
-  color: var(--colour-white);
-}
