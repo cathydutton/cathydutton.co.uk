@@ -4,14 +4,14 @@
 
 .anchor {
   color: var(--colour-medium);
-  text-decoration: none;
-  border-bottom: dashed 1px currentColor;
+  /* text-decoration: none;
+  border-bottom: dashed 1px currentColor; */
 }
 
 .anchor:hover {
   transition: all .3s ease-in-out;
   color: var(--colour-bright);
-  border-bottom: solid 1px;
+  /* border-bottom: solid 1px; */
 }
 
 .anchor[target=_blank]:after {

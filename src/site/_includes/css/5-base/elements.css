@@ -17,17 +17,11 @@ html {
 body {
   color: var(--colour-black);
   background: var(--colour-white);
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  line-height: 1.2;
-  font-weight: 400;
 }
 
 /* Anchor tags */
 a {
   color: currentColor;
-  text-decoration: none;
-  border-bottom: solid 1px currentColor
 }
 
 a:hover {
@@ -37,7 +31,7 @@ a:hover {
 
 pre { 
   padding: .5em;
-  line-height: 1.5;
+  line-height: var(--line-height);
   margin-bottom: 1em;
   font-family: Consolas, Monaco, monospace;
   tab-size: 4;

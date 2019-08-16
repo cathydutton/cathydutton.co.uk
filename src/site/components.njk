@@ -6,133 +6,139 @@ permalink: /components/
 pageName: Components 
 ---
 
-<header class="clear" id="js-skip-link-target">
-  <h1>
-    Pod
-    <span class="page-description">Design components</span>
-  </h1>
+<header id="js-skip-link-target" class="page-header clear">
+  <div class="inner-wrapper">
+    <h1>
+     Pod
+    </h1>
+    <p class="page-intro">Design components</p>
+    {% include "socialMedia.njk" %}
+  </div>
 </header>
 
-<p class="highlight-text">
-  Reusable design components built with CSS, HTML and the occasional JavaScript. Each component is designed to work without media queries.
-<p>
 
-  <h3>Components list</h3>
-  {% for post in collections.components %}
-    <ul class="unordered-list">
-      <li class="unordered-list__list-item">
-        <a href="{{ post.url }}" class="anchor">{{ post.data.title }}</a>
-      </li>
-    </ul>
-  {%- endfor -%}
+<div class="inner-wrapper">
 
+  <p class="highlight-text">
+    Reusable design components built with CSS, HTML and the occasional JavaScript. Each component is designed to work without media queries.
+  <p>
 
-
-
-
- 
-{# 
-
-<p class="highlight-text">
-  am a user experience designer with over 12 years industry experience. I am passionate about accessibility, front end architecture, performance and user centered design. I work with CSS (including Sass and PostCSS), HTM
-</p>
-
-<section>
-  <figure class="quote">
-    <blockquote>
-      am a user experience designer with over 12 years industry experience. I am passionate about accessibility, front end architecture, performance and user centered design. I work with CSS (including Sass and PostCSS), HTM
-    </blockquote>
-    <figcaption>Sherlock Holmes,
-      <cite>Sign of Four</cite>
-    </figcaption>
-  </figure>
-</section>
-    
-
-<section>
-  <h3>Description Lists</h3>
-  <h4>Front end development languages</h4>
-  <dl class="description-list">
-    <dt class="description-list__title">CSS</dt>
-    <dd class="description-list__description">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</dd>
-    <dt class="description-list__title">HTML</dt>
-    <dd class="description-list__description">Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications.
-    </dd>
-    <dt class="description-list__title">JavaScript</dt>
-    <dd class="description-list__description">JavaScript enables interactive web pages and thus is an essential part of web applications.</dd>
-  </dl>
-</section>
-
-<h3>Table</h3>
-
-<p>
-Components and service patterns have a tendency to serve the needs of the business or organization, not the user.
-</p>
-
-<figure role="group" class="table-wrapper">
-  <table>
-    <caption>Service patterns vs user needs</caption>
-    <thead>
-      <tr>
-        <th scope="col">Pattern</th>
-        <th scope="col">Service</th>
-        <th scope="col">User need</th>
-        <th scope="col">Organization need</th>
-        <th scope="col">Organization need</th>
-        <th scope="col">Organization need</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Apply for something</td>
-        <td>Get a fishing license</td>
-        <td>Enjoy the outdoors</td>
-        <td>Keep rivers clean; generate income</td>
-        <td>Keep rivers clean; generate income</td>
-        <td>Keep rivers clean; generate income</td>
-      </tr>
-      <tr>
-        <td>Apply for something</td>
-        <td>Apply for a work visa</td>
-        <td>Work in a different country</td>
-        <td>Check eligibility</td>
-        <td>Keep rivers clean; generate income</td>
-        <td>Keep rivers clean; generate income</td>
-      </tr>
-      <tr>
-        <td>Create an account</td>
-        <td>Online bank account</td>
-        <td>Save money</td>
-        <td>Security; fraud prevention</td>
-        <td>Keep rivers clean; generate income</td>
-        <td>Keep rivers clean; generate income</td>
-      </tr>
-      <tr>
-        <td>Create an account</td>
-        <td>Join a gym</td>
-        <td>Lose weight</td>
-        <td>Capture customer information</td>
-        <td>Keep rivers clean; generate income</td>
-        <td>Keep rivers clean; generate income</td>
-      </tr>
-      <tr>
-        <td>Register</td>
-        <td>Register to vote</td>
-        <td>Make my voice heard</td>
-        <td>Check eligibility</td>
-        <td>Keep rivers clean; generate income</td>
-        <td>Keep rivers clean; generate income</td>
-      </tr>
-      <tr>
-        <td>Register</td>
-        <td>Online shopping</td>
-        <td>Find my order</td>
-        <td>Security; marketing</td>
-        <td>Keep rivers clean; generate income</td>
-        <td>Keep rivers clean; generate income</td>
-      </tr>
-    </tbody>
-  </table>
-</figure> #}
+    <h3>Components list</h3>
+    {% for post in collections.components %}
+      <ul class="unordered-list">
+        <li class="unordered-list__list-item">
+          <a href="{{ post.url }}" class="anchor">{{ post.data.title }}</a>
+        </li>
+      </ul>
+    {%- endfor -%}
 
 
+
+
+
+  
+  {# 
+
+  <p class="highlight-text">
+    am a user experience designer with over 12 years industry experience. I am passionate about accessibility, front end architecture, performance and user centered design. I work with CSS (including Sass and PostCSS), HTM
+  </p>
+
+  <section>
+    <figure class="quote">
+      <blockquote>
+        am a user experience designer with over 12 years industry experience. I am passionate about accessibility, front end architecture, performance and user centered design. I work with CSS (including Sass and PostCSS), HTM
+      </blockquote>
+      <figcaption>Sherlock Holmes,
+        <cite>Sign of Four</cite>
+      </figcaption>
+    </figure>
+  </section>
+      
+
+  <section>
+    <h3>Description Lists</h3>
+    <h4>Front end development languages</h4>
+    <dl class="description-list">
+      <dt class="description-list__title">CSS</dt>
+      <dd class="description-list__description">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</dd>
+      <dt class="description-list__title">HTML</dt>
+      <dd class="description-list__description">Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications.
+      </dd>
+      <dt class="description-list__title">JavaScript</dt>
+      <dd class="description-list__description">JavaScript enables interactive web pages and thus is an essential part of web applications.</dd>
+    </dl>
+  </section>
+
+  <h3>Table</h3>
+
+  <p>
+  Components and service patterns have a tendency to serve the needs of the business or organization, not the user.
+  </p>
+
+  <figure role="group" class="table-wrapper">
+    <table>
+      <caption>Service patterns vs user needs</caption>
+      <thead>
+        <tr>
+          <th scope="col">Pattern</th>
+          <th scope="col">Service</th>
+          <th scope="col">User need</th>
+          <th scope="col">Organization need</th>
+          <th scope="col">Organization need</th>
+          <th scope="col">Organization need</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apply for something</td>
+          <td>Get a fishing license</td>
+          <td>Enjoy the outdoors</td>
+          <td>Keep rivers clean; generate income</td>
+          <td>Keep rivers clean; generate income</td>
+          <td>Keep rivers clean; generate income</td>
+        </tr>
+        <tr>
+          <td>Apply for something</td>
+          <td>Apply for a work visa</td>
+          <td>Work in a different country</td>
+          <td>Check eligibility</td>
+          <td>Keep rivers clean; generate income</td>
+          <td>Keep rivers clean; generate income</td>
+        </tr>
+        <tr>
+          <td>Create an account</td>
+          <td>Online bank account</td>
+          <td>Save money</td>
+          <td>Security; fraud prevention</td>
+          <td>Keep rivers clean; generate income</td>
+          <td>Keep rivers clean; generate income</td>
+        </tr>
+        <tr>
+          <td>Create an account</td>
+          <td>Join a gym</td>
+          <td>Lose weight</td>
+          <td>Capture customer information</td>
+          <td>Keep rivers clean; generate income</td>
+          <td>Keep rivers clean; generate income</td>
+        </tr>
+        <tr>
+          <td>Register</td>
+          <td>Register to vote</td>
+          <td>Make my voice heard</td>
+          <td>Check eligibility</td>
+          <td>Keep rivers clean; generate income</td>
+          <td>Keep rivers clean; generate income</td>
+        </tr>
+        <tr>
+          <td>Register</td>
+          <td>Online shopping</td>
+          <td>Find my order</td>
+          <td>Security; marketing</td>
+          <td>Keep rivers clean; generate income</td>
+          <td>Keep rivers clean; generate income</td>
+        </tr>
+      </tbody>
+    </table>
+  </figure> #}
+
+</div>

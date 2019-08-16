@@ -8,49 +8,35 @@
 
 .navigation .navigation__list {
   padding: 0 1em;
-  /* display: grid;
-  grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(8em, 1fr)); 
-  text-align: center; */
 }
 
-
-
-
 .navigation .navigation__item {
-  /* justify-content: center; */
   float: left;
   margin: .2em;
   list-style: none;
-  /* hyphens: auto; */
-  border: solid 1px var(--colour-medium);
-  background: var(--colour-dark);
 }
   
 .navigation a {
-  color: var(--colour-light);
+  color: var(--colour-dark);
   padding: .4em .8em;
-  border-bottom: 0;
-  border-left: 3px solid var(--colour-bright);
-  /* display: block; */
-  height: 100%;
-  background: linear-gradient(to right, var(--colour-bright) 50%, transparent 50%);
-  background-size: 200% 100%;
-  background-position: 99% bottom;
 }
 
-.navigation a:hover,
-.navigation a:focus {
+.navigation a:hover {
   color: var(--colour-bright);
   text-decoration: underline;
-  background-position: 95% bottom;
   transition: all .3s ease-in-out;
+}
+
+.navigation a:focus {
+  background: var(--colour-bright);
+  text-decoration: underline;
+  transition: all .3s ease-in-out;
+  outline: 0;
 }
   
 .navigation .navigation__item--current a,
 .navigation a:active {
-  background: var(--colour-white);
-  color: var(--colour-dark);
+  color: var(--colour-bright);
   text-decoration: underline;
 }
 

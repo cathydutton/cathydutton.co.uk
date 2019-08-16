@@ -9,33 +9,42 @@ pagination:
 permalink: projects/tags/{{ tag.data.projectTags[0] | lower | replace(" ", "-")}}/ 
 ---
 
-<header class="clear" id="js-skip-link-target">
-  <h1>
-    {{ tag.data.projectTags[0] }}
+
+<header id="js-skip-link-target" class="page-header clear">
+  <div class="inner-wrapper">
+    <h1>
+     {{ tag.data.projectTags[0] }}
     <span class="page-description">Latest
       {{ tag.data.projectTags[0] }}
       projects</span>
-  </h1>
+    </h1>
+    <p class="page-intro">cdscdscdccdc cdc</p>
+    {% include "socialMedia.njk" %}
+  </div>
 </header>
 
-<section class="project">
-  {% for post in collections.projects %}
-    {% if tag.data.projectTags[0] in post.data.projectTags %}
-      <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-        <div class="image-ratio project__img">
-          <img data-src="{{ post.data.image }}" class="lazyload" alt="{{ post.data.title }} image">
-        </div>
-        <h3 class="project__title">
-          <a href="{{ post.url }}">
-            <span class="visually-hidden">Project title</span>
-            {{ post.data.title }}
-          </a>
-        </h3>
-        <p class="project__date">
-          <span class="visually-hidden">Project date</span>
-          <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
-        </p>
-      </article>
-    {% endif %}
-  {% endfor %}
-</section>
+<div class="inner-wrapper">
+
+  <section class="project">
+    {% for post in collections.projects %}
+      {% if tag.data.projectTags[0] in post.data.projectTags %}
+        <article class="project__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+          <div class="image-ratio project__img">
+            <img data-src="{{ post.data.image }}" class="lazyload" alt="{{ post.data.title }} image">
+          </div>
+          <h3 class="project__title">
+            <a href="{{ post.url }}">
+              <span class="visually-hidden">Project title</span>
+              {{ post.data.title }}
+            </a>
+          </h3>
+          <p class="project__date">
+            <span class="visually-hidden">Project date</span>
+            <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
+          </p>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </section>
+
+</div>

@@ -6,6 +6,9 @@
   list-style: none;
   margin: 1em 0;
   padding-left: 1em;
+  line-height: 2;
+  max-width: 80%;
+  margin-bottom: 1.5rem;
 }
 
 .ordered-list__list-item {

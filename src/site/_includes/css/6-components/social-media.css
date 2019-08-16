@@ -7,7 +7,6 @@ Social media icons
   padding: 0;
   margin: 2.5em 0;
   list-style: none;
-  text-align: center;
   animation: fadeIn 2s forwards;
 }
 
@@ -15,18 +14,17 @@ Social media icons
   display: inline-block;
 }
 
-.social-media__anchor {
-  position: relative;
-  display: block;
-  width: 44px;
-  height: 44px;
+.social-media__anchor svg {
+  width: 34px;
+  height: 34px;
   margin: 0 5px;
   color: var(--colour-dark);
   fill: var(--colour-dark);
 }
 
-.social-media__anchor:hover,
-.social-media__anchor:focus {
+.social-media__anchor svg:hover,
+.social-media__anchor svg:focus {
+  transition: all .3s ease-in-out;
   border-radius: 100%;
   color: var(--colour-bright);
   fill: var(--colour-bright);
@@ -35,7 +33,7 @@ Social media icons
   transform: scale(1.25);
 }
 
-.social-media__anchor:before {
+/* .social-media__anchor:before {
   border-radius: 3px;
   background-color: var(--colour-dark);
   color: var(--colour-white);
@@ -48,11 +46,11 @@ Social media icons
   text-align: center;
   transform: translateY(-150%);
   transition: all 0.25s ease;
-}
+} */
 
-.social-media__anchor:focus:before,
+/* .social-media__anchor:focus:before,
 .social-media__anchor:hover:before {
   opacity: 1;
   transform: translate(-18% ,-144%);
-}
+} */
 

@@ -3,10 +3,9 @@
     ----------------------------------- */
 
 .navigation-footer {
-  margin: 1.5em auto 2em;
+  margin: 1.5em 0;
   padding: 0;
   font-size: 1.1em;
-  text-align: center;
 }
 
 .navigation-footer .navigation__item {

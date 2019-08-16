@@ -6,43 +6,49 @@ permalink: /now/
 pageName: Now 
 ---
 
-<header class="clear" id="js-skip-link-target">
-  <h1>
-    Now
-    <span class="page-description">things I'm doing right now</span>
-  </h1>
+<header id="js-skip-link-target" class="page-header clear">
+  <div class="inner-wrapper">
+    <h1>
+     Now
+    </h1>
+    <p class="page-intro">things I'm doing right now</p>
+    {% include "socialMedia.njk" %}
+  </div>
 </header>
 
-<p class="highlight-text">
-  This is my <a href="https://nownownow.com/about" title="Derek Sivers now pages" rel="noopener" target="_blank" class="anchor">now page</a>, inspired by Derek Sivers.
-</p>
+<div class="inner-wrapper">
 
-<section>
-  <h2>Currently working on</h2>
-  <ul class="unordered-list">
-    <li class="unordered-list__list-item">A simple component library</li>
-    <li class="unordered-list__list-item">Experimenting with CSS grid and subgrid</li>
-    <li class="unordered-list__list-item">Removing Sass legacy code from my websites</li>
-  </ul>
-</section>
+  <p class="highlight-text">
+    This is my <a href="https://nownownow.com/about" title="Derek Sivers now pages" rel="noopener" target="_blank" class="anchor">now page</a>, inspired by Derek Sivers.
+  </p>
 
-<section>
-  <h2>Currently reading</h2>
-  <ul class="unordered-list">
-    <li class="unordered-list__list-item">Emotional Design by Donald A Norman</li>
-    <li class="unordered-list__list-item">The design of everyday things, a revised and expanded edition by Donald A Norman</li>
-    <li class="unordered-list__list-item">Form Design Patterns by Adam Silver</li>
-    <li class="unordered-list__list-item">Freakonomics: A Rogue Economist Explores the Hidden Side of Everything by Stephen J. Dubner, Steven Levitt</li>
-    <li class="unordered-list__list-item">No Nonsense: The Autobiography by Joey Barton</li>
-  </ul>
-</section>
+  <section>
+    <h2>Currently working on</h2>
+    <ul class="unordered-list">
+      <li class="unordered-list__list-item">A simple component library</li>
+      <li class="unordered-list__list-item">Experimenting with CSS grid and subgrid</li>
+      <li class="unordered-list__list-item">Removing Sass legacy code from my websites</li>
+    </ul>
+  </section>
 
-<section class="currently-using">
-  <h3>Currently using</h3>
-  <p>Tools aren’t everything but right now I'm using:</p>
-  {% include "tech.njk" %}
-</section>
+  <section>
+    <h2>Currently reading</h2>
+    <ul class="unordered-list">
+      <li class="unordered-list__list-item">Emotional Design by Donald A Norman</li>
+      <li class="unordered-list__list-item">The design of everyday things, a revised and expanded edition by Donald A Norman</li>
+      <li class="unordered-list__list-item">Form Design Patterns by Adam Silver</li>
+      <li class="unordered-list__list-item">Freakonomics: A Rogue Economist Explores the Hidden Side of Everything by Stephen J. Dubner, Steven Levitt</li>
+      <li class="unordered-list__list-item">No Nonsense: The Autobiography by Joey Barton</li>
+    </ul>
+  </section>
 
-<section class="latest-posts">
-  {% include "latest-posts.njk" %}
-</section>
+  <section class="currently-using">
+    <h3>Currently using</h3>
+    <p>Tools aren’t everything but right now I'm using:</p>
+    {% include "tech.njk" %}
+  </section>
+
+  <section class="latest-posts">
+    {% include "latest-posts.njk" %}
+  </section>
+</div>

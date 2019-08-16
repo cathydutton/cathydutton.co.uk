@@ -16,12 +16,13 @@
   --colour-bright: hsl(322, 80%, 51%);
   
   
+  
   --colour-border: hsl(0, 0%, 80%);
 
   --font-family: Lato,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
- 
+  --font-size: 100%;
+  --line-height: 1.5;
 
-  --font-size: calc(12px + 0.25vw)
 }
 
 /* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=001E3D&v=00356C&v=9C2064&v=FE9F00&v=FFFA06&v=FFFFFF */

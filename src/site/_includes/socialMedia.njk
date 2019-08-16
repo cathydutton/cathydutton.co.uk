@@ -3,6 +3,7 @@
 		<li class="social-media__item">
 			<a href="{{ item.url }}" class="social-media__anchor" aria-label="{{ item.title }}" target="_blank" rel="noopener">
 				<span class="visually-hidden">{{ item.description }} - opens an external site</span>
+				{{ item.title }}
 				<svg version="1.1" width="100" height="100" role="img" viewBox="{{ item.viewBox }}" aria-labelledby="{{ item.title }}Title" aria-describedby="{{ item.title }}Desc">
 					<title id="{{ item.title }}Title">View my {{ item.title }} profile</title>
    				<desc id="{{ item.title }}Desc">link to {{ item.title }} profile</desc>

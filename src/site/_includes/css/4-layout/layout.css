@@ -14,8 +14,8 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  /* border: solid 4px red; */
+  /* justify-content: center; */
+  border: solid 4px red;
 }
 
 .header {
@@ -29,7 +29,6 @@ body {
 
 .navigation {
   height: 100px;
-  background: green;
   justify-content: flex-end;
   align-items: flex-end
 }
@@ -50,7 +49,6 @@ main {
 }
 
 footer {
-  text-align: center;
   padding: 0 .4em;
 }
 

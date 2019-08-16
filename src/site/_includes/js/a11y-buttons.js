@@ -26,12 +26,16 @@
   // Dyslexic font family
   dyslexicFont.addEventListener('click', function (e) {
     body.style.setProperty('font-family', '"OpenDyslexic", sans-serif');
+    defaultFont.classList.remove("button--ally--active");
+    dyslexicFont.classList.add("button--ally--active");
     localStorage.setItem("fontFamily", '"OpenDyslexic", sans-serif');
   });
 
   // Default font family
   defaultFont.addEventListener('click', function (e) {
     body.style.setProperty('font-family', 'Verdana, Geneva, sans-serif');
+    dyslexicFont.classList.remove("button--ally--active");
+    defaultFont.classList.add("button--ally--active");
     localStorage.setItem("fontFamily", 'Verdana, Geneva, sans-serif');
   });
 
@@ -47,16 +51,25 @@
 
   themeDefault.addEventListener('click', function (e) {
     body.className = 'theme-default';
+    themeDefault.classList.add("button--ally--active");
+    themeMonochrome.classList.remove("button--ally--active");
+    themeContrast.classList.remove("button--ally--active");
     localStorage.setItem("currentTheme", 'theme-default');
   });
 
   themeContrast.addEventListener('click', function (e) {
     body.className = 'theme-contrast';
+    themeContrast.classList.add("button--ally--active");
+    themeMonochrome.classList.remove("button--ally--active");
+    themeDefault.classList.remove("button--ally--active");
     localStorage.setItem('currentTheme', 'theme-contrast');
   });
 
   themeMonochrome.addEventListener('click', function (e) {
     body.className = 'theme-monochrome';
+    themeMonochrome.classList.add("button--ally--active");
+    themeContrast.classList.remove("button--ally--active");
+    themeDefault.classList.remove("button--ally--active");
     localStorage.setItem('currentTheme', 'theme-monochrome');
   });
 

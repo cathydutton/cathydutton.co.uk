@@ -18,7 +18,8 @@ Latest posts feed
 }
 
 .news-feed__title {
-  font-size: 2em;
+  /* font-size: 2em; */
+  margin-bottom: .2em;
   color: var(--colour-medium);
 }
 
