@@ -4,8 +4,8 @@ Pagination
 
 .pagination {
   margin-top: 2em;
-  border-top: 1px solid var(--colour-light);
-  border-bottom: 1px solid var(--colour-light);
+  border-top: 1px solid var(--colour-white);
+  border-bottom: 1px solid var(--colour-white);
 }
 
 .pagination__list {
@@ -45,7 +45,7 @@ Pagination
 }
 
 .pagination__anchor:hover  {
-  background: var(--colour-light);
+  background: var(--colour-white);
 }
 
 .pagination__anchor:hover svg {

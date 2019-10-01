@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   /* justify-content: center; */
-  border: solid 4px red;
+  /* border: solid 4px red; */
 }
 
 .header {
@@ -39,8 +39,8 @@ body {
 .page-header {
   padding: 3.05rem 0;
   background: var(--colour-light);
-  border-top: solid 1px var(--colour-border);
-  border-bottom: solid 1px var(--colour-border);
+  border-top: solid 1px var(--colour-medium);
+  border-bottom: solid 1px var(--colour-medium);
 }
 
 main {

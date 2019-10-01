@@ -7,20 +7,18 @@ Latest posts feed
   margin-top: 1.4em;
   padding: .8em;
   background: var(--colour-light);
-  border: solid 1px var(--colour-border);
-  border-bottom: solid 1px var(--colour-bright);
+  outline: solid 1px var(--colour-medium);
+  border-bottom: solid 2px var(--colour-bright);
 }
 
 .news-feed__post:hover {
   transition: all .3s ease-in-out;
   background: var(--colour-white);
-  outline: solid 1px var(--colour-light);
 }
 
 .news-feed__title {
   /* font-size: 2em; */
   margin-bottom: .2em;
-  color: var(--colour-medium);
 }
 
 .news-feed__header {

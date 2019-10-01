@@ -4,7 +4,7 @@ Profile image
 
 .profile-image {
   border-radius: 50%;
-  border: solid 1px var(--colour-border);
+  border: solid 1px var(--colour-medium);
   width: 10em;
   height: 10em;
   background-color: transparent;
@@ -44,10 +44,9 @@ Profile image
 }
 
 .profile-image-back {
-  background-color: var(--colour-dark);
+  background-color: var(--colour-light);
   color: var(--colour-white);
   transform: rotateY(180deg);
-  padding: 32% 0;
 }
 
 

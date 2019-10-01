@@ -18,16 +18,24 @@
 
 .accessibility-tools legend {
   float: left;
-  padding: .4em .4em .2em 0;
+  padding: .4em .8em .2em 0;
 }
 
 .button--ally {
-  background: var(--colour-medium);
+  background: var(--colour-bright);
+  color: var(--colour-dark);
   font-weight: normal;
-  border: 0;
+  border: solid 1px var(--colour-bright);
 }
 
-.button--ally--active {
+.button.button--ally:hover {
+  box-shadow: none!important;
+}
+
+.button--ally--active,
+.button--ally--active:hover  {
   cursor: not-allowed;
-  background: var(--colour-bright);
+  border: solid 1px var(--colour-white);
+  background: var(--colour-dark);
+  color: var(--colour-white);
 }

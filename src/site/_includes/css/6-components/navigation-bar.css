@@ -19,29 +19,65 @@
 .navigation a {
   color: var(--colour-dark);
   padding: .4em .8em;
+  text-decoration: none;
+  border-bottom: solid 6px var(--colour-medium);
+  position: relative;
 }
 
-.navigation a:hover {
+@media (hover: hover) {
+  .navigation .navigation__item a:before,
+  .navigation .navigation__item a:after {
+    display: block;
+    content: '';
+    border-bottom: solid 6px var(--colour-bright);  
+    position: absolute;
+    top: 100%;
+    transition: width .3s;
+    height: 6px;
+  }
+
+  .navigation .navigation__item a:before,
+  .navigation .navigation__item a:before {
+    width: 0;
+    left: 50%;
+  }
+
+  .navigation .navigation__item a:after,
+  .navigation .navigation__item a:after {
+    width: 0;
+    right: 50%;
+  }
+
+  .navigation .navigation__item a:hover:before,
+  .navigation .navigation__item a:focus:before {
+    width: 50%;
+    left: 50%;
+  }
+
+  .navigation .navigation__item a:hover:after,
+  .navigation .navigation__item a:focus:after {
+    width: 50%;
+    right: 50%;
+  }
+
+}
+
+.navigation .navigation__item a:hover,
+.navigation .navigation__item a:focus {
+  transition: all .3s ease-in-out;
   color: var(--colour-bright);
-  text-decoration: underline;
-  transition: all .3s ease-in-out;
 }
 
-.navigation a:focus {
-  background: var(--colour-bright);
-  text-decoration: underline;
-  transition: all .3s ease-in-out;
-  outline: 0;
-}
-  
 .navigation .navigation__item--current a,
 .navigation a:active {
-  color: var(--colour-bright);
-  text-decoration: underline;
+  border-bottom: solid 6px var(--colour-bright);
+  background: var(--colour-light);
+
 }
 
+.navigation .navigation__item--current a:hover
 .navigation a:active:hover {
-  text-decoration: none;
+  border-bottom: solid 6px var(--colour-bright); 
   cursor: not-allowed;
 }
   

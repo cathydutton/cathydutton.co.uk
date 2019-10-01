@@ -30,7 +30,7 @@
     position: relative;
     text-decoration: none;
     border-bottom: 0;
-    border-right: solid 1px var(--colour-light);
+    border-right: solid 1px var(--colour-white);
     text-decoration: underline;
     height: 100%;
   }
@@ -58,7 +58,7 @@
   
   .tab-panel {
     padding: .5em;
-    background: var(--colour-light);
+    background: var(--colour-white);
     border: solid 1px var(--colour-bright);
     margin-bottom: 1em;
   }

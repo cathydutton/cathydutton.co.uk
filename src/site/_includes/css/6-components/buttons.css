@@ -11,12 +11,16 @@ button,
   box-shadow: 0;
   transition: all 0.3s ease-in-out;
   background: var(--colour-dark);
+  border: 0;
 }
 
 button:hover,
 .button:hover {
-  background: var(--colour-bright);
+  transition: all .3s ease-in-out;
   text-decoration: underline;
+  background: var(--colour-white);
+  color: var(--colour-dark);
+  box-shadow: inset 0 0 0 1px var(--colour-dark);
 }
 
 button[disabled="disabled"],
@@ -32,7 +36,6 @@ button[disabled]:hover,
 .button[disabled="disabled"]:hover,
 .button[disabled]:hover {
   text-decoration: none;
-  background: var(--colour-medium);
 }
 
 button:active,
@@ -43,23 +46,19 @@ button:visited,
 }
 
 .button--primary {
-  background: var(--colour-dark);
-  color: var(--colour-white);
-}
-
-.button--secondary {
-  background: var(--colour-medium);
-  color: var(--colour-white);
-}
-
-.button--submit {
   background: var(--colour-bright);
   color: var(--colour-dark);
 }
 
-.button--submit:hover {
+
+.button--secondary {
   background: var(--colour-dark);
   color: var(--colour-white);
+}
+
+.button--submit {
+  background: var(--colour-dark);
+  color: var(--colour-bright);
 }
 
 .button--right {
