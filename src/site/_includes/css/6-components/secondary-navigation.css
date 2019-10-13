@@ -3,14 +3,14 @@
     ----------------------------------- */
 
 .navigation-footer {
-  margin: 1.5em 0;
+  margin: 1.5rem 0;
   padding: 0;
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 .navigation-footer .navigation__item {
   display: inline-block;
-  margin: .4em;
+  margin: .4rem;
 }
 
 .navigation-footer .navigation__item a {

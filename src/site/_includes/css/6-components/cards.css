@@ -5,13 +5,13 @@ Cards
 .cards {
   --ratio-padding: 55%;
   display: grid;
-  grid-template-columns: repeat( auto-fill, minmax(12em, 1fr) );
-  grid-gap: 1em;
-  padding: 1em;
+  grid-template-columns: repeat( auto-fill, minmax(12rem, 1fr) );
+  grid-gap: 1rem;
+  padding: 1rem;
 }
 
 .card {
-  padding: .8em;
+  padding: .8rem;
   background: var(--colour-white);
   border-bottom: solid 4px var(--colour-bright);
 }

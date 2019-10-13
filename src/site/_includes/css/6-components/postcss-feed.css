@@ -4,8 +4,8 @@ PostCSS  feed
 
 .postcss__post {
   width: 100%;
-  margin-top: 1.4em;
-  padding: .8em;
+  margin-top: 1.4rem;
+  padding: .8rem;
   background: var(--colour-white);
   border-bottom: solid 4px var(--colour-bright);
 }
@@ -17,7 +17,7 @@ PostCSS  feed
 }
 
 .postcss__title {
-  font-size: 2em;
+  font-size: 2rem;
   color: var(--colour-medium);
 }
 

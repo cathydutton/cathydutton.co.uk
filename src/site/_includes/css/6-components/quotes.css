@@ -3,30 +3,30 @@ Quotations
 ----------------------------------- */
 .quote {
   background: var(--colour-white);
-  margin: 1em 0;
-  padding: 1em;
+  margin: 1rem 0;
+  padding: 1rem;
 }
 
 blockquote {
-  padding: 1em;
+  padding: 1rem;
 }
 
 blockquote:before,
 blockquote:after {
   font-family: var(--font-family);
   color: var(--colour-medium);
-  font-size: 2em;
-  line-height: 0.1em;
+  font-size: 2rem;
+  line-height: 0.1rem;
 }
 
 blockquote:before {
   content: open-quote;
-  margin-right: 0.25em;
-  vertical-align: -0.2em;
+  margin-right: 0.25rem;
+  vertical-align: -0.2rem;
 }
 
 blockquote:after {
   content: close-quote;
-  margin-left: 0.25em;
-  vertical-align: -0.3em;
+  margin-left: 0.25rem;
+  vertical-align: -0.3rem;
 }

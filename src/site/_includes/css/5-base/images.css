@@ -19,7 +19,7 @@
 
 img {
   image-rendering: auto;
-  padding: .2em;
+  padding: .2rem;
   display: block;
 }
 
@@ -27,7 +27,7 @@ img {
   height: 0;
   overflow: hidden;
   position: relative;
-  margin: 1em 0;
+  margin: 1rem 0;
   padding-bottom: var(--ratio-padding);
   border: solid 1px var(--colour-white);
   background: url('/images/placeholder.svg') var(--colour-white) no-repeat 50% 50%;

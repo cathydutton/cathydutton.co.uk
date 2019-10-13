@@ -34,7 +34,7 @@ a[target=_blank]:after,
   a:before,
   .anchor:before {
     content:" (" attr(href) ") "!important;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     font-weight: normal;
   }
 

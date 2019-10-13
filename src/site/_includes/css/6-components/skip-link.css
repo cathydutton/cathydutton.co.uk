@@ -6,7 +6,7 @@ Skip Links
   position: absolute;
   top: 0;
   right: 100%; /* moves off screen */
-  padding: .2em .6em
+  padding: .2rem .6rem
 }
 
 .skip-link:focus {

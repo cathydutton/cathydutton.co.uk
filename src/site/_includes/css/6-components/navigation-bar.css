@@ -3,22 +3,22 @@
   ----------------------------------- */
 
 .navigation {
-  margin: 1em;
+  margin: 1rem;
 }
 
 .navigation .navigation__list {
-  padding: 0 1em;
+  padding: 0 1rem;
 }
 
 .navigation .navigation__item {
   float: left;
-  margin: .2em;
+  margin: .2rem;
   list-style: none;
 }
   
 .navigation a {
   color: var(--colour-dark);
-  padding: .4em .8em;
+  padding: .4rem .8rem;
   text-decoration: none;
   border-bottom: solid 6px var(--colour-medium);
   position: relative;

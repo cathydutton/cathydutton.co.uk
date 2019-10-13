@@ -5,7 +5,7 @@
 button,
 .button {
   display: inline-block;
-  padding: .5em 1em;
+  padding: .5rem 1rem;
   color: var(--colour-white);
   font-weight: bold;
   box-shadow: 0;

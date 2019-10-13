@@ -19,7 +19,7 @@ body {
 }
 
 .header {
-  padding: 1em 0;
+  padding: 1rem 0;
 }
 
 .profile-image {
@@ -34,8 +34,6 @@ body {
 }
 
 
-
-
 .page-header {
   padding: 3.05rem 0;
   background: var(--colour-light);
@@ -44,12 +42,12 @@ body {
 }
 
 main {
-  /* margin: 0 2em 0 1em;;
-  padding: 1em 0; */
+  /* margin: 0 2rem 0 1rem;;
+  padding: 1rem 0; */
 }
 
 footer {
-  padding: 0 .4em;
+  padding: 0 .4rem;
 }
 
 .inner-wrapper {

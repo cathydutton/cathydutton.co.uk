@@ -6,19 +6,19 @@
   color: var(--colour-white);
   background: var(--colour-dark);
   border-bottom: solid 4px var(--colour-bright);
-  padding: .5em 0;
+  padding: .5rem 0;
 }
   
 .accessibility-tools fieldset {
-  margin: 0 1em 0 0;
-  padding: .2em 0;
+  margin: 0 1rem 0 0;
+  padding: .2rem 0;
   float: left;
   border: 0;
 }
 
 .accessibility-tools legend {
   float: left;
-  padding: .4em .8em .2em 0;
+  padding: .4rem .8rem .2rem 0;
 }
 
 .button--ally {

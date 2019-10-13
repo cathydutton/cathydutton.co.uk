@@ -22,9 +22,9 @@ body {
 
 
 pre { 
-  padding: .5em;
+  padding: .5rem;
   line-height: var(--line-height);
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   font-family: Consolas, Monaco, monospace;
   tab-size: 4;
   white-space: unset;
@@ -35,7 +35,7 @@ code {
   font: inherit ;
   background: var(--colour-white);
   background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
-  background-size: auto 3em;
+  background-size: auto 3rem;
   background-origin: content-box; 
   display: block;
 }
@@ -89,8 +89,8 @@ ul li {
 /* DESCRIPTION LIST */
 dl,
 .description-list {
-  margin-top: .4em;
-  margin-bottom: 1em;
+  margin-top: .4rem;
+  margin-bottom: 1rem;
 }
 
 dt,
@@ -124,7 +124,7 @@ dt + dt::before,
 .description-list__title + .description-list__title::before {
   content: ', ';
   font-weight: normal;
-  margin-left: -.25em;
+  margin-left: -.25rem;
 }
 
 [hidden], 

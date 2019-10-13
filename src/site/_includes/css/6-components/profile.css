@@ -5,15 +5,15 @@ Profile image
 .profile-image {
   border-radius: 50%;
   border: solid 1px var(--colour-medium);
-  width: 10em;
-  height: 10em;
+  width: 10rem;
+  height: 10rem;
   background-color: transparent;
   perspective: 1000px;
 }
 
 .profile-image__img {
   border-radius: 50%;
-  padding: .3em;
+  padding: .3rem;
   width: 100%;
 } 
 

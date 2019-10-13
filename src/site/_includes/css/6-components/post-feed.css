@@ -4,8 +4,8 @@ Latest posts feed
 
 .news-feed__post {
   width: 100%;
-  margin-top: 1.4em;
-  padding: .8em;
+  margin-top: 1.4rem;
+  padding: .8rem;
   background: var(--colour-light);
   outline: solid 1px var(--colour-medium);
   border-bottom: solid 2px var(--colour-bright);
@@ -17,8 +17,8 @@ Latest posts feed
 }
 
 .news-feed__title {
-  /* font-size: 2em; */
-  margin-bottom: .2em;
+  /* font-size: 2rem; */
+  margin-bottom: .2rem;
 }
 
 .news-feed__header {

@@ -3,7 +3,7 @@ Pagination
 ----------------------------------- */
 
 .pagination {
-  margin-top: 2em;
+  margin-top: 2rem;
   border-top: 1px solid var(--colour-white);
   border-bottom: 1px solid var(--colour-white);
 }
@@ -11,7 +11,7 @@ Pagination
 .pagination__list {
   display: grid;
   grid-columns: 1fr 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
 
 .pagination__list-item {
@@ -26,7 +26,7 @@ Pagination
 
 .pagination__anchor {
   display: block;
-  padding: 1em 0;
+  padding: 1rem 0;
   border-bottom: 0;
 }
 
