@@ -2,8 +2,14 @@
   Anchors
   ----------------------------------- */
 
+a {
+  --link: hsl(230, 60%, 50%);
+  --link-visited: hsl(290, 60%, 50%);
+  --link-hover: hsl(230, 80%, 60%);
+  --link-active: hsl(350, 60%, 50%);
+}
 
-a,
+/* a,
 .anchor {
   color: currentColor;
   text-decoration: green wavy underline;
@@ -16,15 +22,13 @@ a:hover,
 }
 
 
-
-
 a[target=_blank]:after,
 .anchor[target=_blank]:after{
   content: ' (opens new window)';
-} 
+}  */
 
 /* Print styles */
-@media print {
+/* @media print {
   
   a,
   .anchor{
@@ -43,4 +47,4 @@ a[target=_blank]:after,
     content: '';
   }
 
-}
+} */

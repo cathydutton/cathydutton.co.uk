@@ -4,6 +4,38 @@
 
 button,
 .button {
+  --button: hsl(230, 60%, 50%);
+  --button-visited: hsl(290, 60%, 50%);
+  --button-hover: hsl(230, 80%, 60%);
+  --button-active: hsl(350, 60%, 50%);
+}
+
+button,
+.button {
+  --button: hsl(230, 60%, 50%);
+  --button-visited: hsl(290, 60%, 50%);
+  --button-hover: hsl(230, 80%, 60%);
+  --button-active: hsl(350, 60%, 50%);
+}
+
+button,
+.button {
+  --button: hsl(230, 60%, 50%);
+  --button-visited: hsl(290, 60%, 50%);
+  --button-hover: hsl(230, 80%, 60%);
+  --button-active: hsl(350, 60%, 50%);
+}
+
+button,
+.button {
+  --button: hsl(230, 60%, 50%);
+  --button-visited: hsl(290, 60%, 50%);
+  --button-hover: hsl(230, 80%, 60%);
+  --button-active: hsl(350, 60%, 50%);
+}
+
+/* button,
+.button {
   display: inline-block;
   padding: .5rem 1rem;
   color: var(--colour-white);
@@ -63,4 +95,4 @@ button:visited,
 
 .button--right {
   float: right;
-}
+} */
