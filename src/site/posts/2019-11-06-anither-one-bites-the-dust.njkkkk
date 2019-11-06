@@ -1,0 +1,71 @@
+--- 
+title: Another one bites the dust
+description: 
+date: "2019-11-06" 
+tags: [Design, css, front end development] 
+---
+
+<p>One of the first things I learned as a web designer was to disable native behaviour for anchor tags.</p>
+
+<pre>
+  <code>
+
+a {
+  text-decoration: none;
+  border-bottom: solid 1px currentcolor;
+}
+
+<pre>
+  <code>
+
+Without any styling links looked like this…</p>
+
+<p>Causing problems with words like….</p>
+
+<p>and the colour had to match etc</p>
+
+<p>The first workaround I used was text-decoration: none and Border-bottom: solid 1px currentcolor </p>
+ 
+<p>Work around like this are common in CSS when the options properties and values available do not meet the requirements of a design.</p>
+ 
+<p>Other examples include....</p>
+ 
+<p>Reasons:  urging through g’s etc</p>
+ 
+ 
+<p>List all current properties </p>
+ 
+<p>Border</p>
+<p>Shadow </p>
+<p>Background image - https://www.cassie.codes/</p>
+<p>Before and after classes </p>
+ 
+<p>Animation </p>
+ 
+<p>New CSS properties and values mean we can use the intended properties to style anchors.</p>
+ 
+<p>New props = offset, thicknes, colour, text-decoration-skip, text-decoration-skip-ink</p>
+ 
+<p>My site example before</p>
+ 
+<p>My site example after</p>
+
+<p>Animation???</p>
+ 
+ <p>You can also do strike throughs noe - is this better semantiaaclk??</p>
+
+<p>Browser support</p>
+
+<p>Performance gains?</p>
+
+<p>Firther reading &amp; watching</p>
+
+<ul>
+  <li>https://codepen.io/jensimmons/pen/voYMPE?editors=1100</li>
+  <li>https://codepen.io/collection/XgGLMO/</li>
+  <li>https://www.youtube.com/watch?v=sZS-7RX_c7g&feature=youtu.be</li>
+  <li></li>
+</ul>
+
+
+<p>https://codepen.io/cassie-codes/pen/rNNGdmw</p>
