@@ -38,4 +38,5 @@ Cards
   transition: all .3s ease-in-out;
   background: var(--colour-white);
   outline: solid 1px var(--colour-white);
+  /* transform: scale(0.9); */
 }

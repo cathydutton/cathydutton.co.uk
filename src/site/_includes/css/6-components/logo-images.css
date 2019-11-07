@@ -57,7 +57,7 @@ Logo images
   outline: 0;
 }
 
-.tech-logo__anchor:before,
+/* .tech-logo__anchor:before,
 .work-logo__anchor:before {
   background-color: var(--colour-bright);
   color: var(--colour-dark);
@@ -71,12 +71,12 @@ Logo images
   width: 100%;
   height: 100%;
   font-size: .7rem;
-}
+} */
 
-.tech-logo__anchor:focus:before,
+/* .tech-logo__anchor:focus:before,
 .tech-logo__anchor:hover:before,
 .work-logo__anchor:focus:before,
 .work-logo__anchor:hover:before {
   transition: all .3s ease-in-out;
   opacity: .90;
-}
+} */

@@ -3,11 +3,9 @@
   CSS variables for fonts, colors, etc.
   ----------------------------------- */
 
-/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FCFCFC&v=E3E3E3&v=E61E9C&v=780C83&v=1E0321&v=333333 */
 
 
 /* RECHECK ALL CONTRAST ON ALL 3 MODES!!!! */
-
 
 
 /* Colors */
@@ -21,11 +19,15 @@
 
   
   --colour-dark: #1e1e1e;
-  --colour-medium: #e3e3e3;
-  --colour-light: #f3f3f3;
   --colour-white: #ffffff;
-  --colour-bright: #ff3465;
- 
+
+  --colour-grey: #e3e3e3;
+  --colour-grey-light: #f3f3f3;
+
+  --colour-pink: #ff3262;
+  --colour-pink-light: #FFE2E2;
+  
+  /* https://toolness.github.io/accessible-color-matrix/?n=White&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=F3F3F3&v=FFE2E2&v=E3E3E3&v=FF3465&v=1E1E1E  */
   
   
 

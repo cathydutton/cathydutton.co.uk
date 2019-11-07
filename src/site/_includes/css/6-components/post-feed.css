@@ -14,6 +14,7 @@ Latest posts feed
 .news-feed__post:hover {
   transition: all .3s ease-in-out;
   background: var(--colour-white);
+  transform: scale(0.9);
 }
 
 .news-feed__title {

@@ -3,27 +3,29 @@
 
 ----------------------------------- */
 
-:root {
+/* :root {
   --ratio-padding: 55%; /* Square default images 275 x 150 | 550 x 300 */
-}
+/* } */ 
 
 /* Full length images */
 
-.image-ratio--thin {
+/* .image-ratio--thin {
   --ratio-padding: 34.37%  /* 640 x 220 */
-}
+/* } */ 
 
-.image-ratio--medium {
+/* .image-ratio--medium {
   --ratio-padding: 51.57% /* 640 x 330 */
-} 
+/* }  */ 
 
 img {
   image-rendering: auto;
   padding: .2rem;
   display: block;
+  border: solid 1px var(--colour-white);
+  background: url('/images/placeholder.svg') var(--colour-white) no-repeat 50% 50%;
 }
 
-.image-ratio {
+/* .image-ratio {
   height: 0;
   overflow: hidden;
   position: relative;
@@ -31,12 +33,12 @@ img {
   padding-bottom: var(--ratio-padding);
   border: solid 1px var(--colour-white);
   background: url('/images/placeholder.svg') var(--colour-white) no-repeat 50% 50%;
-}
+} */
 
-.image-ratio img {
+/* .image-ratio img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */

@@ -5,9 +5,9 @@
       <a href="{{ item.url }}" title="Visit the {{ item.logo }} website" target="_blank" rel="noopener" aria-label="{{ item.logo }}" class="work-logo__anchor">
       <span class="visually-hidden">Visit the {{ item.logo }} website.</span>
     {% endif %}
-    <div class="image-ratio">
-      <img src="../images/work/{{ item.logo | lower | replace(" ", "-") }}-logo.jpg" alt="{{ item.logo }} logo">
-    </div>
+    {# <div class="image-ratio"> #}
+      <img src="../images/work/{{ item.logo | lower | replace(" ", "-") }}-logo.jpg" alt="{{ item.logo }} logo" width="200" height="200">
+    {# </div> #}
     {% if item.url %}
       </a>
     {% endif %}
