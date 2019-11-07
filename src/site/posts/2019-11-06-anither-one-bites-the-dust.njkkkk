@@ -5,6 +5,9 @@ date: "2019-11-06"
 tags: [Design, css, front end development] 
 ---
 
+
+descender text
+
 <p>One of the first things I learned as a web designer was to disable native behaviour for anchor tags.</p>
 
 <pre>
@@ -44,7 +47,9 @@ Without any styling links looked like this…</p>
  
 <p>New CSS properties and values mean we can use the intended properties to style anchors.</p>
  
-<p>New props = offset, thicknes, colour, text-decoration-skip, text-decoration-skip-ink</p>
+<p>New props = offset, thicknes, colour, text-decoration-skip-ink, text-decoration-style - OLD!!!</p>
+
+<p>text-decoration-skip-ink auto by defualt (browser decides based on ???? - SKIP - means always skip - None - to move it up and create nice effect), </p>
  
 <p>My site example before</p>
  
@@ -69,3 +74,12 @@ Without any styling links looked like this…</p>
 
 
 <p>https://codepen.io/cassie-codes/pen/rNNGdmw</p>
+
+
+/* 
+
+https://css-tricks.com/styling-underlines-web/ 
+
+https://www.dannyguo.com/blog/animated-multiline-link-underlines-with-css/
+
+*/
