@@ -4,8 +4,8 @@
 
 .accessibility-tools {
   color: var(--colour-white);
-  background: var(--colour-dark);
-  border-bottom: solid 4px var(--colour-bright);
+  background: var(--colour-black);
+  border-bottom: solid 4px var(--colour-pink);
   padding: .5rem 0;
 }
   
@@ -22,20 +22,13 @@
 }
 
 .button--ally {
-  background: var(--colour-bright);
-  color: var(--colour-dark);
-  font-weight: normal;
-  border: solid 1px var(--colour-bright);
-}
+  --button: hsl(346, 100%, 60%);
+  --button-hover: hsl(346, 100%, 70%);
+  --button-active:  hsl(346, 100%, 80%);
+  --button-visited: hsl(346, 100%, 70%);
+  --button-colour: var(--colour-black);
+  --button-border: var(--colour-pink);
 
-.button.button--ally:hover {
-  box-shadow: none!important;
-}
-
-.button--ally--active,
-.button--ally--active:hover  {
-  cursor: not-allowed;
-  border: solid 1px var(--colour-white);
-  background: var(--colour-dark);
-  color: var(--colour-white);
+  padding: .5em .7em;
+  box-shadow: 0;
 }

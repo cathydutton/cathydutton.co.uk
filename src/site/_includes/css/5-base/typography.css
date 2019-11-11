@@ -47,7 +47,7 @@ p {
 
 
 .highlight-text {
-  border-left: 4px solid var(--colour-bright);
+  border-left: 4px solid var(--colour-pink);
   padding-left: .4rem;
   font-size: 1.2rem;
 }

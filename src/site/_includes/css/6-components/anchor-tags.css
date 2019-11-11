@@ -18,7 +18,7 @@ a {
 a:hover,
 .anchor:hover {
   transition: all .3s ease-in-out;
-  color: var(--colour-bright);
+  color: var(--colour-pink);
 }
 
 

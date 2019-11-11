@@ -36,9 +36,9 @@ body {
 
 .page-header {
   padding: 3.05rem 0;
-  background: var(--colour-light);
-  border-top: solid 1px var(--colour-medium);
-  border-bottom: solid 1px var(--colour-medium);
+  background: var(--colour-grey-light);
+  border-top: solid 1px var(--colour-grey);
+  border-bottom: solid 1px var(--colour-grey);
 }
 
 main {

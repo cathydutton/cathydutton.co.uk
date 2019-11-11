@@ -18,24 +18,24 @@ Social media icons
   width: 34px;
   height: 34px;
   margin: 0 5px;
-  color: var(--colour-dark);
-  fill: var(--colour-dark);
+  color: var(--colour-black);
+  fill: var(--colour-black);
 }
 
 .social-media__anchor svg:hover,
 .social-media__anchor svg:focus {
   transition: all .3s ease-in-out;
   border-radius: 100%;
-  color: var(--colour-bright);
-  fill: var(--colour-bright);
-  background: var(--colour-dark);
+  color: var(--colour-pink);
+  fill: var(--colour-pink);
+  background: var(--colour-black);
   outline: none;
   transform: scale(1.25);
 }
 
 /* .social-media__anchor:before {
   border-radius: 3px;
-  background-color: var(--colour-dark);
+  background-color: var(--colour-black);
   color: var(--colour-white);
   content: attr(aria-label);
   display: inline-block;

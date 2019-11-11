@@ -41,7 +41,7 @@ Pagination
 .pagination__svg {
   width: 20px;
   height: 16px;
-  fill: var(--colour-medium);
+  fill: var(--colour-grey);
 }
 
 .pagination__anchor:hover  {
@@ -49,9 +49,9 @@ Pagination
 }
 
 .pagination__anchor:hover svg {
-  fill: var(--colour-bright);
+  fill: var(--colour-pink);
 }
 
 .pagination__anchor:hover .navigation__title {
-  border-color: var(--colour-bright);
+  border-color: var(--colour-pink);
 }

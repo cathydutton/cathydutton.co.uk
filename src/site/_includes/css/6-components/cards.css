@@ -13,7 +13,7 @@ Cards
 .card {
   padding: .8rem;
   background: var(--colour-white);
-  border-bottom: solid 4px var(--colour-bright);
+  border-bottom: solid 4px var(--colour-pink);
 }
 
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
@@ -31,7 +31,7 @@ Cards
 }
 
 .card__title {
-  color: var(--colour-medium);
+  color: var(--colour-grey);
 }
 
 .card__post:hover {

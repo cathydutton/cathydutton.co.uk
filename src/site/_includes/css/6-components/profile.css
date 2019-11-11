@@ -4,7 +4,7 @@ Profile image
 
 .profile-image {
   border-radius: 50%;
-  border: solid 1px var(--colour-medium);
+  border: solid 1px var(--colour-grey);
   width: 10rem;
   height: 10rem;
   background-color: transparent;

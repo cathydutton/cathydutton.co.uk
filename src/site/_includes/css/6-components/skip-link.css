@@ -11,6 +11,6 @@ Skip Links
 
 .skip-link:focus {
   right: auto;
-  background: var(--colour-bright);
+  background: var(--colour-pink);
   color: var(--colour-white);
 }

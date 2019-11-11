@@ -2,97 +2,107 @@
   Buttons
   ----------------------------------- */
 
-button,
-.button {
-  --button: hsl(230, 60%, 50%);
-  --button-visited: hsl(290, 60%, 50%);
-  --button-hover: hsl(230, 80%, 60%);
-  --button-active: hsl(350, 60%, 50%);
-}
+  button,
+  .button{
+    --button: hsl(0, 0%, 12%);
+    --button-hover: hsl(0, 0%, 20%);
+    --button-active:  hsl(0, 0%, 30%);
+    --button-visited: hsl(0, 0%, 20%);
+    --button-colour: var(--colour-white);
+    --button-border: var(--colour-black);
+  }
+  
+  
+  .button--primary {
+    --button: hsl(346, 100%, 60%);
+    --button-hover: hsl(346, 100%, 70%);
+    --button-active:  hsl(346, 100%, 80%);
+    --button-visited: hsl(346, 100%, 70%);
+    --button-colour: var(--colour-black);
+    --button-border: var(--colour-black);
+  } 
+  
+  .button--secondary {
+    --button: hsl(0, 0%, 79%);
+    --button-hover: hsl(0, 0%, 89%);
+    --button-active:  hsl(0, 0%, 69%);
+    --button-visited: hsl(0, 0%, 89%);
+    --button-colour: var(--colour-black);
+    --button-border: var(--colour-black);
+  }
+  
+  .button--tertiary {
+    --button: hsl(0, 100%, 90%);
+    --button-hover: hsl(0, 100%, 94%);
+    --button-active:  hsl(0, 100%, 84%);
+    --button-visited: hsl(0, 100%, 94%);
+    --button-colour: var(--colour-black);
+    --button-border: var(--colour-black);
+  }
+  
+  
+  button,
+  .button {
+    padding: .9rem 1.7rem;
+    color: var(--button-colour);
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    background: var(--button);
+    border: solid 1px var(--button-border);
+    box-shadow: inset 0 0 0 2px var(--colour-white);
+    margin-right: 1em;
+  }
+  
+  button:hover,
+  .button:hover {
+    text-decoration: underline;
+    background: var(--button-hover);
+    box-shadow: inset 0 0 0 4px var(--colour-white);
+  }
+  
+  button:active,
+  .button:active
+   {
+    text-decoration: underline;
+    background: var(--button-active);
+    box-shadow: inset 0 0 0 4px var(--colour-white);
+  }
+  
+  button:visited,
+  .button:visited {
+    text-decoration: underline;
+    background: var(--button-visited);
+    box-shadow: inset 0 0 0 4px var(--colour-white);
+  }
 
-button,
-.button {
-  --button: hsl(230, 60%, 50%);
-  --button-visited: hsl(290, 60%, 50%);
-  --button-hover: hsl(230, 80%, 60%);
-  --button-active: hsl(350, 60%, 50%);
-}
+  button[disabled="disabled"],
+  button[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
 
-button,
-.button {
-  --button: hsl(230, 60%, 50%);
-  --button-visited: hsl(290, 60%, 50%);
-  --button-hover: hsl(230, 80%, 60%);
-  --button-active: hsl(350, 60%, 50%);
-}
+  button[disabled="disabled"]:hover,
+  button[disabled]:hover {
+    text-decoration: none;
+  }
 
-button,
-.button {
-  --button: hsl(230, 60%, 50%);
-  --button-visited: hsl(290, 60%, 50%);
-  --button-hover: hsl(230, 80%, 60%);
-  --button-active: hsl(350, 60%, 50%);
-}
-
-/* button,
-.button {
-  display: inline-block;
-  padding: .5rem 1rem;
-  color: var(--colour-white);
-  font-weight: bold;
-  box-shadow: 0;
-  transition: all 0.3s ease-in-out;
-  background: var(--colour-dark);
-  border: 0;
-}
-
-button:hover,
-.button:hover {
-  transition: all .3s ease-in-out;
-  text-decoration: underline;
-  background: var(--colour-white);
-  color: var(--colour-dark);
-  box-shadow: inset 0 0 0 1px var(--colour-dark);
-}
-
-button[disabled="disabled"],
-button[disabled],
-.button[disabled="disabled"],
-.button[disabled] {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-button[disabled="disabled"]:hover,
-button[disabled]:hover,
-.button[disabled="disabled"]:hover,
-.button[disabled]:hover {
-  text-decoration: none;
-}
-
-button:active,
-button:visited,
-.button:active,
-.button:visited {
-  opacity: 0.74;
-}
-
-.button--primary {
-  background: var(--colour-bright);
-  color: var(--colour-dark);
-}
+  .button--right {
+    float: right;
+  } 
 
 
-.button--secondary {
-  background: var(--colour-dark);
-  color: var(--colour-white);
-}
 
-.button--submit {
-  background: var(--colour-dark);
-  color: var(--colour-bright);
-}
 
-.button--right {
-  float: right;
-} */
+
+
+
+
+
+
+
+
+
+
+
+

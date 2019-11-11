@@ -10,7 +10,7 @@
   padding: 1rem;
   align-items: center;
   justify-content: center;
-  border-bottom: dashed 1px var(--colour-dark);
+  border-bottom: dashed 1px var(--colour-black);
 }
   
   @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {

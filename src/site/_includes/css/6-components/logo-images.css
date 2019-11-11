@@ -59,8 +59,8 @@ Logo images
 
 /* .tech-logo__anchor:before,
 .work-logo__anchor:before {
-  background-color: var(--colour-bright);
-  color: var(--colour-dark);
+  background-color: var(--colour-pink);
+  color: var(--colour-black);
   content: attr(aria-label);
   font-weight: bold;
   display: inline-block;

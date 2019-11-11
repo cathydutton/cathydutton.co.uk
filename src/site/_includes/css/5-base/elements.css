@@ -55,7 +55,7 @@ pre p {
 
 /* Select */
 ::selection {
-  background: var(--colour-bright);
+  background: var(--colour-pink);
 }
 
 /* SVG */

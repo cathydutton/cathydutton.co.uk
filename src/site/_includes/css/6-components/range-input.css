@@ -33,7 +33,7 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background:var(--colour-dark);
+    background:var(--colour-black);
     cursor: pointer;
     outline: 2px;
 } 
@@ -42,7 +42,7 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: var(--colour-dark);
+    background: var(--colour-black);
     cursor: pointer;
     outline: 2px;
 } 

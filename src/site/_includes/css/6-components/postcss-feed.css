@@ -7,7 +7,7 @@ PostCSS  feed
   margin-top: 1.4rem;
   padding: .8rem;
   background: var(--colour-white);
-  border-bottom: solid 4px var(--colour-bright);
+  border-bottom: solid 4px var(--colour-pink);
 }
 
 .postcss__post:hover {
@@ -18,7 +18,7 @@ PostCSS  feed
 
 .postcss__title {
   font-size: 2rem;
-  color: var(--colour-medium);
+  color: var(--colour-grey);
 }
 
 .postcss__header {

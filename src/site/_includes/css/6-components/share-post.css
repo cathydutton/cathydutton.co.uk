@@ -17,7 +17,7 @@ Social Share buttons
 
 .share-post a:hover,
 .share-post a:active {
-  color: var(--colour-bright);
+  color: var(--colour-pink);
 }
 
 .share-post__twitter {

@@ -11,24 +11,24 @@
 /* Colors */
 :root {
   /* --colour-black:  hsl(212, 12%, 21%);
-  --colour-dark: hsl(294, 83%, 7%);
+  --colour-black: hsl(294, 83%, 7%);
   --colour-medium: hsl(294, 83%, 28%);
   --colour-white: hsla(0, 3%, 94%, 0.933); 
   --colour-white: hsl(0, 0%, 100%);
   --colour-bright: hsl(322, 80%, 51%); */
 
   
-  --colour-dark: #1e1e1e;
+  --colour-black: hsl(0, 0%, 12%);
+  --colour-black-light: #727272;
   --colour-white: #ffffff;
 
-  --colour-grey: #e3e3e3;
+  --colour-grey: hsl(0, 0%, 79%);
   --colour-grey-light: #f3f3f3;
 
-  --colour-pink: #ff3262;
-  --colour-pink-light: #FFE2E2;
+  --colour-pink: hsl(346, 100%, 60%);
+  --colour-pink-light: #fecccc;
   
-  /* https://toolness.github.io/accessible-color-matrix/?n=White&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=F3F3F3&v=FFE2E2&v=E3E3E3&v=FF3465&v=1E1E1E  */
-  
+  /* https://toolness.github.io/accessible-color-matrix/?n=White&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=F3F3F3&v=FECCCC&v=E3E3E3&v=FF3465&v=1E1E1E   */
   
 
 
@@ -42,7 +42,7 @@
 
 .theme-contrast {
   /* --colour-black: hsl(0, 0%, 100%);
-  --colour-dark: hsl(59, 100%, 51%);
+  --colour-black: hsl(59, 100%, 51%);
   --colour-medium: hsl(38, 100%, 50%);
   --colour-white: hsl(211, 100%, 21%);
   --colour-white: hsl(210, 100%, 12%);
@@ -53,7 +53,7 @@
 
 .theme-monochrome {
   /* --colour-black: hsl(34, 74%, 7%);
-  --colour-dark: hsl(29, 66%, 14%);
+  --colour-black: hsl(29, 66%, 14%);
   --colour-medium: hsl(33, 50%, 22%);
   --colour-white: hsl(39, 92%, 86%);
   --colour-white: hsl(42, 86%, 92%);

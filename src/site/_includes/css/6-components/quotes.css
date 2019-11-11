@@ -14,7 +14,7 @@ blockquote {
 blockquote:before,
 blockquote:after {
   font-family: var(--font-family);
-  color: var(--colour-medium);
+  color: var(--colour-grey);
   font-size: 2rem;
   line-height: 0.1rem;
 }
