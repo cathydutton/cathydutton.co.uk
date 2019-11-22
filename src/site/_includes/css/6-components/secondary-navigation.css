@@ -31,30 +31,12 @@
     top: 100%;
     transition: width .3s;
     height: 3px;
-  }
-
-  .navigation-footer .navigation__item a:before,
-  .navigation-footer .navigation__item a:before {
     width: 0;
-    left: 50%;
-  }
-
-  .navigation-footer .navigation__item a:after,
-  .navigation-footer .navigation__item a:after {
-    width: 0;
-    right: 50%;
   }
 
   .navigation-footer .navigation__item a:hover:before,
   .navigation-footer .navigation__item a:focus:before {
-    width: 50%;
-    left: 50%;
-  }
-
-  .navigation-footer .navigation__item a:hover:after,
-  .navigation-footer .navigation__item a:focus:after {
-    width: 50%;
-    right: 50%;
+    width: 100%;
   }
 
 }

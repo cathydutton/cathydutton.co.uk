@@ -28,7 +28,26 @@
   --button-visited: hsl(346, 100%, 70%);
   --button-colour: var(--colour-black);
   --button-border: var(--colour-pink);
-
   padding: .5em .7em;
-  box-shadow: 0;
+  box-shadow: none;
 }
+
+  .button--ally:hover {
+    box-shadow: none;
+  }
+  
+
+  
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+

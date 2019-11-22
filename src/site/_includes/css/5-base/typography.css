@@ -3,6 +3,16 @@
   Reset and/or normalize styles, box-sizing definition, etc. 
   ----------------------------------- */
 
+
+.flow {
+  --flow-space: 1em;
+}  
+  
+.flow > * + * { 
+  margin-top: var(--flow-space);
+}
+
+
 body {
   font-family: var(--font-family);
   font-weight: 400;
@@ -11,7 +21,7 @@ body {
 }
 
 h1, h2, h3, h4, p, .page-intro {
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   max-width: 80%;
 }
 
@@ -34,7 +44,7 @@ h4 {
 }
 
 p {
-  max-width: 33rem;
+  /* max-width: 33rem; */
   font-size: 1.1rem;
 }
 

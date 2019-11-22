@@ -22,7 +22,7 @@ pageName: Home
 
 
 <header id="js-skip-link-target" class="page-header clear">
-  <div class="inner-wrapper">
+  <div class="inner-wrapper flow">
     <h1>
      Hello, I'm Cathy a designer from Cheshire.
     </h1>
@@ -31,22 +31,17 @@ pageName: Home
   </div>
 </header>
 
- <div class="inner-wrapper">
-
-  <p class="highlight-text">
-    fdsk,dfgdfg,d fdgdfgdfgdfg gfdgdfgdg, 
-  </p>
-
-  <section>  
+<div class="inner-wrapper  inner-wrapper--grid">
+  <section class="test"> 
+    <p class="highlight-text">
+      fdsk,dfgdfg,d fdgdfgdfgdfg gfdgdfgdg, 
+    </p> 
     <p>
       I’m currently working as a Lead Designer for the Department for Environment, Food &amp; Rural Affairs (Defra UK). I work with user researchers, business analysts and content designers to design services that are engaging, intuitive and easy to navigate. 
     </p>
     <p>
       Alongside project work I am also an active member of the design community, trained service assessor and member of the <a href="https://design-system.service.gov.uk/community/design-system-working-group/" rel="noopener" target="_blank" title="Design system working group" class="anchor">GDS design system working group</a>, helping to maintain standards whilst promoting inclusivity.
     </p>
-  </section>
-
-  <section>
     <h2>Around the Web</h2>
     <p>
       Besides this site you can also find my work in the folowing places:
@@ -60,13 +55,20 @@ pageName: Home
     </ul>
   </section>
 
-  <section class="work-history">
+  <section></section>
+  <section></section>
+  <section></section>
+</div>
+
+<div class="inner-wrapper">
+
+  <section class="work-history flow">
     <h2>Work history</h2>
     <p>Over the years I have been fortunate enough to work with some amazing companies and brands. Here are a few highlights:</p>
     {% include "work.njk" %}
   </section>
 
-  <section class="latest-posts">
+  <section class="latest-posts flow">
     {% include "latest-posts.njk" %}
   </section>
 
