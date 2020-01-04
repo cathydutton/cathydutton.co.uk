@@ -10,6 +10,8 @@ layout: layouts/base.njk
   <time datetime="{{ date }}">{{ date | dateDisplayProject }}</time>
 </p>
 
-{{ content | safe }}
+<section class="flow"> 
+  {{ content | safe }}
+</section>
 
 <a href="/projects" class="anchor">Back to all projects</a>

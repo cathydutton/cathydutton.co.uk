@@ -14,10 +14,10 @@
 }
 
 .navigation-footer .navigation__item a {
-  color: var(--colour-black);
+  color: var(--colour-white);
   text-decoration: none;
   display: inline-block;
-  border-bottom: solid 3px var(--colour-grey);
+  border-bottom: solid 3px var(--colour-black-light);
   position: relative;
 }
 
@@ -44,7 +44,7 @@
 .navigation-footer .navigation__item a:hover,
 .navigation-footer .navigation__item a:focus {
   transition: all .3s ease-in-out;
-  color: var(--colour-pink);
+  /* color: var(--colour-pink); */
 
 }
 

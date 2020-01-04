@@ -10,7 +10,9 @@ layout: layouts/base.njk
   <span class="visually-hidden">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
 </p>
 
-{{ content | safe }}
+<section class="flow"> 
+  {{ content | safe }}
+</section>
 
 <p>
   Subscribe to the <a href="/feed.xml" class="anchor">RSS feed</a>

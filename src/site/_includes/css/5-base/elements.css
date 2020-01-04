@@ -16,10 +16,8 @@ html {
 
 body {
   color: var(--colour-black);
-  background: var(--colour-white);
+  background: var(--colour-grey-light);
 }
-
-
 
 pre { 
   padding: .5rem;

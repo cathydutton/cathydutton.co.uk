@@ -52,15 +52,19 @@ p {
   font-size: 1.3rem;
 }
 
-/* 
-
 
 
 .highlight-text {
-  border-left: 4px solid var(--colour-pink);
-  padding-left: .4rem;
+  padding: 1rem;
   font-size: 1.2rem;
+  background: var(--colour-white);
+  border: solid 1px var(--colour-grey);
+  /* border-left: 4px solid var(--colour-pink); */
 }
+
+
+
+/* 
 
 .post-title,
 .project-title {

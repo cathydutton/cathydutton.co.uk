@@ -18,7 +18,7 @@ permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/
 
 
 <header id="js-skip-link-target" class="page-header clear">
-  <div class="inner-wrapper">
+  <div class="wrapper">
     <h1>
      {{ tag }}
     </h1>
@@ -27,7 +27,7 @@ permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/
   </div>
 </header>
 
-<div class="inner-wrapper">
+<div class="wrapper">
 
   {% set taglist = collections[tag] %}
   {% for post in taglist | reverse %}

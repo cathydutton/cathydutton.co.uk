@@ -18,15 +18,16 @@
   --colour-bright: hsl(322, 80%, 51%); */
 
   
-  --colour-black: hsl(0, 0%, 12%);
-  --colour-black-light: #727272;
+  --colour-black: #1f1f1f;
+  --colour-black-light: #2F2F2F;
+  
   --colour-white: #ffffff;
 
   --colour-grey: hsl(0, 0%, 79%);
   --colour-grey-light: #f3f3f3;
 
   --colour-pink: hsl(346, 100%, 60%);
-  --colour-pink-light: #fecccc;
+  --colour-pink-light: #FF4370;
   
   /* https://toolness.github.io/accessible-color-matrix/?n=White&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=F3F3F3&v=FECCCC&v=E3E3E3&v=FF3465&v=1E1E1E   */
   
@@ -35,6 +36,12 @@
   --font-family: Lato,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
   --font-size: 100%;
   --line-height: 1.5;
+
+
+
+
+
+
 
 }
 
@@ -59,3 +66,5 @@
   --colour-white: hsl(42, 86%, 92%);
   --colour-bright: hsl(41, 91%, 49%); */
 }
+
+

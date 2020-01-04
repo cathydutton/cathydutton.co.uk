@@ -3,7 +3,7 @@
   ----------------------------------- */
 
 .navigation {
-  margin: 1rem;
+  margin: -1rem 1rem 1rem;
 }
 
 .navigation .navigation__list {

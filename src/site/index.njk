@@ -6,36 +6,30 @@ permalink: /
 pageName: Home 
 ---
 
- 
-<style>
-.demo {
-  font-style: normal;
-  font-weight: bold;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-thickness: 0.8em;
-  text-underline-offset: -0.5em;
-  text-decoration-color: #d0ececd9;
-}
-
-</style>
 
 
 <header id="js-skip-link-target" class="page-header clear">
-  <div class="inner-wrapper flow">
+  <div class="wrapper wrapper--hero flow">
     <h1>
-     Hello, I'm Cathy a designer from Cheshire.
+     Hello, I'm Cathy a human centered designer from Cheshire.
     </h1>
     <p class="page-intro">I design and build <span class="demo">inclusive services</span>, focusing on interaction design, accesability, HTML &amp; CSS.</p>
     {% include "socialMedia.njk" %}
   </div>
 </header>
 
-<div class="inner-wrapper  inner-wrapper--grid">
-  <section class="test"> 
-    <p class="highlight-text">
-      fdsk,dfgdfg,d fdgdfgdfgdfg gfdgdfgdg, 
-    </p> 
+<div class="wrapper wrapper--grid">
+ 
+    <div class="highlight-text" style="margin-top: -5.625rem;">
+      <p>fdsk,dfgdfg,d fdgdfgdfgdfg gfdgdfgdg,vs fsdfdsf fsfsffsf  fsd </p>
+       <p>fdsk,dfgdfg,d fdgdfgdfgdfg gfdgdfgdg, </p>
+    </div> 
+
+    <section class="latest-posts flow">
+    {% include "latest-posts.njk" %}
+    </section>
+
+  <section class="flow test"> 
     <p>
       I’m currently working as a Lead Designer for the Department for Environment, Food &amp; Rural Affairs (Defra UK). I work with user researchers, business analysts and content designers to design services that are engaging, intuitive and easy to navigate. 
     </p>
@@ -55,12 +49,9 @@ pageName: Home
     </ul>
   </section>
 
-  <section></section>
-  <section></section>
-  <section></section>
 </div>
 
-<div class="inner-wrapper">
+<div class="wrapper">
 
   <section class="work-history flow">
     <h2>Work history</h2>
@@ -68,8 +59,6 @@ pageName: Home
     {% include "work.njk" %}
   </section>
 
-  <section class="latest-posts flow">
-    {% include "latest-posts.njk" %}
-  </section>
+
 
 </div>
