@@ -24,7 +24,7 @@ a:hover,
 
 a[target=_blank]:after,
 .anchor[target=_blank]:after{
-  content: ' (opens new window)';
+  content: ' (opens new window)'; - NOT NEEDED!s
 }  */
 
 /* Print styles */
