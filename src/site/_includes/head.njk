@@ -32,28 +32,10 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9902393-15"></script>
 <script>
-	{# window.dataLayer = window.dataLayer || [];
+	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-  gtag('config', 'UA-9902393-15'); #}
-
-  var GA_LOCAL_STORAGE_KEY = 'ga:clientId';
-
-if (window.localStorage) {
-  ga('create', 'UA-9902393-15', {
-    'storage': 'none',
-    'clientId': localStorage.getItem(GA_LOCAL_STORAGE_KEY)
-  });
-  ga(function(tracker) {
-    localStorage.setItem(GA_LOCAL_STORAGE_KEY, tracker.get('clientId'));
-  });
-}
-else {
-  ga('create', 'UA-9902393-15', 'auto');
-}
-
-ga('send', 'pageview');
-
+  gtag('config', 'UA-9902393-15');
 </script>
 
 
