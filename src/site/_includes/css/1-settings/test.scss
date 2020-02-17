@@ -1,8 +1,0 @@
-
-@mixin grid($colSpan, $gridColumns: 12, $margin: 1%,) {
-  $unitWidth: $gridColumns / $colSpan;
-  float:left;
-  width: (100 - $unitWidth * $margin) / $unitWidth;
-  margin: 0 $margin/2;
-}
-

@@ -62,6 +62,10 @@
 
 } */
 
+.navigation .navigation__item a:hover {
+  cursor: hand;
+}
+
 .navigation .navigation__item a:hover,
 .navigation .navigation__item a:focus {
   transition: all .3s ease-in-out;

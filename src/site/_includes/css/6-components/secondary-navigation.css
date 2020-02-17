@@ -22,6 +22,11 @@
 }
 
 @media (hover: hover) {
+
+  .navigation-footer .navigation__item a:hover {
+    cursor: hand;
+  }
+
   .navigation-footer .navigation__item a:before,
   .navigation-footer .navigation__item a:after {
     display: block;

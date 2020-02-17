@@ -6,6 +6,7 @@
   color: var(--colour-white);
   background: var(--colour-black);
   border-bottom: solid 4px var(--colour-pink);
+  border-bottom: solid 4px var(--colour-white);
   padding: .5rem 0;
 }
   
