@@ -9,7 +9,7 @@
 }  
   
 .flow > * + * { 
-  margin-bottom: var(--flow-space);
+  margin-top: var(--flow-space);
 }
 
 
@@ -77,10 +77,14 @@ p {
 
 .highlight-text {
   padding: 1rem;
-  font-size: 1.2rem;
-  background: var(--colour-white);
+  background: var(--colour-grey-light);
   border: solid 1px var(--colour-grey);
+  max-width: 80%;
   /* border-left: 4px solid var(--colour-pink); */
+}
+
+.highlight-text p {
+  max-width: 100%;
 }
 
 
