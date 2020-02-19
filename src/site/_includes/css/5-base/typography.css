@@ -9,7 +9,7 @@
 }  
   
 .flow > * + * { 
-  margin-top: var(--flow-space);
+  margin-bottom: var(--flow-space);
 }
 
 
@@ -41,6 +41,27 @@ h3 {
 
 h4 {
   font-size: 1.2rem;
+}
+
+/* Decoration */
+
+h2,
+h3, 
+h4 {
+  position: relative;
+}
+
+h2:after,
+h3:after,
+h4:after {
+  content: "";
+  height: 6px;
+  display: block;
+  background-color: var(--colour-pink);
+  width: 60px;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
 }
 
 p {

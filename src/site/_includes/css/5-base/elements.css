@@ -19,6 +19,10 @@ body {
   background: var(--colour-grey-light);
 }
 
+main {
+  background: var(--colour-grey-light);
+}
+
 pre { 
   padding: .5rem;
   line-height: var(--line-height);

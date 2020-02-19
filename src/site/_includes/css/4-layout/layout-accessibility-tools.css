@@ -1,0 +1,12 @@
+/*
+  Layout - Accessibility tools
+  ----------------------------------- */
+
+  .wrapper--accessibility-tools {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );  
+    /* grid-template-columns: max-content auto; */
+    /* grid-template-rows: auto;
+    align-items: center; */
+
+  }
