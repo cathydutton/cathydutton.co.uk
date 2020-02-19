@@ -1,0 +1,34 @@
+ [
+    {
+      "menu_item": "Home",
+      "url": "/"
+    },
+    {
+      "menu_item": "About me",
+      "url": "/about-me/"
+    },
+    {
+      "menu_item": "Now",
+      "url": "/now/"
+    },
+    {
+      "menu_item": "Projects",
+      "url": "/projects/"
+    },
+    {
+      "menu_item": "Posts",
+      "url": "/posts/"
+    },
+    {
+      "menu_item": "PostCSS",
+      "url": "/postcss-plugins/"
+    },
+    {
+      "menu_item": "Components",
+      "url": "/components/"
+    },
+    {
+      "menu_item": "Cookies",
+      "url": "/cookies/"
+    }
+  ]
