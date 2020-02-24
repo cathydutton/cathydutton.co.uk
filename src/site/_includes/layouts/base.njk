@@ -38,37 +38,49 @@
         <div class="profile-image-inner">
           <div class="profile-image-front">
               <img
-              sizes="(max-width: 369px) 100vw, 369px"
-              srcset="
-              /images/profile-image_m4cdxm_c_scale,w_200.jpg 200w,
-              /images/profile-image_m4cdxm_c_scale,w_369.jpg 369w"
-              src="/images/profile-image_m4cdxm_c_scale,w_369.jpg"
-              alt="Profile picture - Cathy Dutton" class="profile-image__img">
+                sizes="(max-width: 369px) 100vw, 369px"
+                srcset="
+                /images/profile-image_m4cdxm_c_scale,w_200.jpg 200w,
+                /images/profile-image_m4cdxm_c_scale,w_369.jpg 369w"
+                src="/images/profile-image_m4cdxm_c_scale,w_369.jpg"
+                alt="Profile picture - Cathy Dutton" class="profile-image__img">
           </div>
           <div class="profile-image-back">
-          <img
-              sizes="(max-width: 369px) 100vw, 369px"
-              srcset="
-              /images/profile-logo_m4cdxm_c_scale,w_200.jpg 200w,
-              /images/profile-logo_m4cdxm_c_scale,w_369.jpg 369w"
-              src="/images/profile-logo_m4cdxm_c_scale,w_369.jpg"
-              alt="Profile logo - Cathy Dutton" class="profile-image__img">
-            {# <p>Cathy Dutton</p> 
-            <p>Interaction designer</p>  #}
+            <img
+                sizes="(max-width: 369px) 100vw, 369px"
+                srcset="
+                /images/profile-logo_m4cdxm_c_scale,w_200.jpg 200w,
+                /images/profile-logo_m4cdxm_c_scale,w_369.jpg 369w"
+                src="/images/profile-logo_m4cdxm_c_scale,w_369.jpg"
+                alt="Profile logo - Cathy Dutton" class="profile-image__img">
+              {# <p>Cathy Dutton</p> 
+              <p>Interaction designer</p>  #}
+            </div>
           </div>
+        </div>
+
+        <nav class="navigation">
+          {% include "navigation.njk" %}
+        </nav>
+
+      </div>
+
+      <div id="js-skip-link-target" class="main-content">
+        <div class="wrapper flow">
+          <h1>
+          Hello, I'm Cathy a human centered designer from Cheshire.
+          </h1>
+          <p class="page-intro">I design and build inclusive services, focusing on interaction design, accesability, HTML &amp; CSS.</p>
+          {% include "socialMedia.njk" %}
         </div>
       </div>
 
-      <nav class="navigation">
-        {% include "navigation.njk" %}
-      </nav>
-
-    </div>
-  </header>
+    </header>
 
 
 
 
+  
   <main id="main">
     {{ content | safe }}
   </main>

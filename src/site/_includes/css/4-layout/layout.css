@@ -2,8 +2,13 @@
   Layout - Base
   ----------------------------------- */
 
+html {
+  background: var(--colour-black);
+}
+
 body {
   animation: fadeIn 2s forwards;
+  transform: skewY(-0.5deg);
 }
 
 header,
@@ -16,16 +21,18 @@ section {
   margin-bottom: 2rem;
 }
 
+
 /* Wrappers  */
 
 .wrapper {
   max-width: 59rem;
-  padding: 0 1.5rem;
   margin: 0 auto;
   list-style: none;
+  transform: skewY(0.5deg);
 }
 
 .wrapper--top {
+  padding: 0 1.5rem;
   margin-top: -10rem;
   margin-bottom: 2rem;
   padding-top: 1.5rem;
@@ -34,15 +41,19 @@ section {
 }
 
 .wrapper--white {
-  margin-bottom: 2rem;
+  padding: 0 1.5rem;
+  /* margin-bottom: 2rem; */
   margin-top: 2rem;
   background: var(--colour-white);
   border: solid 1px var(--colour-grey);
 }
 
+.wrapper--header{
+  padding-bottom: 2rem;
+}
+
 .main-content {
-  padding: 1rem 0 10rem 0;
-  border-bottom: solid 8px var(--colour-white);
+  /* padding: 1rem 0 10rem 0; */
 }
 
 

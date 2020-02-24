@@ -2,9 +2,7 @@
   A11y buttons
   ----------------------------------- */
 
-
-    
-
+ 
 .accessibility-tools {
   color: var(--colour-white);
   background: var(--colour-black);
@@ -12,18 +10,31 @@
   border-bottom: solid 4px var(--colour-white);
   padding: .5rem 0;
 }
-  
-.accessibility-tools fieldset {
-  margin: 1rem 1rem 1rem 0;
-  padding: .2rem 0;
-  /* float: left; */
-  border: 0;
+
+.wrapper--accessibility-tools {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+ grid-gap: 10px;
+
 }
 
-.accessibility-tools legend {
-  float: left;
-  padding: .4rem .8rem .2rem 0;
+.sub-grid {
+ grid-column: span 4;
+ display: grid;
+ grid-template-columns: subgrid;
 }
+
+  
+/* .accessibility-tools fieldset {
+  margin: 1rem 1rem 1rem 0;
+  padding: .2rem 0;
+}  */
+
+/* .accessibility-tools legend {
+  padding: .9rem 0;
+} */
+
 
 .button--ally {
   --button: hsl(346, 100%, 60%);
@@ -36,19 +47,18 @@
   box-shadow: none;
 }
 
-  .button--ally:hover {
+  /* .button--ally:hover {
     box-shadow: none;
   }
   
 
   .button--ally--active {
     --button: hsl(346, 100%, 30%);
-  }
+  } */
 
   
  
 
- 
 
 
 

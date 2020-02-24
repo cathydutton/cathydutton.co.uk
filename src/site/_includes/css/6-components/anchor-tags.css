@@ -9,12 +9,15 @@ a {
   --link-active: hsl(350, 60%, 50%);
 }
 
-/* a,
+ a,
 .anchor {
   color: currentColor;
-  text-decoration: green wavy underline;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  /* text-decoration: green wavy underline; */
 }
 
+/*
 a:hover,
 .anchor:hover {
   transition: all .3s ease-in-out;

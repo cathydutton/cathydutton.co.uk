@@ -19,7 +19,7 @@
 
   
   --colour-black: #1f1f1f;
-  --colour-black-light: #2F2F2F;
+  --colour-black-light: rgb(92, 92, 92);
   
   --colour-white: #ffffff;
 
@@ -27,7 +27,7 @@
   --colour-grey-light: #f3f3f3;
 
   --colour-pink: #ff3363;
-  --colour-pink-light: #fd7091;
+  --colour-pink-light: #fc4a74;
   
   /* https://toolness.github.io/accessible-color-matrix/?n=White&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=F3F3F3&v=FECCCC&v=E3E3E3&v=FF3465&v=1E1E1E   */
   
