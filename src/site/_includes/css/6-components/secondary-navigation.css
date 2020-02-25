@@ -19,12 +19,15 @@
   display: inline-block;
   border-bottom: solid 3px var(--colour-black-light);
   position: relative;
+  padding: 0;
 }
 
 @media (hover: hover) {
 
   .navigation-footer .navigation__item a:hover {
     cursor: hand;
+    background: none;
+    color: var(--colour-pink);
   }
 
   .navigation-footer .navigation__item a:before,

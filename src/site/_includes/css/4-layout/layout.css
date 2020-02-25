@@ -32,24 +32,23 @@ section {
 }
 
 .wrapper--top {
-  padding: 0 1.5rem;
   margin-top: -10rem;
   margin-bottom: 2rem;
-  padding-top: 1.5rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
   background: var(--colour-white);
   border: solid 1px var(--colour-grey);
 }
 
 .wrapper--white {
   padding: 0 1.5rem;
-  /* margin-bottom: 2rem; */
   margin-top: 2rem;
   background: var(--colour-white);
   border: solid 1px var(--colour-grey);
 }
 
-.wrapper--header{
-  padding-bottom: 2rem;
+.wrapper--no-container{
+  padding:0 1.5rem 2rem 1.5rem;
+  max-width: 62rem;
 }
 
 .main-content {

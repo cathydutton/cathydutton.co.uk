@@ -3,15 +3,22 @@ Social media icons
 ----------------------------------- */
 
 .social-media {
-  width: 100%;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 20px;
   margin: 2.5rem 0;
   list-style: none;
   animation: fadeIn 2s forwards;
+  align-items: center;
 }
 
 .social-media__item {
-  display: inline-block;
+  /* display: inline-block; */
+  list-style: none;
+}
+
+.social-media__anchor {
+  display: block;
 }
 
 .social-media__anchor svg {
@@ -32,25 +39,4 @@ Social media icons
   outline: none;
   transform: scale(1.25);
 }
-
-/* .social-media__anchor:before {
-  border-radius: 3px;
-  background-color: var(--colour-black);
-  color: var(--colour-white);
-  content: attr(aria-label);
-  display: inline-block;
-  opacity: 0;
-  padding: 5px 10px;
-  position: absolute;
-  top: 10px;
-  text-align: center;
-  transform: translateY(-150%);
-  transition: all 0.25s ease;
-} */
-
-/* .social-media__anchor:focus:before,
-.social-media__anchor:hover:before {
-  opacity: 1;
-  transform: translate(-18% ,-144%);
-} */
 

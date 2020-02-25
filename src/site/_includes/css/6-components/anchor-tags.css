@@ -2,36 +2,54 @@
   Anchors
   ----------------------------------- */
 
-a {
+/* a {
   --link: hsl(230, 60%, 50%);
   --link-visited: hsl(290, 60%, 50%);
   --link-hover: hsl(230, 80%, 60%);
   --link-active: hsl(350, 60%, 50%);
-}
+} */
 
  a,
 .anchor {
   color: currentColor;
   text-decoration: underline;
   text-underline-offset: 2px;
-  /* text-decoration: green wavy underline; */
+  text-decoration-thickness: 3px;
+  transition: all .3s ease-in-out;
+  padding: 0 .3rem;
 }
 
-/*
 a:hover,
 .anchor:hover {
-  transition: all .3s ease-in-out;
-  color: var(--colour-pink);
+  background: var(--colour-pink-light);
+  text-decoration: none;
+}
+
+a:active,
+.anchor:active {
+  outline-style: dotted;
+  outline-color: var(--colour-pink-light);
+  outline-width: 5px;
+}
+
+a:focus,
+.anchor:focus {
+  outline-style: dotted;
+  outline-color: var(--colour-pink-light);
+  outline-width: 5px;
+}
+
+a:visited,
+.anchor:visited {
+  outline-style: dotted;
+  outline-color: var(--colour-pink-light);
+  outline-width: 5px;
 }
 
 
-a[target=_blank]:after,
-.anchor[target=_blank]:after{
-  content: ' (opens new window)'; - NOT NEEDED!s
-}  */
-
 /* Print styles */
-/* @media print {
+
+@media print {
   
   a,
   .anchor{
@@ -50,4 +68,4 @@ a[target=_blank]:after,
     content: '';
   }
 
-} */
+} 

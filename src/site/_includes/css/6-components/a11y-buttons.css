@@ -13,7 +13,6 @@
 
 .wrapper--accessibility-tools {
  display: grid;
- grid-template-columns: repeat(4, 1fr);
  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
  grid-gap: 10px;
 
@@ -23,6 +22,7 @@
  grid-column: span 4;
  display: grid;
  grid-template-columns: subgrid;
+ align-items: center;
 }
 
   

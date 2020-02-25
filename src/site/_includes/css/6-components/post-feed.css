@@ -25,6 +25,11 @@ Latest posts feed
   margin-bottom: .2rem;
 }
 
+.news-feed__anchor {
+  padding: 0;
+  text-decoration: none;
+}
+
 .news-feed__header {
   margin: 0;
   padding: 0;
