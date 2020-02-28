@@ -68,20 +68,16 @@
       <div id="js-skip-link-target" class="main-content">
         <div class="wrapper wrapper--no-container flow">
           <h1>
-          Hello, I'm Cathy a human centered designer from Cheshire.
+            {{ headerOne }}
           </h1>
-          <p class="page-intro">I design and build inclusive services, focusing on interaction design, accesability, HTML &amp; CSS.</p>
-          {% include "socialMedia.njk" %}
+          <p class="page-intro"> {{ strapline }}</p>
         </div>
       </div>
 
     </header>
 
-
-
-
-  
   <main id="main">
+   {% include "socialMedia.njk" %}
     {{ content | safe }}
   </main>
 

@@ -4,20 +4,23 @@
 
 
 .wrapper--header {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 170px 1fr;
   grid-template-rows: auto;
+  align-items: center; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  /* clip-path: polygon(0 0,100% 0,100% 100%,0 calc(100% - 1.5rem)); */
-  /* justify-items: end; */
+
 }
 
 .profile-image {
-  width: 142px;
-  height: 100px;
+  /* width: 142px;
+  height: 100px; */
 }
 
 .navigation {
-  justify-self: end;
+  justify-content: flex-end;
 }
 

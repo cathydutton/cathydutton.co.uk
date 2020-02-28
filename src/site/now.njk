@@ -4,19 +4,12 @@ description: Things I'm currently working on, currently reading and always worki
 layout: layouts/base.njk 
 permalink: /now/ 
 pageName: Now 
+headerOne: Now
+strapline: things I'm doing right now
 ---
 
-<header id="js-skip-link-target" class="main-content">
-  <div class="wrapper">
-    <h1>
-     Now
-    </h1>
-    <p class="page-intro">things I'm doing right now</p>
-    {% include "socialMedia.njk" %}
-  </div>
-</header>
 
-<div class="wrapper">
+<div class="wrapper  wrapper--top">
 
   <p class="highlight-text">
     This is my <a href="https://nownownow.com/about" title="Derek Sivers now pages" rel="noopener" target="_blank" class="anchor">now page</a>, inspired by Derek Sivers.
@@ -39,12 +32,18 @@ pageName: Now
     </ul>
   </section>
 
+</div>
+<div class="wrapper">
   <section class="currently-using flow">
     <h3>Currently using</h3>
     <p>Tools aren’t everything but right now I'm using:</p>
     {% include "tech.njk" %}
   </section>
+</div>
 
+
+
+<div class="wrapper wrapper--white">
   <section class="latest-posts">
     {% include "latest-posts.njk" %}
   </section>

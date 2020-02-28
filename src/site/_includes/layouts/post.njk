@@ -2,22 +2,27 @@
 layout: layouts/base.njk
 ---
 
-<h1 class="post-title" id="js-skip-link-target">
+{# <h1 class="post-title" id="js-skip-link-target">
   {{ title }}
-</h1>
+</h1> #}
 
-<p class="post-date">
-  <span class="visually-hidden">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
-</p>
+<div class="wrapper  wrapper--top">
 
-<section class="flow"> 
-  {{ content | safe }}
-</section>
+  <p class="post-date">
+    <span class="visually-hidden">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+  </p>
 
-<p>
-  Subscribe to the <a href="/feed.xml" class="anchor">RSS feed</a>
-</p>
+  <section class="flow"> 
+    {{ content | safe }}
+  </section>
+</div>
 
-<p>
-  <a href="/posts" class="anchor">Back to all posts</a>
-</p>
+<div class="wrapper wrapper--white">
+  <p>
+    Subscribe to the <a href="/feed.xml" class="anchor">RSS feed</a>
+  </p>
+
+  <p>
+    <a href="/posts" class="anchor">Back to all posts</a>
+  </p>
+</div>

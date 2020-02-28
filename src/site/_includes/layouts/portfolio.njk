@@ -2,16 +2,21 @@
 layout: layouts/base.njk
 ---
 
-<h1 class="project-title" id="js-skip-link-target">
+{# <h1 class="project-title" id="js-skip-link-target">
   {{ title }}
-</h1>
+</h1> #}
 
-<p class="post-date">
-  <time datetime="{{ date }}">{{ date | dateDisplayProject }}</time>
-</p>
+<div class="wrapper  wrapper--top">
+  <p class="post-date">
+    <time datetime="{{ date }}">{{ date | dateDisplayProject }}</time>
+  </p>
+  <section class="flow"> 
+    {{ content | safe }}
+  </section>
+</div>
 
-<section class="flow"> 
-  {{ content | safe }}
-</section>
+<div class="wrapper wrapper--white">
+  <a href="/projects" class="anchor">Back to all projects</a>
+</div>
 
-<a href="/projects" class="anchor">Back to all projects</a>
+

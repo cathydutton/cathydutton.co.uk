@@ -7,20 +7,11 @@ pagination:
   size: 10 
 permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html 
 pageName: Posts 
+headerOne: Posts
+strapline: Latest posts and tutorials
 ---
 
-
-<header id="js-skip-link-target" class="main-content">
-  <div class="wrapper">
-    <h1>
-     Posts
-    </h1>
-    <p class="page-intro">Latest posts and tutorials</p>
-    {% include "socialMedia.njk" %}
-  </div>
-</header>
-
-<div class="wrapper">
+<div class="wrapper  wrapper--top">
 
   <p class="highlight-text">
     Subscribe to the <a href="/feed.xml" class="anchor">RSS feed</a>

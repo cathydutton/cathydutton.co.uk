@@ -3,11 +3,11 @@
   ----------------------------------- */
 
 .navigation {
-  margin: -1rem 1rem 1rem;
+  margin: 2rem 1rem 1rem 0;
 }
 
 .navigation .navigation__list {
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
 }
 
 .navigation .navigation__item {
@@ -20,68 +20,51 @@
   color: var(--colour-black);
   padding: .4rem .8rem;
   text-decoration: none;
-  border-bottom: solid 6px var(--colour-grey);
   position: relative;
+  font-size: 1.1rem;
+  border-bottom: solid 6px var(--colour-pink);
 }
 
-/* @media (hover: hover) {
+@media (hover: hover) {
   .navigation .navigation__item a:before,
   .navigation .navigation__item a:after {
     display: block;
     content: '';
-    border-bottom: solid 6px var(--colour-pink);  
+    border-bottom: solid 6px var(--colour-white);  
     position: absolute;
     top: 100%;
     transition: width .3s;
     height: 6px;
+    width: 0;
   }
 
-  .navigation .navigation__item a:before,
-  .navigation .navigation__item a:before {
-    width: 0;
-    left: 50%;
-  }
-
-  .navigation .navigation__item a:after,
-  .navigation .navigation__item a:after {
-    width: 0;
-    right: 50%;
-  }
 
   .navigation .navigation__item a:hover:before,
   .navigation .navigation__item a:focus:before {
-    width: 50%;
-    left: 50%;
+    width: 100%;
   }
 
-  .navigation .navigation__item a:hover:after,
-  .navigation .navigation__item a:focus:after {
-    width: 50%;
-    right: 50%;
-  }
-
-} */
+}
 
 .navigation .navigation__item a:hover {
   cursor: hand;
+  background: var(--colour-grey);
 }
 
 .navigation .navigation__item a:hover,
 .navigation .navigation__item a:focus {
   transition: all .3s ease-in-out;
-  color: var(--colour-pink);
 }
 
 .navigation .navigation__item--current a,
 .navigation a:active {
-  border-bottom: solid 6px var(--colour-pink);
-  background: var(--colour-light);
-
+  border-bottom: solid 6px var(--colour-white);
+  background: var(--colour-grey);
 }
 
-.navigation .navigation__item--current a:hover
+.navigation__item--current a:hover
 .navigation a:active:hover {
-  border-bottom: solid 6px var(--colour-pink); 
+  /* border-bottom: solid 6px var(--colour-pink);  */
   cursor: not-allowed;
 }
   

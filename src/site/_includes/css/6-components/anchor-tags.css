@@ -27,23 +27,23 @@ a:hover,
 
 a:active,
 .anchor:active {
-  outline-style: dotted;
+  outline-style: dashed;
   outline-color: var(--colour-pink-light);
-  outline-width: 5px;
+  outline-width: 1px;
 }
 
 a:focus,
 .anchor:focus {
-  outline-style: dotted;
+  outline-style: dashed;
   outline-color: var(--colour-pink-light);
-  outline-width: 5px;
+  outline-width: 1px;
 }
 
 a:visited,
 .anchor:visited {
-  outline-style: dotted;
+  outline-style: dashed;
   outline-color: var(--colour-pink-light);
-  outline-width: 5px;
+  outline-width: 1px;
 }
 
 
