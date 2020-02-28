@@ -34,7 +34,7 @@ strapline: Latest posts and tutorials
         </header>
         <div>
           <p>{{ post.data.description | safe }}</p>
-          {% if post.data.tags %}
+          {# {% if post.data.tags %}
             <p>Tagged in:
               {% for tag in post.data.tags %}
                 <a href="/posts/tags/{{ tag | lower | replace(" ", "-") }}" class="anchor">{{ tag }}</a>
@@ -42,7 +42,7 @@ strapline: Latest posts and tutorials
                 {% endif %}
               {% endfor %}
             </p>
-          {% endif %}
+          {% endif %} #}
         </div>
       </article>
     {%- endfor -%}

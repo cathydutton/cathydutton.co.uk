@@ -1,8 +1,3 @@
----
-layout: layouts/base.njk
----
-
-
 {% set componentHtml %}
   {% include "components/" + page.fileSlug + ".njk" %}
 {% endset %}  
@@ -15,40 +10,117 @@ layout: layouts/base.njk
   {% include "js/" + page.fileSlug + ".js"  ignore missing %}
 {% endset %}
 
-<h1 id="js-skip-link-target">{{ title }}</h1>
+<!doctype html>
+<html lang="en">
+<!--
 
+      #########:: #########:: ##.... ##:::: ##.... ##:. ####::::
+      ##.....:::: ##.... ##:. ##.... ##:.:: ##.... ##:.  ##:::::
+      ##.....:::: ##:::: ##:: ##:::: ##:::: ##.... ##:.  ##:::::
+      #########:: #########:: #########:::: #########::  ##:::::
+      ::.... ##:: ##.... ##:: :::::: ##:::: ##.... ##::  ##:::::
+      :::::: ##:: ##.... ##:: :::::: ##:::: ##.... ##::  ##:::::
+      #########:: ##.... ##:: :::::: ##:::: ##.... ##:: ####::::
 
-<p class="highlight-text">
-  {{ intro }}
-</p>
+      Email: info@cathydutton.co.uk
+      Twitter: cathy_dutton
+      website: cathydutton.co.uk
+      
+  -->
 
-<section>
-  {# <h2>Demo</h2> #}
-  {# <p>Resize the panel to view the {{ title | lower }} demo in different container sizes.</p> #}
+<head>
+  {% include "head.njk" %}
+</head>
 
-  <div class="slider-container">
-    <label>Resize the panel width:</label>
-    <input type='range' class="slider" min='30' max='100' value='100' step='10' 
-    onchange="setStyleOn('width', 'demo', this.value + '%')" /> 
+<body class="flow">
+  
+  <a href="#js-skip-link-target" class="skip-link" id="js-skip-link">skip to main content</a>
+    
+  <div aria-label="Accessibility tools" class="accessibility-tools">
+    <div class="wrapper wrapper--accessibility-tools">
+      {% include "a11y-buttons.njk" %}
+    </div>
   </div>
 
-  <div class="clear resize" id="demo">
-    {% include "components/" + page.fileSlug + ".njk" %}
-  </div> 
+  <header class="header" role="banner">
+    <div class="wrapper wrapper--no-container wrapper--header">
 
-  <script>
-  function setStyleOn(rule, targetId, value) {
-      x = document.getElementById(targetId);
-      x.style[rule] = value;
-  }
-  </script>
 
-</section>
- <section>
-  {{ content | safe }}
-</section>
+      <div class="profile-image">
+        <div class="profile-image-inner">
+          <div class="profile-image-front">
+              <img
+                sizes="(max-width: 369px) 100vw, 369px"
+                srcset="
+                /images/profile-image_m4cdxm_c_scale,w_200.jpg 200w,
+                /images/profile-image_m4cdxm_c_scale,w_369.jpg 369w"
+                src="/images/profile-image_m4cdxm_c_scale,w_369.jpg"
+                alt="Profile picture - Cathy Dutton" class="profile-image__img">
+          </div>
+          <div class="profile-image-back">
+            <img
+                sizes="(max-width: 369px) 100vw, 369px"
+                srcset="
+                /images/profile-logo_m4cdxm_c_scale,w_200.jpg 200w,
+                /images/profile-logo_m4cdxm_c_scale,w_369.jpg 369w"
+                src="/images/profile-logo_m4cdxm_c_scale,w_369.jpg"
+                alt="Profile logo - Cathy Dutton" class="profile-image__img">
+              {# <p>Cathy Dutton</p> 
+              <p>Interaction designer</p>  #}
+            </div>
+          </div>
+        </div>
 
-  <section class="flow"> 
+        <nav class="navigation">
+          {% include "navigation.njk" %}
+        </nav>
+
+      </div>
+
+      <div id="js-skip-link-target" class="main-content">
+        <div class="wrapper wrapper--no-container flow">
+          <h1>
+            {{ title }}
+          </h1>
+          <p class="page-intro">{{ intro }}</p>
+        </div>
+      </div>
+
+    </header>
+
+  <main id="main">
+   {% include "socialMedia.njk" %}
+<div class="wrapper  wrapper--top">
+   <section>
+      <div class="slider-container">
+        <label>Resize the panel width:</label>
+        <input type='range' class="slider" min='30' max='100' value='100' step='10' 
+        onchange="setStyleOn('width', 'demo', this.value + '%')" /> 
+      </div>
+
+      <div class="clear resize" id="demo">
+        {% include "components/" + page.fileSlug + ".njk" %}
+      </div> 
+
+      <script>
+      function setStyleOn(rule, targetId, value) {
+          x = document.getElementById(targetId);
+          x.style[rule] = value;
+      }
+      </script>
+
+    </section>
+    </div>
+    <div class="wrapper wrapper--white">
+  
+      
+      <section class="flow"> 
+        {{ content | safe }}
+      </section>
+      
+    </div>
+    <div class="wrapper wrapper--white">
+     <section class="flow"> 
     <h2>Code</h2>
     <p>Use the tabs to view the {{ title | lower}} source code.</p>
   </section>
@@ -89,10 +161,54 @@ layout: layouts/base.njk
     {% endif %}
   </div> 
 
+    <div class="wrapper wrapper--white">
+    <p>
+      <a href="/components" class="anchor">Back to all components</a>
+    </p>
+    </div> 
+  </main>
 
-<p>
-  <a href="/components" class="anchor">Back to all components</a>
-</p>
+  <footer class="footer">
+    <div class="wrapper wrapper--no-container">
+      {% include "footer.njk" %}
+    </div>
+  </footer>
+
+  <script src="/js/scripts.js"></script>
+  
+  <!-- Service worker -->
+  <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/serviceWorker.js').then(function(registration) {
+          }).catch(function(err) {
+          });
+        });
+      }
+  </script>
+  <!-- Copy button -->
+  <script>
+    var clipboard = new ClipboardJS('.button--copy');
+    clipboard.on('success', function(e) {
+        //console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        //console.log(e);
+    });
+  </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+  
 
 
 

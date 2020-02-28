@@ -1,28 +1,131 @@
----
-layout: layouts/base.njk
----
+<!doctype html>
+<html lang="en">
+<!--
 
-{# <h1 class="post-title" id="js-skip-link-target">
-  {{ title }}
-</h1> #}
+      #########:: #########:: ##.... ##:::: ##.... ##:. ####::::
+      ##.....:::: ##.... ##:. ##.... ##:.:: ##.... ##:.  ##:::::
+      ##.....:::: ##:::: ##:: ##:::: ##:::: ##.... ##:.  ##:::::
+      #########:: #########:: #########:::: #########::  ##:::::
+      ::.... ##:: ##.... ##:: :::::: ##:::: ##.... ##::  ##:::::
+      :::::: ##:: ##.... ##:: :::::: ##:::: ##.... ##::  ##:::::
+      #########:: ##.... ##:: :::::: ##:::: ##.... ##:: ####::::
 
-<div class="wrapper  wrapper--top">
+      Email: info@cathydutton.co.uk
+      Twitter: cathy_dutton
+      website: cathydutton.co.uk
+      
+  -->
 
-  <p class="post-date">
-    <span class="visually-hidden">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
-  </p>
+<head>
+  {% include "head.njk" %}
+</head>
 
-  <section class="flow"> 
-    {{ content | safe }}
-  </section>
-</div>
+<body class="flow">
+  
+  <a href="#js-skip-link-target" class="skip-link" id="js-skip-link">skip to main content</a>
+    
+  <div aria-label="Accessibility tools" class="accessibility-tools">
+    <div class="wrapper wrapper--accessibility-tools">
+      {% include "a11y-buttons.njk" %}
+    </div>
+  </div>
 
-<div class="wrapper wrapper--white">
-  <p>
-    Subscribe to the <a href="/feed.xml" class="anchor">RSS feed</a>
-  </p>
+  <header class="header" role="banner">
+    <div class="wrapper wrapper--no-container wrapper--header">
 
-  <p>
-    <a href="/posts" class="anchor">Back to all posts</a>
-  </p>
-</div>
+
+      <div class="profile-image">
+        <div class="profile-image-inner">
+          <div class="profile-image-front">
+              <img
+                sizes="(max-width: 369px) 100vw, 369px"
+                srcset="
+                /images/profile-image_m4cdxm_c_scale,w_200.jpg 200w,
+                /images/profile-image_m4cdxm_c_scale,w_369.jpg 369w"
+                src="/images/profile-image_m4cdxm_c_scale,w_369.jpg"
+                alt="Profile picture - Cathy Dutton" class="profile-image__img">
+          </div>
+          <div class="profile-image-back">
+            <img
+                sizes="(max-width: 369px) 100vw, 369px"
+                srcset="
+                /images/profile-logo_m4cdxm_c_scale,w_200.jpg 200w,
+                /images/profile-logo_m4cdxm_c_scale,w_369.jpg 369w"
+                src="/images/profile-logo_m4cdxm_c_scale,w_369.jpg"
+                alt="Profile logo - Cathy Dutton" class="profile-image__img">
+              {# <p>Cathy Dutton</p> 
+              <p>Interaction designer</p>  #}
+            </div>
+          </div>
+        </div>
+
+        <nav class="navigation">
+          {% include "navigation.njk" %}
+        </nav>
+
+      </div>
+
+      <div id="js-skip-link-target" class="main-content">
+        <div class="wrapper wrapper--no-container flow">
+          <h1>
+            {{ title }}
+          </h1>
+          <p class="page-intro"> {{ description }}</p>
+        </div>
+      </div>
+
+    </header>
+
+  <main id="main">
+   {% include "socialMedia.njk" %}
+    <div class="wrapper  wrapper--top">
+      <p class="post-date">
+        <span class="visually-hidden">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+      </p>
+      <section class="flow"> 
+        {{ content | safe }}
+      </section>
+    </div>
+    <div class="wrapper wrapper--white">
+      <p>
+        Subscribe to the <a href="/feed.xml" class="anchor">RSS feed</a>
+      </p>
+
+      <p>
+        <a href="/posts" class="anchor">Back to all posts</a>
+      </p>
+    </div> 
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper wrapper--no-container">
+      {% include "footer.njk" %}
+    </div>
+  </footer>
+
+  <script src="/js/scripts.js"></script>
+  
+  <!-- Service worker -->
+  <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/serviceWorker.js').then(function(registration) {
+          }).catch(function(err) {
+          });
+        });
+      }
+  </script>
+  <!-- Copy button -->
+  <script>
+    var clipboard = new ClipboardJS('.button--copy');
+    clipboard.on('success', function(e) {
+        //console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        //console.log(e);
+    });
+  </script>
+
+</body>
+
+</html>

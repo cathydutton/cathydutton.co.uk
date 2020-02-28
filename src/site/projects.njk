@@ -31,7 +31,7 @@ strapline: Design and Front End Development work
           <span class="visually-hidden">Project date</span>
           <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplayProject }}</time>
         </p>
-        {% if post.data.projectTags %}
+        {# {% if post.data.projectTags %}
           <p class="card__tags">Tagged in:
             {% for projectTag in post.data.projectTags %}
               <a href="/projects/tags/{{ projectTag | lower | replace(" ", "-") }}" class="anchor">{{ projectTag }}</a>
@@ -39,7 +39,7 @@ strapline: Design and Front End Development work
               {% endif %}
             {% endfor %}
           </p>
-        {% endif %}
+        {% endif %} #}
       </article>
     {%- endfor -%}
   </section>

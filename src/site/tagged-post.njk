@@ -1,7 +1,7 @@
 --- 
 title: Design, User Experience and Front End Development posts - Cathy Dutton 
 description: A collection of my posts and tutorials on Design, User Experience, CSS, PostCSS, and Front End Development 
-layout: layouts/base.njk 
+layout: layouts/post.njk 
 pagination: 
   data: collections 
   size: 1 
@@ -17,17 +17,7 @@ permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/
 ---
 
 
-<header id="js-skip-link-target" class="main-content">
-  <div class="wrapper">
-    <h1>
-     {{ tag }}
-    </h1>
-    <p class="page-intro">Latest {{ tag }} posts and tutorials</p>
-    {% include "socialMedia.njk" %}
-  </div>
-</header>
-
-<div class="wrapper">
+{# <div class="wrapper  wrapper--top"> #}
 
   {% set taglist = collections[tag] %}
   {% for post in taglist | reverse %}
@@ -46,4 +36,4 @@ permalink: posts/tags/{{ tag | lower | replace(" ", "-") }}/
     </article>
   {% endfor %}
 
-</div>
+{# </div> #}
