@@ -7,15 +7,10 @@ Social media icons
   --colour-social-stroke: var(--colour-pink);
 }
 
-
-
 .footer {
   --colour-social-colour: var(--colour-pink);
   --colour-social-stroke: var(--colour-black);
 }
-
-
-
 
 .social-media {
   margin: 2.5rem 0;
@@ -65,4 +60,10 @@ Social media icons
 
 main .social-media {
   position: absolute;
+  top: 1em;
+  right: 0;
+  background: var(--colour-grey-light);
+  border: solid 1px var(--colour-grey);
+  border-right: 0;
+  padding: 1em .5em;
 }

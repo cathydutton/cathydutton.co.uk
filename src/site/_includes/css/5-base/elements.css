@@ -23,6 +23,7 @@ main {
   background: var(--colour-grey-light);
   margin-bottom: -4rem;
   border-top: solid 4px var(--colour-white);
+  position: relative;
 }
 
 pre { 

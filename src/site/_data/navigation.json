@@ -4,6 +4,10 @@
       "url": "/"
     },
     {
+      "menu_item": "Posts",
+      "url": "/posts/"
+    },
+    {
       "menu_item": "About me",
       "url": "/about-me/"
     },
@@ -16,7 +20,7 @@
       "url": "/projects/"
     },
     {
-      "menu_item": "Posts",
-      "url": "/posts/"
+      "menu_item": "Components",
+      "url": "/components/"
     }
   ]

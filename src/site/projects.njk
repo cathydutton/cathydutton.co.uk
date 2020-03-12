@@ -17,29 +17,31 @@ strapline: Design and Front End Development work
 
   <section class="cards">
     {% for post in collections.projects %}
-      <article class="card js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-        <div class="image-ratio">
-          <img data-src="{{ post.data.image }}" class="lazyload" alt="Cover image for {{ post.data.title }}">
-        </div>
-        <h3 class="card__title">
-          <a href="{{ post.url }}">
-            <span class="visually-hidden">Project title</span>
-            {{ post.data.title }}
-          </a>
-        </h3>
-        <p class="card__date">
-          <span class="visually-hidden">Project date</span>
-          <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplayProject }}</time>
-        </p>
-        {# {% if post.data.projectTags %}
-          <p class="card__tags">Tagged in:
-            {% for projectTag in post.data.projectTags %}
-              <a href="/projects/tags/{{ projectTag | lower | replace(" ", "-") }}" class="anchor">{{ projectTag }}</a>
-              {% if not loop.last %},
-              {% endif %}
-            {% endfor %}
+      <article class="card-wrapper js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+          <div class="card">
+          <h2 class="card__title">
+            <a href="{{ post.url }}">
+              <span class="visually-hidden">Project title</span>
+              {{ post.data.title }}
+            </a>
+          </h2>
+          <div class="image-ratio">
+            <img src="{{ post.data.image }}" alt="Cover image for {{ post.data.title }}">
+          </div>
+          <p class="card__date">
+            <span class="visually-hidden">Project date</span>
+            <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplayProject }}</time>
           </p>
-        {% endif %} #}
+            {# {% if post.data.projectTags %}
+              <p class="card__tags">Tagged in:
+                {% for projectTag in post.data.projectTags %}
+                  <a href="/projects/tags/{{ projectTag | lower | replace(" ", "-") }}" class="anchor">{{ projectTag }}</a>
+                  {% if not loop.last %},
+                  {% endif %}
+                {% endfor %}
+              </p>
+            {% endif %} #}
+        </div>
       </article>
     {%- endfor -%}
   </section>

@@ -33,7 +33,6 @@
   <header class="header" role="banner">
     <div class="wrapper wrapper--no-container wrapper--header">
 
-
       <div class="profile-image">
         <div class="profile-image-inner">
           <div class="profile-image-front">
@@ -77,8 +76,8 @@
     </header>
 
   <main id="main">
-   {% include "socialMedia.njk" %}
     {{ content | safe }}
+    {% include "socialMedia.njk" %}
   </main>
 
   <footer class="footer">

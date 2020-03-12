@@ -3,7 +3,7 @@
   ----------------------------------- */
 
 .slides figure {
-  --ratio-padding: 56.27%;
+  /* --ratio-padding: 56.27%; */
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(18rem, 1fr) );
   grid-gap: 1rem;

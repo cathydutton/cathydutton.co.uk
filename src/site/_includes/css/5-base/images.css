@@ -19,10 +19,10 @@
 
 img {
   image-rendering: auto;
-  padding: .2rem;
+  padding: .4rem;
   display: block;
-  border: solid 1px var(--colour-white);
-  background: url('/images/placeholder.svg') var(--colour-white) no-repeat 50% 50%;
+  border: solid 1px var(--colour-grey);
+  background: url('/images/placeholder.svg') var(--colour-grey-light) no-repeat 50% 50%;
 }
 
 /* .image-ratio {
