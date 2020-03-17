@@ -21,28 +21,28 @@
 
 a:hover,
 .anchor:hover {
-  background: var(--colour-pink-light);
+  background: var(--colour-pink);
   text-decoration: none;
 }
 
 a:active,
 .anchor:active {
   outline-style: dashed;
-  outline-color: var(--colour-pink-light);
+  outline-color: var(--colour-pink);
   outline-width: 1px;
 }
 
 a:focus,
 .anchor:focus {
   outline-style: dashed;
-  outline-color: var(--colour-pink-light);
+  outline-color: var(--colour-pink);
   outline-width: 1px;
 }
 
 a:visited,
 .anchor:visited {
   outline-style: dashed;
-  outline-color: var(--colour-pink-light);
+  outline-color: var(--colour-pink);
   outline-width: 1px;
 }
 

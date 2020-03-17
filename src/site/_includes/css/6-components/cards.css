@@ -10,7 +10,7 @@ Cards
 }
 
 .card-wrapper {
-  background: linear-gradient(180deg, var(--colour-pink) 0%, var(--colour-pink) 40%, var(--colour-white) 40%);
+  background: linear-gradient(180deg, var(--colour-pink) 0%, var(--colour-pink) 40%, var(--colour-grey-light) 40%);
   border: solid 1px var(--colour-grey); 
   padding: 1rem;
   /* display: contents; */
@@ -43,11 +43,20 @@ Cards
   text-decoration: none;
 }
 
-/* .card__post:hover {
+.card__title a:hover {
+  background: none;
+}
+
+.card-wrapper:hover,
+.card-wrapper:focus {
+  cursor: pointer;
   transition: all .3s ease-in-out;
-  background: var(--colour-white);
-  outline: solid 1px var(--colour-white);
-}  */
+  outline-style: dashed;
+  outline-color: var(--colour-pink-light);
+  outline-width: 2px;
+  background: linear-gradient(180deg, var(--colour-pink) 0%, var(--colour-pink) 35%, var(--colour-white) 35%);
+
+} 
 
 
 

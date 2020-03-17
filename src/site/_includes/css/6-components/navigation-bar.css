@@ -14,15 +14,16 @@
   float: left;
   margin: .2rem;
   list-style: none;
+  margin: .4rem .8rem;
 }
   
 .navigation a {
   color: var(--colour-black);
-  padding: .4rem .8rem;
+  padding: .4rem;
   text-decoration: none;
   position: relative;
   font-size: 1.1rem;
-  border-bottom: solid 6px var(--colour-pink);
+  border-bottom: solid 3px var(--colour-pink-light);
 }
 
 @media (hover: hover) {
@@ -30,11 +31,11 @@
   .navigation .navigation__item a:after {
     display: block;
     content: '';
-    border-bottom: solid 6px var(--colour-white);  
+    border-bottom: solid 3px var(--colour-white);  
     position: absolute;
     top: 100%;
     transition: width .3s;
-    height: 6px;
+    height: 3px;
     width: 0;
   }
 
@@ -58,7 +59,7 @@
 
 .navigation .navigation__item--current a,
 .navigation a:active {
-  border-bottom: solid 6px var(--colour-white);
+  border-bottom: solid 3px var(--colour-white);
   background: var(--colour-grey);
 }
 

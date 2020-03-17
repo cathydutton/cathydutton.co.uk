@@ -16,13 +16,22 @@ Latest posts feed
   /* border-bottom: solid 2px var(--colour-pink); */
 }
 
-.news-feed__post:hover {
+.news-feed__post:hover,
+.news-feed__post:focus {
+  cursor: pointer;
   transition: all .3s ease-in-out;
+  outline-style: dashed;
+  outline-color: var(--colour-pink-light);
+  outline-width: 2px;
   background: var(--colour-white);
 }
 
 .news-feed__title {
   margin-bottom: .2rem;
+}
+
+.news-feed__title a:hover {
+  background: transparent;
 }
 
 .news-feed__anchor {
