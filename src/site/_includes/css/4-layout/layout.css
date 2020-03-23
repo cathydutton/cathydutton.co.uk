@@ -46,9 +46,13 @@ section {
   border: solid 1px var(--colour-grey);
 }
 
-.wrapper--no-container{
+.wrapper--no-container {
   padding: 0 1.5rem 2rem 1.5rem;
   max-width: 62rem;
+}
+
+.wrapper-bottom {
+  margin-bottom: -2rem;
 }
 
 .main-content {

@@ -4,7 +4,7 @@
       "url": "/"
     },
     {
-      "menu_item": "Posts",
+      "menu_item": "Articles",
       "url": "/posts/"
     },
     {
@@ -16,7 +16,7 @@
       "url": "/now/"
     },
     {
-      "menu_item": "Projects",
+      "menu_item": "Case studies",
       "url": "/projects/"
     },
     {

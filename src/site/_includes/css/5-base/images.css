@@ -1,6 +1,9 @@
 /*
   Elements -   Images
 
+  https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/?utm_source=CSS-Weekly&utm_campaign=Issue-402&utm_medium=email
+
+https://web.dev/native-lazy-loading/
 ----------------------------------- */
 
 /* :root {
@@ -9,11 +12,11 @@
 
 /* Full length images */
 
-/* .image-ratio--thin {
+/* .--thin {
   --ratio-padding: 34.37%  /* 640 x 220 */
 /* } */ 
 
-/* .image-ratio--medium {
+/* .--medium {
   --ratio-padding: 51.57% /* 640 x 330 */
 /* }  */ 
 
@@ -25,7 +28,7 @@ img {
   background: url('/images/placeholder.svg') var(--colour-grey-light) no-repeat 50% 50%;
 }
 
-/* .image-ratio {
+/* . {
   height: 0;
   overflow: hidden;
   position: relative;
@@ -35,7 +38,7 @@ img {
   background: url('/images/placeholder.svg') var(--colour-white) no-repeat 50% 50%;
 } */
 
-/* .image-ratio img {
+/* . img {
   position: absolute;
   top: 0;
   left: 0;

@@ -21,8 +21,9 @@ body {
 
 main {
   background: var(--colour-grey-light);
-  margin-bottom: -4rem;
+  margin-bottom: -2rem;
   border-top: solid 4px var(--colour-white);
+  border-bottom: solid 4px var(--colour-pink);
   position: relative;
 }
 

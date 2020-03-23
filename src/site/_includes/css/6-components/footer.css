@@ -6,7 +6,6 @@ Footer
 footer {
   color: var(--colour-white);
   background: var(--colour-black);
-  border-top: solid 4px var(--colour-pink);
   margin-bottom: 0;
   padding-top: 4rem;
 }

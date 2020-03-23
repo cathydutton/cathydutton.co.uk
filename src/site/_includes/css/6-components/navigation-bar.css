@@ -37,6 +37,7 @@
     transition: width .3s;
     height: 3px;
     width: 0;
+    /* margin: 0 .8rem; */
   }
 
 
@@ -49,7 +50,7 @@
 
 .navigation .navigation__item a:hover {
   cursor: hand;
-  background: var(--colour-grey);
+  /* background: var(--colour-grey); */
 }
 
 .navigation .navigation__item a:hover,

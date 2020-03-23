@@ -40,8 +40,8 @@ Logo images
   padding: 0;
 }
 
-.tech-logo .image-ratio,
-.work-logo .image-ratio {
+.tech-logo .,
+.work-logo . {
   margin: 0;
   border: 0;
 }
