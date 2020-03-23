@@ -25,7 +25,7 @@
 } 
 
 .sub-grid {
-  grid-column: span 3;
+  grid-column: span 4;
   display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
@@ -40,12 +40,12 @@
 
 
 .button--ally {
-  --button: hsl(346, 100%, 60%);
+  /* --button: hsl(346, 100%, 60%);
   --button-hover: hsl(346, 100%, 70%);
   --button-active:  hsl(346, 100%, 80%);
   --button-visited: hsl(346, 100%, 70%);
   --button-colour: var(--colour-black);
-  --button-border: var(--colour-pink);
+  --button-border: var(--colour-pink); */
   padding: .5em .7em;
   box-shadow: none;
   height: 100%;

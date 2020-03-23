@@ -4,10 +4,6 @@
       "url": "/"
     },
     {
-      "menu_item": "Articles",
-      "url": "/posts/"
-    },
-    {
       "menu_item": "About me",
       "url": "/about-me/"
     },
@@ -16,8 +12,12 @@
       "url": "/now/"
     },
     {
-      "menu_item": "Case studies",
+      "menu_item": "Portfolio",
       "url": "/projects/"
+    },
+    {
+      "menu_item": "Blog",
+      "url": "/posts/"
     },
     {
       "menu_item": "Components",

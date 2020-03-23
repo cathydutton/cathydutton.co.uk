@@ -17,7 +17,7 @@
   color: var(--colour-white);
   text-decoration: none;
   display: inline-block;
-  border-bottom: solid 3px var(--colour-black-light);
+  border-bottom: solid 3px var(--colour-grey);
   position: relative;
   padding: 0;
 }
