@@ -28,6 +28,7 @@
     cursor: hand;
     background: none;
     color: var(--colour-pink);
+    outline-width: none;
   }
 
   .navigation-footer .navigation__item a:before,

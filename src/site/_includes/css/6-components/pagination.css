@@ -3,19 +3,20 @@ Pagination
 ----------------------------------- */
 
 .pagination {
-  margin-top: 2rem;
-  border-top: 1px solid var(--colour-white);
-  border-bottom: 1px solid var(--colour-white);
+ padding: .5rem;
 }
 
 .pagination__list {
   display: grid;
   grid-columns: 1fr 1fr;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-gap: .5rem;
+  grid-template-rows: 50px;
 }
 
 .pagination__list-item {
   list-style: none;
+  display: contents;
 }
 
 .pagination__list-item--prev,
@@ -25,9 +26,11 @@ Pagination
 }
 
 .pagination__anchor {
-  display: block;
-  padding: 1rem 0;
-  border-bottom: 0;
+  transition: all .3s ease-in-out;
+  background: var(--colour-grey-light);
+  height: 100%;
+  padding: 0;
+  text-decoration: none;
 }
 
 .pagination__list-item--prev a {
@@ -39,19 +42,39 @@ Pagination
 }
 
 .pagination__svg {
-  width: 20px;
-  height: 16px;
-  fill: var(--colour-grey);
+  transition: all .3s ease-in-out;
+  fill: var(--colour-black);
+  background: var(--colour-pink);
+  padding: 14px 12px;
+  width: 45px;
 }
 
 .pagination__anchor:hover  {
-  background: var(--colour-white);
+  background: var(--colour-pink);
 }
 
 .pagination__anchor:hover svg {
   fill: var(--colour-pink);
+  background: var(--colour-black);
 }
 
-.pagination__anchor:hover .navigation__title {
-  border-color: var(--colour-pink);
+.navigation__title {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  padding-top: 13px;
 }
+
+.pagination__list-item--prev .navigation__title {
+  padding-left: 10px;
+}
+
+.pagination__list-item--next .navigation__title {
+  padding-right: 10px;
+}
+
+.pagination__anchor--white {
+  background: var(--colour-white);
+}
+
+

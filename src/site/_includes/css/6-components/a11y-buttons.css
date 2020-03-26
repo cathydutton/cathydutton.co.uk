@@ -14,8 +14,8 @@
   padding: 1rem 1.5rem;
   max-width: 62rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
+  grid-template-rows: min-content min-content;
   grid-gap: 10px;
 }
 
@@ -25,8 +25,9 @@
 } 
 
 .sub-grid {
-  grid-column: span 4;
   display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-column: span 3;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   align-items: center;

@@ -77,11 +77,9 @@ p {
 
 .highlight-text {
   padding: 1rem;
-  /* background: var(--colour-grey-light); */
-  border-left: solid 4px var(--colour-grey);
+  border-left: solid 4px var(--colour-pink);
   max-width: 80%;
   margin-bottom: 2rem;
-  /* border-left: 4px solid var(--colour-pink); */
 }
 
 .highlight-text p {

@@ -5,8 +5,8 @@
 
 :root {
 
-  /* https://toolness.github.io/accessible-color-matrix/?n=White&n=grey%20light&n=grey&n=pink%20light&n=pink%20light&n=black&v=FFFFFF&v=F3F3F3&v=C2C2C2&v=FF94AD&v=FF3363&v=1F1F1F */
-
+  /* https://toolness.github.io/accessible-color-matrix/?n=White&n=grey%20light&n=grey&n=pink%20light&n=pink&n=black&v=FFFFFF&v=F3F3F3&v=C2C2C2&v=FF94AD&v=FF3363&v=1F1F1F */
+ 
   --colour-black: #1f1f1f;
   --colour-white: #ffffff;
 
@@ -24,7 +24,7 @@
 }
 
 /* https://toolness.github.io/accessible-color-matrix/?n=White&n=grey%20light&n=grey&n=pink%20light&n=pink&n=black&v=FFDD04&v=F3F3F3&v=C2C2C2&v=71FF6A&v=5ACB54&v=1F1F1F */
-.theme-contrast {
+/* .theme-contrast {
 
   --colour-black: #F7FF0B;
   --colour-white: #1F1F1F;
@@ -34,18 +34,18 @@
 
   --colour-pink: #601A0B;
   --colour-pink-light: #0F6F24;
-}
+} */
 
-/* https://toolness.github.io/accessible-color-matrix/?n=white&n=grey%20light&n=grey&n=pink%20light&n=pink&n=black&v=FCF1D8&v=FCE5B9&v=EEA60B&v=DD9B4A&v=9F8152&v=211505 */
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=grey%20light&n=grey&n=pink%20light&n=pink&n=black&v=FFFFFF&v=D5D5D5&v=8B8B8B&v=797979&v=ACACAC&v=010101 */
 .theme-monochrome {
-  --colour-black: #211505;
-  --colour-white: #FCF1D8;
+  --colour-black: #010101;
+  --colour-white: #FFFFFF;
 
-  --colour-grey: #EEA60B;
-  --colour-grey-light: #FCE5B9;
+  --colour-grey: #8B8B8B;
+  --colour-grey-light: #D5D5D5;
 
-  --colour-pink: #9F8152;
-  --colour-pink-light: #DD9B4A;
+  --colour-pink: #ACACAC;
+  --colour-pink-light: #797979;
 }
 
 

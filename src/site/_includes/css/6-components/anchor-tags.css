@@ -21,7 +21,7 @@
 
 a:hover,
 .anchor:hover {
-  background: var(--colour-pink);
+  outline: dashed 1px var(--colour-pink);
   text-decoration: none;
 }
 

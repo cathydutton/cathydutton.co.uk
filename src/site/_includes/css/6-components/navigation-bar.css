@@ -50,7 +50,7 @@
 
 .navigation .navigation__item a:hover {
   cursor: hand;
-  /* background: var(--colour-grey); */
+  outline-width: none;
 }
 
 .navigation .navigation__item a:hover,
@@ -61,7 +61,8 @@
 .navigation .navigation__item--current a,
 .navigation a:active {
   border-bottom: solid 3px var(--colour-white);
-  background: var(--colour-grey);
+  background:   var(--colour-pink-light);
+
 }
 
 .navigation__item--current a:hover

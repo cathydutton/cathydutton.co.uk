@@ -44,7 +44,7 @@
 
   // Set buttons
   var themeDefault = document.getElementById('theme-default');
-  var themeContrast = document.getElementById('theme-contrast');
+  // var themeContrast = document.getElementById('theme-contrast');
   var themeMonochrome = document.getElementById('theme-monochrome');
 
   body.className = localStorage.getItem('currentTheme');
@@ -53,22 +53,22 @@
     body.className = 'theme-default';
     themeDefault.classList.add("button--ally--active");
     themeMonochrome.classList.remove("button--ally--active");
-    themeContrast.classList.remove("button--ally--active");
+    // themeContrast.classList.remove("button--ally--active");
     localStorage.setItem("currentTheme", 'theme-default');
   });
 
-  themeContrast.addEventListener('click', function (e) {
-    body.className = 'theme-contrast';
-    themeContrast.classList.add("button--ally--active");
-    themeMonochrome.classList.remove("button--ally--active");
-    themeDefault.classList.remove("button--ally--active");
-    localStorage.setItem('currentTheme', 'theme-contrast');
-  });
+  // themeContrast.addEventListener('click', function (e) {
+  //   body.className = 'theme-contrast';
+  //   themeContrast.classList.add("button--ally--active");
+  //   themeMonochrome.classList.remove("button--ally--active");
+  //   themeDefault.classList.remove("button--ally--active");
+  //   localStorage.setItem('currentTheme', 'theme-contrast');
+  // });
 
   themeMonochrome.addEventListener('click', function (e) {
     body.className = 'theme-monochrome';
     themeMonochrome.classList.add("button--ally--active");
-    themeContrast.classList.remove("button--ally--active");
+    // themeContrast.classList.remove("button--ally--active");
     themeDefault.classList.remove("button--ally--active");
     localStorage.setItem('currentTheme', 'theme-monochrome');
   });
