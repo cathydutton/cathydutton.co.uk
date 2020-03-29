@@ -70,14 +70,13 @@
             {{ headerOne }}
           </h1>
           <p class="page-intro"> {{ strapline }}</p>
+          {% include "socialMedia.njk" %}
         </div>
       </div>
-
     </header>
 
   <main id="main">
     {{ content | safe }}
-    {% include "socialMedia.njk" %}
   </main>
 
   <footer class="footer">
