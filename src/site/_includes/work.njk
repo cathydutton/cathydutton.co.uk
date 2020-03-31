@@ -2,13 +2,10 @@
   {% for item in work %}
     <li class="work-logo__item">
     {% if item.url %}
-      <a href="{{ item.url }}" title="Visit the {{ item.logo }} website" target="_blank" rel="noopener" aria-label="{{ item.logo }}" class="work-logo__anchor">
+      <a href="{{ item.url }}" title="Visit the {{ item.logo }} website" target="_blank" rel="noopener" aria-label="{{ item.logo }}" class="work-logo__anchor {{ item.class }}">
       <span class="visually-hidden">Visit the {{ item.logo }} website.</span>
     {% endif %}
-    {# <div class=""> #}
-      <img src="../images/work/{{ item.logo | lower | replace(" ", "-") }}-logo.jpg" alt="{{ item.logo }} logo" class="{{ item.class }}"width="{{ item.width }}" height="{{ item.height }}">
-    {# </div> #}
-    {# <p>test</P> #}
+      <img src="../images/work/{{ item.logo | lower | replace(" ", "-") }}-logo.jpg" alt="{{ item.logo }} logo" width="{{ item.width }}" height="{{ item.height }}">
     {% if item.url %}
       </a>
     {% endif %}

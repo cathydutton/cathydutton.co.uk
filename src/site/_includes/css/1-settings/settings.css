@@ -7,45 +7,33 @@
 
   /* https://toolness.github.io/accessible-color-matrix/?n=White&n=grey%20light&n=grey&n=pink%20light&n=pink&n=black&v=FFFFFF&v=F3F3F3&v=C2C2C2&v=FF94AD&v=FF3363&v=1F1F1F */
  
-  --colour-black: #1f1f1f;
-  --colour-white: #ffffff;
+  --colour-black: hsl(0, 0%, 12%);
+  --colour-white: hsl(0, 0%, 100%);
 
-  --colour-grey: #c2c2c2;
-  --colour-grey-light: #f3f3f3;
+  --colour-grey: hsl(0, 0%, 76%);
+  --colour-grey-light: hsl(0, 0%, 95%);
 
-  --colour-pink: #ff3363;
-  --colour-pink-light: #ff94ad;
+  --colour-pink: hsl(346, 100%, 60%);
+  --colour-pink-light: hsl(346, 100%, 79%);
   
-
   --font-family: Lato,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
   --font-size: 100%;
   --line-height: 1.5;
 
 }
 
-/* https://toolness.github.io/accessible-color-matrix/?n=White&n=grey%20light&n=grey&n=pink%20light&n=pink&n=black&v=FFDD04&v=F3F3F3&v=C2C2C2&v=71FF6A&v=5ACB54&v=1F1F1F */
-/* .theme-contrast {
-
-  --colour-black: #F7FF0B;
-  --colour-white: #1F1F1F;
-
-  --colour-grey: #494949;
-  --colour-grey-light: #343434;
-
-  --colour-pink: #601A0B;
-  --colour-pink-light: #0F6F24;
-} */
 
 /* https://toolness.github.io/accessible-color-matrix/?n=white&n=grey%20light&n=grey&n=pink%20light&n=pink&n=black&v=FFFFFF&v=D5D5D5&v=8B8B8B&v=797979&v=ACACAC&v=010101 */
+
 .theme-monochrome {
-  --colour-black: #010101;
-  --colour-white: #FFFFFF;
+  --colour-black: hsl(0, 0%, 0%);
+  --colour-white: hsl(0, 0%, 100%);
 
-  --colour-grey: #8B8B8B;
-  --colour-grey-light: #D5D5D5;
+  --colour-grey: hsl(0, 0%, 55%);
+  --colour-grey-light: hsl(0, 0%, 84%);
 
-  --colour-pink: #ACACAC;
-  --colour-pink-light: #797979;
+  --colour-pink: hsl(0, 0%, 67%);
+  --colour-pink-light: hsl(0, 0%, 47%);
 }
 
 

@@ -2,113 +2,113 @@
     {
       "logo": "CSS",
       "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3",
-      "width": "200px",
-      "height": "200px",
-      "class": ""
+      "width": "275px",
+      "height": "150px",
+      "class": "row-2"
     },
     {
       "logo": "PostCSS",
       "url": "https://postcss.org/",
-      "width": "200px",
-      "height": "200px",
+      "width": "275px",
+      "height": "150px",
       "class": ""
     },
     {
       "logo": "ITCSS",
       "url": "https://itcss.io/",
-      "width": "200px",
-      "height": "200px",
-      "class": ""
+      "width": "275px",
+      "height": "150px",
+      "class": "column-2 row-2"
     },
     {
       "logo": "HTML5",
       "url": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
-      "width": "200px",
-      "height": "200px",
-      "class": ""
+      "width": "275px",
+      "height": "150px",
+      "class": "row-2"
     },
     {
       "logo": "JavaScript",
       "url": "https://www.javascript.com/",
-      "width": "200px",
-      "height": "200px",
+      "width": "275px",
+      "height": "150px",
       "class": ""
     },
     {
       "logo": "Node",
       "url": "https://nodejs.org/en/",
-      "width": "200px",
-      "height": "200px",
+      "width": "275px",
+      "height": "150px",
       "class": ""
     },
     {
       "logo": "Express",
       "url": "https://expressjs.com/",
-      "width": "200px",
-      "height": "200px",
+      "width": "275px",
+      "height": "150px",
       "class": ""
     },
     {
       "logo": "Gulp",
       "url": "https://gulpjs.com/",
-      "width": "200px",
-      "height": "200px",
-      "class": ""
+      "width": "275px",
+      "height": "150px",
+      "class": "row-2"
     },
     {
       "logo": "Git",
       "url": "https://git-scm.com/",
-      "width": "200px",
-      "height": "200px",
+      "width": "275px",
+      "height": "150px",
       "class": ""
     },
     {
       "logo": "NPM",
       "url": "https://www.npmjs.com/",
-      "width": "200px",
-      "height": "200px",
+      "width": "275px",
+      "height": "150px",
       "class": ""
     },
     {
       "logo": "Sketch",
       "url": "https://www.sketchapp.com/",
-      "width": "200px",
-      "height": "200px",
+      "width": "275px",
+      "height": "150px",
       "class": ""
     },
     {
       "logo": "Nunjucks",
       "url": "https://mozilla.github.io/nunjucks/",
-      "width": "200px",
-      "height": "200px",
+      "width": "275px",
+      "height": "150px",
       "class": ""
     },
     {
       "logo": "Slack",
       "url": "https://slack.com/",
-      "width": "200px",
-      "height": "200px",
+      "width": "275px",
+      "height": "150px",
       "class": ""
     },
     {
       "logo": "Eleventy",
       "url": "https://www.11ty.io/",
-      "width": "200px",
-      "height": "200px",
+      "width": "275px",
+      "height": "150px",
       "class": ""
     },
     {
       "logo": "Netlify",
       "url": "https://www.netlify.com/",
-      "width": "200px",
-      "height": "200px",
-      "class": ""
+      "width": "275px",
+      "height": "150px",
+      "class": "column-2"
     },
     {
       "logo": "Github",
       "url": "https://github.com/",
-      "width": "200px",
-      "height": "200px",
+      "width": "275px",
+      "height": "150px",
       "class": ""
     }
   ]

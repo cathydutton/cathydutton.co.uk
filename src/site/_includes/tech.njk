@@ -1,13 +1,11 @@
 <ul class="tech-logo">
   {% for item in tech %}
-    <li class="tech-logo__item {{ item.class }}">
+    <li class="tech-logo__item">
     {% if item.url %}
-      <a href="{{ item.url }}" title="Visit the {{ item.logo }} website" target="_blank" rel="noopener" aria-label="{{ item.logo }}" class="work-logo__anchor">
+      <a href="{{ item.url }}" title="Visit the {{ item.logo }} website" target="_blank" rel="noopener" aria-label="{{ item.logo }}" class="tech-logo__anchor {{ item.class }}">
       <span class="visually-hidden">Visit the {{ item.logo }} website.</span>
     {% endif %}  
-    {# <div class="">  #}
       <img src="../images/tech/{{ item.logo | lower | replace(" ", "-") }}.jpg" alt="{{ item.logo }} logo" width="{{ item.width }}" height="{{ item.height }}">
-    {# </div> #}
     {% if item.url %}
       </a>
      {% endif %}   
