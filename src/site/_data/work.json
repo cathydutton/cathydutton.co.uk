@@ -1,58 +1,100 @@
 [
   {
     "logo": "Defra",
-    "url": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs"
+    "url": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs",
+    "width": "200px",
+    "height": "200px",
+    "class": "column-2 row-2"
   },
   {
     "logo": "Environment agency",
-    "url": "https://www.gov.uk/government/organisations/environment-agency"
+    "url": "https://www.gov.uk/government/organisations/environment-agency",
+    "width": "200px",
+    "height": "200px",
+    "class": ""
   },
   {
     "logo": "Barclays",
-    "url": "https://www.barclays.co.uk/"
+    "url": "https://www.barclays.co.uk/",
+    "width": "200px",
+    "height": "200px",
+    "class": ""
   },
   {
     "logo": "The Hut Group",
-    "url": "https://www.thg.com/"
+    "url": "https://www.thg.com/",
+    "width": "200px",
+    "height": "200px",
+    "class": "column-2"
   },
   {
     "logo": "AO.com",
-    "url": "https://ao.com/"
+    "url": "https://ao.com/",
+    "width": "200px",
+    "height": "200px",
+    "class": ""
   },
   {
     "logo": "Get The Label",
-    "url": "GetTheLabel.com"
+    "url": "GetTheLabel.com",
+    "width": "200px",
+    "height": "200px",
+    "class": ""
   },
   {
     "logo": "My Protein",
-    "url": "https://www.myprotein.com/"
+    "url": "https://www.myprotein.com/",
+    "width": "200px",
+    "height": "200px",
+    "class": ""
   },
   {
     "logo": "Mobile by Sainsbury's",
-    "url": "http://www.phoneshopbysainsburys.co.uk/"
+    "url": "http://www.phoneshopbysainsburys.co.uk/",
+    "width": "200px",
+    "height": "200px",
+    "class": ""
   },
   {
     "logo": "Elizabeth Arden",
-    "url": "https://www.elizabetharden.co.uk/"
+    "url": "https://www.elizabetharden.co.uk/",
+    "width": "200px",
+    "height": "200px",
+    "class": "row-2"
   },
   {
     "logo": "EE",
-    "url": "https://accessories.ee.co.uk/"
+    "url": "https://accessories.ee.co.uk/",
+    "width": "200px",
+    "height": "200px",
+    "class": "row-2"
   },
   {
     "logo": "Tropic skincare",
-    "url": "https://www.tropicskincare.com/"
+    "url": "https://www.tropicskincare.com/",
+    "width": "200px",
+    "height": "200px",
+    "class": ""
   },
   {
     "logo": "Nintendo",
-    "url": "https://store.nintendo.co.uk/"
+    "url": "https://store.nintendo.co.uk/",
+    "width": "200px",
+    "height": "200px",
+    "class": "column-2"
   },
   {
     "logo": "Creare",
-    "url": "https://www.creare.co.uk/"
+    "url": "https://www.creare.co.uk/",
+    "width": "200px",
+    "height": "200px",
+    "class": ""
   },
   {
     "logo": "Zavvi",
-    "url": "https://www.zavvi.com/"
+    "url": "https://www.zavvi.com/",
+    "width": "200px",
+    "height": "200px",
+    "class": ""
   }
 ]

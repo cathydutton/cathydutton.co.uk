@@ -39,14 +39,31 @@ Profile image
 }
 
 .profile-image-front {
-  background-color: var(--colour-light);
-  color: var(--colour-black);;
+  background-color: var(--colour-grey-lightt);
+  color: var(--colour-black);
 }
 
 .profile-image-back {
-  background-color: var(--colour-light);
-  color: var(--colour-white);
+  background-color: var(--colour-grey-light);
+  /* color: var(--colour-white); */
   transform: rotateY(180deg);
+}
+
+.profile-image__svg-circle {
+  fill: var(--colour-pink);
+  stroke: var(--colour-grey-light);
+  stroke-width: 4px;
+}
+
+.profile-image__svg-text {
+  fill: var(--colour-black);
+}
+
+/* Theme */
+
+.theme-monochrome .profile-image__img { 
+  filter: grayscale(100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(grayscale(100%))";
 }
 
 

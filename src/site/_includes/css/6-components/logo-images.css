@@ -3,7 +3,7 @@ Logo images
 
 ----------------------------------- */
 
-.tech-logo,
+/* .tech-logo,
 .work-logo {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(6.375rem, 1fr));
@@ -55,7 +55,7 @@ Logo images
 .tech-logo__anchor:focus,
 .work-logo__anchor:focus {
   outline: 0;
-}
+} */
 
 /* .tech-logo__anchor:before,
 .work-logo__anchor:before {
@@ -80,3 +80,40 @@ Logo images
   transition: all .3s ease-in-out;
   opacity: .90;
 } */
+
+
+.tech-logo,
+.work-logo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6.375rem, 1fr)); 
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-bottom: 1.5rem;
+}
+
+.tech-logo__item,
+.work-logo__item,
+.tech-logo__item a,
+.work-logo__item a{
+  display: contents;
+}
+
+.tech-logo__item img,
+.work-logo__item img{
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
+.column-2 {
+  grid-column: span 2;
+}
+
+.row-2 {
+  grid-row: span 2;
+}
+
+.tech-logo__item img,
+.work-logo__item img {
+ padding: 0;
+}

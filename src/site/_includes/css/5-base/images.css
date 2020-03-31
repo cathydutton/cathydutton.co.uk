@@ -21,6 +21,9 @@ https://web.dev/native-lazy-loading/
 /* }  */ 
 
 img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
   image-rendering: auto;
   padding: .4rem;
   display: block;

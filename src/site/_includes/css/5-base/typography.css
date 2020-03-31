@@ -73,13 +73,12 @@ p {
   font-size: 1.3rem;
 }
 
-
-
 .highlight-text {
   padding: 1rem;
   border-left: solid 4px var(--colour-pink);
   max-width: 80%;
   margin-bottom: 2rem;
+  background: var(--colour-grey-light);
 }
 
 .highlight-text p {
