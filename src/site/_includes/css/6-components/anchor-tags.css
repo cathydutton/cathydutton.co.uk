@@ -46,6 +46,9 @@ a:visited,
   outline-width: 1px;
 }
 
+.anchor[target=_blank]:after {
+  content: ' (opens new window)';
+} 
 
 /* Print styles */
 

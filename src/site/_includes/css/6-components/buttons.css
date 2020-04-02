@@ -2,48 +2,9 @@
   Buttons
   ----------------------------------- */
 
-  /* button,
-  .button{
-    --button: hsl(0, 0%, 12%);
-    --button-hover: hsl(0, 0%, 20%);
-    --button-active:  hsl(0, 0%, 30%);
-    --button-visited: hsl(0, 0%, 20%);
-    --button-colour: var(--colour-white);
-    --button-border: var(--colour-black);
-  }
-  
-  
-  .button--primary {
-    --button: hsl(346, 100%, 60%);
-    --button-hover: hsl(346, 100%, 70%);
-    --button-active:  hsl(346, 100%, 80%);
-    --button-visited: hsl(346, 100%, 70%);
-    --button-colour: var(--colour-black);
-    --button-border: var(--colour-black);
-  } 
-  
-  .button--secondary {
-    --button: hsl(0, 0%, 79%);
-    --button-hover: hsl(0, 0%, 89%);
-    --button-active:  hsl(0, 0%, 69%);
-    --button-visited: hsl(0, 0%, 89%);
-    --button-colour: var(--colour-black);
-    --button-border: var(--colour-black);
-  }
-  
-  .button--tertiary {
-    --button: hsl(0, 100%, 90%);
-    --button-hover: hsl(0, 100%, 94%);
-    --button-active:  hsl(0, 100%, 84%);
-    --button-visited: hsl(0, 100%, 94%);
-    --button-colour: var(--colour-black);
-    --button-border: var(--colour-black);
-  } */
-  
-  
   button,
   .button {
-    padding: .9rem 1.7rem;
+    padding: .7rem;
     color: var(--colour-black);
     font-weight: 500;
     font-size: 16px;
@@ -87,7 +48,15 @@
   } 
 
 
+.button--secondary {
+    background: var(--colour-grey);
+    border-color: var(--colour-black);
+  }
 
+.button--tertiary {
+  background: var(--colour-grey-light);
+  border-color: var(--colour-grey);
+}
 
 
 

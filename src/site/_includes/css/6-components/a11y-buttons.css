@@ -14,9 +14,9 @@
   padding: 1rem 1.5rem;
   max-width: 62rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
-  grid-template-rows: min-content min-content;
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-rows: auto auto;
+  gap: 0 10px;
 }
 
 .accessibility-tools fieldset {
@@ -25,64 +25,17 @@
 } 
 
 .sub-grid {
-  display: grid;
-  grid-template-columns: 150px 150px 150px;
   grid-column: span 3;
+  display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   align-items: center;
 }
 
-  
-
-/* .accessibility-tools legend {
-  padding: .9rem 0;
-} */
-
-
 .button--ally {
-  /* --button: hsl(346, 100%, 60%);
-  --button-hover: hsl(346, 100%, 70%);
-  --button-active:  hsl(346, 100%, 80%);
-  --button-visited: hsl(346, 100%, 70%);
-  --button-colour: var(--colour-black);
-  --button-border: var(--colour-pink); */
-  padding: .5em .7em;
   box-shadow: none;
   height: 100%;
 }
 
-  /* .button--ally:hover {
-    box-shadow: none;
-  }
   
-
-  .button--ally--active {
-    --button: hsl(346, 100%, 30%);
-  } */
-
-  /* @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
-    .wrapper--accessibility-tools  {
-      clear: both;
-      overflow: auto;
-      position: relative;
-    }
-  
-    .sub-grid {
-      float: left;
-      width: 48%;
-      margin: 1%;
-    }
-  }
-  */
-
-
-
-
-
-
-
-
-
-
 

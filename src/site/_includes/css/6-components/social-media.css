@@ -32,6 +32,10 @@ Social media icons
   justify-content: center;
 }
 
+.social-media__anchor[target=_blank]:after {
+  content: '';
+} 
+
 .social-media__anchor svg {
   width: 40px;
   height: 40px;

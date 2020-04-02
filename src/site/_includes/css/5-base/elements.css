@@ -34,16 +34,18 @@ pre {
   font-family: Consolas, Monaco, monospace;
   tab-size: 4;
   white-space: unset;
-  background: var(--colour-white);
+  background: var(--colour-black);
 }
   
 code { 
   font: inherit ;
-  background: var(--colour-white);
-  background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
+  background: var(--colour-black);
+  background-image: linear-gradient( var(--colour-black) 50%, transparent 0);
   background-size: auto 3rem;
   background-origin: content-box; 
   display: block;
+  color: var(--colour-white);
+  padding: .5rem 1rem;
 }
 
 pre code {
