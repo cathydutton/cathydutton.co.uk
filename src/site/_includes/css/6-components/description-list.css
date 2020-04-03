@@ -3,7 +3,7 @@
   ----------------------------------- */
   
 .description-list {
-  margin-top: .4rem;
+  margin-top: var(--flow-space);
   margin-bottom: 1rem;
 }
 

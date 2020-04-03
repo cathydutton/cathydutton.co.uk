@@ -2,13 +2,16 @@
   Range input
   ----------------------------------- */
 
- .slider-container label {
+.slider-container {
+  margin-bottom: 1rem;
+}
+
+.slider-container label {
     display: block;
   }
 
   .slider {
     width: 100%;
-    margin-top: var(--flow-space);
   }
 
   .slider {

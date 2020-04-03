@@ -17,13 +17,13 @@ strapline: Patterns, components and styles for cathydutton.co.uk
   <p>
 
     <h3>Components list</h3>
-    {% for post in collections.components %}
-      <ul class="unordered-list">
+    <ul class="unordered-list">
+      {% for post in collections.components %}
         <li class="unordered-list__list-item">
           <a href="{{ post.url }}" class="anchor">{{ post.data.title }}</a>
         </li>
-      </ul>
-    {%- endfor -%}
+      {%- endfor -%}
+    </ul>
 </section>
 
 
