@@ -46,14 +46,12 @@ h4 {
 /* Decoration */
 
 h2,
-h3, 
-h4 {
+h3 {
   position: relative;
 }
 
 h2:after,
-h3:after,
-h4:after {
+h3:after {
   content: "";
   height: 6px;
   display: block;
