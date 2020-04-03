@@ -58,6 +58,12 @@ Pagination
   background: var(--colour-black);
 }
 
+.pagination__anchor:focus,
+.pagination__anchor:active  {
+  background: var(--colour-pink-light);
+  outline: none;;
+}  
+
 .navigation__title {
   display: inline-block;
   vertical-align: top;

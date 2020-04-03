@@ -6,10 +6,6 @@
   margin: 2rem 1rem 1rem 0;
 }
 
-.navigation .navigation__list {
-  /* padding: 0 1rem; */
-}
-
 .navigation .navigation__item {
   float: left;
   margin: .2rem;
@@ -51,11 +47,11 @@
 .navigation .navigation__item a:hover {
   cursor: hand;
   outline-width: none;
+  transition: all .3s ease-in-out;
 }
 
-.navigation .navigation__item a:hover,
 .navigation .navigation__item a:focus {
-  transition: all .3s ease-in-out;
+  outline-color: var(--colour-white);
 }
 
 .navigation .navigation__item--current a,

@@ -116,15 +116,15 @@
 
             <span class="visually-hidden">Use left and right arrows to navigate between tabs.</span>
             <div class="js-tabs tabs">
-                <ul class="tab-list">
+                <ul class="tab-list" role="tablist">
                     <li class="tab-item" data-tab-active>
                         <a class="tab-link" href="#tab-1" data-tab-active aria-selected="true">HTML</a>
                     </li>
-                    <li class="tab-item">
+                    <li class="tab-item" role="presentation">
                         <a class="tab-link" href="#tab-2">CSS</a>
                     </li>
                     {% if hasJS %}
-                    <li class="tab-item">
+                    <li class="tab-item" role="presentation">
                         <a class="tab-link" href="#tab-3">JavaScript</a>
                     </li>
                     {% endif %}

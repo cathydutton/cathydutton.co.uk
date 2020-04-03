@@ -42,9 +42,9 @@ strapline: Latest posts and tutorials
             </p>
           {% endif %} #}
         </div>
-         {% if post.data.tags %}
+         {# {% if post.data.tags %}
           <p>Tagged in: {% for postTag in post.data.tags %}<a href="/posts/tags/{{ postTag | lower | replace(" ", "-")}}/" class="anchor">{{ postTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
-         {% endif %}
+         {% endif %} #}
       </article>
     {%- endfor -%}
   </section>

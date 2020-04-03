@@ -8,22 +8,23 @@
 
   .slider {
     width: 100%;
+    margin-top: var(--flow-space);
   }
 
-/* 
   .slider {
     -webkit-appearance: none;
     width: 100%;
     height: 15px;
     border-radius: 5px;
-    background: var(--colour-white);
+    background: var(--colour-grey);
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
-}*/
+}
 
-.slider:hover {
+.slider:hover,
+.slider:focus {
     opacity: 1;
 } 
 
@@ -47,7 +48,3 @@
     outline: 2px;
 } 
 
-.slider::-webkit-slider-thumb:focus,
-.slider::-moz-range-thumb:focus, {
-  outline: -webkit-focus-ring-color auto 5px;
-} 

@@ -71,6 +71,7 @@ p {
 
 .page-intro {
   font-size: 1.3rem;
+  margin-bottom: var(--flow-space);
 }
 
 .highlight-text {
