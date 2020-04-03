@@ -70,7 +70,21 @@
           <h1>
             {{ title }}
           </h1>
-          <p class="page-intro"> {{ description }}</p>
+          <p class="page-intro"> {{ period }}</p>
+          <ul class="social-media">
+            {% for item in socialMedia %} 
+              <li class="social-media__item">
+                <a href="{{ item.url }}" class="anchor social-media__anchor" aria-label="{{ item.title }}" target="_blank" rel="noopener">
+                <span>{{ item.description }}</span>
+                  <svg version="1.1" width="100" height="100" role="img" viewBox="{{ item.viewBox }}" aria-labelledby="{{ item.title }} Title" aria-describedby="{{ item.title }}Desc">
+                    <title id="{{ item.title }}Title">{{ item.description }}</title>
+                    <desc id="{{ item.title }}Desc">link to {{ item.title }} profile</desc>
+                    <path d="{{ item.path }}"/>
+                  </svg>
+                </a>
+              </li>
+            {% endfor %}
+          </ul> 
         </div>
       </div>
 
@@ -78,9 +92,9 @@
 
   <main id="main">
     <div class="wrapper  wrapper--top">
-      <p class="post-date">
+      {# <p class="post-date">
         <time datetime="{{ date }}">{{ date | dateDisplayProject }}</time>
-      </p>
+      </p> #}
       <section class="flow"> 
         {{ content | safe }}
       </section>

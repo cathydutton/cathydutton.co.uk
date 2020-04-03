@@ -2,19 +2,20 @@
 Quotations
 ----------------------------------- */
 .quote {
-  background: var(--colour-white);
-  margin: 1rem 0;
-  padding: 1rem;
+  margin: 2rem 0;
 }
 
 blockquote {
+  background: var(--colour-grey-light);
   padding: 1rem;
+  margin-bottom: 1rem;
+  border: solid 1px var(--colour-grey);
 }
 
 blockquote:before,
 blockquote:after {
   font-family: var(--font-family);
-  color: var(--colour-grey);
+  color: var(--colour-pink);
   font-size: 2rem;
   line-height: 0.1rem;
 }

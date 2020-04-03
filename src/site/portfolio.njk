@@ -2,18 +2,16 @@
 title: Design, User Experience and Front End Development portfolio - Cathy Dutton 
 description: A collection of my work from employers including Defra, Barclays, EE, The Hut Group and AO.com 
 layout: layouts/base.njk 
-permalink: /projects/ 
+permalink: /portfolio/ 
 pageName: Portfolio 
-headerOne: Projects
-strapline: Design and Front End Development work
+headerOne: Portfolio
+strapline:  Over the past 15 years I have had some great opportunities to develop my skills and experience working on a range of projects for creative agencies, small businesses, global brands and government departments, helping the teams I have worked with create user-focused, accessible and intuitive services. 
+
+
 ---
 
 
 <div class="wrapper  wrapper--full">
-
-  <p class="highlight-text">
-    Over the years I have had the pleasure of working for some amazing companies and brands on a range of digital projects. Below are just a few examples of my design and development work. 
-  </p>
 
   <section class="cards">
     {% for post in collections.projects %}
@@ -30,7 +28,7 @@ strapline: Design and Front End Development work
           </div>
           <p class="card__date">
             <span class="visually-hidden">Project date</span>
-            <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplayProject }}</time>
+            {{ post.data.period }}
           </p>
             {# {% if post.data.projectTags %}
               <p class="card__tags">Tagged in:
