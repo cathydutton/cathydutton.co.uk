@@ -30,13 +30,16 @@ Latest posts feed
   margin-bottom: .2rem;
 }
 
-.news-feed__title a:hover {
-  background: transparent;
-}
-
 .news-feed__anchor {
   padding: 0;
   text-decoration: none;
+}
+
+.news-feed__anchor:hover,
+.news-feed__anchor:focus,
+.news-feed__anchor:active,
+.news-feed__anchor:visited {
+  outline: none;
 }
 
 .news-feed__header {

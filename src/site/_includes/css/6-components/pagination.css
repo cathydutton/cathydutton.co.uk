@@ -27,7 +27,7 @@ Pagination
 
 .pagination__anchor {
   transition: all .3s ease-in-out;
-  background: var(--colour-grey-light);
+  background: var(--colour-pink);
   height: 100%;
   padding: 0;
   text-decoration: none;
@@ -43,19 +43,19 @@ Pagination
 
 .pagination__svg {
   transition: all .3s ease-in-out;
-  fill: var(--colour-black);
-  background: var(--colour-pink);
+  fill: var(--colour-pink);
+  background: var(--colour-black);
   padding: 14px 12px;
   width: 45px;
 }
 
 .pagination__anchor:hover  {
-  background: var(--colour-pink);
+  background: var(--colour-grey-light);
 }
 
 .pagination__anchor:hover svg {
-  fill: var(--colour-pink);
-  background: var(--colour-black);
+  fill: var(--colour-black);
+  background: var(--colour-pink);
 }
 
 .pagination__anchor:focus,
@@ -69,6 +69,7 @@ Pagination
   vertical-align: top;
   position: relative;
   padding-top: 13px;
+  padding-left: 10px;
 }
 
 .pagination__list-item--prev .navigation__title {
@@ -79,8 +80,5 @@ Pagination
   padding-right: 10px;
 }
 
-.pagination__anchor--white {
-  background: var(--colour-white);
-}
 
 

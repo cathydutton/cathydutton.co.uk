@@ -44,7 +44,7 @@ Cards
 }
 
 .card__title a:hover {
-  background: none;
+  outline: none;
 }
 
 .card-wrapper:hover,

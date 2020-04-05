@@ -31,3 +31,11 @@
   border: solid 1px var(--colour-black);
   padding: 1rem;
 }
+
+.no-margin {
+  margin: 0!important
+}
+
+.margin-bottom {
+  margin-bottom: 1rem;
+}

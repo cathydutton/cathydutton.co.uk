@@ -23,9 +23,9 @@ module.exports = function(config) {
   });
 
   // PostCSS plugin collection
-  config.addCollection("postcss", function(collection) {
-    return collection.getFilteredByGlob("**/postcss/**.njk").reverse();
-  });
+  // config.addCollection("postcss", function(collection) {
+  //   return collection.getFilteredByGlob("**/postcss/**.njk").reverse();
+  // });
 
   // Components collection
   config.addCollection("components", function(collection) {
