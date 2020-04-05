@@ -1,8 +1,10 @@
 /*
   A11y buttons
   ----------------------------------- */
+  
+@supports (display: subgrid) {
+  
 
- 
 .accessibility-tools {
   color: var(--colour-white);
   background: var(--colour-black);
@@ -48,3 +50,8 @@
   cursor: not-allowed;
  } 
 
+}
+
+.accessibility-tools {
+  display: none;
+}
