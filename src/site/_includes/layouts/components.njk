@@ -79,11 +79,11 @@
               <li class="social-media__item">
                 <a href="{{ item.url }}" class="anchor social-media__anchor" aria-label="{{ item.title }}" target="_blank" rel="noopener">
                 <span>{{ item.description }}</span>
-                  <svg version="1.1" width="100" height="100" role="img" viewBox="{{ item.viewBox }}" aria-labelledby="{{ item.title }} Title" aria-describedby="{{ item.title }}Desc">
-                    <title id="{{ item.title }}Title">{{ item.description }}</title>
-                    <desc id="{{ item.title }}Desc">link to {{ item.title }} profile</desc>
-                    <path d="{{ item.path }}"/>
-                  </svg>
+                <svg version="1.1" width="100" height="100" role="img" viewBox="{{ item.viewBox }}" aria-labelledby="{{ item.title }}Title {{ item.title }}Desc">
+                  <title id="{{ item.title }}Title">{{ item.title }}</title>
+                  <desc id="{{ item.title }}Desc">link to {{ item.title }} profile</desc>
+                  <path d="{{ item.path }}"/>
+                </svg>
                 </a>
               </li>
             {% endfor %}
@@ -96,9 +96,11 @@
     <main id="main">
         <div class="wrapper  wrapper--top">
             <section>
+                
+                
                 <div class="slider-container">
-                    <label>Resize the panel width:</label>
-                    <input type='range' class="slider" min='30' max='100' value='100' step='10' onchange="setStyleOn('width', 'demo', this.value + '%')" />
+                    <label for="width">Resize the panel width:</label>
+                    <input type='range' id="width" class="slider" min='30' max='100' value='100' step='10' onchange="setStyleOn('width', 'demo', this.value + '%')" />
                 </div>
 
                 <div class="clear resize" id="demo">
@@ -143,20 +145,20 @@
                     </li>
                     {% endif %}
                 </ul>
-                <div id="#tab-1" class="tab-panel" role="tabpanel" aria-labelledby="tab_HTML">
+                <div id="#tab-1" class="tab-panel" role="tabpanel">
                     <h3>HTML</h3>
                     <pre>
                       <button class="button--copy button--right" data-clipboard-target="#HTMLCode">Copy</button>
                       <code id="HTMLCode">{{componentHtml | e}}</code>
                     </pre>
                 </div>
-                <div id="#tab-2" class="tab-panel" role="tabpanel" aria-labelledby="tab_CSS">
+                <div id="#tab-2" class="tab-panel" role="tabpanel">
                     <h3>CSS</h3>
                     <pre><button class="button--copy button--right" data-clipboard-target="#CSSCode">Copy</button><code id="CSSCode">{{componentCSS | e}}</code>
                     </pre>
                 </div>
                 {% if hasJS %}
-                <div id="#tab-3" class="tab-panel" role="tabpanel" aria-labelledby="tab_JavaScript">
+                <div id="#tab-3" class="tab-panel" role="tabpanel">
                     <h3>JavaScript</h3>
                     <pre><button class="button--copy button--right" data-clipboard-target="#JavaScriptCode">Copy</button><code id="JavaScriptCode">{{componentJS | e}}</code>
                     </pre>

@@ -14,7 +14,7 @@
   padding: 1rem 1.5rem;
   max-width: 62rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
   grid-template-rows: auto auto;
   gap: 5px 10px;
 }
@@ -27,7 +27,7 @@
 .sub-grid {
   grid-column: span 3;
   display: grid;
-  grid-template-columns: 145px 145px 145px;
+  grid-template-columns: 145px 145px 145px; 
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   align-items: center;
@@ -36,6 +36,7 @@
 .button--ally {
   box-shadow: none;
   height: 100%;
+  font-size: .9rem;
 }
 
  .button--ally--active:after {

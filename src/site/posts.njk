@@ -20,12 +20,12 @@ strapline: I've been writitng blog posts since 2014, mostly on Design, Front End
   <section class="post">
     {% for post in pagination.items %}
       <article class="news-feed__post js-content-group flow" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-        <h3 class="news-feed__title">
+        <h2 class="news-feed__title">
           <a href="{{ post.url }}" class="anchor news-feed__anchor">
             <span class="visually-hidden">Article title</span>
             {{ post.data.title }}
           </a>
-        </h3>
+        </h2>
         <p>
           <span class="visually-hidden">Published on</span>
           <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>

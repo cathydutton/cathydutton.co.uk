@@ -13,9 +13,9 @@
 .anchor {
   color: currentColor;
   text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-thickness: 3px;
-  transition: all .3s ease-in-out;
+  /* text-underline-offset: 1px;
+  text-decoration-thickness: 1px;
+  transition: all .3s ease-in-out; */
   padding: 0 .3rem;
 }
 

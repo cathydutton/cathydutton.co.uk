@@ -149,7 +149,9 @@ Tabs
       var attributes = {
         'role': 'tabpanel',
         'aria-hidden': 'true',
-        'aria-labelledby': 'tab-link-' + i
+        // 'aria-labelledby': 'tab-link-' + i
+        'aria-labelledby': 'tab-link-' + tabLinkText[i]
+        
       };
        
       // set up next tab link
