@@ -6,7 +6,8 @@
 	"start_url": "/",
   "theme_color": "#1f1f1f",
   "background_color": "#ffffff",
-  "display": "browser",
+  "display": "standalone",
+  "prefer_related_applications": true,
   "icons": [
     {
       "src": "images/icon-72x72.png",
