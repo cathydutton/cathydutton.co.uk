@@ -4,18 +4,5 @@
 	"name": "User Experience Designer - Cathy Dutton",
 	"description": "Cheshire based User Experience Designer focusing on Interaction &amp; Service Designer - Cathy Dutton ",
 	"start_url": "/",
-	"display": "standalone",
-	"icons": [{
-		"src": "images/apple-icon-180x180.png",
-		"sizes": "192x192",
-		"type": "image/png"
-	},
-	{
-		"src": "images/apple-icon-180x180",
-		"type": "image/png",
-		"sizes": "512x512"
-	}
-],
-	"background_color": "#ffffff",
-	"theme_color": "#010101"
+	"display": "standalone"
 }
