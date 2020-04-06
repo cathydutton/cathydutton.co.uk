@@ -24,9 +24,9 @@
                   '/posts/blurred-lines-and-job-titles/index.html',
                   '/posts/designing-digital-forms/index.html',
                   '/posts/the-problem-with-patterns/index.html',
-                  '/projects/waste-tracking/index.html',
-                  '/projects/i-want-to-fish-service/index.html',
-                  '/projects/ee/index.html',
+                  '/portfolio/waste-tracking/index.html',
+                  '/portfolio/i-want-to-fish-service/index.html',
+                  '/portfolio/ee/index.html',
                   '/css/main.css',
                   '/js/scripts.js',
                 ]);
