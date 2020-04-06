@@ -21,7 +21,7 @@
                   '/projects/index.html',
                   '/posts/index.html',
                   '/offline/index.html',
-                  'posts/blurred-lines-and-job-titles/index.html',
+                  '/posts/blurred-lines-and-job-titles/index.html',
                   '/posts/designing-digital-forms/index.html',
                   '/posts/the-problem-with-patterns/index.html',
                   '/projects/waste-tracking/index.html',

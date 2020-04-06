@@ -10,7 +10,7 @@
   float: left;
   margin: .2rem;
   list-style: none;
-  margin: .8rem;
+  margin: .8rem .8rem .8rem 0;
 }
   
 .navigation a {
@@ -33,9 +33,7 @@
     transition: width .3s;
     height: 3px;
     width: 0;
-    /* margin: 0 .8rem; */
   }
-
 
   .navigation .navigation__item a:hover:before,
   .navigation .navigation__item a:focus:before {
@@ -58,12 +56,10 @@
 .navigation a:active {
   border-bottom: solid 3px var(--colour-white);
   background:   var(--colour-pink-light);
-
 }
 
 .navigation__item--current a:hover
 .navigation a:active:hover {
-  /* border-bottom: solid 6px var(--colour-pink);  */
   cursor: not-allowed;
 }
   
