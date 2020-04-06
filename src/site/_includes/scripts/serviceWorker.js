@@ -17,16 +17,27 @@
                   '/',
                   '/index.html',
                   '/about-me/index.html',
+                  '/about-me/',
                   '/now/index.html',
+                  '/now/',
                   '/portfolio/index.html',
+                  '/portfolio/',
                   '/posts/index.html',
+                  '/posts/',
                   '/offline/index.html',
+                  '/offline/',
                   '/posts/blurred-lines-and-job-titles/index.html',
+                  '/posts/blurred-lines-and-job-titles/',
                   '/posts/designing-digital-forms/index.html',
+                  '/posts/designing-digital-forms/',
                   '/posts/the-problem-with-patterns/index.html',
+                  '/posts/the-problem-with-patterns/',
                   '/projects/waste-tracking/index.html',
+                  '/projects/waste-tracking/',
                   '/projects/i-want-to-fish-service/index.html',
+                  '/projects/i-want-to-fish-service/',
                   '/projects/ee/index.html',
+                  '/projects/ee/',
                   '/css/main.css',
                   '/js/scripts.js',
                 ]);
@@ -61,7 +72,7 @@
             event.respondWith(
                 fetch(request)
                     .catch(function () {
-                        return caches.match('/offline/index.html');
+                        return caches.match('/offline/');
                     })
             );
             return;
@@ -93,7 +104,7 @@
                     .catch(function () {
                         return caches.match(request)
                             .then(function (response) {
-                                return response || caches.match('/offline/index.html');
+                                return response || caches.match('/offline/');
                             })
                     })
             );
