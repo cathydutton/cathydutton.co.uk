@@ -3,40 +3,37 @@
   CSS variables for fonts, colors, etc.
   ----------------------------------- */
 
-/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FCFCFC&v=E3E3E3&v=E61E9C&v=780C83&v=1E0321&v=333333 */
-
-/* Colors */
 :root {
-  --colour-black: hsl(293, 81%, 4%);
-  --colour-dark: hsl(294, 83%, 7%);
-  --colour-medium: hsl(294, 83%, 28%);
-  --colour-light: hsl(0, 3%, 94%);
-  --colour-white: hsl(0, 0%, 99%);
-  --colour-bright: hsl(322, 80%, 51%);
 
-  --font-family: Verdana, Geneva, sans-serif;
+  /* https://toolness.github.io/accessible-color-matrix/?n=White&n=grey%20light&n=grey&n=pink%20light&n=pink&n=black&v=FFFFFF&v=F3F3F3&v=C2C2C2&v=FF94AD&v=FF3363&v=1F1F1F */
+ 
+  --colour-black: hsl(0, 0%, 12%);
+  --colour-white: hsl(0, 0%, 100%);
 
-  --font-size: calc(18px + 0.25vw)
+  --colour-grey: hsl(0, 0%, 76%);
+  --colour-grey-light: hsl(0, 0%, 95%);
+
+  --colour-pink: hsl(346, 100%, 60%);
+  --colour-pink-light: hsl(346, 100%, 79%);
+  
+  --font-family: Lato,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+  --font-size: 100%;
+  --line-height: 1.5;
+
 }
 
-/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=001E3D&v=00356C&v=9C2064&v=FE9F00&v=FFFA06&v=FFFFFF */
 
-.theme-contrast {
-  --colour-black: hsl(0, 0%, 100%);
-  --colour-dark: hsl(59, 100%, 51%);
-  --colour-medium: hsl(38, 100%, 50%);
-  --colour-light: hsl(211, 100%, 21%);
-  --colour-white: hsl(210, 100%, 12%);
-  --colour-bright: hsl(327, 66%, 37%);
-}
-
-/* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FCF1D8&v=FCE5B9&v=EEA60B&v=543B1C&v=3A220C&v=211505 */
+/* https://toolness.github.io/accessible-color-matrix/?n=white&n=grey%20light&n=grey&n=pink%20light&n=pink&n=black&v=FFFFFF&v=D5D5D5&v=8B8B8B&v=797979&v=ACACAC&v=010101 */
 
 .theme-monochrome {
-  --colour-black: hsl(34, 74%, 7%);
-  --colour-dark: hsl(29, 66%, 14%);
-  --colour-medium: hsl(33, 50%, 22%);
-  --colour-light: hsl(39, 92%, 86%);
-  --colour-white: hsl(42, 86%, 92%);
-  --colour-bright: hsl(41, 91%, 49%);
+  --colour-black: hsl(0, 0%, 0%);
+  --colour-white: hsl(0, 0%, 100%);
+
+  --colour-grey: hsl(0, 0%, 55%);
+  --colour-grey-light: hsl(0, 0%, 84%);
+
+  --colour-pink: hsl(0, 0%, 67%);
+  --colour-pink-light: hsl(0, 0%, 47%);
 }
+
+

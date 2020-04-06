@@ -4,24 +4,68 @@ Profile image
 
 .profile-image {
   border-radius: 50%;
-  border: dashed 2px var(--colour-medium);
-  width: 10em;
-  height: 10em;
-  margin: 1em auto;
-  text-align: center;
+  /* border: solid 1px var(--colour-grey); */
+  width: 10rem;
+  height: 10rem;
+  background-color: transparent;
+  perspective: 1000px;
 }
 
 .profile-image__img {
   border-radius: 50%;
-  padding: .3em;
+  padding: .3rem;
   width: 100%;
 } 
 
-.profile-description {
-  padding: 1em;
-  width: 80%;
-  max-width: 25em;
-  margin: 1em auto;
-  border-top: solid 1px var(--colour-medium);
-  border-bottom: solid 1px var(--colour-medium);
+.profile-image-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
+
+.profile-image:hover .profile-image-inner {
+  transform: rotateY(180deg);
+}
+
+.profile-image-front, .profile-image-back {
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.profile-image-front {
+  background-color: var(--colour-grey-lightt);
+  color: var(--colour-black);
+}
+
+.profile-image-back {
+  background-color: var(--colour-grey-light);
+  /* color: var(--colour-white); */
+  transform: rotateY(180deg);
+}
+
+.profile-image__svg-circle {
+  fill: var(--colour-pink);
+  stroke: var(--colour-grey-light);
+  stroke-width: 4px;
+}
+
+.profile-image__svg-text {
+  fill: var(--colour-black);
+}
+
+/* Theme */
+
+.theme-monochrome .profile-image__img { 
+  filter: grayscale(100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(grayscale(100%))";
+}
+
+
+
+

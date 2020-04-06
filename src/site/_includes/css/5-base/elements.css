@@ -16,42 +16,36 @@ html {
 
 body {
   color: var(--colour-black);
-  background: var(--colour-bright);
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  line-height: 1.7;
-  font-weight: 400;
+  background: var(--colour-grey-light);
 }
 
-/* Anchor tags */
-a {
-  color: currentColor;
-  text-decoration: none;
-  border-bottom: solid 1px currentColor
-}
-
-a:hover {
-  transition: all .3s ease-in-out;
-  color: var(--colour-bright);
+main {
+  background: var(--colour-grey-light);
+  margin-bottom: -2rem;
+  border-top: solid 4px var(--colour-white);
+  border-bottom: solid 4px var(--colour-pink);
+  position: relative;
 }
 
 pre { 
-  padding: .5em;
-  line-height: 1.5;
-  margin-bottom: 1em;
+  padding: .5rem;
+  line-height: var(--line-height);
+  margin-bottom: 1rem;
   font-family: Consolas, Monaco, monospace;
   tab-size: 4;
   white-space: unset;
-  background: var(--colour-light);
+  background: var(--colour-black);
 }
   
 code { 
   font: inherit ;
-  background: var(--colour-light);
-  background-image: linear-gradient( var(--colour-white) 50%, transparent 0);
-  background-size: auto 3em;
+  background: var(--colour-black);
+  background-image: linear-gradient( var(--colour-black) 50%, transparent 0);
+  background-size: auto 3rem;
   background-origin: content-box; 
   display: block;
+  color: var(--colour-white);
+  padding: .5rem 1rem;
 }
 
 pre code {
@@ -69,7 +63,7 @@ pre p {
 
 /* Select */
 ::selection {
-  background: var(--colour-bright);
+  background: var(--colour-pink);
 }
 
 /* SVG */
@@ -103,8 +97,8 @@ ul li {
 /* DESCRIPTION LIST */
 dl,
 .description-list {
-  margin-top: .4em;
-  margin-bottom: 1em;
+  margin-top: .4rem;
+  margin-bottom: 1rem;
 }
 
 dt,
@@ -138,7 +132,7 @@ dt + dt::before,
 .description-list__title + .description-list__title::before {
   content: ', ';
   font-weight: normal;
-  margin-left: -.25em;
+  margin-left: -.25rem;
 }
 
 [hidden], 

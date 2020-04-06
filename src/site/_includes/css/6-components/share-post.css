@@ -5,19 +5,19 @@ Social Share buttons
 .share-post {
   display: grid;
   grid-columns: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
-  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-gap: 1rem;
 }
 
 .share-post a {
   display: block;
-  padding: .5em;
+  padding: .5rem;
   color: var(--colour-white);
 }
 
 .share-post a:hover,
 .share-post a:active {
-  color: var(--colour-bright);
+  color: var(--colour-pink);
 }
 
 .share-post__twitter {

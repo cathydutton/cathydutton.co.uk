@@ -2,31 +2,32 @@
 Quotations
 ----------------------------------- */
 .quote {
-  background: var(--colour-light);
-  margin: 1em 0;
-  padding: 1em;
+  margin: 2rem 0;
 }
 
 blockquote {
-  padding: 1em;
+  background: var(--colour-grey-light);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: solid 1px var(--colour-grey);
 }
 
 blockquote:before,
 blockquote:after {
   font-family: var(--font-family);
-  color: var(--colour-medium);
-  font-size: 2em;
-  line-height: 0.1em;
+  color: var(--colour-pink);
+  font-size: 2rem;
+  line-height: 0.1rem;
 }
 
 blockquote:before {
   content: open-quote;
-  margin-right: 0.25em;
-  vertical-align: -0.2em;
+  margin-right: 0.25rem;
+  vertical-align: -0.2rem;
 }
 
 blockquote:after {
   content: close-quote;
-  margin-left: 0.25em;
-  vertical-align: -0.3em;
+  margin-left: 0.25rem;
+  vertical-align: -0.3rem;
 }

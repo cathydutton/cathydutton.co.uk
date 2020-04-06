@@ -4,31 +4,55 @@
 
 .accessibility-tools {
   display: none;
-}  
+} 
 
-@supports ( (--a: 0)) {
-  .accessibility-tools-wrapper {
-    float: right;
-  }
+@supports (display: grid) {
   
   .accessibility-tools {
+    display: block;
+    color: var(--colour-white);
+    background: var(--colour-black);
+    border-bottom: solid 4px var(--colour-pink);
+    border-bottom: solid 4px var(--colour-white);
+  }
+  
+  .wrapper--accessibility-tools {
+    padding: 1rem 1.5rem;
+    max-width: 62rem;
     display: grid;
-    grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+    grid-template-rows: auto auto;
+    gap: 5px 10px;
+    grid-auto-flow: column;
   }
   
   .accessibility-tools fieldset {
-    margin: 0 .3em .3em .3em;
-    padding: .2em;
-    float: right;
-  }
+    display: contents;
+    border: 0;
+  } 
   
-  .accessibility-tools legend {
-    padding: .4em;
+  .sub-grid {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    align-items: center;
   }
   
   .button--ally {
-    font-size: .7em;
-    margin: .2em 0;
+    box-shadow: none;
+    height: 100%;
+    font-size: .9rem;
   }
+  
+  .button--ally--active:after {
+    content: ': on';
+  } 
+  
+  .button--ally--active:hover {
+    background: var(--colour-pink);
+    cursor: not-allowed;
+  }
+
 }

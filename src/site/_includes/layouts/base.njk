@@ -20,25 +20,94 @@
   {% include "head.njk" %}
 </head>
 
-<body>
-  <div class="wrapper">
-    <div class="container">
-    <a href="#js-skip-link-target" class="skip-link" id="js-skip-link">skip to main content</a>
-    {% include "a11y-buttons.njk" %}
-      <div class="sidebar">
-        {% include "sidebar.njk" %}
-      </div>
-      <div class="content">
-      <main id="main">
-          {{ content | safe }}
-        </main>
-        <footer class="footer">
-          {% include "footer.njk" %}
-        </footer>
-      </div>
+<body class="flow">
+  
+  <a href="#js-skip-link-target" class="skip-link" id="js-skip-link">skip to main content</a>
+    
+  <div aria-label="Accessibility tools" class="accessibility-tools">
+    <div class="wrapper wrapper--accessibility-tools">
+      {% include "a11y-buttons.njk" %}
     </div>
   </div>
+
+  <header class="header" role="banner">
+    <div class="wrapper wrapper--no-container wrapper--header">
+
+      <div class="profile-image">
+        <div class="profile-image-inner">
+          <div class="profile-image-front">
+              <img
+                sizes="(max-width: 369px) 100vw, 369px"
+                srcset="
+                /images/profile-image_m4cdxm_c_scale,w_200.jpg 200w,
+                /images/profile-image_m4cdxm_c_scale,w_369.jpg 369w"
+                src="/images/profile-image_m4cdxm_c_scale,w_369.jpg"
+                alt="Profile picture - Cathy Dutton" class="profile-image__img">
+          </div>
+          <div class="profile-image-back">
+              <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" class="profile-image__img">
+                  <desc>Profile logo - Cathy Dutton</desc>
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Artboard">
+                          <circle id="Oval" stroke-width="2" fill-rule="nonzero" cx="50" cy="50" r="50" class="profile-image__svg-circle"></circle>
+                          <g id="Group" transform="translate(-1.000000, 18.000000)" fill="#1E1E1E" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="50" font-weight="bold">
+                              <text id="C" class="profile-image__svg-text">
+                                  <tspan x="15.1901703" y="49">C</tspan>
+                              </text>
+                              <text id="D" class="profile-image__svg-text">
+                                  <tspan x="49.1901703" y="49">D</tspan>
+                              </text>
+                          </g>
+                      </g>
+                  </g>
+              </svg>
+
+            </div>
+          </div>
+        </div>
+
+         <nav class="navigation" aria-labelledby="mainNavigation" id="mainNavigation">
+          {% include "navigation.njk" %}
+        </nav>
+
+      </div>
+
+      <div id="js-skip-link-target" class="main-content">
+        <div class="wrapper wrapper--no-container flow">
+          <h1>
+            {{ headerOne }}
+          </h1>
+          <p class="page-intro"> {{ strapline }}</p>
+          <ul class="social-media">
+            {% for item in socialMedia %} 
+              <li class="social-media__item">
+                <a href="{{ item.url }}" class="anchor social-media__anchor" aria-label="{{ item.title }}" target="_blank" rel="noopener">
+                <span>{{ item.description }}</span>
+                  <svg version="1.1" width="100" height="100" role="img" viewBox="{{ item.viewBox }}" aria-labelledby="{{ item.title }}Title {{ item.title }}Desc">
+                  <title id="{{ item.title }}Title">{{ item.title }}</title>
+                  <desc id="{{ item.title }}Desc">link to {{ item.title }} profile</desc>
+                  <path d="{{ item.path }}"/>
+                </svg>
+                </a>
+              </li>
+            {% endfor %}
+          </ul> 
+        </div>
+      </div>
+    </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper wrapper--no-container">
+      {% include "footer.njk" %}
+    </div>
+  </footer>
+
   <script src="/js/scripts.js"></script>
+  
   <!-- Service worker -->
   <script>
       if ('serviceWorker' in navigator) {
@@ -59,6 +128,7 @@
         //console.log(e);
     });
   </script>
+
 </body>
 
 </html>

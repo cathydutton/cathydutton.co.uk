@@ -3,18 +3,62 @@ Cards
 ----------------------------------- */
 
 .cards {
-  --ratio-padding: 55%;
   display: grid;
-  grid-template-columns: repeat( auto-fill, minmax(12em, 1fr) );
-  grid-gap: 1em;
-  padding: 1em;
+  grid-template-columns: repeat( auto-fill, minmax(16rem, 1fr) );
+  /* grid-template-rows: auto repeat(4, auto 1fr auto); */
+  grid-gap: 2rem;
+}
+
+.card-wrapper {
+  background: linear-gradient(180deg, var(--colour-pink) 0%, var(--colour-pink) 40%, var(--colour-grey-light) 40%);
+  border: solid 1px var(--colour-grey); 
+  padding: 1rem;
+  /* display: contents; */
 }
 
 .card {
-  padding: .8em;
-  background: var(--colour-light);
-  border-bottom: solid 4px var(--colour-bright);
+  display: grid;
+  /* grid-row: span 3; */
+  grid-template-rows: auto 1fr auto;
+  /* grid-template-rows: subgrid;  */
+  grid-row-gap: .5rem;
+  height: 100%;
+} 
+
+.card img {
+  width: 100%;
+  grid-row: 1; 
 }
+
+.card__title {
+  grid-row: 2; 
+}
+
+.card__title::after {
+  content: "";
+  display: none;
+}
+
+.card__title a {
+  text-decoration: none;
+}
+
+.card__title a:hover {
+  outline: none;
+}
+
+.card-wrapper:hover,
+.card-wrapper:focus {
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  outline-style: dashed;
+  outline-color: var(--colour-pink-light);
+  outline-width: 2px;
+  background: linear-gradient(180deg, var(--colour-pink) 0%, var(--colour-pink) 35%, var(--colour-white) 35%);
+
+} 
+
+
 
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
   .card {
@@ -28,14 +72,4 @@ Cards
     width: 48%;
     margin: 1%;
   }
-}
-
-.card__title {
-  color: var(--colour-medium);
-}
-
-.card__post:hover {
-  transition: all .3s ease-in-out;
-  background: var(--colour-white);
-  outline: solid 1px var(--colour-light);
-}
+} 

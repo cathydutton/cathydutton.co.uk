@@ -12,16 +12,12 @@
       "url": "/now/"
     },
     {
-      "menu_item": "Projects",
-      "url": "/projects/"
+      "menu_item": "Portfolio",
+      "url": "/portfolio/"
     },
     {
-      "menu_item": "Posts",
+      "menu_item": "Blog",
       "url": "/posts/"
-    },
-    {
-      "menu_item": "PostCSS",
-      "url": "/postcss-plugins/"
     },
     {
       "menu_item": "Components",

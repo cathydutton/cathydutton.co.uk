@@ -34,6 +34,9 @@
 @import '6-components/range-input';
 @import '6-components/tabs';
 @import '6-components/slides';
+@import '6-components/footer';
+@import '6-components/header';
+@import '6-components/webmentions';
 
 @import '7-utilities/utilities';
 @import '1-settings/print';

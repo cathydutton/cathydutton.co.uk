@@ -4,43 +4,41 @@ description: Things I'm currently working on, currently reading and always worki
 layout: layouts/base.njk 
 permalink: /now/ 
 pageName: Now 
+headerOne: Now
+strapline: This page is inspired by Derek Siver’s now page suggestion and his Now Now Now movement. 
 ---
 
-<header role="banner" class="header clear" id="js-skip-link-target">
-  <h1>
-    Now
-    <span class="page-description">things I'm doing right now</span>
-  </h1>
-</header>
 
-<p class="highlight-text">
-  This is my <a href="https://nownownow.com/about" title="Derek Sivers now pages" rel="noopener" target="_blank" class="anchor">now page</a>, inspired by Derek Sivers.
-</p>
+<div class="wrapper  wrapper--top">
+   <section class="flow"> 
+    <h2>Currently working on</h2>
+    <ul class="unordered-list">
+      <li class="unordered-list__list-item">A simple component library</li>
+      <li class="unordered-list__list-item">Experimenting with CSS grid and subgrid</li>
+      <li class="unordered-list__list-item">Removing Sass legacy code from my websites</li>
+    </ul>
+    <h2>Currently reading</h2>
+    <ul class="unordered-list">
+      <li class="unordered-list__list-item">Inclusive components by Haydon Pickering</li>
+      <li class="unordered-list__list-item">Ruined by Design: How Designers Destroyed the World by Mike Monteiro</li>
+      <li class="unordered-list__list-item">Content Design by Sarah Richards</li>
+      <li class="unordered-list__list-item">Emotional Design by Donald A Norman</li>
+    </ul>
+  </section>
 
-<section>
-  <h2>Currently working on</h2>
-  <ul class="unordered-list">
-    <li class="unordered-list__list-item">A simple component library</li>
-    <li class="unordered-list__list-item">Experimenting with CSS grid and subgrid</li>
-    <li class="unordered-list__list-item">Removing Sass legacy code from my websites</li>
-  </ul>
-</section>
+</div>
+<div class="wrapper wrapper--no-container">
+  <section class="currently-using flow">
+    <h3>Currently using</h3>
+    <p>Tools aren’t everything but right now I'm using:</p>
+    {% include "tech.njk" %}
+  </section>
+</div>
 
-<section>
-  <h2>Currently reading</h2>
-  <ul class="unordered-list">
-    <li class="unordered-list__list-item">Ruined by Design: How Designers Destroyed the World by Mike Monteiro</li>
-    <li class="unordered-list__list-item">Content Design by Sarah Richards</li>
-    <li class="unordered-list__list-item">Emotional Design by Donald A Norman</li>
-  </ul>
-</section>
 
-<section class="currently-using">
-  <h3>Currently using</h3>
-  <p>Tools aren’t everything but right now I'm using:</p>
-  {% include "tech.njk" %}
-</section>
 
-<section class="latest-posts">
-  {% include "latest-posts.njk" %}
-</section>
+<div class="wrapper wrapper-bottom">
+  <section class="latest-posts">
+    {% include "latest-posts.njk" %}
+  </section>
+</div>

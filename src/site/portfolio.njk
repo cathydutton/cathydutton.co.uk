@@ -1,0 +1,49 @@
+--- 
+title: Design, User Experience and Front End Development portfolio - Cathy Dutton 
+description: A collection of my work from employers including Defra, Barclays, EE, The Hut Group and AO.com 
+layout: layouts/base.njk 
+permalink: /portfolio/ 
+pageName: Portfolio 
+headerOne: Portfolio
+strapline:  Over the past 15 years I have had some great opportunities to develop my skills and experience working as both a Designer and a Front End Developer. 
+
+
+---
+
+
+<div class="wrapper  wrapper--full">
+
+<p class="highlight-text margin-bottom">I have worked on a range of projects for creative agencies, small businesses, global brands and government departments, helping the teams I have worked with create user-focused, accessible and intuitive services. </p>
+
+  <section class="cards">
+    {% for post in collections.projects %}
+      <article class="card-wrapper js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+          <div class="card">
+          <h2 class="card__title">
+            <a href="{{ post.url }}">
+              <span class="visually-hidden">Project title</span>
+              {{ post.data.title }}
+            </a>
+          </h2>
+          <div class="">
+            <img src="{{ post.data.image }}" alt="Cover image for {{ post.data.title }}">
+          </div>
+          <p class="card__date">
+            <span class="visually-hidden">Project date</span>
+            {{ post.data.period }}
+          </p>
+            {# {% if post.data.projectTags %}
+              <p class="card__tags">Tagged in:
+                {% for projectTag in post.data.projectTags %}
+                  <a href="/projects/tags/{{ projectTag | lower | replace(" ", "-") }}" class="anchor">{{ projectTag }}</a>
+                  {% if not loop.last %},
+                  {% endif %}
+                {% endfor %}
+              </p>
+            {% endif %} #}
+        </div>
+      </article>
+    {%- endfor -%}
+  </section>
+
+</div>

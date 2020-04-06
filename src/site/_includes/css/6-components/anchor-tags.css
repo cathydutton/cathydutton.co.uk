@@ -2,16 +2,48 @@
   Anchors
   ----------------------------------- */
 
+/* a {
+  --link: hsl(230, 60%, 50%);
+  --link-visited: hsl(290, 60%, 50%);
+  --link-hover: hsl(230, 80%, 60%);
+  --link-active: hsl(350, 60%, 50%);
+} */
+
+ a,
 .anchor {
-  color: var(--colour-medium);
-  text-decoration: none;
-  border-bottom: dashed 1px currentColor;
+  color: currentColor;
+  text-decoration: underline;
+  /* text-underline-offset: 1px;
+  text-decoration-thickness: 1px;
+  transition: all .3s ease-in-out; */
+  padding: 0 .3rem;
 }
 
+a:hover,
 .anchor:hover {
-  transition: all .3s ease-in-out;
-  color: var(--colour-bright);
-  border-bottom: solid 1px;
+  outline: dashed 1px var(--colour-pink);
+  text-decoration: none;
+}
+
+a:active,
+.anchor:active {
+  outline-style: dashed;
+  outline-color: var(--colour-pink);
+  outline-width: 1px;
+}
+
+a:focus,
+.anchor:focus {
+  outline-style: dashed;
+  outline-color: var(--colour-pink);
+  outline-width: 1px;
+}
+
+a:visited,
+.anchor:visited {
+  outline-style: dashed;
+  outline-color: var(--colour-pink);
+  outline-width: 1px;
 }
 
 .anchor[target=_blank]:after {
@@ -19,20 +51,24 @@
 } 
 
 /* Print styles */
+
 @media print {
   
+  a,
   .anchor{
     color: #000!important;
   }
 
+  a:before,
   .anchor:before {
     content:" (" attr(href) ") "!important;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     font-weight: normal;
   }
 
+  a:after ,
   .anchor:after {
     content: '';
   }
 
-}
+} 

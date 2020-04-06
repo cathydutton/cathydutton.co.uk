@@ -1,6 +1,6 @@
-<h2>Latest posts</h2>
+<h3>Latest posts</h3>
 {% for post in collections.latestPosts %}
- <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+ <article class="news-feed__post js-content-group flow" data-url="{{ post.url }}" data-title="{{post.data.title}}">
   <h3 class="news-feed__title">
     <a href="{{ post.url }}" title="{{post.data.title}}" class="anchor news-feed__anchor">
       <span class="visually-hidden">Article title</span>
@@ -12,9 +12,9 @@
     <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
   </p>
   <p>{{ post.data.description | safe }}</p>
-    {% if post.data.tags %}
+    {# {% if post.data.tags %}
     <p>Tagged in: {% for postTag in post.data.tags %}<a href="/posts/tags/{{ postTag | lower | replace(" ", "-")}}/" class="anchor">{{ postTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
-    {% endif %}
+    {% endif %} #}
   </article>
 {% endfor %}
 

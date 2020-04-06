@@ -3,56 +3,67 @@
   ----------------------------------- */
 
 .navigation {
-  margin: 1em 0;
+  margin: 2rem 1rem 1rem 0;
 }
-
-.navigation .navigation__list {
-  padding: 0 1em;
-  display: grid;
-  grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
-  text-align: center;
-}
-
 
 .navigation .navigation__item {
-  justify-content: center;
-  margin: .2em;
+  float: left;
+  margin: .2rem;
   list-style: none;
-  /* hyphens: auto; */
-  border: solid 1px var(--colour-medium);
-  background: var(--colour-dark);
+  margin: .8rem;
 }
   
 .navigation a {
-  color: var(--colour-light);
-  padding: .4em .8em;
-  border-bottom: 0;
-  border-left: 3px solid var(--colour-bright);
-  display: block;
-  height: 100%;
-  background: linear-gradient(to right, var(--colour-bright) 50%, transparent 50%);
-  background-size: 200% 100%;
-  background-position: 99% bottom;
+  color: var(--colour-black);
+  padding: .4rem;
+  text-decoration: none;
+  position: relative;
+  font-size: 1.1rem;
+  border-bottom: solid 3px var(--colour-pink-light);
 }
 
-.navigation a:hover,
-.navigation a:focus {
-  color: var(--colour-bright);
-  text-decoration: underline;
-  background-position: 95% bottom;
+@media (hover: hover) {
+  .navigation .navigation__item a:before,
+  .navigation .navigation__item a:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px var(--colour-white);  
+    position: absolute;
+    top: 100%;
+    transition: width .3s;
+    height: 3px;
+    width: 0;
+    /* margin: 0 .8rem; */
+  }
+
+
+  .navigation .navigation__item a:hover:before,
+  .navigation .navigation__item a:focus:before {
+    width: 100%;
+  }
+
+}
+
+.navigation .navigation__item a:hover {
+  cursor: hand;
+  outline-width: none;
   transition: all .3s ease-in-out;
 }
-  
-.navigation .navigation__item--current a,
-.navigation a:active {
-  background: var(--colour-white);
-  color: var(--colour-dark);
-  text-decoration: underline;
+
+.navigation .navigation__item a:focus {
+  outline-color: var(--colour-white);
 }
 
+.navigation .navigation__item--current a,
+.navigation a:active {
+  border-bottom: solid 3px var(--colour-white);
+  background:   var(--colour-pink-light);
+
+}
+
+.navigation__item--current a:hover
 .navigation a:active:hover {
-  text-decoration: none;
+  /* border-bottom: solid 6px var(--colour-pink);  */
   cursor: not-allowed;
 }
   

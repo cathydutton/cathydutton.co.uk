@@ -4,14 +4,14 @@ Project images
 
 .portfolio-images {
   display: grid;
-  grid-gap: 1em;
+  grid-gap: 1rem;
   grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 
 .portfolio-images--wide {
   display: grid;
-  grid-gap: 1em;
+  grid-gap: 1rem;
   grid-columns: 1fr 1fr;
-  grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
 }

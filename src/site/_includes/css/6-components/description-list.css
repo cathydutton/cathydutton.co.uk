@@ -3,8 +3,8 @@
   ----------------------------------- */
   
 .description-list {
-  margin-top: .4em;
-  margin-bottom: 1em;
+  margin-top: var(--flow-space);
+  margin-bottom: 1rem;
 }
 
 .description-list__title {
@@ -30,12 +30,12 @@
 .description-list__description + .description-list__description::before {
   content: ', ';
   font-weight: normal;
-  margin-left: -.10em;
+  margin-left: -.10rem;
 }
 
 .description-list__title + .description-list__title::before {
   content: ', ';
   font-weight: bold;
-  margin-left: -.05em;
+  margin-left: -.05rem;
 }
 

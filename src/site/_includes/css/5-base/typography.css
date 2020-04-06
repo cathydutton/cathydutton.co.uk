@@ -4,52 +4,93 @@
   ----------------------------------- */
 
 
-h1 {
-  font-size: 2.8em;
-  color: var(--colour-medium);
-  margin-bottom: .4em;
-  line-height: .9;
-  max-width: 14em;
+.flow {
+  --flow-space: 1em;
+}  
+  
+.flow > * + * { 
+  margin-top: var(--flow-space);
 }
 
-.page-description {
-  font-size: .4em;
-  display: block;
-  font-weight: normal;
-  color: var(--colour-dark);
-  margin-top: .6em;
+
+body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  line-height: var(--line-height);
+  font-size: var(--font-size);
+}
+
+h1, h2, h3, h4, p, .page-intro {
+  /* margin-bottom: 1.5rem; */
+  max-width: 80%;
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+  font-weight: 900;
 }
 
 h2 {
-  color: var(--colour-dark);
-  margin-bottom: .4em;
+  font-size: 2rem;
 }
-  
+
 h3 {
-  color: var(--colour-dark);
-  margin-bottom: .4em;
+  font-size: 1.6rem;
 }
-  
-h4,
-h5,
-h6 {
-  color: var(--colour-dark);
-  margin-bottom: .4em;
+
+h4 {
+  font-size: 1.2rem;
+}
+
+/* Decoration */
+
+h2,
+h3 {
+  position: relative;
+}
+
+h2:after,
+h3:after {
+  content: "";
+  height: 6px;
+  display: block;
+  background-color: var(--colour-pink);
+  width: 60px;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
 }
 
 p {
-  margin-bottom: .8em;
+  /* max-width: 33rem; */
+  font-size: 1.1rem;
+}
+
+.page-intro {
+  font-size: 1.3rem;
+  margin-bottom: var(--flow-space);
 }
 
 .highlight-text {
-  border-left: 4px solid var(--colour-bright);
-  padding-left: .4em;
-  font-size: 1.2em;
+  padding: 1rem;
+  border-left: solid 4px var(--colour-pink);
+  max-width: 80%;
+  margin-top: var(--flow-space);
+  background: var(--colour-grey-light);
 }
+
+.highlight-text p {
+  max-width: 100%;
+}
+
+
+
+/* 
 
 .post-title,
 .project-title {
-  font-size: 2.4em;
+  font-size: 2.4rem;
 }
 
 .post-date {
@@ -61,13 +102,13 @@ select,
 textarea, 
 button {
   font-family: inherit;
-  font-size: .8em;
+  font-size: .8rem;
 }
 
 footer p {
-  font-size: .8em;
+  font-size: .8rem;
 }
 
 .profile-description {
-  font-size: .8em;
-}
+  font-size: .8rem;
+} */

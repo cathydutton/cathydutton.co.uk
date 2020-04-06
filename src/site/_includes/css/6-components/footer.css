@@ -1,0 +1,11 @@
+/*
+Footer
+
+----------------------------------- */
+
+footer {
+  color: var(--colour-white);
+  background: var(--colour-black);
+  margin-bottom: 0;
+  padding-top: 4rem;
+}

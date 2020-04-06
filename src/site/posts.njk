@@ -6,49 +6,54 @@ pagination:
   data: collections.posts 
   size: 10 
 permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html 
-pageName: Posts 
+pageName: Blog 
+headerOne: Blog 
+strapline: I've been writitng blog posts since 2014, mostly on Design, Front End Development and CSS.
 ---
 
-<header role="banner" class="header clear" id="js-skip-link-target">
-  <h1>
-    Posts
-    <span class="page-description">Latest posts and tutorials</span>
-  </h1>
-</header>
+<div class="wrapper  wrapper--top">
 
-<p class="highlight-text">
-  Subscribe to the <a href="/feed.xml" class="anchor">RSS feed</a>
-</p>
+  <p class="highlight-text no-margin">
+    Subscribe to the <a href="/feed.xml" class="anchor">RSS feed</a>
+  </p>
 
-<section class="post">
-  {% for post in pagination.items %}
-    <article class="news-feed__post js-content-group" data-url="{{ post.url }}" data-title="{{post.data.title}}">
-      <header class="news-feed__header">
-        <h3 class="news-feed__title">
-          <a href="{{ post.url }}">
+  <section class="post">
+    {% for post in pagination.items %}
+      <article class="news-feed__post js-content-group flow" data-url="{{ post.url }}" data-title="{{post.data.title}}">
+        <h2 class="news-feed__title">
+          <a href="{{ post.url }}" class="anchor news-feed__anchor">
             <span class="visually-hidden">Article title</span>
             {{ post.data.title }}
           </a>
-        </h3>
+        </h2>
         <p>
           <span class="visually-hidden">Published on</span>
           <time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time>
         </p>
-      </header>
       <div>
-        <p>{{ post.data.description | safe }}</p>
-        {% if post.data.tags %}
-          <p>Tagged in:
-            {% for tag in post.data.tags %}
-              <a href="/posts/tags/{{ tag | lower | replace(" ", "-") }}" class="anchor">{{ tag }}</a>
-              {% if not loop.last %},
-              {% endif %}
-            {% endfor %}
-          </p>
-        {% endif %}
-      </div>
-    </article>
-  {%- endfor -%}
-</section>
+      <p>{{ post.data.description | safe }}</p>
+          {# {% if post.data.tags %}
+            <p>Tagged in:
+              {% for tag in post.data.tags %}
+                <a href="/posts/tags/{{ tag | lower | replace(" ", "-") }}" class="anchor">{{ tag }}</a>
+                {% if not loop.last %},
+                {% endif %}
+              {% endfor %}
+            </p>
+          {% endif %} #}
+        </div>
+         {# {% if post.data.tags %}
+          <p>Tagged in: {% for postTag in post.data.tags %}<a href="/posts/tags/{{ postTag | lower | replace(" ", "-")}}/" class="anchor">{{ postTag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+         {% endif %} #}
+      </article>
+    {%- endfor -%}
+  </section>
+</div>
 
-{% include "pagination.njk" %}
+
+<div class="wrapper wrapper-bottom">
+  {% include "pagination.njk" %}
+</div>
+
+
+

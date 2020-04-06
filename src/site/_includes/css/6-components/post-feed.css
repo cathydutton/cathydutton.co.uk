@@ -2,23 +2,44 @@
 Latest posts feed
 ----------------------------------- */
 
+
+/* .latest-posts {
+  border: solid 1px var(--colour-grey);
+} */
+
 .news-feed__post {
   width: 100%;
-  margin-top: 1.4em;
-  padding: .8em;
-  background: var(--colour-light);
-  border-bottom: solid 4px var(--colour-bright);
+  margin-top: 2rem;
+  padding: .8rem;
+  background: var(--colour-grey-light);
+  border: solid 1px var(--colour-grey);
+  /* border-bottom: solid 2px var(--colour-pink); */
 }
 
-.news-feed__post:hover {
+.news-feed__post:hover,
+.news-feed__post:focus {
+  cursor: pointer;
   transition: all .3s ease-in-out;
+  outline-style: dashed;
+  outline-color: var(--colour-pink-light);
+  outline-width: 2px;
   background: var(--colour-white);
-  outline: solid 1px var(--colour-light);
 }
 
 .news-feed__title {
-  font-size: 2em;
-  color: var(--colour-medium);
+  margin-bottom: .2rem;
+}
+
+.news-feed__anchor {
+  padding: 0;
+  text-decoration: none;
+}
+
+.news-feed__anchor:hover,
+.news-feed__anchor:focus,
+.news-feed__anchor:active,
+.news-feed__anchor:visited {
+  outline: none;
 }
 
 .news-feed__header {

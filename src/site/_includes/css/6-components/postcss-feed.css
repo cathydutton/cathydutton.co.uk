@@ -4,21 +4,21 @@ PostCSS  feed
 
 .postcss__post {
   width: 100%;
-  margin-top: 1.4em;
-  padding: .8em;
-  background: var(--colour-light);
-  border-bottom: solid 4px var(--colour-bright);
+  margin-top: 1.4rem;
+  padding: .8rem;
+  background: var(--colour-white);
+  border-bottom: solid 4px var(--colour-pink);
 }
 
 .postcss__post:hover {
   transition: all .3s ease-in-out;
   background: var(--colour-white);
-  outline: solid 1px var(--colour-light);
+  outline: solid 1px var(--colour-white);
 }
 
 .postcss__title {
-  font-size: 2em;
-  color: var(--colour-medium);
+  font-size: 2rem;
+  color: var(--colour-grey);
 }
 
 .postcss__header {

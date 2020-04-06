@@ -6,11 +6,12 @@ Skip Links
   position: absolute;
   top: 0;
   right: 100%; /* moves off screen */
-  padding: .2em .6em
+  padding: .2rem .6rem;
+  transform: skewY(0.5deg);
 }
 
 .skip-link:focus {
   right: auto;
-  background: var(--colour-bright);
-  color: var(--colour-white);
+  background: var(--colour-pink);
+  color: var(--colour-black);
 }

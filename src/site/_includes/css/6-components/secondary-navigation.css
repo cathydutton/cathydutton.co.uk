@@ -3,35 +3,44 @@
     ----------------------------------- */
 
 .navigation-footer {
-  margin: 1.5em auto 2em;
+  margin: 1.5rem 0;
   padding: 0;
-  font-size: 1.1em;
-  text-align: center;
+  font-size: 1.1rem;
 }
 
 .navigation-footer .navigation__item {
   display: inline-block;
-  margin: .4em;
+  margin: .4rem;
 }
 
 .navigation-footer .navigation__item a {
-  color: var(--colour-black);
+  color: var(--colour-white);
   text-decoration: none;
   display: inline-block;
-  border-bottom: solid 3px var(--colour-light);
+  border-bottom: solid 3px var(--colour-grey);
   position: relative;
+  padding: 0;
 }
 
 @media (hover: hover) {
-  .navigation-footer .navigation__item a:before {
+
+  .navigation-footer .navigation__item a:hover {
+    cursor: hand;
+    background: none;
+    color: var(--colour-pink);
+    outline-width: none;
+  }
+
+  .navigation-footer .navigation__item a:before,
+  .navigation-footer .navigation__item a:after {
     display: block;
     content: '';
-    border-bottom: solid 3px var(--colour-bright);  
+    border-bottom: solid 3px var(--colour-pink);  
     position: absolute;
     top: 100%;
     transition: width .3s;
-    width: 0;
     height: 3px;
+    width: 0;
   }
 
   .navigation-footer .navigation__item a:hover:before,
@@ -44,11 +53,11 @@
 .navigation-footer .navigation__item a:hover,
 .navigation-footer .navigation__item a:focus {
   transition: all .3s ease-in-out;
-  color: var(--colour-bright);
+  /* color: var(--colour-pink); */
 }
 
 .navigation-footer .navigation__item--current a,
 .navigation-footer .navigation__item a:active {
-  color: var(--colour-medium)!important;
-  border-bottom: solid 3px var(--colour-medium); 
+  border-bottom: solid 3px var(--colour-pink); 
+  cursor: not-allowed;
 }

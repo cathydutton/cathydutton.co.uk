@@ -1,21 +1,162 @@
----
-layout: layouts/base.njk
----
+<!doctype html>
+<html lang="en">
+<!--
 
-<h1 class="post-title" id="js-skip-link-target">
-  {{ title }}
-</h1>
+      #########:: #########:: ##.... ##:::: ##.... ##:. ####::::
+      ##.....:::: ##.... ##:. ##.... ##:.:: ##.... ##:.  ##:::::
+      ##.....:::: ##:::: ##:: ##:::: ##:::: ##.... ##:.  ##:::::
+      #########:: #########:: #########:::: #########::  ##:::::
+      ::.... ##:: ##.... ##:: :::::: ##:::: ##.... ##::  ##:::::
+      :::::: ##:: ##.... ##:: :::::: ##:::: ##.... ##::  ##:::::
+      #########:: ##.... ##:: :::::: ##:::: ##.... ##:: ####::::
 
-<p class="post-date">
-  <span class="visually-hidden">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
-</p>
+      Email: info@cathydutton.co.uk
+      Twitter: cathy_dutton
+      website: cathydutton.co.uk
+      
+  -->
 
-{{ content | safe }}
+<head>
+  {% include "head.njk" %}
+</head>
 
-<p>
-  Subscribe to the <a href="/feed.xml" class="anchor">RSS feed</a>
-</p>
+<body class="flow">
+  
+  <a href="#js-skip-link-target" class="skip-link" id="js-skip-link">skip to main content</a>
+    
+  <div aria-label="Accessibility tools" class="accessibility-tools">
+    <div class="wrapper wrapper--accessibility-tools">
+      {% include "a11y-buttons.njk" %}
+    </div>
+  </div>
 
-<p>
-  <a href="/posts" class="anchor">Back to all posts</a>
-</p>
+  <header class="header" role="banner">
+    <div class="wrapper wrapper--no-container wrapper--header">
+
+
+      <div class="profile-image">
+        <div class="profile-image-inner">
+          <div class="profile-image-front">
+              <img
+                sizes="(max-width: 369px) 100vw, 369px"
+                srcset="
+                /images/profile-image_m4cdxm_c_scale,w_200.jpg 200w,
+                /images/profile-image_m4cdxm_c_scale,w_369.jpg 369w"
+                src="/images/profile-image_m4cdxm_c_scale,w_369.jpg"
+                alt="Profile picture - Cathy Dutton" class="profile-image__img">
+          </div>
+          <div class="profile-image-back">
+            <img
+                sizes="(max-width: 369px) 100vw, 369px"
+                srcset="
+                /images/profile-logo_m4cdxm_c_scale,w_200.jpg 200w,
+                /images/profile-logo_m4cdxm_c_scale,w_369.jpg 369w"
+                src="/images/profile-logo_m4cdxm_c_scale,w_369.jpg"
+                alt="Profile logo - Cathy Dutton" class="profile-image__img">
+              {# <p>Cathy Dutton</p> 
+              <p>Interaction designer</p>  #}
+            </div>
+          </div>
+        </div>
+
+        <nav class="navigation" aria-labelledby="mainNavigation" id="mainNavigation">
+          {% include "navigation.njk" %}
+        </nav>
+
+      </div>
+
+      <div id="js-skip-link-target" class="main-content">
+        <div class="wrapper wrapper--no-container flow">
+          <h1>
+            {{ title }}
+          </h1>
+          <p class="page-intro"> {{ description }}</p>
+          <ul class="social-media">
+            {% for item in socialMedia %} 
+              <li class="social-media__item">
+                <a href="{{ item.url }}" class="anchor social-media__anchor" aria-label="{{ item.title }}" target="_blank" rel="noopener">
+                <span>{{ item.description }}</span>
+                <svg version="1.1" width="100" height="100" role="img" viewBox="{{ item.viewBox }}" aria-labelledby="{{ item.title }}Title {{ item.title }}Desc">
+                  <title id="{{ item.title }}Title">{{ item.title }}</title>
+                  <desc id="{{ item.title }}Desc">link to {{ item.title }} profile</desc>
+                  <path d="{{ item.path }}"/>
+                </svg>
+                </a>
+              </li>
+            {% endfor %}
+          </ul> 
+        </div>
+      </div>
+
+    </header>
+
+  <main id="main">
+    <div class="wrapper  wrapper--top">
+      <p class="post-date">
+        <span class="visually-hidden">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+      </p>
+      <section class="flow"> 
+        {{ content | safe }}
+      </section>
+    </div>
+    
+    
+    <div class="wrapper wrapper-bottom">
+      <nav class="pagination">
+        <ul class="pagination__list">
+            <li class="pagination__list-item pagination__list-item--prev">
+              <a class="pagination__anchor" href="/posts">
+                <svg class="pagination__svg" version="1.1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"></path>
+                </svg>
+                <span class="navigation__title">Back to all posts</span>
+              </a>
+            </li>
+          <li class="pagination__list-item pagination__list-item--next">
+            <a class="pagination__anchor" href="/feed.xml">
+              <span class="navigation__title">RSS feed</span>
+              <svg class="pagination__svg" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+                <path d="M11.611,10.049l-4.76-4.873c-0.303-0.31-0.297-0.804,0.012-1.105c0.309-0.304,0.803-0.293,1.105,0.012l5.306,5.433c0.304,0.31,0.296,0.805-0.012,1.105L7.83,15.928c-0.152,0.148-0.35,0.223-0.547,0.223c-0.203,0-0.406-0.08-0.559-0.236c-0.303-0.309-0.295-0.803,0.012-1.104L11.611,10.049z"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    
+    </div> 
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper wrapper--no-container">
+      {% include "footer.njk" %}
+    </div>
+  </footer>
+
+  <script src="/js/scripts.js"></script>
+  
+  <!-- Service worker -->
+  <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/serviceWorker.js').then(function(registration) {
+          }).catch(function(err) {
+          });
+        });
+      }
+  </script>
+  <!-- Copy button -->
+  <script>
+    var clipboard = new ClipboardJS('.button--copy');
+    clipboard.on('success', function(e) {
+        //console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        //console.log(e);
+    });
+  </script>
+
+</body>
+
+</html>
