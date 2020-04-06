@@ -18,7 +18,7 @@
                   '/index.html',
                   '/about-me/index.html',
                   '/now/index.html',
-                  '/projects/index.html',
+                  '/portfolio/index.html',
                   '/posts/index.html',
                   '/offline/index.html',
                   '/posts/blurred-lines-and-job-titles/index.html',
