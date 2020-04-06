@@ -55,7 +55,7 @@ module.exports = function(config) {
         removeComments: true,
         collapseWhitespace: true,
       })
-      //return minified
+      return minified
     }
     return content
   })

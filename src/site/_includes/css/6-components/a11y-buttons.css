@@ -23,7 +23,6 @@
     grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
     grid-template-rows: auto auto;
     gap: 5px 10px;
-    grid-auto-flow: column;
   }
   
   .accessibility-tools fieldset {
