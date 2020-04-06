@@ -20,6 +20,7 @@ body {
 }
 
 main {
+  min-height: 100px;
   background: var(--colour-grey-light);
   margin-bottom: -2rem;
   border-top: solid 4px var(--colour-white);
