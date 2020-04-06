@@ -18,7 +18,7 @@
                   '/index.html',
                   '/about-me/index.html',
                   '/now/index.html',
-                  '/projects/index.html',
+                  '/portfolio/index.html',
                   '/posts/index.html',
                   '/offline/index.html',
                   '/posts/blurred-lines-and-job-titles/index.html',
@@ -26,7 +26,7 @@
                   '/posts/the-problem-with-patterns/index.html',
                   '/projects/waste-tracking/index.html',
                   '/projects/i-want-to-fish-service/index.html',
-                  '/portfolio/ee/index.html',
+                  '/projects/ee/index.html',
                   '/css/main.css',
                   '/js/scripts.js',
                 ]);
