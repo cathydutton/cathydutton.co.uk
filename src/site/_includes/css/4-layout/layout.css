@@ -63,3 +63,17 @@ section {
   background: var(--colour-white);
   border: solid 1px var(--colour-grey);
 }
+
+/* HEADER */
+
+.wrapper--header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.navigation {
+  justify-content: flex-end;
+}

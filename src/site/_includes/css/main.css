@@ -8,8 +8,6 @@
 @import '2-tools/tools';
 @import '3-generic/generic';
 @import '4-layout/layout';
-@import '4-layout/layout-accessibility-tools';
-@import '4-layout/layout-header';
 @import '5-base/elements';
 @import '5-base/typography';
 @import '5-base/images';
