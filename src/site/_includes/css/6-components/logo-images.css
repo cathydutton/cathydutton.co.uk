@@ -63,3 +63,21 @@ Logo images
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(grayscale(100%))";
 }
 
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  
+  .work-logo,
+  .tech-logo {
+    clear: both;
+    overflow: auto;
+    position: relative;
+  }
+
+  .work-logo__item,
+  .tech-logo__item {
+    float: left;
+    width: 19%;
+    margin: 1%;
+  }
+
+} 

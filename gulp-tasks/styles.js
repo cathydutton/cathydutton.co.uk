@@ -38,7 +38,7 @@ gulp.task('main', function() {
   .pipe(postcss([
     postcssImport(),
     autoprefixer({ grid: false, browsers: ['>2%'] }),
-    // postCSSCustomProperties({strict: false, warnings: false, preserve: true}),
+    postCSSCustomProperties({strict: false, warnings: false, preserve: true}),
     cssDeclarationSorter({order: 'concentric-css'}),
   ]))
   .pipe(gulpif(isProd, postcss([

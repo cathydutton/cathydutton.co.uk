@@ -7,7 +7,7 @@
 
   /* https://toolness.github.io/accessible-color-matrix/?n=White&n=grey%20light&n=grey&n=pink%20light&n=pink&n=black&v=FFFFFF&v=F3F3F3&v=C2C2C2&v=FF94AD&v=FF3363&v=1F1F1F */
  
-  --colour-black: rgb(31, 31, 31);
+  --colour-black: hsl(0, 0%, 12%);
   --colour-white: hsl(0, 0%, 100%);
 
   --colour-grey: hsl(0, 0%, 76%);
