@@ -7,7 +7,7 @@
 
     // Update 'version' if you need to refresh the cache
     var staticCacheName = 'static';
-    var version = 'v7::';
+    var version = 'v9::';
 
     // Store core files in a cache (including a page to display when offline)
     function updateStaticCache() {
@@ -72,7 +72,7 @@
             event.respondWith(
                 fetch(request)
                     .catch(function () {
-                        return caches.match('/offline/index.html');
+                        return caches.match('/offline/');
                     })
             );
             return;
@@ -104,7 +104,7 @@
                     .catch(function () {
                         return caches.match(request)
                             .then(function (response) {
-                                return response || caches.match('/offline/index.html');
+                                return response || caches.match('/offline/');
                             })
                     })
             );
