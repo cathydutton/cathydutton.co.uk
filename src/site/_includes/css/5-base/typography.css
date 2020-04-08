@@ -14,7 +14,7 @@
 
 
 body {
-  font-display: optional
+  font-display: optional;
   font-family: var(--font-family);
   font-weight: 400;
   line-height: var(--line-height);
