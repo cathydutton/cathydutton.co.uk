@@ -4,38 +4,38 @@
   ----------------------------------- */
 
 @font-face {
+  font-display: swap;
   font-family: 'OpenDyslexic';
   font-weight: 400;
   src: url("../fonts/OpenDyslexic-Regular.WOFF");
-  font-display: swap;
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'OpenDyslexic';
   font-style: italic;
   src: url("../fonts/OpenDyslexic-Italic.WOFF");
-  font-display: swap;
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'OpenDyslexic';
   font-weight: 700;
   src: url("../fonts/OpenDyslexic-Bold.WOFF");
-  font-display: swap;
 }
 
 @font-face {
+  font-display: swap;
   font-family: OpenDyslexic;
   font-style: italic;
   font-weight: 700;
   src: url("../fonts/OpenDyslexic-BoldItalic.WOFF");
-  font-display: swap;
 }
 
 @font-face { 
+  font-display: swap;
   font-family: 'OpenDyslexicMono';
   src: url("../fonts/OpenDyslexicMono-Regular.WOFF");
-  font-display: swap;
 }
 
 .dyslexic {
