@@ -19,6 +19,7 @@ Logo images
 .tech-logo__item,
 .work-logo__item {
   display: contents;
+  list-style: none;
 }
 
 .tech-logo__item a,

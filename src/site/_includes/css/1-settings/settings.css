@@ -13,13 +13,13 @@
   --colour-grey: hsl(0, 0%, 76%);
   --colour-grey-light: hsl(0, 0%, 95%);
 
-  --colour-pink: rgb(255, 51, 99);
+  --colour-pink: hsl(346, 100%, 60%);
   --colour-pink-light: hsl(346, 100%, 79%);
   
   --font-family: Lato,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
   --font-size: 100%;
   --line-height: 1.5;
-
+  --flow-space: 1em;
 }
 
 

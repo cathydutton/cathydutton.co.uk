@@ -26,7 +26,7 @@
 }
 
 .resize {
-  /* resize: both; */
+  resize: both;
   overflow: auto;
   border: solid 1px var(--colour-black);
   padding: 1rem;
