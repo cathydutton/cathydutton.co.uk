@@ -7,7 +7,7 @@
 
     // Update 'version' if you need to refresh the cache
     var staticCacheName = 'static';
-    var version = 'v11::';
+    var version = 'v12::';
 
     // Store core files in a cache (including a page to display when offline)
     function updateStaticCache() {
