@@ -5,7 +5,7 @@
       <a href="{{ item.url }}" title="Visit the {{ item.logo }} website" target="_blank" rel="noopener" aria-label="{{ item.logo }}" class="tech-logo__anchor {{ item.class }}">
       <span class="visually-hidden">Visit the {{ item.logo }} website.</span>
     {% endif %}  
-      <img src="../images/tech/{{ item.logo | lower | replace(" ", "-") }}.jpg" alt="{{ item.logo }} logo" width="{{ item.width }}" height="{{ item.height }}">
+      <img src="../images/tech/{{ item.logo | lower | replace(" ", "-") }}.jpg" loading="lazy" alt="{{ item.logo }} logo" width="{{ item.width }}" height="{{ item.height }}">
     {% if item.url %}
       </a>
      {% endif %}   

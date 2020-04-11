@@ -43,6 +43,8 @@
     height: 100%;
     font-size: .9rem;
   }
+
+  /* ACTIVE */
   
   .button--ally--active:after {
     content: ': on';

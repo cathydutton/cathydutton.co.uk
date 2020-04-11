@@ -2,38 +2,41 @@
 Social Share buttons
 ----------------------------------- */
 
-.share-post {
-  display: grid;
-  grid-columns: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  grid-gap: 1rem;
-}
-
-.share-post a {
-  display: block;
-  padding: .5rem;
-  color: var(--colour-white);
-}
-
-.share-post a:hover,
-.share-post a:active {
-  color: var(--colour-pink);
-}
-
-.share-post__twitter {
+.share-post-anchor {
+  max-width: 200px;
+  text-align: center;
+  padding: .7rem .5rem;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
   background: #4099ff;
   border: 0;
   border-bottom: solid 2px #0f4481;
+  display: block;
+  color: var(--colour-white);
+  margin-top: 2rem;
 }
 
-.share-post__facebook {
-  background: #3b5998;
-  border: 0;
-  border-bottom: solid 2px #142547;
-}
+.share-post-anchor:hover,
+.share-post-anchor:active {
+  background: #0f4481;
+  outline-color: #0f4481;
+} 
 
-.share-post__google {
-  background: #008744;
-  border: 0;
-  border-bottom: solid 2px #013f20;
-}
+.share-post-anchor:focus {
+  outline-color: #0f4481;
+} 
+
+.theme-monochrome .share-post-anchor {
+  background: var(--colour-black);
+  border-bottom: solid 2px var(--colour-grey);
+} 
+
+.theme-monochrome .share-post-anchor:hover,
+.theme-monochrome .share-post-anchor:focus,
+.theme-monochrome .share-post-anchor:active {
+  background: var(--colour-grey);
+  border-bottom: solid 2px var(--colour-grey);
+  outline-color: var(--colour-black);
+} 
+
