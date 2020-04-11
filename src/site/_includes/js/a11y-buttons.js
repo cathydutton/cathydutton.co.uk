@@ -16,11 +16,6 @@
     body.style.setProperty('font-family', sessionStorage.getItem('fontFamily')); 
   }
 
-  // if (document.getElementById('dyslexic-font').classList.contains('null')) {
-  //   sessionStorage.setItem("defaultFontClass", 'button--ally--active');
-  // }
-
-
   // Get current value
   var fontFamily = getComputedStyle(body).getPropertyValue('font-family');
 
@@ -29,27 +24,30 @@
   var dyslexicFont = document.getElementById('dyslexic-font');
   var defaultFont = document.getElementById('default-font');
 
-  defaultFont.className = sessionStorage.getItem('defaultFontClass');
-  dyslexicFont.className = sessionStorage.getItem('dyslexicFontClass');
-
+  if (sessionStorage.getItem("dyslexicFontClass") === null) {
+    defaultFont.className = "button--ally--active";
+  } else {
+    defaultFont.className = sessionStorage.getItem('defaultFontClass');
+    dyslexicFont.className = sessionStorage.getItem('dyslexicFontClass');
+  }
 
   // Dyslexic font family
   dyslexicFont.addEventListener('click', function (e) {
     body.style.setProperty('font-family', '"OpenDyslexic", sans-serif');
-    defaultFont.classList.remove("button--ally--active");
-    dyslexicFont.classList.add("button--ally--active");
+    defaultFont.className = "";
+    dyslexicFont.className = "button--ally--active";
     sessionStorage.setItem("dyslexicFontClass", 'button--ally--active');
-    sessionStorage.removeItem("defaultFontClass");
+    sessionStorage.setItem("defaultFontClass", 'null');
     sessionStorage.setItem("fontFamily", '"OpenDyslexic", sans-serif');
   });
 
   // Default font family
   defaultFont.addEventListener('click', function (e) {
     body.style.setProperty('font-family', 'Verdana, Geneva, sans-serif');
-    dyslexicFont.classList.remove("button--ally--active");
-    defaultFont.classList.add("button--ally--active");
+    dyslexicFont.className = "";
+    defaultFont.className = "button--ally--active";
     sessionStorage.setItem("defaultFontClass", 'button--ally--active');
-    sessionStorage.removeItem("dyslexicFontClass");
+    sessionStorage.setItem("dyslexicFontClass", 'null');
     sessionStorage.setItem("fontFamily", 'Verdana, Geneva, sans-serif');
   });
 
@@ -60,8 +58,12 @@
   var themeDefault = document.getElementById('theme-default');
   var themeMonochrome = document.getElementById('theme-monochrome');
 
-  themeDefault.className = sessionStorage.getItem('themeDefaultClass');
-  themeMonochrome.className = sessionStorage.getItem('themeMonochromeClass');
+  if (sessionStorage.getItem("themeMonochromeClass") === null) {
+    themeDefault.className = "button--ally--active";
+  } else {
+    themeDefault.className = sessionStorage.getItem('themeDefaultClass');
+    themeMonochrome.className = sessionStorage.getItem('themeMonochromeClass');
+  }
 
   body.className = sessionStorage.getItem('currentTheme');
 
