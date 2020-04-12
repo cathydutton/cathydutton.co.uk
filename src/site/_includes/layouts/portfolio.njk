@@ -125,10 +125,10 @@
     </div>
   </footer>
 
-  <script src="/js/scripts.js"></script>
+  <script async src="/js/scripts.js"></script>
   
   <!-- Service worker -->
-  <script>
+  <script defer>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
           navigator.serviceWorker.register('/serviceWorker.js').then(function(registration) {
@@ -137,16 +137,7 @@
         });
       }
   </script>
-  <!-- Copy button -->
-  <script>
-    var clipboard = new ClipboardJS('.button--copy');
-    clipboard.on('success', function(e) {
-        //console.log(e);
-    });
-    clipboard.on('error', function(e) {
-        //console.log(e);
-    });
-  </script>
+
 
 </body>
 

@@ -198,16 +198,16 @@
         </div>
     </footer>
 
-    <script src="/js/scripts.js"></script>
+    <script async src="/js/scripts.js"></script>
 
     <!-- Service worker -->
-    <script>
+    <script defer>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/serviceWorker.js').then(function(registration) {}).catch(function(err) {});
             });
         }
-    </script>
+    </script defer>
     <!-- Copy button -->
     <script>
         var clipboard = new ClipboardJS('.button--copy');
