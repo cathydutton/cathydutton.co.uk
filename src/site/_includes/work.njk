@@ -12,3 +12,13 @@
     </li>
   {% endfor %}
 </ul>
+
+
+{# <img
+  sizes="(max-width: 275px) 100vw, 275px"
+  srcset="
+  environment-agency-logo_hdv5f6_c_scale,w_200.jpg 200w,
+  environment-agency-logo_hdv5f6_c_scale,w_275.jpg 275w"
+  src="../images/work/{{ item.logo | lower | replace(" ", "-") }}-logo.jpg"
+loading="lazy" alt="{{ item.logo }} logo" width="{{ item.width }}" height="{{ item.height }}"> #}
+
