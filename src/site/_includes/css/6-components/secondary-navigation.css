@@ -59,5 +59,4 @@
 .navigation-footer .navigation__item--current a,
 .navigation-footer .navigation__item a:active {
   border-bottom: solid 3px var(--colour-pink); 
-  cursor: not-allowed;
 }

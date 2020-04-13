@@ -39,6 +39,7 @@ Pagination
 
 .pagination__list-item--next a {
   text-align: right;
+  height: 50px;
 }
 
 .pagination__svg {
@@ -47,6 +48,7 @@ Pagination
   background: var(--colour-black);
   padding: 14px 12px;
   width: 45px;
+  height: 50px;
 }
 
 .pagination__anchor:hover  {

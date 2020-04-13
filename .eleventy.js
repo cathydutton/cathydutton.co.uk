@@ -1,5 +1,8 @@
 const htmlmin = require("html-minifier");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const sanitizeHTML = require('sanitize-html');
+const { DateTime } = require('luxon');
+
 
 module.exports = function(config) {
 
@@ -46,27 +49,64 @@ module.exports = function(config) {
     });
   });
 
-    // Webmentions Filter
-    config.addFilter('webmentionsForUrl', (webmentions, url) => {
-      const allowedTypes = ['mention-of', 'in-reply-to']
-      const clean = content =>
-        sanitizeHTML(content, {
-          allowedTags: ['b', 'i', 'em', 'strong', 'a'],
-          allowedAttributes: {
-            a: ['href']
-          }
-        })
+
+  // Webmentions
+
+  config.addFilter(
+    'readableDate',
+    (dateObj, format = 'dd LLL yyyy') => {
+      return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(format)
+    }
+  )
+
+  config.addFilter('dateFromTimestamp', timestamp => {
+    return DateTime.fromISO(timestamp, { zone: 'utc' }).toJSDate()
+  })
+
+  config.addFilter(
+    'readableDate',
+    (dateObj, format = 'dd LLL yyyy') => {
+      return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(format)
+    }
+  )
+
+   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+   config.addFilter('htmlDateString', dateObj => {
+    return DateTime.fromJSDate(dateObj).toFormat('yyyy-LL-dd')
+  })
+
+  // Get the first `n` elements of a collection.
+  config.addFilter('head', (array, n) => {
+    if (n < 0) {
+      return array.slice(n)
+    }
+
+    return array.slice(0, n)
+  })
+
+  // Webmentions Filter
+  config.addFilter('webmentionsForUrl', (webmentions, url) => {
+    const allowedTypes = ['mention-of', 'in-reply-to']
+    const clean = content =>
+      sanitizeHTML(content, {
+        allowedTags: ['b', 'i', 'em', 'strong', 'a'],
+        allowedAttributes: {
+          a: ['href']
+        }
+      })
   
-      return webmentions
-        .filter(entry => entry['wm-target'] === url)
-        .filter(entry => allowedTypes.includes(entry['wm-property']))
-        .filter(entry => !!entry.content)
-        .map(entry => {
-          const { html, text } = entry.content
-          entry.content.value = html ? clean(html) : clean(text)
-          return entry
-        })
-    })
+    return webmentions
+      .filter(entry => entry['wm-target'] === url)
+      .filter(entry => allowedTypes.includes(entry['wm-property']))
+      .filter(entry => !!entry.content)
+      .map(entry => {
+        const { html, text } = entry.content
+        entry.content.value = html ? clean(html) : clean(text)
+        return entry
+      })
+  })
+
+  
 
 
   // Minify HTML output
