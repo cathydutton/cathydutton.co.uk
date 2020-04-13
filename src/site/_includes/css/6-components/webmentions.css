@@ -1,7 +1,7 @@
 /* Webmention Section */
 
 .webmentions {
-    display:block;
+    display: block;
     text-align: left;
 }
 .webmentions__facepile {
@@ -27,20 +27,25 @@
 /* Single Webmention */
 
 .webmention {
-    display:block;
-}
+    margin-top: 2rem;
+    display: block;
+} 
+
 .webmention__meta,
 .webmention__author {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
+
 .webmention__meta {
     margin-bottom:.5rem;
 }
+
 .webmention__author {
     margin-right:.25rem;
 }
+
 .webmention__author__photo {
     height: 3rem;
     width: 3rem;
@@ -48,6 +53,7 @@
     object-fit: cover;
     margin-right:.5rem;
 }
+
 .webmention__pubdate {
     font-style: italic;
 }

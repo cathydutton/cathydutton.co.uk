@@ -1,0 +1,17 @@
+{
+  "title": "Cheshire based Designer and Front end developer - Cathy Dutton ",
+  "url": "https://cathydutton.co.uk/",
+  "domain": "cathydutton.co.uk",
+  "description": "An Interaction, Experience and Service Designer, based in Warrington, Cheshire. Specialising in CSS, UX, Accessibility and inclusive design. ",
+  "feed": {
+    "subtitle": "I design and build inclusive services. I'm currently an Interaction Designer, but these titles tend to change.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "url": "https://cathydutton.co.uk/feed/feed.xml",
+    "id": "https://cathydutton.co.uk/"
+  },
+  "author": {
+    "name": "Cathy Dutton",
+    "email": "infos@cathydutton.co.uk"
+  }
+}
