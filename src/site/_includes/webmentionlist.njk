@@ -1,5 +1,6 @@
 {%- set absoluteUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
 {%- set mentions = webmentions.children | webmentionsForUrl(absoluteUrl) -%}
+
 <section class="webmentions flow" id="webmentions">
   <h3>Webmentions</h3>
 
