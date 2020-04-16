@@ -20,7 +20,8 @@
   {% include "head.njk" %}
 </head>
 
-<body class="flow">
+<body>
+<div class="h-entry">
   
   <a href="#js-skip-link-target" class="skip-link" id="js-skip-link">skip to main content</a>
     
@@ -76,7 +77,7 @@
       </div>
 
       <div id="js-skip-link-target" class="main-content">
-        <div class="wrapper wrapper--no-container flow h-entry">
+        <div class="wrapper wrapper--no-container flow">
           <h1 class="p-name">
             {{ title }}
           </h1>
@@ -179,7 +180,7 @@
       }
   </script>
 
-
+</div>
 </body>
 
 </html>
