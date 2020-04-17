@@ -2,19 +2,42 @@ const htmlmin = require("html-minifier");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const sanitizeHTML = require('sanitize-html');
 const { DateTime } = require('luxon');
+const filters = require('./filters/filters');
 
 
 module.exports = function(config) {
+
+  // config.addFilter('getwebmentionsForUrl', (webmentions, url) => {
+  //   return webmentions.children.filter(entry => entry['wm-target'] === url)
+  // }),
+  // config.addFilter('size',  (mentions) => {
+  //   return !mentions ? 0 : mentions.length
+  // }),
+  // config.addFilter('webmentionsByType', (mentions, mentionType) => {
+  //   return mentions.filter(entry => !!entry[mentionType])
+  // }),
+  // config.addFilter('readableDateFromISO', (dateStr, formatStr = "dd LLL yyyy 'at' hh:mma") => {
+  //   return DateTime.fromISO(dateStr).toFormat(formatStr);
+  // }),
+
+
+  // Filters
+  Object.keys(filters).forEach(filterName => {
+    config.addFilter(filterName, filters[filterName])
+  })
 
   // Add a date formatter filter to Nunjucks
   config.addFilter("dateDisplay", require("./filters/dates.js") );
   config.addFilter("dateDisplayProject", require("./filters/datesProject.js") );
   config.addFilter("timestamp", require("./filters/timestamp.js") );
   config.addFilter("squash", require("./filters/squash.js") );
+
  
   // Plugins
   config.addPlugin(pluginRss);
 
+
+   
   // Blog post collection
   config.addCollection("posts", function(collection) {
     return collection.getFilteredByGlob("**/posts/**.njk").reverse();
@@ -52,59 +75,59 @@ module.exports = function(config) {
 
   // Webmentions
 
-  config.addFilter(
-    'readableDate',
-    (dateObj, format = 'dd LLL yyyy') => {
-      return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(format)
-    }
-  )
+  // config.addFilter(
+  //   'readableDate',
+  //   (dateObj, format = 'dd LLL yyyy') => {
+  //     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(format)
+  //   }
+  // )
 
-  config.addFilter('dateFromTimestamp', timestamp => {
-    return DateTime.fromISO(timestamp, { zone: 'utc' }).toJSDate()
-  })
+  // config.addFilter('dateFromTimestamp', timestamp => {
+  //   return DateTime.fromISO(timestamp, { zone: 'utc' }).toJSDate()
+  // })
 
-  config.addFilter(
-    'readableDate',
-    (dateObj, format = 'dd LLL yyyy') => {
-      return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(format)
-    }
-  )
+  // config.addFilter(
+  //   'readableDate',
+  //   (dateObj, format = 'dd LLL yyyy') => {
+  //     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(format)
+  //   }
+  // )
 
    // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-   config.addFilter('htmlDateString', dateObj => {
-    return DateTime.fromJSDate(dateObj).toFormat('yyyy-LL-dd')
-  })
+  //  config.addFilter('htmlDateString', dateObj => {
+  //   return DateTime.fromJSDate(dateObj).toFormat('yyyy-LL-dd')
+  // })
 
   // Get the first `n` elements of a collection.
-  config.addFilter('head', (array, n) => {
-    if (n < 0) {
-      return array.slice(n)
-    }
+  // config.addFilter('head', (array, n) => {
+  //   if (n < 0) {
+  //     return array.slice(n)
+  //   }
 
-    return array.slice(0, n)
-  })
+  //   return array.slice(0, n)
+  // })
 
   // Webmentions Filter
-  config.addFilter('webmentionsForUrl', (webmentions, url) => {
-    const allowedTypes = ['mention-of', 'in-reply-to']
-    const clean = content =>
-      sanitizeHTML(content, {
-        allowedTags: ['b', 'i', 'em', 'strong', 'a'],
-        allowedAttributes: {
-          a: ['href']
-        }
-      })
+  // config.addFilter('webmentionsForUrl', (webmentions, url) => {
+  //   const allowedTypes = ['mention-of', 'in-reply-to']
+  //   const clean = content =>
+  //     sanitizeHTML(content, {
+  //       allowedTags: ['b', 'i', 'em', 'strong', 'a'],
+  //       allowedAttributes: {
+  //         a: ['href']
+  //       }
+  //     })
   
-    return webmentions
-      .filter(entry => entry['wm-target'] === url)
-      .filter(entry => allowedTypes.includes(entry['wm-property']))
-      .filter(entry => !!entry.content)
-      .map(entry => {
-        const { html, text } = entry.content
-        entry.content.value = html ? clean(html) : clean(text)
-        return entry
-      })
-  })
+  //   return webmentions
+  //     .filter(entry => entry['wm-target'] === url)
+  //     .filter(entry => allowedTypes.includes(entry['wm-property']))
+  //     .filter(entry => !!entry.content)
+  //     .map(entry => {
+  //       const { html, text } = entry.content
+  //       entry.content.value = html ? clean(html) : clean(text)
+  //       return entry
+  //     })
+  // })
 
   
 
@@ -136,13 +159,8 @@ module.exports = function(config) {
     markdownTemplateEngine : "njk"
   };
   
-  
 
 };
-
-
-
-
 
 
 

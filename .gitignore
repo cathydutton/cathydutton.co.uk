@@ -3,3 +3,4 @@ dist
 functions
 yarn-error.log
 .env
+_cache/

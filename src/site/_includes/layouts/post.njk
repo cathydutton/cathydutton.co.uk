@@ -103,35 +103,32 @@
 
   <main id="main">
     {# bridgy #}
-    <a class="u-url" href="{{ postURL }}">
-    <a href="https://brid.gy/publish/twitter"></a>
     <data class="p-bridgy-omit-link" value="false"></data>
     <div class="wrapper  wrapper--top e-content">
+      <a class="u-url" href="{{ postURL }}">
+      <a href="https://brid.gy/publish/twitter"></a>
       <p class="post-date">
         <span class="visually-hidden dt-published">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
         <span class="h-card p-author"><a class="anchor" href="https://cathydutton.co.uk/">Cathy Dutton</a></span>
       </p>
 
-      {# <p>
-        <a href="https://twitter.com/intent/tweet?text={{ title }}&url={{ postURL }}&via=cathy_dutton&related=cathy_dutton" rel="noopener"  target="_blank" class="share-post-anchor">
-          Share on Twitter
-        </a> 
-      </p>   #}
-
       <section class="flow"> 
         {{ content | safe }}
-
         <p>
           <a href="https://twitter.com/intent/tweet?text={{ title }}&url={{ postURL }}" rel="noopener"  target="_blank" class="share-post-anchor">
             Share on Twitter
           </a> 
         </p>  
-
       </section>
     </div>
 
-   <div class="wrapper  wrapper--middle">
-     {% include "webmentionlist.njk" %}
+
+    <div class="wrapper  wrapper--middle flow">
+      <section class="webmentions flow" id="webmentions">
+        <h2>Webmentions</h2>
+        {% set webmentionUrl %}{{ page.url | url | absoluteUrl(site.url) }}{% endset %}
+        {% include 'webmentionlist.njk' %}
+      </section>
     </div>
     
     
