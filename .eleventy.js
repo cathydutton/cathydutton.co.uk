@@ -5,6 +5,7 @@ const { DateTime } = require('luxon');
 
 
 module.exports = function(config) {
+  
 
   // Add a date formatter filter to Nunjucks
   config.addFilter("dateDisplay", require("./filters/dates.js") );
@@ -86,7 +87,7 @@ module.exports = function(config) {
 
   // Webmentions Filter
   config.addFilter('webmentionsForUrl', (webmentions, url) => {
-    const allowedTypes = ['mention-of', 'in-reply-to']
+    const allowedTypes = ['mention-of', 'in-reply-to', 'like-of', 'repost-of']
     const clean = content =>
       sanitizeHTML(content, {
         allowedTags: ['b', 'i', 'em', 'strong', 'a'],
@@ -104,8 +105,18 @@ module.exports = function(config) {
         entry.content.value = html ? clean(html) : clean(text)
         return entry
       })
+
+      
+      
   })
 
+  config.addFilter('webmentionsByType', (mentions, mentionType) => {
+    return mentions.filter(entry => !!entry[mentionType])
+  })
+
+  config.addFilter('size', (mentions) => {
+    return !mentions ? 0 : mentions.length
+  })
   
 
 

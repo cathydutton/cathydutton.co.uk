@@ -1,30 +1,74 @@
 {%- set absoluteUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
 {%- set mentions = webmentions.children | webmentionsForUrl(absoluteUrl) -%}
+<!-- Set reposts as mentions that are `repost-of`  -->  
+{% set reposts = mentions | webmentionsByType('repost-of') %}
+{% set repostsSize = reposts | size %}
+<!-- Set likes as mentions that are `like-of`  -->
+{% set like = mentions | webmentionsByType('like-of') %}
+{% set likesSize = like | size %}
+<!-- Set replies as mentions that are `in-reply-to`  -->
+{% set replies = mentions | webmentionsByType('in-reply-to')  %}
+{% set repliesSize = replies | size  %}
+<!-- Set mentions as mentions that are `in-reply-to`  -->
+{% set mention = mentions | webmentionsByType('mention-of')  %}
+{% set mentionSize = mention | size  %}
+
+
+  {# {{ likesSize }} -- #}
+
 
 <section class="webmentions flow" id="webmentions">
-  <h3>Webmentions</h3>
-
   {% if mentions | length %}
-    <div class="webmentions__facepile">
-      {% for webmention in mentions | reverse | head(5) %}
-        <img src="{% if webmention.author.photo %}{{ webmention.author.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ webmention.author.name }}" alt="" class="webmentions__face" />
-      {% endfor %}
-      {% if mentions.length > 5 %}
-        <span>+{{ mentions.length - 5 }}</span>
-      {% endif %}
-    </div>
 
-    <ol class="webmentions__list">
-      {% for webmention in mentions | reverse %}
-        <li class="webmentions__item">
+    {% if likesSize > 0 %}
+      <h3>Likes</h3>
+      <div class="webmentions__facepile">
+        {% for webmention in like | reverse | head(5) %}
+          <img src="{% if webmention.author.photo %}{{ webmention.author.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ webmention.author.name }}" alt="" class="webmentions__face" />
+        {% endfor %}
+        {% if like.length > 5 %}
+          <span>+{{ like.length - 5 }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if repostsSize > 0 %}
+      <h3>Retweets</h3>
+      <div class="webmentions__facepile">
+        {% for webmention in reposts | reverse | head(10) %}
+          <img src="{% if webmention.author.photo %}{{ webmention.author.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ webmention.author.name }}" alt="" class="webmentions__face" />
+        {% endfor %}
+        {% if reposts.length > 10 %}
+          <span>+{{ reposts.length - 10 }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if mentionSize > 0 %}
+      <h3>Mentions</h3>
+      <div class="webmentions__facepile">
+        {% for webmention in mention | reverse | head(5) %}
+          <img src="{% if webmention.author.photo %}{{ webmention.author.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ webmention.author.name }}" alt="" class="webmentions__face" />
+        {% endfor %}
+        {% if mention.length > 5 %}
+          <span>+{{ mention.length - 5 }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if repliesSize > 0 %}
+      <div class="webmention-replies">
+        <h3>{{ repliesSize }} {% if replies.length == "1" %}Reply{% else %}Replies{% endif %}</h3>
+        {% for webmention in replies %}
           {% include 'webmention.njk' %}
-        </li>
-      {% endfor %}
-    </ol>
+        {% endfor %}
+      </div>
+    {% endif %}
+
 
   {% else %}
+    <h3>Webmentions</h3>
     <p>No mentions yet.</p>
   {% endif %}
+
 </section>
-
-
