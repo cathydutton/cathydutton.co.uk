@@ -24,7 +24,7 @@
   
   <a href="#js-skip-link-target" class="skip-link" id="js-skip-link">skip to main content</a>
     
-  <div aria-label="Accessibility tools" class="accessibility-tools">
+  <div role="form" aria-label="Accessibility tools" class="accessibility-tools">
     <div class="wrapper wrapper--accessibility-tools">
       {% include "a11y-buttons.njk" %}
     </div>
@@ -69,7 +69,7 @@
         </a>
       </div>
 
-      <nav class="navigation" aria-labelledby="mainNavigation" id="mainNavigation">
+      <nav class="navigation" aria-labelledby="mainNavigation" aria-label="mainNavigation" id="mainNavigation">
         {% include "navigation.njk" %}
       </nav>
 

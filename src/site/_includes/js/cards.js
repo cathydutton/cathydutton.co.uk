@@ -29,7 +29,7 @@
     // Group "button" attibutes
     group.classList.add('clickable');
     group.setAttribute('tabindex', '0');
-    group.setAttribute('role', 'link');
+    // group.setAttribute('role', 'link');
     group.setAttribute('aria-labelledby', 'group-title-' + index);
     group.setAttribute('aria-describedby', 'group-text-' + index);
 
