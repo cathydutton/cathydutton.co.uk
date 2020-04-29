@@ -27,7 +27,7 @@
   .navigation .navigation__item a:after {
     display: block;
     content: '';
-    border-bottom: solid 3px var(--colour-white);  
+    border-bottom: solid 3px var(--colour-black);  
     position: absolute;
     top: 100%;
     transition: width .3s;

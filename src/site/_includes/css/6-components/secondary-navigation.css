@@ -52,7 +52,7 @@
 
 .navigation-footer .navigation__item a:hover,
 .navigation-footer .navigation__item a:focus {
-  transition: all .3s ease-in-out;
+  transition: all .9s ease-in-out;
   /* color: var(--colour-pink); */
 }
 
