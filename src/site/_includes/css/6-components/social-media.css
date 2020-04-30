@@ -9,9 +9,9 @@ Social media icons
 }
 
 .footer {
-  --colour-social-colour: var(--colour-pink);
+  --colour-social-colour: var(--colour-pink-light);
   --colour-social-stroke: var(--colour-black);
-  --colour-social-hover: var(--colour-pink);
+  --colour-social-hover: var(--colour-pink-light);
 }
 
 .social-media {

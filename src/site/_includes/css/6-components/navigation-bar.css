@@ -19,7 +19,7 @@
   text-decoration: none;
   position: relative;
   font-size: 1.1rem;
-  border-bottom: solid 3px var(--colour-pink-light);
+  border-bottom: solid 3px var(--colour-pink);
 }
 
 @media (hover: hover) {
@@ -27,7 +27,7 @@
   .navigation .navigation__item a:after {
     display: block;
     content: '';
-    border-bottom: solid 3px var(--colour-black);  
+    border-bottom: solid 3px var(--colour-white);  
     position: absolute;
     top: 100%;
     transition: width .3s;
@@ -55,7 +55,7 @@
 .navigation .navigation__item--current a,
 .navigation a:active {
   border-bottom: solid 3px var(--colour-white);
-  background:   var(--colour-pink-light);
+  background:   var(--colour-pink);
 }
 
 .navigation__item--current a:hover

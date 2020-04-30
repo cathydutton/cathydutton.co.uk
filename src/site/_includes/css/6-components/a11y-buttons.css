@@ -51,7 +51,7 @@
   } 
   
   .button--ally--active:hover {
-    background: var(--colour-pink);
+    background: var(--colour-pink-light);
     cursor: not-allowed;
   }
 

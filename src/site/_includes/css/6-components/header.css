@@ -4,7 +4,7 @@ Header
 ----------------------------------- */
 
 header {
-  background: var(--colour-pink);
+  background: var(--colour-pink-light);
   /* background-image: linear-gradient(45deg,  var(--colour-pink), var(--colour-pink-light));  */
   padding: 2rem 0 10rem;
 }

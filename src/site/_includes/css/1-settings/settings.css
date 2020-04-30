@@ -4,16 +4,15 @@
   ----------------------------------- */
 
 :root {
-  /* https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=FFB1E0&v=FF0986&v=990566&v=4A1C44&v=000000 */
+
+  /* https://toolness.github.io/accessible-color-matrix/?n=White&n=grey%20light&n=grey&n=pink%20light&n=pink&n=black&v=FFFFFF&v=F3F3F3&v=C2C2C2&v=FFACB9&v=FF859D&v=1F1F1F */
 
   --colour-black: hsl(0, 0%, 12%);
   --colour-white: hsl(0, 0%, 100%);
   --colour-grey: hsl(0, 0%, 76%);
   --colour-grey-light: hsl(0, 0%, 95%);
-  /* --colour-pink: rgb(255, 51, 99); */
-  --colour-pink:hsl(346, 100%, 80%);
-  /* --colour-pink-light: hsl(346, 100%, 79%); */
-  --colour-pink-light: hsl(358, 100%, 95%);
+  --colour-pink: hsl(348, 100%, 76%);
+  --colour-pink-light: hsl(351, 100%, 84%);
   
   
   --font-family: Lato,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;

@@ -27,7 +27,7 @@
   .navigation-footer .navigation__item a:hover {
     cursor: hand;
     background: none;
-    color: var(--colour-pink);
+    color: var(--colour-pink-light);
     outline-width: none;
   }
 
@@ -35,7 +35,7 @@
   .navigation-footer .navigation__item a:after {
     display: block;
     content: '';
-    border-bottom: solid 3px var(--colour-pink);  
+    border-bottom: solid 3px var(--colour-pink-light);  
     position: absolute;
     top: 100%;
     transition: width .3s;
@@ -58,5 +58,5 @@
 
 .navigation-footer .navigation__item--current a,
 .navigation-footer .navigation__item a:active {
-  border-bottom: solid 3px var(--colour-pink); 
+  border-bottom: solid 3px var(--colour-pink-light); 
 }

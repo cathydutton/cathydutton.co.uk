@@ -45,12 +45,11 @@ Profile image
 
 .profile-image-back {
   background-color: var(--colour-grey-light);
-  /* color: var(--colour-white); */
   transform: rotateY(180deg);
 }
 
 .profile-image__svg-circle {
-  fill: var(--colour-pink);
+  fill: var(--colour-pink-light);
   stroke: var(--colour-grey-light);
   stroke-width: 4px;
 }
