@@ -1,33 +1,8 @@
 /*
 Quotations
 ----------------------------------- */
+q,
 .quote {
   margin: 2rem 0;
-}
-
-blockquote {
-  background: var(--colour-grey-light);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border: solid 1px var(--colour-grey);
-}
-
-blockquote:before,
-blockquote:after {
-  font-family: var(--font-family);
-  color: var(--colour-pink);
-  font-size: 2rem;
-  line-height: 0.1rem;
-}
-
-blockquote:before {
-  content: open-quote;
-  margin-right: 0.25rem;
-  vertical-align: -0.2rem;
-}
-
-blockquote:after {
-  content: close-quote;
-  margin-left: 0.25rem;
-  vertical-align: -0.3rem;
+  font-style: italic;
 }
