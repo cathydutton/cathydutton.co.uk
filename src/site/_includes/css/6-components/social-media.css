@@ -5,7 +5,7 @@ Social media icons
 :root {
   --colour-social-colour: var(--colour-black);
   --colour-social-stroke: var(--colour-pink);
-  --colour-social-hover: var(--colour-pink-light);
+  --colour-social-hover: var(--colour-white);
 }
 
 .footer {
@@ -30,6 +30,7 @@ Social media icons
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 10px;
 }
 
 .social-media__anchor[target=_blank]:after {
@@ -45,7 +46,7 @@ Social media icons
 }
 
 .social-media__anchor:hover svg,
-.social-media__ancho:focus svg {
+.social-media__anchor:focus svg {
   transition: all .3s ease-in-out;
   border-radius: 100%;
   color: var(--colour-social-stroke);

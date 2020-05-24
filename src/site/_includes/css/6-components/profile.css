@@ -26,7 +26,8 @@ Profile image
   transform-style: preserve-3d;
 }
 
-.profile-image:hover .profile-image-inner {
+.profile-image:hover .profile-image-inner,
+.profile-image:focus .profile-image-inner {
   transform: rotateY(180deg);
 }
 

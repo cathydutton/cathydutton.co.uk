@@ -49,10 +49,16 @@
   .button--ally--active:after {
     content: ': on';
   } 
+
+  .button--ally--active {
+    background: var(--colour-pink);
+  } 
   
-  .button--ally--active:hover {
-    background: var(--colour-pink-light);
+  .button--ally--active:hover,
+  .button--ally--active:focus {
+    background: var(--colour-pink);
     cursor: not-allowed;
   }
+
 
 }

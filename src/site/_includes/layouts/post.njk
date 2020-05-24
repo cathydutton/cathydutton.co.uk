@@ -34,8 +34,8 @@
   <header class="header" role="banner">
     <div class="wrapper wrapper--no-container wrapper--header">
 
-      <div class="profile-image h-card p-author">
-        <a class="u-url" href="/">
+    
+        <a class="profile-image h-card p-author u-url" href="/">
           <div class="profile-image-inner">
             <div class="profile-image-front">
                 <img
@@ -68,7 +68,7 @@
    
           </div>
         </a>
-      </div>
+    
 
         <nav class="navigation" aria-label="mainNavigation" aria-labelledby="mainNavigation" id="mainNavigation">
           {% include "navigation.njk" %}
@@ -103,13 +103,15 @@
 
   <main id="main">
     <div class="wrapper  wrapper--top e-content">
+     
       {# bridgy #}
-      <a class="u-url" href="{{ postURL }}">
-      <a href="https://brid.gy/publish/twitter"></a>
+      <p class="hidden"><a class="u-url" href="{{ postURL }}">Post link</a></p>
+      <p class="hidden"><a href="https://brid.gy/publish/twitter">bridgy link</a></p>
+      
       <data class="p-bridgy-omit-link" value="false"></data>
       <p class="post-date">
-        <span class="visually-hidden dt-published">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
-        <span class="h-card p-author"><a class="anchor" href="https://cathydutton.co.uk/">Cathy Dutton</a></span>
+        <span class="dt-published">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+        <span class="hidden h-card p-author"><a class="anchor" href="https://cathydutton.co.uk/">Cathy Dutton</a></span>
       </p>
 
       <section class="flow"> 

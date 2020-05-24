@@ -16,7 +16,9 @@
   }
   
   button:hover,
-  .button:hover {
+  .button:hover,
+  button:focus,
+  .button:focus {
     text-decoration: underline;
     background: var(--colour-white);
     /* box-shadow: inset 0 0 0 2px var(--colour-pink); */
