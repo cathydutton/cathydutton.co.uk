@@ -23,13 +23,13 @@
     {% if likesSize > 0 %}
       <h3>Likes</h3>
       <div class="webmentions__facepile">
-        {% for webmention in likes | reverse | head(5) %}
+        {% for webmention in likes | reverse | head(10) %}
           <a class="webmention__author p-author" href="{{ webmention.author.url }}" target="_blank" rel="noopener noreferrer">
             <img src="{% if webmention.author.photo %}{{ webmention.author.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ webmention.author.name }}" alt="" class="webmentions__face" />
           </a>
         {% endfor %}
-        {% if likes.length > 5 %}
-          <span>+{{ likes.length - 5 }}</span>
+        {% if likes.length > 10 %}
+          <span>+{{ likes.length - 10 }}</span>
         {% endif %}
       </div>
     {% endif %}
@@ -51,13 +51,13 @@
     {% if mentionSize > 0 %}
       <h3>Mentions</h3>
       <div class="webmentions__facepile">
-        {% for webmention in mention | reverse | head(5) %}
+        {% for webmention in mention | reverse | head(10) %}
           <a class="webmention__author p-author" href="{{ webmention.author.url }}" target="_blank" rel="noopener noreferrer">
           <img src="{% if webmention.author.photo %}{{ webmention.author.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ webmention.author.name }}" alt="" class="webmentions__face" />
         </a>
         {% endfor %}
-        {% if mention.length > 5 %}
-          <span>+{{ mention.length - 5 }}</span>
+        {% if mention.length > 10 %}
+          <span>+{{ mention.length - 10 }}</span>
         {% endif %}
       </div>
     {% endif %}

@@ -75,18 +75,6 @@ ul {
   margin-bottom: var(--flow-space);
 }
 
-.highlight-text {
-  padding: 1rem;
-  border-left: solid 4px var(--colour-pink);
-  max-width: 80%;
-  margin-top: var(--flow-space);
-  background: var(--colour-grey-light);
-}
-
-.highlight-text p {
-  max-width: 100%;
-}
-
 .post-date {
   padding-bottom: .5em;
   widtH: 300px;
