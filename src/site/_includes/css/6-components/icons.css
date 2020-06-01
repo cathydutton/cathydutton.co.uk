@@ -5,7 +5,7 @@ Social media icons
 :root {
   --colour-social-colour: var(--colour-black);
   --colour-social-stroke: var(--colour-pink);
-  --colour-social-hover: var(--colour-white);
+  --colour-social-hover: var(--colour-black);
 }
 
 .footer {
