@@ -51,20 +51,18 @@ Pagination
   height: 50px;
 }
 
-.pagination__anchor:hover  {
+.pagination__anchor:hover,
+.pagination__anchor:focus ,
+.pagination__anchor:active   {
   background: var(--colour-grey-light);
 }
 
-.pagination__anchor:hover svg {
+.pagination__anchor:hover svg,
+.pagination__anchor:focus svg,
+.pagination__anchor:active svg {
   fill: var(--colour-black);
   background: var(--colour-pink);
 }
-
-.pagination__anchor:focus,
-.pagination__anchor:active  {
-  background: var(--colour-pink-light);
-  outline: none;;
-}  
 
 .navigation__title {
   display: inline-block;
