@@ -1,6 +1,6 @@
 <ul class="navigation__list">
   {% for item in navigationFooter %}
     <li class="navigation__item navigation__item--{{ item.menu_item | lower | replace(" ", "-")}}{% if pageName == item.menu_item %} navigation__item--current{% endif %}">
-      <a href="{{ item.url }}">{{ item.menu_item }}</a></li>
+     <a href="{{ item.url }}" {% if pageName == item.menu_item %} aria-current="page"{% endif %}>{{ item.menu_item }}</a></li>
   {% endfor %}
 </ul>
