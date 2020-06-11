@@ -1,6 +1,13 @@
 /*
   Anchors
   ----------------------------------- */
+:root {
+   --colour-focus: hsl(311, 100%, 50%);
+}
+
+.footer {
+  --colour-focus: hsl(312, 100%, 24%);
+}
 
 /* a {
   --link: hsl(230, 60%, 50%);
@@ -11,6 +18,7 @@
 
  a,
 .anchor {
+  transition: all .3s ease-in-out;
   color: currentColor;
   text-decoration: underline;
   /* text-underline-offset: 1px;
@@ -21,7 +29,7 @@
 
 a:hover,
 .anchor:hover {
-  outline: dashed 1px var(--colour-pink);
+  /* outline: dashed 1px var(--colour-pink); */
   text-decoration: none;
 }
 
@@ -30,13 +38,15 @@ a:active,
   outline-style: dashed;
   outline-color: var(--colour-pink);
   outline-width: 1px;
+  background: 
 }
 
 a:focus,
 .anchor:focus {
-  outline-style: dashed;
-  outline-color: var(--colour-pink);
-  outline-width: 1px;
+  outline: none;
+  text-decoration: none;
+  background: var(--colour-focus);
+  box-shadow: 0 -2px var(--colour-focus), 0 4px var(--colour-black);
 }
 
 a:visited,

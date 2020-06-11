@@ -55,6 +55,7 @@ Pagination
 .pagination__anchor:focus ,
 .pagination__anchor:active   {
   background: var(--colour-grey-light);
+  box-shadow: none;
 }
 
 .pagination__anchor:hover svg,
