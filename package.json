@@ -28,7 +28,7 @@
     "gulp-serve": "^1.4.0",
     "gulp-shell": "^0.6.5",
     "gulp-uglify": "^3.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mime": "^2.4.3",
     "mime-db": "^1.40.0",
     "node-fetch": "^2.6.0",
