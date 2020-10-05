@@ -13,6 +13,7 @@
     border: solid 1px var(--colour-pink-light);
     /* box-shadow: inset 0 0 0 2px var(--colour-white); */
     margin-right: .5em;
+    height: 100%;
   }
   
   button:hover,
