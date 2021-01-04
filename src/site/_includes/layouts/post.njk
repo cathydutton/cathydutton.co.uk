@@ -81,8 +81,9 @@
           <h1 class="p-name margin-top">
             {{ title }}
           </h1>
+          <p>Published on <time datetime="{{ date }}">{{ date | dateDisplay }}</time></p>
           <p class="page-intro"> {{ description }}</p>
-          <ul class="social-media">
+          {# <ul class="social-media">
             {% for item in socialMedia %} 
               <li class="social-media__item">
                 <a href="{{ item.url }}" class="anchor social-media__anchor" aria-label="{{ item.title }}" target="_blank" rel="noopener">
@@ -95,7 +96,7 @@
                 </a>
               </li>
             {% endfor %}
-          </ul> 
+          </ul>  #}
         </div>
       </div>
 
@@ -109,8 +110,9 @@
       <p class="hidden"><a href="https://brid.gy/publish/twitter">bridgy link</a></p>
       
       <data class="p-bridgy-omit-link" value="false"></data>
-      <p class="post-date">
-        <span class="dt-published">Published on</span> <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+      {# <p class="post-date"> #}
+      <p>
+        <span class="hidden dt-published">Published on <time datetime="{{ date }}">{{ date | dateDisplay }}</time></span>
         <span class="hidden h-card p-author"><a class="anchor" href="https://cathydutton.co.uk/">Cathy Dutton</a></span>
       </p>
 
