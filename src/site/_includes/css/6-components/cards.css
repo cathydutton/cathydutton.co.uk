@@ -21,9 +21,19 @@ Cards
   height: 100%;
 } 
 
+.card div {
+  background: var(--colour-pink);
+}
+
 .card img {
   width: 100%;
   grid-row: 1; 
+  mix-blend-mode: overlay;
+}
+
+.card-wrapper:hover img,
+.card-wrapper:focus img{
+  mix-blend-mode: normal;
 }
 
 .card__title {

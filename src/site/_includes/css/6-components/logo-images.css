@@ -26,6 +26,18 @@ Logo images
 .work-logo__item a { 
   display: inline;
   padding: 0;
+  background: var(--colour-pink);
+  transition: all .3s ease-in-out;
+}
+
+.tech-logo__item a:hover img,
+.work-logo__item a:hover img, 
+.tech-logo__item a:active img,
+.work-logo__item a:active img,
+.tech-logo__item a:focus img,
+.work-logo__item a:focus img { 
+  /* opacity: 70%; */
+  mix-blend-mode: normal;
 }
 
 .tech-logo__item a:hover,
@@ -33,10 +45,10 @@ Logo images
 .tech-logo__item a:active,
 .work-logo__item a:active,
 .tech-logo__item a:focus,
-.work-logo__item a:focus,
-.tech-logo__item a:visited,
-.work-logo__item a:visited { 
-  opacity: 70%;
+.work-logo__item a:focus { 
+  border: 0;
+  outline: 0;
+  box-shadow: none;
 }
 
 .tech-logo__item img,
@@ -46,6 +58,7 @@ Logo images
   grid-template-rows: subgrid;
   padding: 0;
   border: none; 
+  mix-blend-mode: overlay;
 }
 
 .column-2 {
