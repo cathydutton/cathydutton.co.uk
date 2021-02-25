@@ -31,7 +31,7 @@
     "lodash": "^4.17.15",
     "mime": "^2.4.3",
     "mime-db": "^1.40.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "require-dir": "^1.0.0",
     "sanitize-html": "^1.23.0"
   },
