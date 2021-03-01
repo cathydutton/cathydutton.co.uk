@@ -25,6 +25,7 @@
 /* https://toolness.github.io/accessible-color-matrix/?n=white&n=grey%20light&n=grey&n=pink%20light&n=pink&n=black&v=FFFFFF&v=D5D5D5&v=8B8B8B&v=797979&v=ACACAC&v=010101 */
 
 .theme-monochrome {
+  
   --colour-black: hsl(0, 0%, 0%);
   --colour-white: hsl(0, 0%, 100%);
 
@@ -35,4 +36,17 @@
   --colour-pink-light: hsl(0, 0%, 47%);
 }
 
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --colour-black: hsl(0, 0%, 0%);
+    --colour-white: hsl(0, 0%, 100%);
+
+    --colour-grey: hsl(0, 0%, 55%);
+    --colour-grey-light: hsl(0, 0%, 84%);
+
+    --colour-pink: hsl(0, 0%, 67%);
+    --colour-pink-light: hsl(0, 0%, 47%);
+  }
+}
 
