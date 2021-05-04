@@ -1,0 +1,261 @@
+--- 
+title:  Designing Forms - Minimum viable design
+description: How can we re-design legacy forms quickly and cheaply? What is the minimum amount of design needed and how will we make sure standards are maintained?
+date: "2021-05-04" 
+tags: [Design] 
+pageName: Blog
+postURL: https://cathydutton.co.uk/posts/minimum-viable-form-design/
+---
+
+<p>Friday the 30th April was the 3rd cross Government meet-up on forms and the second one I've spoken at. My talk this time was called 'Minimum viable design' and was mostly a list of questions I think we need to answer before we start re-designing legacy forms in bulk.</p>
+
+
+<h2>Form builders and Defra</h2>
+
+<p>My first talk was 'Forms, Form builders and Defra' and discussed the 2 separate form builders Defra had developed over the previous 18 months.</p>
+
+
+<p>The first one was built to speed up the repetitive process of getting around 1500 PDF forms online as part of a new digital service. The Form builder allowed those existing PDF's to be scanned and then converted to HTML replicas. 
+</p>
+
+<p>The second form builder was built to try to reduce the cost of creating digital services and was aimed at parts of Defra that didn’t have the funds to pay for a full delivery team to go through the usual Discovery, Alpha, Beta delivery phases. That form builder had a more traditional drag and drop type interface that could be exported to production code.
+</p>
+
+
+<p>Both form builders sooner or later ran into the same problem, these legacy forms still needed to be designed and the tools we had built couldn't help us with this part of the process.
+</p>
+
+<h3>Online isn't always better</h3>
+
+<p>There are a lot of benefits to putting paper or PDF forms online, HTML is more inclusive and accessible, there's wider device support and the forms themselves will be easier to find.
+But simply copying offline forms and putting them online does not work.
+</p>
+
+<p>That could be because the forms we are copying were poorly designed in the first place. Or it could be because we are changing the way people interact with those forms.
+</p>
+
+<p>Some of the benefits of paper forms that we can lose when we put them online include:
+</p>
+
+
+<ul class="unordered-list">
+<li class="unordered-list__list-item">they can be read from beginning to end so users know exactly what's expected of them before they start
+</li>
+<li class="unordered-list__list-item">they can be re-visited or part completed so users can go and get information they may not have had to hand 
+</li>
+<li class="unordered-list__list-item">they can be filled out in the order of the user's choosing
+</li>
+<li class="unordered-list__list-item">they can be edited or checked before their sent off
+</li>
+<li class="unordered-list__list-item">they can be filled out by more than one person, this was particularly relevant for our first form builder project where users would treat the forms almost like a Google doc editing or updating answers based on input from others
+</li>
+</ul>
+
+
+<h2>Process over tools</h2>
+
+<p>We moved on to do a short piece of work trying to understand the <a href="https://cathydutton.co.uk/posts/put-that-form-online/" class="anchor">full process involved in getting legacy forms designed, built, and online</a>.
+As part of that work we identified some key stages.
+</p>
+
+<h3>Upfront consultation</h3>
+
+<p>Firstly an upfront discussion with the business area would be needed to understand their current service, the form, and any known issues. This would be carried out by a developer and a designer to understand any technical constraints and any parts of the form that would be particularly difficult to replicate online. </p>
+
+<h3>A design phase</h3>
+<p>Then there would be a design phase with the constraints of time and cost to consider.</p>
+
+<h3>A clear sign of point</h3>
+<p>A clear sign of point from design to front-end build would be needed to keep projects quick and on budget.</p>
+
+<p>
+We then created some pre-defined products which we thought would help speed up the delivery whilst maintaining quality and standards.
+</p>
+
+<p>The 3 products were:
+</p>
+
+<ul class="unordered-list">
+<li class="unordered-list__list-item">re-design the PDF or paper form, because sometimes online is not better especially if we have budget constraints
+</li>
+<li class="unordered-list__list-item">basic HTML form with simple input types, none sensitive data, and low transaction numbers.
+</li>
+<li class="unordered-list__list-item">advanced HTML form with higher numbers of transactions, complex design, and/or sensitive data.
+</li>
+</ul>
+
+<p>Each one of these products was then mapped out so we could start to understand which parts of the process would benefit most from automation. As well as which would be the most time-consuming and the most costly.
+</p>
+
+<figure id="figure1">
+<img src="/images/posts/minimum-viable-design/form-design-process-idea.png" loading="lazy" alt="flow diagram fro designing a form" >
+<figcaption>Form design process sketch</figcaption>
+</figure>
+
+<p>This is where we can start to see exactly where our form builders can help, which for now is in the front-end development space.
+</p>
+
+<p>I wrote about this process in more detail last year in <a href="https://cathydutton.co.uk/posts/put-that-form-online/" class="anchor">Put that form online!</a>
+</p>
+
+
+<h2>The design phase</h2>
+
+<figure id="figure1">
+<img src="/images/posts/minimum-viable-design/form-design-process-2.jpg" loading="lazy" alt="flow diagram fro designing a form" >
+<figcaption>Form design process sketch</figcaption>
+</figure>
+
+<p>The part we didn't dig into in any real detail was the design phase. We know the forms need to be designed to work in a new medium. We need to work out how many design, iteration, and test cycles we need to feel confident that we have done this successfully and improved the form for its users.</p>
+
+
+<p>The task of the form design working group will be to answer this question, focusing specifically on design and how much design is enough.  
+</p>
+
+<p>Before we can answer that question though there are a few other things we need answers to.
+</p>
+
+
+<h3>Question 1 - should we be doing this?</h3>
+
+<p>The first question we need to answer is should we be doing anything in this space at all?
+</p>
+
+<p>A form is usually just one small piece of a much larger service and sometimes that form's very existence is a result of flaws in that service.
+
+For example, at Defra we had a request to redesign a PDF payment query form.
+</p>
+
+<p>This form wouldn’t be needed if the service clearly explained why a decision had been made in the first place, which is part of Lou Downe’s <a href="https://blog.louisedowne.com/2018/06/14/15-principles-of-good-service-design/" class="anchor">15 principles of good service design</a>.
+</p>
+
+<p>Sometimes however we have to accept that we can't redesign a whole service. If there's limited trust, funding, or time we need to focus on making the existing form easier to use for the people that need to use it.
+</p>
+
+<p>By doing this we can:
+</p>
+
+<ul class="unordered-list">
+<li class="unordered-list__list-item">build trust with areas of an organisation we don’t usually work with 
+</li>
+<li class="unordered-list__list-item">create more inclusive, accessible interactions for users
+</li>
+<li class="unordered-list__list-item">increasing consistency across government
+</li>
+<li class="unordered-list__list-item">improve data quality and efficiency for internal processes
+</li>
+</ul>
+
+
+<h3>Question 2 - How or should we meet the Government service standard?</h3>
+
+
+<p>A scary question to ask but assuming we do carry on with this work what standards should we be held to?
+
+</p>
+
+<p>The Government service standard sets the bar for how we design good services in Government, but what if a form is needed in a hurry? Or we need a lot of forms?
+Or there’s no money?
+</p>
+
+<p>Do the rules change? Or more importantly Should the rules change?
+</p>
+
+<p>A few years ago MoJ blogged about how they designed, built, and launched <a href="https://mojdigital.blog.gov.uk/2019/10/01/the-child-funeral-fund-service-now-launched/#:~:text=In%20March%202019%20the%20former,costs%20of%20burials%20or%20cremations" class="anchor">The child funeral fund service</a> whilst meeting the service standard. They did it in just six weeks!</p>
+
+<p>So we know it is possible to meet the standards at pace, we also know that none of the 14 points in the standard are linked explicitly to timeframes. 
+But what about cost? And scale?
+</p>
+
+<p>Some of the most difficult points to meet within those constraints would be:
+</p>
+
+<ul class="unordered-list">
+  <li class="unordered-list__list-item"><strong>1. Understand users and their needs</strong>. This requires a lot of discovery and research activities which take time and can be costly.</li>
+  <li class="unordered-list__list-item"><strong>2. Solve a whole problem for users</strong>. We couldn't do this if the form was just one piece of a larger service</li>
+</ul>
+
+<p>
+What we really can’t do is design forms that take us backwards, if we are putting forms online there must also be an offline version for people who either don't want to or can’t complete the online version.
+Both of these formats must be designed with the same amount of care and attention.
+</p>
+
+<p> We also must comply with <a href="https://www.legislation.gov.uk/uksi/2018/852/contents/made" class="anchor">The Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018</a>.
+</p>
+
+<h3>Question 3 -  When does a form become a digital service?</h3>
+
+<p>If there are to be different rules for forms and for services then we need a clear and consistent definition of both a form and a service. Without this, there's a risk of undermining the work already done by GDS to implement government-wide service standards, and we really don’t want to do that.
+</p>
+
+<h3>Question 4 -  Should we use GOV.UK branding?</h3>
+
+
+<p>Should we use GOV.UK branding? Or more specifically if we’re not meeting the service standard are we allowed to use the GOV.UK branding?
+</p>
+
+<p>If we do then again we risk undoing some of the hard work that’s gone into building trust, and the design standards associated with GOV.UK. If we don't then we start from scratch and lose all of that built-up trust.
+</p>
+
+<p>We would also be adding extra design time to create branding or page templates for each organisation and arms-length body.
+</p>
+
+<h3>Question 5 - How do we upskill and/or share knowledge so design does not become a bottleneck?</h3>
+
+
+<p>Another of the original problem statements was around the need to design forms at scale, so how can we make sure this is achievable even if we are just 1 person in a team of many?
+What we don't want is for design itself to become a blocker to re-designing legacy forms. 
+</p>
+
+
+<h2>So how much design do we need?</h2>
+
+<p>To try to make this open-ended question feel less overwhelming I’ve started to put together a list of outcomes to help scope the work and to make sure we're adding value.
+</p>
+
+<p>The most important first step will be to establish a relationship between the form design working group and the GOV.UK Design System community. And equally to establish a relationship between the form design group and GOV.UK service manual.
+</p>
+
+<p>Then between us to try to agree on an assurance process for form design in Government.
+</p> 
+
+<h3>Standards and guidance</h3>
+
+<p>Other possible outcomes to work towards would be definitions and standards including:
+</p>
+
+<ul class="unordered-list">
+  <li class="unordered-list__list-item">a clear and consistent definition of a form and of a service
+  </li>
+  <li class="unordered-list__list-item">form design best practice or form design standards
+  </li>
+  <li class="unordered-list__list-item">a best/quickest/cheapest and most efficient process for designing better forms. This is something we might only get by designing forms repeatedly and learning/iterating as we go</li>
+</ul>
+
+<h3>Tools</h3>
+
+<p>Finally tools, could we create a centralised place for reusable things like:</p>
+
+
+<ul class="unordered-list">
+  <li class="unordered-list__list-item">process and guidance around question protocols
+  </li>
+  <li class="unordered-list__list-item">task-based patterns like apply for something, register for something etc
+  </li>
+  <li class="unordered-list__list-item">page templates or other tools to help us to easily and consistently brand forms</li>
+</ul>
+
+<h2>Next steps</h2>
+
+<p>The next steps for this group are to:
+</p>
+
+<ul class="unordered-list">
+<li class="unordered-list__list-item">collect a list of interested people
+</li>
+<li class="unordered-list__list-item">review the questions and outcomes mentioned here
+</li>
+<li class="unordered-list__list-item">plan how we start achieving them, probably beginning with some online workshops 
+</li>
+</ul>
+

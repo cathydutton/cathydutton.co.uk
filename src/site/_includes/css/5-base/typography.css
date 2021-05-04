@@ -37,7 +37,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 h4 {
@@ -46,13 +46,11 @@ h4 {
 
 /* Decoration */
 
-h2,
-h3 {
+h2 {
   position: relative;
 }
 
-h2:after,
-h3:after {
+h2:after {
   content: "";
   height: 6px;
   display: block;
