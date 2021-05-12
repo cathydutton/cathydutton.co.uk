@@ -60,7 +60,7 @@
     "gulp-rename": "^1.4.0",
     "html-minifier": "^3.5.21",
     "path": "^0.12.7",
-    "postcss": "^7.0.2",
+    "postcss": "^8.2.10",
     "postcss-color-function": "^4.1.0",
     "postcss-custom-properties": "^7.0.0",
     "postcss-import": "^12.0.0",
