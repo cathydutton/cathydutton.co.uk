@@ -23,7 +23,7 @@
     "gravatar": "^1.6.0",
     "gulp": "^4.0.0",
     "gulp-clean": "^0.4.0",
-    "gulp-eslint": "^5.0.0",
+    "gulp-eslint": "^5.16.0",
     "gulp-image-resize": "^0.13.0",
     "gulp-serve": "^1.4.0",
     "gulp-uglify": "^3.0.0",
@@ -33,7 +33,8 @@
     "node-fetch": "^2.6.0",
     "npm": "^7.11.2",
     "require-dir": "^1.0.0",
-    "sanitize-html": "^1.23.0"
+    "sanitize-html": "^1.23.0",
+    "save-dev": "0.0.1-security"
   },
   "proxy": {
     "/.netlify/functions": {
