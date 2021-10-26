@@ -4,10 +4,6 @@
       "url": "/"
     },
     {
-      "menu_item": "Now",
-      "url": "/now/"
-    },
-    {
       "menu_item": "About me",
       "url": "/about-me/"
     },
