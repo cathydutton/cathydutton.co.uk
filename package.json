@@ -33,7 +33,7 @@
     "node-fetch": "^2.6.0",
     "npm": "^7.11.2",
     "require-dir": "^1.0.0",
-    "sanitize-html": "^1.23.0",
+    "sanitize-html": "^2.3.2",
     "save-dev": "0.0.1-security"
   },
   "proxy": {
