@@ -5,37 +5,51 @@ layout: layouts/base.njk
 permalink: /about-me/ 
 pageName: About me 
 headerOne: About me
-strapline: I love to design in code, I'm a CSS enthusiast, Intrinsic and Sustainable design fan  
+strapline: I have over 15 years design experience with a background in Product Design and Front-End Development. I'm passionate about about inclusive, sustainable design. 
 ---
 
 
-<div class="wrapper  wrapper--full">
+
+
+<div class="wrapper  wrapper--top">
   <div class="flow"> 
-   {# <p class="highlight-text no-margin">
-      I’ve had a lot of job titles over the years including UX developer, Experience designer, Front end developer,
-      User centered designer, Service designer and now Interaction designer.
-    </p> #}
-    
+
     <p>
       After completing a three year Fine Art course in 2004 I went on to gain a degree in Product Design and Development from the University of Salford in 2007. 
     </p>
 
      <p>
-      Since then I have I have spent time in both front end developer and design roles. This experience has allowed me to develop my knowledge of the web, browsers, devices and front end technologies helping me to design digital services that meet the needs of users and that are inline with best practice and accessibility standards.
+     Over the past 15 years, I have had some great opportunities to develop my skills and experience working on a range of projects for creative agencies, small businesses, global brands, and government departments, helping the teams I have worked with create user-focused, accessible, and intuitive services. 
+
     </p>
 
     <p>
-      I’m currently Head of Interaction and Service Design for the Department for Environment, Food and Rural Affairs (Defra).
+      I’m currently Head of Design for the Department for Environment, Food and Rural Affairs (Defra). In this role, I lead a community of 50 plus Interaction and Service designers across Defra supporting delivery teams, programmes, and portfolios to create inclusive services.
     </p>
-
+    <p>
+     My role includes mentoring designers of all abilities as well as setting the strategy for design and defining the standards we work to.
+    </p>
 
     <p>
-      In this role I lead a community of between 30 plus designers across Defra promoting and encouraging collaboration across programmes, locations and departments.
+      I'm a trained Government service assessor and member of the <a href="https://design-system.service.gov.uk/community/design-system-working-group/" rel="noopener" target="_blank" title="Design system working group" class="anchor">GDS design system working group</a>, helping to maintain standards whilst promoting inclusivity.
     </p>
 
-    {# <p>
-     As part of this role I am responsible for defining design standards and assuring the quality of Defra's digital services.
-    </p> #}
+   <ul class="unordered-list">
+      <li class="unordered-list__list-item">I enjoy building and empowering amazing design teams</li>
+      <li class="unordered-list__list-item">I believe in testing assumptions early, and often in context with users</li>
+      <li class="unordered-list__list-item">I love to design in code, I'm a CSS enthusiast and Intrinsic design fan</li>
+      <li class="unordered-list__list-item">I take a collaborative approach to design, working with researchers, content designers, developers and stakeholders through sketching sessions, workshops and ideation</li>
+      <li class="unordered-list__list-item">I’m passionate about getting designers into the right spaces, helping teams define the problem they want to solve and outcomes they want to achieve</li>
+  </ul> 
+
+    <h2>Books I'm reading</h2>
+    <ul class="unordered-list">
+      <li class="unordered-list__list-item">Sustainable design, Tom Greenwood</li>
+      <li class="unordered-list__list-item">Expressive design systems, Yesenia Perez-Cruz</li>
+      <li class="unordered-list__list-item">Ends, Joe Macleod</li>
+      <li class="unordered-list__list-item">Modernising legacy applications, Luke Mortonand David Winter</li>
+      <li class="unordered-list__list-item">World wide waste, Gerry Mcgovern</li>
+    </ul>
 
     <h2>Interviews</h2>
     <ul class="unordered-list">
@@ -59,14 +73,20 @@ strapline: I love to design in code, I'm a CSS enthusiast, Intrinsic and Sustain
       <li class="unordered-list__list-item">Maze, responsive grid framework <a href="https://github.com/cathydutton/postcss-maze" title="Maze, responsive grid framework" target="_blank" rel="noopener" class="anchor">PostCSS plugin</li>
     </ul>
   </section>
+  </div>
+</div>
 
-
-
+<div class="wrapper wrapper--no-container">
+  <section class="currently-using flow">
+    <h3>Currently using</h3>
+    <p>Tools aren’t everything but right now I'm using:</p>
+    {% include "tech.njk" %}
+  </section>
 </div>
 
 
-{# <div class="wrapper wrapper-bottom">
+<div class="wrapper wrapper-bottom">
   <section class="latest-posts">
     {% include "latest-posts.njk" %}
   </section>
-</div> #}
+</div>
