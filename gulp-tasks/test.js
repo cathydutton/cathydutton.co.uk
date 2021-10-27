@@ -1,7 +1,7 @@
 var project = require('./_project.js');
-var gulp = require('gulp');
+var gulp    = require('gulp');
 var access = require('gulp-accessibility');
-var rename = require('gulp-rename');
+var rename = require("gulp-rename");
 var postcss = require('gulp-postcss');
 var stylelint = require('stylelint');
 var eslint = require('gulp-eslint');
@@ -64,7 +64,6 @@ gulp.task('jsLint', function () {
 //   'jsTest',
 //   'jsLint'
 // ));
-
 
 gulp.task('test', gulp.parallel(
   'cssLint',
