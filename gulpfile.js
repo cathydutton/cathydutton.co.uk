@@ -1,6 +1,6 @@
 var gulp  = require('gulp');
 var shell = require('gulp-shell');
-// var livereload = require('gulp-livereload');
+var livereload = require('gulp-livereload');
 
 /**
   Our gulp tasks live in their own files,
@@ -18,7 +18,7 @@ gulp.task('generate', () => {
   .pipe(shell([
     'eleventy'
   ])) 
-  // .pipe(livereload());
+  .pipe(livereload());
 })
 
 
