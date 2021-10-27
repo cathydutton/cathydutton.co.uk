@@ -1,6 +1,6 @@
 [build]
   Functions = "functions"
-  command = "gulp production --prod"
+  command = "yarn run build"
   publish = "dist"
-  NODE_ENV = "16.13.0"
+  NODE_ENV = "8.9.0"
   
