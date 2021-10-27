@@ -44,7 +44,7 @@
     }
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.7.1",
+    "@11ty/eleventy": ">=0.11",
     "@11ty/eleventy-plugin-rss": "^1.0.5",
     "@types/gulp-shell": "^0.7.0",
     "autoprefixer": "^9.3.1",
