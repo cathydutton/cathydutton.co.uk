@@ -66,7 +66,7 @@ gulp.task('jsLint', function () {
 // ));
 
 gulp.task('test', gulp.parallel(
-  'cssLint',
-  'jsTest',
-  'jsLint'
+'cssLint',
+'jsTest',
+'jsLint'
 ));
