@@ -13,13 +13,13 @@ require('require-dir')('./gulp-tasks');
  Run our static site generator to build the pages
 */
 
-gulp.task('generate', () => {
-  return gulp.src('*.js', {read: false})
-  .pipe(shell([
-    'eleventy'
-  ])) 
-  .pipe(livereload());
-})
+// gulp.task('generate', () => {
+//   return gulp.src('*.js', {read: false})
+//   .pipe(shell([
+//     'eleventy'
+//   ])) 
+//   .pipe(livereload());
+// })
 
 
 // gulp.task('generate', () => {
@@ -28,7 +28,7 @@ gulp.task('generate', () => {
 //     .pipe(shell(['eleventy']))
 // })
 
-// gulp.task('generate', shell.task('eleventy'));
+gulp.task('generate', shell.task('eleventy'));
 
 /*
   compile the assets to the correct destination
