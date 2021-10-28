@@ -1,7 +1,5 @@
 [build]
-  Functions = "functions"
   command = "gulp production --prod"
-  publish = "dist"
-  NODE_VERSION = ">=10"
-  NODE_ENV = ">=10"
 
+[build.environment]
+  NODE_VERSION = "14.17.6"
