@@ -2,5 +2,5 @@
   Functions = "functions"
   command = "gulp production --prod"
   publish = "dist"
-  NODE_ENV = "14.17.6"
-  
+  NODE_VERSION = "16.13.0"
+
