@@ -58,15 +58,11 @@ gulp.task('jsLint', function () {
 /*
   Run all tests 
 */
-// gulp.task('test', gulp.parallel(
-//   'cssLint',
-//   'a11y',
-//   'jsTest',
-//   'jsLint'
-// ));
-
 gulp.task('test', gulp.parallel(
-'cssLint',
-'jsTest',
-'jsLint'
+  'cssLint',
+  'a11y',
+  'jsTest',
+  'jsLint'
 ));
+
+

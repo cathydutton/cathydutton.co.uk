@@ -22,13 +22,13 @@ require('require-dir')('./gulp-tasks');
 // })
 
 
-// gulp.task('generate', () => {
-//   return gulp
-//     .src('*.js', { read: false })
-//     .pipe(shell(['eleventy']))
-// })
+gulp.task('generate', () => {
+  return gulp
+    .src('*.js', { read: false })
+    .pipe(shell(['eleventy']))
+})
 
-gulp.task('generate', shell.task('eleventy'));
+
 
 /*
   compile the assets to the correct destination
