@@ -28,11 +28,10 @@ Cards
 .card img {
   width: 100%;
   grid-row: 1; 
-  mix-blend-mode: overlay;
 }
 
 .card-wrapper:hover img,
-.card-wrapper:focus img{
+.card-wrapper:focus img {
   mix-blend-mode: normal;
 }
 
@@ -57,14 +56,14 @@ Cards
 .card-wrapper:focus {
   cursor: pointer;
   transition: all .3s ease-in-out;
-  outline-style: dashed;
-  outline-color: var(--colour-pink-light);
-  outline-width: 2px;
-  background: linear-gradient(180deg, var(--colour-pink) 0%, var(--colour-pink) 35%, var(--colour-white) 35%);
-
+  border: solid 4px var(--colour-pink);
+  outline: none;
 } 
 
-
+.card-wrapper:hover .card img,
+.card-wrapper:focus .card img {
+mix-blend-mode: overlay;
+}
 
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
   

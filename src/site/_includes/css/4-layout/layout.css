@@ -37,7 +37,7 @@ section {
 
 .wrapper--top {
   margin-top: -10rem;
-  padding: 1.5rem 1.5rem 0 1.5rem;
+  padding: 1.5rem;
   background: var(--colour-white);
   border: solid 1px var(--colour-grey);
 }

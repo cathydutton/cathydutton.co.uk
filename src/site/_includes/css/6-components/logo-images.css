@@ -26,7 +26,7 @@ Logo images
 .work-logo__item a { 
   display: inline;
   padding: 0;
-  background: var(--colour-pink);
+  /* background: var(--colour-pink); */
   transition: all .3s ease-in-out;
 }
 
@@ -36,8 +36,7 @@ Logo images
 .work-logo__item a:active img,
 .tech-logo__item a:focus img,
 .work-logo__item a:focus img { 
-  /* opacity: 70%; */
-  mix-blend-mode: normal;
+  opacity: 70%; 
 }
 
 .tech-logo__item a:hover,
@@ -58,7 +57,7 @@ Logo images
   grid-template-rows: subgrid;
   padding: 0;
   border: none; 
-  mix-blend-mode: overlay;
+  mix-blend-mode: normal;
 }
 
 .column-2 {
