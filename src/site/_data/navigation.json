@@ -8,15 +8,9 @@
       "url": "/about-me/"
     },
     {
-      "menu_item": "Portfolio",
-      "url": "/portfolio/"
-    },
-    {
       "menu_item": "Blog",
       "url": "/posts/"
-    },
-    {
-      "menu_item": "Components",
-      "url": "/components/"
     }
   ]
+
+
