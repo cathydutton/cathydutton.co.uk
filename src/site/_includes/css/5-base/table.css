@@ -10,7 +10,13 @@
 table {
   border-collapse: collapse;
   margin: 1rem 0;
+  width: 100%;
 }
+
+table caption {
+ text-align: left;
+}
+
 
 table::-webkit-scrollbar {
   width: 5px;
@@ -29,3 +35,14 @@ td {
   padding: 15px;
   text-align: left;
 }
+
+
+.grey {
+ background-color: #e3e3e3;
+}
+
+.light-grey {
+background-color: #f3f3f3; 
+}
+
+

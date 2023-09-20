@@ -17,3 +17,7 @@ img {
   border: solid 1px var(--colour-grey);
   background: url('/images/placeholder.svg') var(--colour-grey-light) no-repeat 50% 50%;
 }
+
+img.half {
+  width: 50%;
+}
