@@ -68,6 +68,10 @@ ul {
   font-size: 1.1rem;
 }
 
+.highlight-text.margin-bottom p {
+  margin-bottom: 10px;
+}
+
 .page-intro {
   font-size: 1.3rem;
   margin-bottom: var(--flow-space);
