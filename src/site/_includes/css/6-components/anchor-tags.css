@@ -20,17 +20,18 @@
 .anchor {
   transition: all .3s ease-in-out;
   color: currentColor;
-  text-decoration: underline;
-  /* text-underline-offset: 1px;
-  text-decoration-thickness: 1px;
-  transition: all .3s ease-in-out; */
-  /* padding: 0 .3rem; */
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  transition: all .3s ease-in-out;
 }
 
 a:hover,
 .anchor:hover {
   /* outline: dashed 1px var(--colour-pink); */
   text-decoration: none;
+  outline: none;
+  text-decoration: none;
+  background: var(--colour-pink-light); 
 }
 
 a:active,
