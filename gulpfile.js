@@ -38,8 +38,8 @@ gulp.task('assets', gulp.parallel(
   'styles',
   'scripts',
   'copyScripts',
-  'copyFonts',
-  'blueSky'
+  'copyFonts'
+  // 'blueSky'
 ));
 
 
@@ -55,7 +55,7 @@ gulp.task('build', gulp.series(
   Production 
 */
 gulp.task('production', gulp.series(
- // 'test',
+  'test',
   'build'
 ));
 
