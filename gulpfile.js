@@ -38,7 +38,8 @@ gulp.task('assets', gulp.parallel(
   'styles',
   'scripts',
   'copyScripts',
-  'copyFonts'
+  'copyFonts',
+  'blueSky'
 ));
 
 
