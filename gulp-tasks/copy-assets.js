@@ -23,8 +23,8 @@ gulp.task('copyFonts', function() {
 
 // Copy fbluesky dist fonts folder
 gulp.task('blueSky', function() {
-  return gulp.src(project.buildSrc + "/.well-known/atproto-did")
-      .pipe(gulp.dest(project.buildDest+ "/.well-known"))
+  return gulp.src(project.buildSrc + "/blueSky/*")
+      .pipe(gulp.dest(project.buildDest+ "/.well-known/"))
       .pipe(livereload());
 });
 
