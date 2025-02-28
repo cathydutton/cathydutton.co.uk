@@ -12,6 +12,7 @@
 
       Email: info@cathydutton.co.uk
       Twitter: cathy_dutton
+      Bluesky: @cathydutton.co.uk
       website: cathydutton.co.uk
       
   -->
@@ -119,6 +120,17 @@
       <section class="flow"> 
         {{ content | safe }}
         <p>
+          <a href="https://bsky.app/intent/compose?text={{ title }}+{{ postURL }}" rel="noopener"  target="_blank" class="share-post-anchor">
+            Share on Bluesky
+          </a> 
+        </p>  
+
+
+
+
+
+
+         <p>
           <a href="https://twitter.com/intent/tweet?text={{ title }}&url={{ postURL }}" rel="noopener"  target="_blank" class="share-post-anchor">
             Share on Twitter
           </a> 
