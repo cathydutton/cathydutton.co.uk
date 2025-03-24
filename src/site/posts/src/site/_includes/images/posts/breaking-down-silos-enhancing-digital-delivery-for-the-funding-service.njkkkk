@@ -28,19 +28,25 @@ This made it difficult for us to align service wide tasks like onboarding new gr
 From a planning perspective it was also difficult to take a service view and therefore difficult to make sure we were prioritising the right work. It was also hard for us to clearly define the cost to run vs our spend on improvement work as each product team carried out a mixture of both in each sprint. </p>
 <p>
 Finally the team had a heavy reliance on suppliers, particularly in decision making roles. All these things combined made it difficult to design or deliver a complete service, including handover points and interactions or tasks that fell between systems.
-Existing teams and workflow structured around products.</p>
+</p>
+
+<figure id="figure1">
+<img src="/images/posts/breaking-down-silos-enhancing-digital-delivery-for-the-funding-service/existing-team-structure.png" class="" loading="lazy" alt="Origional team structure">
+<figcaption>Existing teams and workflow structured around products.</figcaption>
+</figure>
+
+
+<h2>Structure around services</h2>
 
 
 
 
-<h2Structure around services</h2
+<p>These challenges highlighted the need for a more flexible team structure allowing us to adopt a service approach to problem-solving and prioritising work, and for more integration across the core delivery teams, reducing single points of knowledge and simplifying working relationships with the teams we support</p>
 
-
-
-
-These challenges highlighted the need for a more flexible team structure allowing us to adopt a service approach to problem-solving and prioritising work, and for more integration across the core delivery teams, reducing single points of knowledge and simplifying working relationships with the teams we support.
-
-New team structure enabling us to focus on user needs across the service.
+<figure id="figure1">
+<img src="/images/posts/breaking-down-silos-enhancing-digital-delivery-for-the-funding-service/new-team-structure.png" class="" loading="lazy" alt="Origional team structure">
+<figcaption>New team structure enabling us to focus on user needs across the service.</figcaption>
+</figure>
 
 <h3>Service insight team</h3>
 
@@ -54,47 +60,80 @@ New team structure enabling us to focus on user needs across the service.
 
 <p>Finally we brought the service delivery teams closer together by pairing product teams under single product and delivery managers. Our digital form builder used to collect information from providers was paired with the data management system giving us better oversight of the data we collect and how it is used across the service. We combined the two teams responsible for the front stage or provider facing part of the service enabling them to take ownership of the full provider experience. Finally we paired our complex calculation system with the contracting and payment system. This was done in line with our ambition to utilise domain driven design, as the two oldest systems in the service they had duplicated calculation and data handling functionality that we wanted to reduce over time.</p>
 
-
-Product teams set up 
+<figure id="figure1">
+<img src="/images/posts/breaking-down-silos-enhancing-digital-delivery-for-the-funding-service/product-team-setup.png" class="" loading="lazy" alt="Origional team structure">
+<figcaption>Product teams set up.</figcaption>
+</figure>
 
 
 <p>The new structure aims to remove single points of knowledge, reduce entry points for work and simplify how we interact with our stakeholders. It will also help us to more clearly define and cost business as usual delivery away from improvement work. Overall, our aim is to enhance collaboration and flexibility whilst increasing the efficiency of digital delivery. </p>
 
 <h2>Design the flow of work</h2>
 
-With the structure in place we then need to design how work flows through those teams. The team currently uses scaled agile and comes together to plan in 3-month increments. I’ve never been a huge fan of SAFe but I could see how this was needed when we had 6 product teams with huge dependency on each other to deliver the annual funding cycle. 
 
-The issue is working this way incentivises each team to fill their 3-month block with work but it doesn’t facilitate service wide prioritisation meaning we may not always be working on the most important things. To address this we started to introduce goals for each PI aligned to our four strategic objectives:
+<p>With the structure in place we then need to design how work flows through those teams. The team currently uses scaled agile and comes together to plan in 3-month increments. I’ve never been a huge fan of SAFe but I could see how this was needed when we had 6 product teams with huge dependency on each other to deliver the annual funding cycle. 
+</p>
+<p>The issue is working this way incentivises each team to fill their 3-month block with work but it doesn’t facilitate service wide prioritisation meaning we may not always be working on the most important things. To address this we started to introduce goals for each PI aligned to our four strategic objectives:
+</p>
 
-Sustain operational excellence (business as usual delivery)
-Build service agility, resilience and efficiency 
-Increase certainty for providers 
-Grow the grant value we support 
+<ol class="ordered-list">
+<li class="ordered-list__list-item">Sustain operational excellence (business as usual delivery)</li>
+<li class="ordered-list__list-item">Build service agility, resilience and efficiency</li>
+<li class="ordered-list__list-item">Increase certainty for providers</li>
+<li class="ordered-list__list-item">Grow the grant value we support</li>
+</ol>
 
+
+<p>
 This was the first step towards making sure all the work we do is aligned with the service strategy and not systems or features. After that we introduced a simple form to capture all the asks of the digital teams. This stops work going directly to product managers in each team and creates a standard and fair way for requests to be evaluated. This process prevents us from duplicating effort across teams and allows us to introduce service level prioritisation. It also helps us to start changing how work is framed, moving requests from solutions to build to problems to be solved.
-
+</p>
+<p>
 As well as handling requests for work from policy or operational colleagues we also need to integrate feedback loops at both product and service level. The insight team will support this by managing a recurring external provider survey and will also implement a similar survey for internal users. They will also carry out user research and analyse existing data from our error and near miss logs to help identify the next areas of focus for our outcome teams.
+</p>
 
-Feedback loops and workflows into the service delivery teams and the outcome focused teams.
-Once the teams are settled into the new structures we plan to review the PI planning process and explore ways to bring together the yearly funding milestones and tasks with our existing agile methods.
-Build capability 
+<figure id="figure1">
+<img src="/images/posts/breaking-down-silos-enhancing-digital-delivery-for-the-funding-service/feedback-loops.png" class="" loading="lazy" alt="Origional team structure">
+<figcaption>Feedback loops and workflows into the service delivery teams and the outcome focused teams.</figcaption>
+</figure>
 
-Our starting team was heavily weighted towards product owners with no UCD leadership and a reliance on managed services for key planning and decision making roles. To address this we needed to grow the team and diversify our in house skill sets.
+<p>Once the teams are settled into the new structures we plan to review the PI planning process and explore ways to bring together the yearly funding milestones and tasks with our existing agile methods.
+</p>
 
-Existing Civil Servant team roles
+<h2>Build capability </h2>
 
-My Civil Service career to date has mostly been about growing design capability by hiring content, interaction and service designers as well as user researchers. This past year though things have been more difficult, the focus is very much on reducing headcount and spend. Despite this, in order to focus our delivery teams on outcomes, user needs, and continuous improvement we needed to have expertise in a range of professions. We also need to provide people with opportunities to learn and develop and to experience different types of delivery or different phases of projects.
+<p>Our starting team was heavily weighted towards product owners with no UCD leadership and a reliance on managed services for key planning and decision making roles. To address this we needed to grow the team and diversify our in house skill sets.
+</p>
 
+<figure id="figure1">
+<img src="/images/posts/breaking-down-silos-enhancing-digital-delivery-for-the-funding-service/civil-servant-roles.png" class="" loading="lazy" alt="Origional team structure">
+<figcaption>Existing Civil Servant team roles.</figcaption>
+</figure>
+
+
+<p>My Civil Service career to date has mostly been about growing design capability by hiring content, interaction and service designers as well as user researchers. This past year though things have been more difficult, the focus is very much on reducing headcount and spend. Despite this, in order to focus our delivery teams on outcomes, user needs, and continuous improvement we needed to have expertise in a range of professions. We also need to provide people with opportunities to learn and develop and to experience different types of delivery or different phases of projects.
+</p>
+<p>
 Our new team structure helps with providing more opportunities, giving people the chance to work on critical live services as well as discovery and alpha projects. Bringing the core delivery teams closer together also enables people to move teams more freely gaining experience across the whole service.
-
+</p>
+<p>
 To start to grow our in-house capabilities we first designed our team of the future. Our aim is to have 1 senior and 1 more junior role in every profession to give us greater resilience, clear career progression routes and more assurance over the work of suppliers. In key decision and oversight roles like delivery and product management we will have more than 2 roles enabling us to take responsibility for delivery and to shape what we do and how we do it. For similar reasons we also decided to make the insight team civil servants only, giving us much more autonomy over our long term direction.
+</p>
+<figure id="figure1">
+<img src="/images/posts/breaking-down-silos-enhancing-digital-delivery-for-the-funding-service/future-cival-servant-roles.png" class="" loading="lazy" alt="Origional team structure">
+<figcaption>Future Civil Servant roles.</figcaption>
+</figure>
 
+ 
 
-Future Civil Servant roles 
+<p>Over the last 12-months we have increased the coverage of UCD roles by hiring a lead and senior service designer and a senior user researcher. We have also added 2 new delivery managers with more roles planned for 2025.
+</P>
 
-Over the last 12-months we have increased the coverage of UCD roles by hiring a lead and senior service designer and a senior user researcher. We have also added 2 new delivery managers with more roles planned for 2025.
-Summary 
+<h2>Summary </h2>
+<p>
 Our primary mission is the seamless delivery of the annual funding cycle, a critical responsibility that consumes nearly all of our resources. Because of that, shifting our delivery to be outcome focused and centered around user needs and continuous improvement has been slow. We have also had to contend with working through a period of downsizing rather than growth. To tackle this, we’ve adopted a staged approach making efficiencies wherever we can to re-invest in more strategic goals.  
-Next steps
-Everything discussed in this post is about the digital teams and how we are evolving, but there is so much more to delivery then the digital side of things. Outside of digital our funding policy implementation (FPI) team are working up front with Policy to streamline the delivery of grants. We also have a collaborative project with FPI to explore how we can design grants that are simpler to operationalise or more consistent allowing us to utilise reusable service patterns. 
+</p>
 
+<h2>Next steps</h2>
+<p>
+Everything discussed in this post is about the digital teams and how we are evolving, but there is so much more to delivery then the digital side of things. Outside of digital our funding policy implementation (FPI) team are working up front with Policy to streamline the delivery of grants. We also have a collaborative project with FPI to explore how we can design grants that are simpler to operationalise or more consistent allowing us to utilise reusable service patterns. 
+</p>
