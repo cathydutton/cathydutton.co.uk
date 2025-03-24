@@ -1,34 +1,66 @@
-Breaking Down Silos: Enhancing Digital Delivery for ESFA's Funding Service
-The post on Mission-Driven Government highlights the growing momentum and opportunity to rethink service delivery in government. It emphasises that, within our existing structures, the most effective starting point is our digital teams. This post explores how we are putting that into action, breaking down silos and reshaping our approach to delivery.
-——
- This year, the ESFA’s Funding Service will distribute over £76 billion to 25,000 providers across the education and skills sector. When I joined the service to lead the digital teams just over 12 months ago I was asked this question by CDDO…
-“How have you broken down silos, set up multidisciplinary teams, and reoriented delivery to focus on outcomes, user needs, and continuous improvement?”
-There’s still a lot of work to do, but this post goes through what the team have achieved over the last 12-months. 
-Where we started
-6 years of investment in digital systems meant the service could collect and manage data, calculate and publish allocations, issue contracts, and provide education providers with online access to their funding details and calculations. The digital teams were organically formed around existing business processes, with each operational delivery team having a digital team to build, run and maintain the technology used to support delivery. 
-This made it difficult for us to align service wide tasks like onboarding new grants to each of the systems and to tackle service wide problems like how do we better communicate funding decisions. The siloed product delivery approach also led to inconsistencies across the suite of products and meant we had numerous single points of failure or product experts embedded in each team. This meant that people interacting with the digital teams or wishing to discuss new funding streams needed to speak to, align and plan work with multiple people.
-From a planning perspective it was also difficult to take a service view and therefore difficult to make sure we were prioritising the right work. It was also hard for us to clearly define the cost to run vs our spend on improvement work as each product team carried out a mixture of both in each sprint. 
+--- 
+title: Breaking Down Silos: Enhancing Digital Delivery for ESFA's Funding Service
+description: The post on Mission-Driven Government highlights the growing momentum and opportunity to rethink service delivery in government. It emphasises that, within our existing structures, the most effective starting point is our digital teams. This post explores how we are putting that into action, breaking down silos and reshaping our approach to delivery.
+tags: [Design] 
+date: "2025-03-28" 
+pageName: Blog
+postURL: https://cathydutton.co.uk/posts/breaking-down-silos-enhancing-digital-delivery-for-the-funding-service/
+---
+
+
+<p>This year, the ESFA’s Funding Service will distribute over £76 billion to 25,000 providers across the education and skills sector. When I joined the service to lead the digital teams just over 12 months ago I was asked this question by CDDO…</p>
+<figure class="quote">
+  <blockquote>
+How have you broken down silos, set up multidisciplinary teams, and reoriented delivery to focus on outcomes, user needs, and continuous improvement?
+  </blockquote>
+</figure>
+
+<p>There’s still a lot of work to do, but this post goes through what the team have achieved over the last 12-months.</p>
+
+
+<h2>Where we started</h2>
+
+<p>
+6 years of investment in digital systems meant the service could collect and manage data, calculate and publish allocations, issue contracts, and provide education providers with online access to their funding details and calculations. The digital teams were organically formed around existing business processes, with each operational delivery team having a digital team to build, run and maintain the technology used to support delivery. </p>
+<p>
+This made it difficult for us to align service wide tasks like onboarding new grants to each of the systems and to tackle service wide problems like how do we better communicate funding decisions. The siloed product delivery approach also led to inconsistencies across the suite of products and meant we had numerous single points of failure or product experts embedded in each team. This meant that people interacting with the digital teams or wishing to discuss new funding streams needed to speak to, align and plan work with multiple people.</p>
+<p>
+From a planning perspective it was also difficult to take a service view and therefore difficult to make sure we were prioritising the right work. It was also hard for us to clearly define the cost to run vs our spend on improvement work as each product team carried out a mixture of both in each sprint. </p>
+<p>
 Finally the team had a heavy reliance on suppliers, particularly in decision making roles. All these things combined made it difficult to design or deliver a complete service, including handover points and interactions or tasks that fell between systems.
-Existing teams and workflow structured around products.
-Structure around services
+Existing teams and workflow structured around products.</p>
+
+
+
+
+<h2Structure around services</h2
+
+
+
+
 These challenges highlighted the need for a more flexible team structure allowing us to adopt a service approach to problem-solving and prioritising work, and for more integration across the core delivery teams, reducing single points of knowledge and simplifying working relationships with the teams we support.
 
 New team structure enabling us to focus on user needs across the service.
 
-Service insight team
+<h3>Service insight team</h3>
 
-The service insight team will be able to carry out research outside of product teams and away from the constraints of what already exists. This will allow them to quickly adapt to emerging priorities or new requests. The small team will take a service wide approach focussing on the needs of our internal and external users, moving us from uvalidating designs or solutions to making more informed decisions about what we need to design and deliver.​
-Outcome focussed teams
+<p>The service insight team will be able to carry out research outside of product teams and away from the constraints of what already exists. This will allow them to quickly adapt to emerging priorities or new requests. The small team will take a service wide approach focussing on the needs of our internal and external users, moving us from uvalidating designs or solutions to making more informed decisions about what we need to design and deliver.​</p>
 
-The outcome focussed teams will allow us to start to tackle some of the known problems that don’t fit neatly into any of the product teams. By funding teams and not specific projects or systems we are able to focus on outcomes and adding value, giving us more flexibility to react or change based on what we learn. These teams also help us to more clearly define value add and improvement work vs the regular running and refining of the funding service systems. To start we set up two teams to run two discoveries. One looking into how we could more efficiently and effectively communicate funding decisions and one looking at how we could enable the teams to onboard more grants to the service.
-Service delivery team
+<h3>Outcome focussed teams</h3>
 
-Finally we brought the service delivery teams closer together by pairing product teams under single product and delivery managers. Our digital form builder used to collect information from providers was paired with the data management system giving us better oversight of the data we collect and how it is used across the service. We combined the two teams responsible for the front stage or provider facing part of the service enabling them to take ownership of the full provider experience. Finally we paired our complex calculation system with the contracting and payment system. This was done in line with our ambition to utilise domain driven design, as the two oldest systems in the service they had duplicated calculation and data handling functionality that we wanted to reduce over time.
+<p>The outcome focussed teams will allow us to start to tackle some of the known problems that don’t fit neatly into any of the product teams. By funding teams and not specific projects or systems we are able to focus on outcomes and adding value, giving us more flexibility to react or change based on what we learn. These teams also help us to more clearly define value add and improvement work vs the regular running and refining of the funding service systems. To start we set up two teams to run two discoveries. One looking into how we could more efficiently and effectively communicate funding decisions and one looking at how we could enable the teams to onboard more grants to the service.</p>
+
+<h3>Service delivery team</h3>
+
+<p>Finally we brought the service delivery teams closer together by pairing product teams under single product and delivery managers. Our digital form builder used to collect information from providers was paired with the data management system giving us better oversight of the data we collect and how it is used across the service. We combined the two teams responsible for the front stage or provider facing part of the service enabling them to take ownership of the full provider experience. Finally we paired our complex calculation system with the contracting and payment system. This was done in line with our ambition to utilise domain driven design, as the two oldest systems in the service they had duplicated calculation and data handling functionality that we wanted to reduce over time.</p>
 
 
 Product teams set up 
-The new structure aims to remove single points of knowledge, reduce entry points for work and simplify how we interact with our stakeholders. It will also help us to more clearly define and cost business as usual delivery away from improvement work. Overall, our aim is to enhance collaboration and flexibility whilst increasing the efficiency of digital delivery. 
-Design the flow of work
+
+
+<p>The new structure aims to remove single points of knowledge, reduce entry points for work and simplify how we interact with our stakeholders. It will also help us to more clearly define and cost business as usual delivery away from improvement work. Overall, our aim is to enhance collaboration and flexibility whilst increasing the efficiency of digital delivery. </p>
+
+<h2>Design the flow of work</h2>
 
 With the structure in place we then need to design how work flows through those teams. The team currently uses scaled agile and comes together to plan in 3-month increments. I’ve never been a huge fan of SAFe but I could see how this was needed when we had 6 product teams with huge dependency on each other to deliver the annual funding cycle. 
 
