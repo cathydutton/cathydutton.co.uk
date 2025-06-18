@@ -12,9 +12,106 @@ postURL: https://cathydutton.co.uk/posts/designing-for-better-delivery:-how-reth
 When I moved out of a hands-on design role, I started thinking more about how design could influence or create the conditions for good service delivery to happen. After speaking with other UCD professionals in leadership and delivery roles, two big themes emerged:
 </p>
 
+<ol class="ordered-list">
+<li class="ordered-list__list-item">Designing team structures and processes (which I wrote about in <a href="https://www.cathydutton.co.uk/posts/breaking-down-silos-enhancing-digital-delivery-for-the-funding-service/" class="anchor" target="_blank">Breaking Down Silos</a>)
+</li>
+<li class="ordered-list__list-item">Designing our relationship with suppliers to create the conditions for whole service delivery instead of systems and IT
+</li>
+</ol>
 
-<h2></h2>
+<h2>Where we started
+</h2>
+
+<p>
+We began with three product- or system-specific contracts, all awarded to the same supplier. This reinforced a siloed delivery model as each team focused on its own system, with little coordination across the service. This led to duplicated effort, multiple hand offs, and a lack of accountability especially in areas between systems and offline interactions. 
+</p>
 
 
+<p>
+People were tied to specific products, making it hard to bring in cross-cutting expertise like enterprise architecture or service designers. And when priorities shifted or urgent issues emerged, reallocating supplier teams was slow and labour intensive. On top of that, relying on a single supplier across all areas left us vulnerable and created a lack of resilience.
+</p>
 
- 
+<p>
+The way our contracts had been designed was hindering collaboration and making it very difficult for us to prioritise work across teams. We wanted to move toward a model that enabled more flexibility, collaboration, and shared responsibility for the overall service.
+</p>
+
+<h2>Rethinking our contract approach
+</h2>
+
+<p>Suppliers often specialise in either design and research or technical delivery. We wanted to make sure we had the right skill sets and expertise across all disciplines so our first aim was to bring in two separate suppliers. 
+</p>
+
+<p>Initially we thought about setting up capability-based contracts (e.g. adding a dedicated UCD supplier), but this would make it even harder to introduce accountability. It would also have added complexity through duplication in statements of work and longer setup times to align mixed supplier teams.
+</p>
+
+<p>So instead of tying contracts to specific disciplines, we aligned them to the core aims of our funding service strategy, built around four pillars:
+</p>
+
+<ul class="unordered-list">
+<li class="unordered-list__list-item">Delivering the business-as-usual funding cycle
+</li>
+<li class="unordered-list__list-item">Improving resilience, scalability, and efficiency
+</li>
+<li class="unordered-list__list-item">Creating a simpler, clearer, and more transparent experience for education providers
+</li>
+<li class="unordered-list__list-item">Onboarding more funding streams to grow the value of the service
+</li>
+</ul>
+
+<p>The first two focus on maintaining and refining the existing service; the second two on enhancing and expanding it. So we set up two new contracts to support this:
+</p>
+
+
+1 Run and Refine: This work focuses on sustaining and strengthening the core service. 
+Run teams keep funding flowing and support day-to-day operations. Refine teams improve live journeys and resolve priority issues
+
+2 Improve and Grow - This work focuses on strategic change and transformation allowing us to improve how users interact with the service and grow the amount of funding we can support. 
+
+
+<h2>What this gives us
+</h2>
+
+<p>We hope this new approach will deliver some key benefits including:
+</p>
+
+<p>Faster response to change: By structuring contracts around work streams instead of systems, we can be more responsive and more flexible. Outcome-focused teams can work across journeys and products adapting to any shift in priority. Whilst a single run-and-refine contract helps us move resources between systems quickly to align to peaks in workload or to react to live issues.
+</p>
+
+<p>Improved planning and prioritisation: We can now plan more effectively across products and scale teams up or down based on what’s needed. We can also focus on the work that brings the most value to the service instead of having equal amounts of resource for each system. 
+</p>
+
+<p>Greater resilience and supplier choice: Having two suppliers reduces dependency on one provider and gives us more flexibility to bring in the right skills for different challenges.
+</p>
+
+<p>Clearer separation of concerns: Separating run from improve work helps us better define and cost business-as-usual versus change. It also supports smarter decision-making so we know when to invest long-term and when to take a more pragmatic, short-term approach.
+</p>
+
+<p>Better support for funding and transparency: In future it should be easier to demonstrate what’s being delivered and why. The clearer structure also supports future funding models being explored across government, which separate the running of live services from innovation and transformation. This lines up with the principles outlined in an Agile and Productive state, helping us to show progress against agreed outcomes. 
+</p>
+
+<h2>Putting it into practice
+</h2>
+
+<p>This is still evolving, but we’re starting to define how teams will work under this new model:
+</p>
+
+<p>Run teams keep funding flowing and support daily operations, aligning closely to the annual funding cycle. This syncs us more closely with the 12-month operational delivery cycle and offers more assurance for policy teams.
+</p>
+
+<p>Refine teams improve live journeys and tackle priority issues. This work has always happened but often around the edges. By defining refine work more clearly, we can spot downtime and deploy teams more intentionally when and where they’re needed.
+</p>
+
+<p>Improve and grow teams focus on strategic transformation. Their work isn’t tied to the annual cycle, giving them space to plan and deliver longer-term change using agile, responsive methods.
+</p>
+
+<p>We’re also trying to shift thinking from systems to domains, for example ‘Collect and manage data’ instead of “form builder” or “ data system”. Each domain may have a mix of run, refine, or improve work, but never all three at once. This allows teams to move more fluidly between operational and strategic work, deepening domain knowledge and creating stronger connections across the service.
+</p>
+
+<p>Longer term we want to use this model for all our processes, right now we are developing roadmaps for Run, Refine, and Improve and Grow work which will then turn to governance processes and success measures for each. 
+</p>
+
+<h2>Final thoughts
+</h2>
+
+<p>We're still learning and embedding the processes, but I hope this shift in how we structure our contracts can help us build the conditions for better delivery with more flexibility, clearer accountability, and a stronger foundation for growing our service offer.
+</p>
