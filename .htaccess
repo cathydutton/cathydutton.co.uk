@@ -24,3 +24,6 @@ FileETag None
 
 ErrorDocument 404 /404.html
 Redirect https://cathydutton.co.uk/defaultsite https://cathydutton.co.uk/
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.cathydutton\.co\.uk$ [NC]
+RewriteRule ^(.*)$ https://cathydutton.co.uk/$1 [L,R=301]
