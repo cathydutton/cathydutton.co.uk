@@ -1,0 +1,128 @@
+title: It’s time to get serious about design
+Description: Design in government has lost its way. We’ve invested in discovery, compliance, and delivery, but not in creativity. Real transformation demands more than tweaking what exists and staying within our structures. If we’re serious about changing how government works, we need to get serious about design.
+tags: [Design] 
+date: "2025-08-08" 
+pageName: Blog
+postURL: https://cathydutton.co.uk/posts/its-time-to-get-serious-about-design
+---
+
+<p>Design has always been about solving problems. My favourite definition is:</p>
+<figure class="quote">
+  <blockquote>
+Design is a creative approach to problem solving.
+  </blockquote>
+</figure>
+<p>That distinguishes it from art, and from digitising processes without actually transforming them.</p>
+<p>Real design is a process that includes:</p>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">understanding the problem</li>
+<li class="unordered-list__list-item">generating ideas and testing assumptions
+</li>
+<li class="unordered-list__list-item">prototyping options
+</li>
+<li class="unordered-list__list-item">testing with users
+</li>
+<li class="unordered-list__list-item">refining ideas before implementation
+</li>
+</ul>
+<p>By the end of the process, you should have a preferred solution, a clear rationale, and measures of success. You should also have created something new or changed something that exists.</p>
+<p>If that hasn’t happened, design hasn’t happened either.</p>
+<h2>What’s the problem?</h2>
+<p>In digital government, design is often reduced to interface tweaks. The Alpha phase, meant for creativity, has become a box‑ticking exercise. What should be an exploratory space is now focused on layout and component decisions for pre‑determined websites, apps, or portals. Ideation has given way to implementation. Creativity has been replaced by compliance. A generation of designers is being conditioned to expect certainty, follow direction, and avoid ambiguity.</p>
+<h3>A crisis in creativity</h3>
+<p>This is stifling creativity. A good Alpha should be messy and full of useful failure and learning. That’s why my favorite thing to ask in Alpha assessments is:</p>
+<figure class="quote">
+  <blockquote>
+What’s in the bin?
+  </blockquote>
+</figure>
+<p>That question should surface bold ideas and the insight gained from their failure. Instead, the answers are often minor: button placement or anchor text. We’re not testing enough to have anything worth discarding.</p>
+<p>I had a very recent challenge of communicating bespoke statements across multiple funding streams, produced manually year after year. It was inconsistent and unscalable.</p>
+<p>We formed a multidisciplinary team to explore:</p>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">How we could present funding data more clearly and consistently
+</li>
+<li class="unordered-list__list-item">And if statements could be generating automatically from existing data sets</li>
+</ul>
+<p>It was clearly a design challenge, messy data, reusable patterns, dynamic templates, source-data improvement. Yet with no standard UI to improve on, the team struggled. They defaulted to safe, repetitive user research rather than taking creative risks. This wasn’t a lack of effort, it was a gap in design confidence, capability, and process. When the brief wasn’t “improve this webpage,” there was no way forward.</p>
+<h2>Times are changing</h2>
+<p>There are of course occasions when we need to move at pace, we can’t always design services in their entirety, and there’s definitely a place for just getting legacy <a href="Put that form online!" class="anchor" target="_blank">forms redesigned and online</a>.</p>
+<p>But the context is shifting. Real transformation is now possible. Fueled by the  <a href="https://www.gov.uk/government/publications/a-blueprint-for-modern-digital-government/a-blueprint-for-modern-digital-government-html" class="anchor" target="_blank">Agile and Productive State</a>  plan, now is the time to reimagine our services.</p>
+<figure class="quote">
+  <blockquote>
+We need to holistically improve policies, business processes, data, and systems rather than on a piecemeal basis.
+  </blockquote>
+</figure>
+<p>But when this opportunity strikes, do we have the creative skills in-house to deliver?</p>
+
+
+
+<h2>The service design trap</h2>
+<p>Service design should be our route out of small fixes and toward real transformation. But it’s not living up to that promise, at least not consistently.</p>
+<p>This is because we are still not getting service designers into the
+<a href="/" class="anchor" target="_blank">https://www.cathydutton.co.uk/posts/a-space-for-service-design/</a>right spaces</a>, or onto the right pieces of work. Hiring people with service design skills is one thing, but if we place them into the same teams with the same constrained brief and limited influence how can we expect things to change? The result is we’ve hired people with service design job titles, but they often end up:</p>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">Coordinating product teams</li>
+<li class="unordered-list__list-item">Leading other UCD professionals</li>
+<li class="unordered-list__list-item">Designing user interfaces</li>
+<li class="unordered-list__list-item">Running workshops or general facilitation</li>
+</ul>
+<p>These may be necessary tasks, but they’re not service design tasks. And over time, this separation of title from function has undermined both confidence in the role and its appeal.</p>
+<p>It has also created overlap with other digital roles in government, particularly product managers and service owners who all operate in the space of framing problems, measuring value and determining the direction and strategy for portfolios of work. That’s fine in principle; we all want better services. But the thing that should set service designers apart is the creative design process. And too often, it doesn’t.</p>
+<p>Because we scaled service design without properly and consistently creating the right spaces, with the right autonomy and creative freedom we ended up with people running workshops instead of solving problems, creating new services or changing existing ones. Worse still, because of this we lose some of the people we hired.</p>
+<h3>The loan wolf</h3>
+<p>If we’re serious about wider understanding and adoption for design skills we need to be honest about how roles like service design work with others. </p>
+<p>In one of my earlier efforts to embed service design, I placed designers across portfolios individually. My thinking was they needed to see across the whole portfolio to know where to focus. But they were the only ones operating at that level. Without user research, product management and business analysis operating at the same scope there’s little to be done besides the mapping. And mapping in isolation is fairly pointless.</p>
+<p>What we need is cross-functional teams operating at service level. In my current team, we’re building a service insight squad to do just that. Their remit is to look beyond systems and processes and focus on internal and external user needs, away from the constraints of existing systems or processes. Elevating research to the service as a whole instead of usability testing, creating a real service roadmap, not a digital one. This should shift us from validating ideas or solutions to making more informed decisions about what we need to change, design, and deliver. This is a work in progress and a shift in approach that will take time to settle in. </p>
+
+<h2>Creating the conditions </h2>
+<p>To truly transform services, we need to create the right conditions, not just add more designers.<p>
+<p>That means:</p>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">Cross-functional teams that span entire services
+</li>
+<li class="unordered-list__list-item">Space for creativity, ambiguity, and experimentation
+</li>
+<li class="unordered-list__list-item">Designers empowered to lead, not just execute
+</li>
+</ul>
+
+<p>As Charles Eames put it:</p>
+<figure class="quote">
+  <blockquote>
+The role of a designer is that of a very good, thoughtful host, anticipating the needs of his guests.  </blockquote>
+<p>That kind of anticipation, of designing proactively, empathetically, and with foresight, only happens when we give designers the autonomy and scope to do their work. It’s not about responding to briefs or colouring inside the lines. It’s about shaping what those lines should be in the first place.</p>
+<p>Hiring great designers isn’t enough, we must also empower them. I was recently asked if I would  rather hire the best designer, or someone who understands the complexity of government or a particular policy space. The answer should be the best designer but only if we can give them the platform they need.</p>
+<h3>Advocacy vs action<.h3>
+<p>It’s not the job of designers to create the right conditions. That’s the job of leadership. However, so many of the interviews or assessments I run with designers still circle back to their role being primarily around advocating or creating the right conditions.  </p>
+<p>That needs to change.</p>
+<p>What we do need is:</p>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">leaders who actively create the space for design to happen
+</li>
+<li class="unordered-list__list-item">designers who utilise that space</li>
+
+<li class="unordered-list__list-item">teams who are comfortable with ambiguity, experimentation, and change</li>
+</ul>
+
+<h2>Everyone’s a designer</h2>
+<p>
+Establishing good design practice is hard enough. Yet the narrative that “everyone’s a designer” complicates things further. Yes, everyone is responsible for delivering good services, just as everyone owns the user experience. But each profession has a distinct role. </p>
+
+<p>
+I really don’t think the increase in the use of the term co-design has helped us here. Co-design when used properly can be a powerful way to put real users and their lived experience at the heart of decision making. But when used in the wrong places there’s an unrealistic burden placed on users to understand more than just their own needs and context. This removes a key responsibility of the design profession. Our job is to synthesize multiple viewpoints, user needs, and constraints, and make tough design decisions. When that doesn’t happen, design becomes committee work, or worse, the loudest voice wins.</p>
+
+<h2>In summary</h2>
+<p>Government wants bold, digital-first transformation, but on the ground, we’re not ready. We’ve spent years advocating for design but are yet to go beyond that.
+There’s definitely momentum building, we’re seeing more senior roles dedicated to design and more designers moving to product and delivery roles. The right foundations are being laid to but to take this forward we need:</p>
+<ul class="unordered-list">
+<li class="unordered-list__list-item">Leaders to take ownership of creating the right conditions for design to thrive 
+</li>
+<li class="unordered-list__list-item">Designers to move from advocacy to action
+</li>
+<li class="unordered-list__list-item">Everyone to be ready to support ambiguity, experimentation, and learning.
+</li>
+</ul>
+<p>It’s time to get creative.</p>
+
+
