@@ -1,4 +1,18 @@
 [
+     {
+    "logo": "DfE",
+    "url": "https://www.gov.uk/government/organisations/department-for-education",
+    "width": "275px",
+    "height": "150px",
+    "class": "column-2 row-2"
+  },
+   {
+    "logo": "ESFA",
+    "url": "https://www.gov.uk/government/organisations/education-and-skills-funding-agency",
+    "width": "275px",
+    "height": "150px",
+    "class": "column-2 row-2"
+  },
   {
     "logo": "Defra",
     "url": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs",
