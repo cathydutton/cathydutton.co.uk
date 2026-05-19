@@ -65,12 +65,12 @@ The first data driven statements went live in April this year, with rollout acro
     </b>
 
 <figure id="figure1">
-<img src="/images/posts/delivering-and-improving-public-services-under-pressure/a.png" class="" loading="lazy" alt="Initial bespoke statement process ">
+<img src="/images/posts/delivering-and-improving-public-services-under-pressure/initial-process.png" class="" loading="lazy" alt="Initial bespoke statement process ">
 <figcaption>Initial bespoke statement process.</figcaption>
 </figure>
 
 <figure id="figure2">
-<img src="/images/posts/delivering-and-improving-public-services-under-pressure/b.png" class="" loading="lazy" alt="Data driven statement process ">
+<img src="/images/posts/delivering-and-improving-public-services-under-pressure/data-driven-process.png" class="" loading="lazy" alt="Data driven statement process ">
 <figcaption>Data driven statement process.</figcaption>
 </figure>
 
@@ -88,12 +88,12 @@ The operational data layer addresses this at the root. Instead of each team hold
 This shifts the model from a linear process to more of a hub and spoke approach, reducing duplication and unnecessary dependencies.
 </p>
 <figure id="figure3">
-<img src="/images/posts/delivering-and-improving-public-services-under-pressure/c.png" class="" loading="lazy" alt="Linear data flow">
+<img src="/images/posts/delivering-and-improving-public-services-under-pressure/linear-systems.png" class="" loading="lazy" alt="Linear data flow">
 <figcaption>Linear data flow.</figcaption>
 </figure>
 
 <figure id="figure4">
-<img src="/images/posts/delivering-and-improving-public-services-under-pressure/d.png" class="" loading="lazy" alt="Hub and spoke data model">
+<img src="/images/posts/delivering-and-improving-public-services-under-pressure/hub-and-spoke-system-design.png" class="" loading="lazy" alt="Hub and spoke data model">
 <figcaption>Hub and spoke data model.</figcaption>
 </figure>
 
@@ -146,7 +146,7 @@ To build on this and make it consistent, we created a North Star for the Funding
 </p>
 
 <figure id="figure5">
-<img src="/images/posts/delivering-and-improving-public-services-under-pressure/e.png" class="" loading="lazy" alt="North Star">
+<img src="/images/posts/delivering-and-improving-public-services-under-pressure/north-star.png" class="" loading="lazy" alt="North Star">
 <figcaption>North Star.</figcaption>
 </figure>
 <p>
@@ -215,7 +215,7 @@ To support this, we introduced clearer governance and prioritisation. A transfor
 <p>Earlier work had grouped systems into domains, but teams still worked largely in isolation. 
 </p>
 <figure id="figure6">
-<img src="/images/posts/delivering-and-improving-public-services-under-pressure/f.png" class="" loading="lazy" alt="Current state: 73 people">
+<img src="/images/posts/delivering-and-improving-public-services-under-pressure/current-team-structure.png" class="" loading="lazy" alt="Current state: 73 people">
 <figcaption> Current state: 73 people.</figcaption>
 </figure>
 
@@ -236,7 +236,7 @@ To support this, we introduced clearer governance and prioritisation. A transfor
 <p>Together, these factors prevent us from working consistently and sharing capability and processes across systems. By tackling these areas, we expect to introduce significant efficiencies over the next 12 to 18 months.
 </p>
 <figure id="figure7">
-<img src="/images/posts/delivering-and-improving-public-services-under-pressure/g.png" class="" loading="lazy" alt="Target: 45 people in 12 to 18 months">
+<img src="/images/posts/delivering-and-improving-public-services-under-pressure/target-team-structure.png" class="" loading="lazy" alt="Target: 45 people in 12 to 18 months">
 <figcaption>Target: 45 people in 12 to 18 months.</figcaption>
 </figure>
 
