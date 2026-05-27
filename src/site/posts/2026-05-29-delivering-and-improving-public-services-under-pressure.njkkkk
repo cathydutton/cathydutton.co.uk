@@ -1,6 +1,6 @@
 --- 
 title: Delivering and improving public services under pressure
-description: Public sector organisations are under constant pressure to do two things at once. Keep essential services running smoothly while improving the systems behind them. 
+description: Public sector organisations are under constant pressure to do two things at once: keep essential services running smoothly and improve the systems behind those service.
 tags: [Design, Delivery] 
 date: "2026-05-29" 
 pageName: Blog
@@ -12,21 +12,23 @@ postURL: https://cathydutton.co.uk/posts/delivering-and-improving-public-service
 
     <h2>Where we started</h2>
 
-    <p>
-In 2024, I took on responsibility for the Funding Service, building on six years of digital investment that had established systems to manage data, calculate and publish allocations, issue contracts, and authorise payments. Operating at significant scale and complexity, the service delivered 58 formula-based grants worth £84bn across 202 funding lines in 2024–25, consistently reaching targets through experienced teams and well-established processes.    </p>
+<p>
+In 2024, I took on responsibility for the Funding Service, building on six years of digital investment that had established systems to manage data, calculate and publish allocations, issue contracts, and authorise payments. Operating at significant scale and complexity, last year the service delivered 58 formula-based grants worth over £84bn across 202 funding lines, consistently reaching targets through experienced teams and well-established processes.  
+</p>
 
     <p>
-However, its incremental evolution has led to structural complexity, with funding delivered through a mix of systems, manual processes, and bespoke arrangements. Products had evolved beyond their original scope to manage edge cases, creating cross dependencies that made the service harder to scale or adapt. Change was often slow and costly, accountability was unclear, and siloed teams limited our ability to view and improve the service end to end. 
+However, its incremental evolution has led to structural complexity, with funding delivered through a mix of systems, manual processes, and bespoke arrangements. Products had evolved beyond their original scope to manage edge cases, creating cross dependencies that made the service harder to scale or adapt. Change was often slow and costly, and siloed teams limited our ability to view and improve the service end to end. 
     </p>
 
     <p>These are not failures of individual systems or teams. They are symptoms of a service that has become fragmented, and where variance is absorbed rather than removed.
     </p>
+
     <p>
       Over the first year, the focus was on creating the space to address this. We reshaped teams to move towards a more service-led, outcome-focused model, supported by better insight into user and service needs (<a href="https://cathydutton.co.uk/posts/breaking-down-silos-enhancing-digital-delivery-for-the-funding-service/" class="anchor" target="_blank">Breaking down silos</a>). In parallel, we redesigned our contract model, separating run and refine from improve and grow (<a href="https://cathydutton.co.uk/posts/designing-for-better-delivery:-how-rethinking-our-contracts-can-support-service-delivery/" class="anchor" target="_blank">Rethinking our contracts</a>), reducing supplier reliance, improving accountability, and giving us greater control.
     </p>
 
     <p>
-These changes reduced running costs and created a clearer separation between work on existing systems and improvement work, allowing us to reinvest in discovery work to shape how the service evolves. With those foundations in place, the next phase is underway, delivering our transformation projects, creating our service north star, and developing a path to a stable, cost effective run state.
+These changes reduced running costs and created a clearer separation between work on existing systems and improvement work, allowing us to reinvest savings in discoveries to shape how the service evolves. With those foundations in place, the next phase is underway, delivering our transformation projects, creating our service north star, and developing a path to a stable, cost effective run state.
     </p>
 
     <h2>Transformation projects</h2>
@@ -54,7 +56,7 @@ Through proof of concept work and a small private beta, they built a microservic
     </p>
 
     <p>
-The first data driven statements went live in April this year, with rollout across all funding streams planned. This will reduce the time to produce statements from weeks to hours, by removing the need for bespoke development each year. End users will receive consistent information all together in one place. 
+The first data driven statements went live in April this year, with rollout across all funding streams planned. This will reduce the time to produce statements from weeks to hours, by removing the need to collect data from multiple spreadsheets and then build bespoke HTML versions. End users will receive consistent information all together in one place. 
     </p>
 
     <b>
@@ -80,13 +82,17 @@ The first data driven statements went live in April this year, with rollout acro
       Another key finding from our Discovery work was how disjointed the use of data across the service was. Right now, operational data is spread across multiple systems, teams, and formats, both online and offline, requiring it to be copied, reworked, and moved between tools. These handovers can introduce errors, inconsistencies, and duplication, driving the need for additional QA and assurance work. Accessing information relies on manual extracts that are time-consuming and quickly become outdated.
     </p>
 
+<p>We also discovered that many grants remain mostly offline due to the effort required to get them set up on our current systems. In general the digital systems are used for the biggest grants meaning smaller and shorter term funding streams are disproportionately expensive to deliver using bespoke offline processes.
+</p>
+
     <p>
-The operational data layer addresses this at the root. Instead of each team holding its own version of the truth, it creates a single, trusted place where funding data is validated, updated and owned. The idea is that operational changes, in-year adjustments and provider updates can be made once, with clear approval and audit trails, and then flow automatically to every part of the service that needs it. 
+The operational data layer aims to address this at the root. Instead of each team holding its own version of the truth, it creates a single, trusted place where funding data is validated, updated and owned. The idea is that operational changes, in-year adjustments and provider updates can be made once, with clear approval and audit trails, and then flow automatically to every part of the service that needs it. 
     </p>
 
 <p>
 This shifts the model from a linear process to more of a hub and spoke approach, reducing duplication and unnecessary dependencies.
 </p>
+
 <figure id="figure3">
 <img src="/images/posts/delivering-and-improving-public-services-under-pressure/linear-systems.png" class="" loading="lazy" alt="Linear data flow">
 <figcaption>Linear data flow.</figcaption>
@@ -101,13 +107,20 @@ This shifts the model from a linear process to more of a hub and spoke approach,
 This reduces reliance on individual knowledge and workarounds, and improves auditability and traceability. Making the service easier to scale and easier to adapt, whether onboarding new funding or responding to policy change in existing funding lines. It will also reduce costs by removing duplicate cuts of data currently stored in multiple systems. 
     </p>
 
+<p>This is a shift from our previous work because instead of trying to better manage the complexity we’re aiming to remove some of that complexity.
+</p>
+
     <p>
-Running a complex live service makes prioritisation difficult. Urgent issues are constant, but quick fixes often lead to workarounds and isolated solutions that add complexity and variation, making the service harder to run.
+Running a complex live service makes prioritisation difficult. Urgent issues are constant, but quick fixes to things that already exist often lead to isolated solutions that add more complexity and variation, making the service harder to run.
     </p>
 
     <p>
 Thinking about communications and data as service wide problems was made possible by introducing outcome focused teams that could work across system boundaries. This started to move us away from reactive fixes and towards more joined up, end to end solutions.
     </p>
+
+<p>
+These outcome focused teams also allow us to think about delivery differently, instead of tackling data collection, calculations and payments as separate capabilities we can deliver a full journey for a smaller selection of grants, enabling us to learn as we go, and to select a cross section of funding lines meaning we embrace complexity from the start and therefore avoiding the previous issues we had around the service being unable to scale or adapt to different types of funding. 
+</p>
 
     <p>
 To build on this and make it consistent, we created a North Star for the Funding Service. It builds on the changes from year one and gives us a clear way to assess value, make trade offs, and focus on service wide outcomes.    </p>
@@ -269,6 +282,10 @@ To support this, we introduced clearer governance and prioritisation. A transfor
 
 <p>At this stage, we would move from a product-based model to a capability-based one. The focus shifts to a small set of core Funding Service capabilities: data collection, calculation, contracting, payment and communication. A smaller team then maintains these shared capabilities and the platform that supports them.
 </p>
+
+<p>Combined with the platform and architectural changes, this enables a capability-based run state. Services become more composable, easier to evolve, and cheaper to operate at scale.
+</p>
+
 <p>Combined with the platform and architectural changes, this enables a capability-based run state. Services become more composable, easier to evolve, and cheaper to operate at scale.
 </p>
 
@@ -303,7 +320,7 @@ To support this, we introduced clearer governance and prioritisation. A transfor
 <p> Year 1 was about understanding the service and creating the conditions for change. Year 2 has focused on turning that insight into action through targeted transformation projects, while continuing to deliver and iterate the live service.
 </p>
 
-<p> Year 3 will be about embedding these foundational changes, developing the service to take on more and different types of funding and moving into a lean run state for business as usual delivery. 
+<p>Year 3 will be about embedding these foundational changes, developing the service to take on more and different types of funding and being much more intentional about the improvement work we chose to take forward. moving into a lean run state for business as usual delivery. 
 </p>
 
 <p> For Communicating funding we want to roll out automated statements to all funding lines and identify opportunities to reuse this model, particularly in the contracting space.
@@ -311,10 +328,11 @@ We also want to make sure ongoing development of our front stage system aligns w
 </p>
 
 <p>For the Data layer we want to build a working prototype to test assumptions and validate early design decisions and then use this to learn before scaling the platform and enabling future automation of payment instructions and calculations. </p>
+
 <p>With the variation work we want to bring policy, and delivery work closer together to jointly develop and validate a small set of service patterns that reduce unnecessary variation and guide future policy designs. These patterns can then be used to underpin a clear policy design menu, so policy teams have real delivery choices that work in practice.</p>
 
 
-<p>Most of all, we need to move away from polishing what exists and making short term fixes that further fragment the service. We want to run the live service as efficiently as possible, while making sure all new work improves the service as a whole. This is what will allow us to take on new and evolving funding without the cost of bespoke development. </p>
-
+<p>Most of all, we need to move away from polishing what exists and making short term fixes that further fragment the service. We want to run the live service as efficiently as possible, while making sure all new work improves the service as a whole. To achieve that we need to start solving problems and stop managing the complexity. This is what will allow us to take on new and evolving funding without the cost of bespoke development. 
+</p>
 
 
