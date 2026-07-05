@@ -6,3 +6,206 @@ date: "2026-07-10"
 pageName: Blog
 postURL: https://cathydutton.co.uk/posts/the-portal-trap
 ---
+
+
+<p>A single entry point or 'portal' can help users navigate complexity, but it cannot replace the need to fix that complexity at source.</p>
+
+<p>No one likes portals, one-stop shops, single front doors or gateways, so why are they the go-to solution for so many large organisations? Around 2018 I came across a line from a talk by Ben Holliday that's stuck with me ever since:</p>
+
+<figure class="quote">
+  <blockquote>
+    We really need one portal for the council, said no one ever.
+  </blockquote>
+  <figcaption>Ben Holliday</figcaption>
+</figure>
+
+<p>It was a response to the steady stream of portal requests that flow from policy into digital teams. Over the years I've lost count of how many times I've been pulled into conversations about creating "one place" to do everything. A hub for permits. A dashboard for services. A front door for users.</p>
+
+<p>It's solution-based conversations like these that have created my slight hatred for all things portal. Not ideal when you go on to inherit a portfolio tasked with delivering a single interaction point for Schools.</p>
+
+<h2>But it's a user need</h2>
+
+<p>Whenever you challenge the reasoning or need for another portal, you're met with a stream of user needs that argue for its creation, like:</p>
+
+<ul class="unordered-list">
+  <li class="unordered-list__list-item">"As a [user], I need one place to…"</li>
+  <li class="unordered-list__list-item">"As a [user], I need to see everything…"</li>
+  <li class="unordered-list__list-item">"As a [user], I want everything in one place."</li>
+</ul>
+
+<p>On the surface, they sound reasonable.</p>
+
+<p>But these are not user needs. They are assumptions.</p>
+
+<p>I don't doubt users say these things, but it's not what they mean or what they need. What they need is less duplication, less confusion, and more confidence they've done what they need to do.</p>
+
+<p>In a recent survey we found nearly two thirds of users were not confident they would spot changes to guidance. Around three quarters worried about missing funding opportunities. Almost half said they spent more time finding information than doing their jobs.</p>
+
+<p>These are very real problems that exist in most large organisations.</p>
+
+<p>The assumption that putting everything in one place will solve them is where the bigger problems begin.</p>
+
+<h2>Let's all build a portal</h2>
+
+<p>As more interactions move online, we don't simplify, we accumulate. Guidance multiplies, services expand, entry points fragment, and communication channels stack up. In most organisations, users are dealing with too many services, thousands of pages of guidance, and numerous communication channels.</p>
+
+<p>When everything is spread out and we know users are becoming overwhelmed, we often respond by bringing things together.</p>
+
+<p>The issue is that these decisions are usually made from an internal perspective. Organisational structures shape the thinking, instead of user behaviour. And because every team sees the problem through its own lens, we don't end up with one portal.</p>
+
+<p>We end up with lots of portals.</p>
+
+<p>Each one may solve a local problem, but collectively they increase duplication and effort for users trying to get things done.</p>
+
+<h2>If not portals, then what?</h2>
+
+<p>If we want to fix this problem properly, we need to start with services. We need to build teams around the services we provide and hold them accountable for the whole experience, not just one part of it.</p>
+
+<p>This is starting to happen in some government organisations, with more focus on service ownership and delivery. But in many areas it still feels a long way off. And even as we get closer to it there will never be a perfect way to slice things.</p>
+
+<p>At Defra, there is an arm's length body dedicated to safeguarding animal and plant health (APHA) and another to protect and enhance the marine environment (MMO). Both have a role in exports post-EU Exit, creating overlap whichever way you look at it.</p>
+
+<p>At DfE we structure around Skills, Schools and Families, but we also have cross-cutting capabilities like funding. Then there are schools that also overlap with colleges and regional improvement teams.</p>
+
+<p>There will likely never be a time where a user only needs to engage with one service to achieve what they perceive as a single task.</p>
+
+<p>So there has to be a more pragmatic solution: a way to make things feel seamless even when they are not. We need consistent ways of describing, exposing and linking services so users can move across them without friction.</p>
+
+<h2>What about one super portal?</h2>
+
+<p>This was the brief given to the team I picked up a year ago: create one single entry point for schools to see all their tasks, services, content and guidance in one place.</p>
+
+<figure>
+  <img src="/images/posts/the-portal-trap/upcoming-tasks.png" alt="An 'Upcoming tasks' screen listing required tasks for a school, such as publishing a PE and sport premium report and submitting audited financial statements, each with a due date.">
+  <figcaption>An example of a single task view, pulling required actions together from separate underlying services.</figcaption>
+</figure>
+
+<p>Setting a brief like this created three key problems.</p>
+
+<h3>Problem one: it's not what users actually need</h3>
+
+<p>It fixates people on putting everything in one place, when what users actually want is relevance and reassurance.</p>
+
+<p>They don't want everything. They want confidence.</p>
+
+<ul class="unordered-list">
+  <li class="unordered-list__list-item">"I need to know what's expected of me."</li>
+  <li class="unordered-list__list-item">"I need to know what's available to me."</li>
+</ul>
+
+<p>These are much better user needs to start with than "I need to see everything".</p>
+
+<p>But a portal only meets these needs if what it shows is relevant to that user and points to something they can act on. Show the wrong things, or the right things with no clear next step, and you've just built a smaller, tidier version of the same overwhelm.</p>
+
+<h3>Problem two: the plumbing problem</h3>
+
+<p>Joining things up is not just a content challenge, it's a systems problem.</p>
+
+<p>We're dealing with multiple systems built at different times, for different reasons, to different standards, and with different data structures. Without shared data or consistent structures, a portal quickly becomes an interpretation layer sitting between everything else.</p>
+
+<figure>
+  <img src="/images/posts/the-portal-trap/school-census.png" alt="A School Census 2025 Spring return listing individual schools, each with a due date, an action such as 'Complete as school', and a status of Complete, Not Started, or In Progress.">
+  <figcaption>Each underlying service, like a census return, has its own data structure, actions and status model.</figcaption>
+</figure>
+
+<pre><code>Service A     Service B     Service C
+     \            |            /
+        Interpretation layer
+               |
+            Portal
+               |
+             Users</code></pre>
+
+<p>This creates a new and costly business process. Someone has to collect information from multiple teams, interpret it, and keep it updated.</p>
+
+<p>These two problems lead to two very risky assumptions: that showing everything in one place is better than the current services, and that the internal business processes this depends on are stable enough, have the support of the department, and can scale as needed.</p>
+
+<p>Both of these assumptions were unproven. If your ambition is a single trusted entry point, it can never be wrong or out of date. That makes this model incredibly fragile.</p>
+
+<h3>Problem three: ownership</h3>
+
+<p>A team tasked with building a portal like this often has no ownership of the services it is bringing together. That can lead to tension, where the narrative shifts towards one team appearing to own everything, or other teams losing control over their own services.</p>
+
+<p>This often comes from good intentions. A team tries to solve problems on behalf of others rather than with them. The intent is to help. The effect is a lot of annoyed people, and services that feel like they've had decisions made about them rather than for them.</p>
+
+<p>Neither is healthy. And neither scales well.</p>
+
+<p>These problems are hard to fix, they cut across an entire organisation, and they require trust and collaboration to solve. To succeed we need people to work together on things outside their immediate interests.</p>
+
+<h2>What does this look like in practice?</h2>
+
+<p>For us, this initially looked like a step backwards.</p>
+
+<p>We paused a private beta that wasn't meeting user needs, couldn't scale, and couldn't be maintained without significant ongoing effort and cost. We went back to basics and re-validated the problem space.</p>
+
+<p>We set a clear vision:</p>
+
+<p class="highlight-text margin-bottom">"All schools can easily access the support and guidance they need, when they need it."</p>
+
+<p>We also set supporting goals:</p>
+
+<ul class="unordered-list">
+  <li class="unordered-list__list-item">Support efficient and effective service delivery, reducing duplication.</li>
+  <li class="unordered-list__list-item">Create a more joined-up experience across DfE products.</li>
+</ul>
+
+<p>This helped us avoid building something that improved the user experience but increased duplication and cost behind the scenes.</p>
+
+<p>Rather than trying to solve everything at once, we tested whether we could add value in a small number of areas first. We then focused on three user journeys. These were chosen deliberately to cover:</p>
+
+<ul class="unordered-list">
+  <li class="unordered-list__list-item">Mandatory and optional tasks</li>
+  <li class="unordered-list__list-item">High and low confidence users</li>
+  <li class="unordered-list__list-item">Routine and infrequent interactions</li>
+</ul>
+
+<p>Alongside traditional alpha work on journeys and UI design, we also ran technical experiments. These included lightweight ways of retrieving data from existing services rather than building a central data store. We needed to prove this could work at scale and across both modern and legacy systems.</p>
+
+<p>We also ran personalisation tests to understand whether we could tailor content based on role, organisation and context. Finally, we plan to explore whether we could go further and recommend actions or opportunities based on what we know about users.</p>
+
+<figure>
+  <img src="/images/posts/the-portal-trap/what-do-we-need-to-do.png" alt="A diagram titled 'What do we need to do?' showing user journeys flowing across a platforms layer, connected to DfE portfolios represented as circles, with arrows showing content surfaced to users and live service insights informing organisational design.">
+  <figcaption>Surface content in a way that makes sense for users, and use live service insights to inform organisational design.</figcaption>
+</figure>
+
+<p>Together, these concepts move us towards a more useful outcome: helping users understand what they need to do, when they need to do it, and what they might be missing.</p>
+
+<h2>Wider than a product</h2>
+
+<p>A single product or entry point can reduce burden and confusion for users. But that doesn't mean wider transformation work isn't needed.</p>
+
+<p>I would describe the portfolio as:</p>
+
+<ul class="unordered-list">
+  <li class="unordered-list__list-item">80% delivering a product that gives schools access to the information they need when they need it</li>
+  <li class="unordered-list__list-item">10% improving visibility through shared roadmaps and transparency</li>
+  <li class="unordered-list__list-item">10% influencing decision-making to reduce fragmentation and encourage reuse</li>
+</ul>
+
+<p>The final part is the hardest, because it requires coordination across teams who don't share the same priorities or incentives.</p>
+
+<p>There's also the underlying plumbing work: connecting systems, aligning taxonomies, improving data, and enabling reuse.</p>
+
+<p>This work is slower, harder, and less visible, but it's essential.</p>
+
+<h2>The challenges that remain</h2>
+
+<p>One of our biggest remaining challenges is balancing incremental delivery with long-term ambition. We need to slice work small enough to deliver value early, but not so small that it loses value or becomes impossible to scale.</p>
+
+<p>That balance is difficult.</p>
+
+<p>If we get it wrong, we will either end up with something that no one uses, or something that takes years to deliver.</p>
+
+<h2>Summary</h2>
+
+<p>These problems aren't going away. If anything, they get harder as organisations grow and services expand.</p>
+
+<p>Portals are an appealing solution because they look like progress. Integration and organisational design are harder but address the issues at source.</p>
+
+<p>In reality we need both.</p>
+
+<p>When portals are treated as containers they fail. You can't cover up the complexity, and attempting to do so just adds another layer of abstraction and frustration.</p>
+
+<p>If portals are instead built as a coordinating or experience layer, deliberately designed to give an outside-in view of an organisation, they can bridge the gap until wider structural changes are made. They can also provide insight and evidence to help us structure around services in future.</p>
+
+<p>Used well, a portal or single front door can resolve problems for users in the short and longer term, while also enabling teams to remain in control of their respective services, balancing a holistic view of user needs with existing teams' detailed knowledge of users and policy outcomes.</p>
